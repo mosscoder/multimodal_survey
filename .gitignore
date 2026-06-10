@@ -1,0 +1,3 @@
+# Run outputs belong on the datastick (mission.toml output_dir), but if a
+# run ever falls back to the in-tree default, keep it out of git.
+runs/
