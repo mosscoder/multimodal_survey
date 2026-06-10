@@ -4,7 +4,8 @@ Mission definitions for Go2 robot line surveys at MPG Ranch. Each mission
 directory under `dev/` holds everything the dog needs to walk a survey
 (`mission.toml` + `waypoints.geojson`) plus the planning artifacts
 (`seed_poly.geojson`, `mission_layout.png`). **Survey outputs (logs and
-captures) are written to the datastick, not into this repo.**
+captures) nest under each mission's `runs/` folder on the datastick —
+git-ignored, so they stay out of the repo history.**
 
 ---
 
@@ -27,13 +28,13 @@ captures) are written to the datastick, not into this repo.**
    ```
 
 3. Make sure the `go2-survey` software on the Jetson is current — it needs
-   `mpg-ai-edge` **v0.30.0 or later, branch `refactor`** (adds the
-   `output_dir` support this mission relies on). In the Jetson's
+   the **`refactor` branch of `mpg-ai-edge`, v0.29.0 or later** (the
+   self-calibrating line-survey walk this mission uses). In the Jetson's
    `mpg-ai-edge` checkout:
 
    ```
    git fetch && git checkout refactor && git pull
-   go2-survey list   # sanity check: command runs, version banner ≥ 0.30.0 on a mission run
+   go2-survey list   # sanity check: command runs; the run banner shows the version
    ```
 
 ### Before every field day
@@ -80,11 +81,11 @@ What you'll see, in order:
 
 ### Outputs
 
-Everything from one run lands in one timestamped folder on the stick,
-**outside** the repo clone:
+Everything from one run lands in one timestamped folder inside the
+mission directory (git-ignored — `git pull` stays clean regardless):
 
 ```
-/media/mpg-robodog/KINGSTON/survey_outputs/site_1_strip_3/site_1_strip_3_<timestamp>/
+/media/mpg-robodog/KINGSTON/multimodal_survey/dev/site_1_strip_3/runs/site_1_strip_3_<timestamp>/
 ├── main.log              ← mission narrative (read this first)
 ├── gps.log               ← dense RTK/NTRIP telemetry
 ├── imu.log               ← IMU stream
@@ -102,8 +103,8 @@ Everything from one run lands in one timestamped folder on the stick,
   cell coverage; reposition and rerun.
 - **Robot not found** — confirm the dog and Jetson share the hotspot, then
   `go2-survey discover-ip` to diagnose.
-- For anything else, send Kyle the whole run folder from `survey_outputs/`
-  (it is self-contained).
+- For anything else, send Kyle the whole run folder from the mission's
+  `runs/` directory (it is self-contained).
 
 ---
 
@@ -114,10 +115,12 @@ multimodal_survey/
 ├── README.md                      ← this walkthrough
 ├── dev/
 │   └── site_1_strip_3/            ← one directory per survey mission
-│       ├── mission.toml           ← run config (output_dir → datastick)
+│       ├── mission.toml           ← run config
 │       ├── seed_poly.geojson      ← survey area drawn in QGIS (EPSG:6514)
 │       ├── waypoints.geojson      ← generated leg corners (do not hand-edit)
-│       └── mission_layout.png     ← route preview
+│       ├── mission_layout.png     ← route preview
+│       └── runs/                  ← created by runs (git-ignored field data)
+│           └── site_1_strip_3_<timestamp>/
 └── planning/                      ← QGIS project + ranch basemap
 ```
 

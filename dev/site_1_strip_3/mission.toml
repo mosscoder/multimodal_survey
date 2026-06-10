@@ -4,12 +4,10 @@ mode        = "nav"
 
 # Run by path. On the dog's Jetson (repo cloned on the KINGSTON datastick):
 #   go2-survey run /media/mpg-robodog/KINGSTON/multimodal_survey/dev/site_1_strip_3
-# Run outputs (logs, captures, sidecars) land on the datastick at
-#   <output_dir>/site_1_strip_3/site_1_strip_3_<timestamp>/
-# i.e. OUTSIDE this clone, so field data never piles up in git. On a dev
-# machine without /media/mpg-robodog/KINGSTON, override per-run:
+# Run outputs (logs, captures, sidecars) land in ./runs/site_1_strip_3_<timestamp>/
+# next to this file — on the datastick, git-ignored. For throwaway dev
+# dry-runs elsewhere:
 #   GO2_SURVEY_OUTPUT_DIR=/tmp/go2-out go2-survey run dev/site_1_strip_3 --dry-run
-output_dir = "/media/mpg-robodog/KINGSTON/survey_outputs"
 
 [gps]
 port = "/dev/ttyACM0"
