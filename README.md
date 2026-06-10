@@ -11,6 +11,17 @@ git-ignored, so they stay out of the repo history.**
 
 ## Field walkthrough: running `site_1_strip_3` on the dog
 
+### TL;DR — routine field day (Jetson)
+
+```
+git -C /media/mpg-robodog/KINGSTON/multimodal_survey pull
+go2-survey run /media/mpg-robodog/KINGSTON/multimodal_survey/dev/site_1_strip_3
+```
+
+Both commands work from any directory — no need to `cd` into either repo.
+You only touch the `mpg-ai-edge` (go2-survey) checkout during one-time
+setup, or when Kyle announces a software update.
+
 ### One-time setup (per datastick)
 
 1. Insert the KINGSTON datastick into the dog's Jetson and confirm it
