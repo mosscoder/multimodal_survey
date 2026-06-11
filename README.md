@@ -4,8 +4,8 @@ Mission definitions for Go2 robot line surveys at MPG Ranch. Each mission
 directory under `dev/` holds everything the dog needs to walk a survey
 (`mission.toml` + `waypoints.geojson`) plus the planning artifacts
 (`seed_poly.geojson`, `mission_layout.png`). **Survey outputs (logs and
-captures) nest under each mission's `runs/` folder on the datastick —
-git-ignored, so they stay out of the repo history.**
+captures) nest under each mission's `runs/` folder and are committed and
+pushed back to this repo after each run.**
 
 ---
 
@@ -18,9 +18,16 @@ git -C /media/mpg-robodog/KINGSTON/multimodal_survey pull
 go2-survey run /media/mpg-robodog/KINGSTON/multimodal_survey/dev/site_1_strip_3
 ```
 
-Both commands work from any directory — no need to `cd` into either repo.
-You only touch the `mpg-ai-edge` (go2-survey) checkout during one-time
-setup, or when Kyle announces a software update.
+…and after the run, push the results (see ["Push the results"](#push-the-results)):
+
+```
+cd /media/mpg-robodog/KINGSTON/multimodal_survey
+git add dev/site_1_strip_3/runs/ && git commit -m "site_1_strip_3 run $(date +%F)" && git push
+```
+
+These commands work from any directory — no need to `cd` into either repo
+except to push. You only touch the `mpg-ai-edge` (go2-survey) checkout
+during one-time setup, or when Kyle announces a software update.
 
 ### One-time setup (per datastick)
 
@@ -93,7 +100,7 @@ What you'll see, in order:
 ### Outputs
 
 Everything from one run lands in one timestamped folder inside the
-mission directory (git-ignored — `git pull` stays clean regardless):
+mission directory:
 
 ```
 /media/mpg-robodog/KINGSTON/multimodal_survey/dev/site_1_strip_3/runs/site_1_strip_3_<timestamp>/
@@ -106,6 +113,37 @@ mission directory (git-ignored — `git pull` stays clean regardless):
     └── captures.geojson  ← manifest of all captures
 ```
 
+### Push the results
+
+After the run (whenever the Jetson has connectivity):
+
+```
+cd /media/mpg-robodog/KINGSTON/multimodal_survey
+git pull
+git add dev/site_1_strip_3/runs/
+git commit -m "site_1_strip_3 run $(date +%F)"
+git push
+```
+
+**One-time before the first push** (per Jetson — pushing needs write
+access even though cloning doesn't):
+
+1. Generate a machine key and send the printed `ssh-ed25519 …` line to
+   Kyle, who registers it on the repo with write access:
+
+   ```
+   ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519 -C "mpg-robodog jetson"
+   cat ~/.ssh/id_ed25519.pub
+   ```
+
+2. Switch the remote to SSH and set the commit identity:
+
+   ```
+   git -C /media/mpg-robodog/KINGSTON/multimodal_survey remote set-url origin git@github.com:mosscoder/multimodal_survey.git
+   git config --global user.name  "MPG Robodog"
+   git config --global user.email robodog@mpgranch.com
+   ```
+
 ### If something goes wrong
 
 - **Ctrl-C** aborts the mission; the dog stops, and all logs/captures up to
@@ -114,8 +152,8 @@ mission directory (git-ignored — `git pull` stays clean regardless):
   cell coverage; reposition and rerun.
 - **Robot not found** — confirm the dog and Jetson share the hotspot, then
   `go2-survey discover-ip` to diagnose.
-- For anything else, send Kyle the whole run folder from the mission's
-  `runs/` directory (it is self-contained).
+- For anything else, push the run (see above) and tell Kyle the run
+  timestamp — the folder is self-contained.
 
 ---
 
@@ -130,7 +168,7 @@ multimodal_survey/
 │       ├── seed_poly.geojson      ← survey area drawn in QGIS (EPSG:6514)
 │       ├── waypoints.geojson      ← generated leg corners (do not hand-edit)
 │       ├── mission_layout.png     ← route preview
-│       └── runs/                  ← created by runs (git-ignored field data)
+│       └── runs/                  ← field data; committed + pushed after each run
 │           └── site_1_strip_3_<timestamp>/
 └── planning/                      ← QGIS project + ranch basemap
 ```

@@ -1,3 +1,0 @@
-# Run outputs (logs, captures, sidecars) live in each mission's runs/ on
-# the datastick — field data stays out of git.
-runs/
