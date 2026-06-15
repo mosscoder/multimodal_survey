@@ -1,5 +1,5 @@
 name        = "site_1_strip_4"
-description = "Lawnmower line survey of site 1, strip 4: the strip polygon boxified to a 125 m × 15 m grid — 3 identical 125.3 m legs at exact 5 m spacing along the strip axis (auto bearing 96.1°), starting at the southern corner, walked at 1 m/s, capturing a clean frame every 1 m of along-track travel (~375 frames over ~376 m of survey legs), steered by cross_track (GPS-course pure pursuit). Waypoints generated from seed_poly.geojson (QGIS polygon, EPSG:6514)."
+description = "Lawnmower line survey of site 1, strip 4: the strip polygon boxified to a 125 m × 20 m grid — 4 identical 125.3 m legs at exact 5 m spacing along the strip axis (auto bearing 96.2°), starting at the southern corner, walked at 1 m/s, capturing a clean frame every 1 m of along-track travel (~500 frames over ~501 m of survey legs), steered by cross_track (GPS-course pure pursuit). Waypoints generated from seed_poly.geojson (QGIS polygon, EPSG:6514)."
 mode        = "nav"
 
 # Run by path. On the dog's Jetson (repo cloned on the KINGSTON datastick):
