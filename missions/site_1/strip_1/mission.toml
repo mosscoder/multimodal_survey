@@ -30,6 +30,8 @@ rotation_rate     = 0.8
 min_fix_type      = 4
 max_hacc          = 0.10
 gps_fix_timeout   = 300
+max_rtcm_age_s    = 12.0   # pause if corrections older than this; raised 5->12
+                           # (RTCM audit: field-link jitter, not caster; hAcc/fix still gate)
 
 [capture]
 # Line survey with cross_track leg steering — the 09-validated config:
