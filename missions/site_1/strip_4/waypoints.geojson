@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "name": "generated_waypoints",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "generation": {
+    "source": "strip_4/seed_poly.geojson",
+    "projection_epsg": 6514,
+    "bearing_deg": 96.12,
+    "bearing_source": "auto_longest_edge",
+    "leg_space_m": 5.0,
+    "start_corner": "south",
+    "source_polygon": [
+      [
+        -114.0042854044232,
+        46.67644496510577
+      ],
+      [
+        -114.00410216873115,
+        46.67644253495748
+      ],
+      [
+        -114.00418278799793,
+        46.67531908587505
+      ],
+      [
+        -114.0043547937824,
+        46.67532196074862
+      ],
+      [
+        -114.0042854044232,
+        46.67644496510577
+      ]
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_001"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.00420917554366,
+          46.67531701026525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0041283440133,
+          46.676443424840436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_003"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0041936505861,
+          46.67644564504626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_004"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0042744807553,
+          46.6753192304249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_005"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.00433978597233,
+          46.67532145054705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_006"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.00425895716427,
+          46.67644786521463
+        ]
+      }
+    }
+  ]
+}

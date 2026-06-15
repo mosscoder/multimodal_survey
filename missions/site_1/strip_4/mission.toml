@@ -1,13 +1,13 @@
-name        = "site_1_strip_3"
-description = "Lawnmower line survey of site 1, strip 3: the ~150 m × 17 m strip polygon boxified to a 150.25 m × 20 m grid — 4 identical 150.25 m legs at exact 5 m spacing along the strip axis (auto bearing 113.4°), starting at the southern corner, walked at 1 m/s, capturing a clean frame every 1 m of along-track travel (~600 frames over ~601 m of survey legs), steered by cross_track (GPS-course pure pursuit). Waypoints generated from seed_poly.geojson (QGIS polygon, EPSG:6514)."
+name        = "site_1_strip_4"
+description = "Lawnmower line survey of site 1, strip 4: the strip polygon boxified to a 125 m × 15 m grid — 3 identical 125.3 m legs at exact 5 m spacing along the strip axis (auto bearing 96.1°), starting at the southern corner, walked at 1 m/s, capturing a clean frame every 1 m of along-track travel (~375 frames over ~376 m of survey legs), steered by cross_track (GPS-course pure pursuit). Waypoints generated from seed_poly.geojson (QGIS polygon, EPSG:6514)."
 mode        = "nav"
 
 # Run by path. On the dog's Jetson (repo cloned on the KINGSTON datastick):
-#   go2-survey run /media/mpg-robodog/KINGSTON/multimodal_survey/dev/site_1_strip_3
-# Run outputs (logs, captures, sidecars) land in ./runs/site_1_strip_3_<timestamp>/
+#   go2-survey run /media/mpg-robodog/KINGSTON/multimodal_survey/missions/site_1/strip_4
+# Run outputs (logs, captures, sidecars) land in ./runs/site_1_strip_4_<timestamp>/
 # next to this file — on the datastick, git-ignored. For throwaway dev
 # dry-runs elsewhere:
-#   GO2_SURVEY_OUTPUT_DIR=/tmp/go2-out go2-survey run dev/site_1_strip_3 --dry-run
+#   GO2_SURVEY_OUTPUT_DIR=/tmp/go2-out go2-survey run missions/site_1/strip_4 --dry-run
 
 [gps]
 port = "/dev/ttyACM0"

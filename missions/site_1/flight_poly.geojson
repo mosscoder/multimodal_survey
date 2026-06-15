@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "flight_poly",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -114.006517918595947, 46.676592283687981 ], [ -114.003829380489407, 46.676706691042014 ], [ -114.003734548117095, 46.675163532439328 ], [ -114.006349547574331, 46.67498922065915 ], [ -114.006517918595947, 46.676592283687981 ] ] ] } }
+]
+}
