@@ -1,0 +1,2 @@
+2026-06-16 10:28:07,838 [INFO] go2_survey.battery.telemetry: SOC  96% | 31.46V | -2.8A (discharging) | batt 22°C | mcu 26°C | cycles 3
+2026-06-16 10:28:17,951 [INFO] go2_survey.battery.telemetry: SOC  95% | 31.32V | -7.4A (discharging) | batt 22°C | mcu 26°C | cycles 3
