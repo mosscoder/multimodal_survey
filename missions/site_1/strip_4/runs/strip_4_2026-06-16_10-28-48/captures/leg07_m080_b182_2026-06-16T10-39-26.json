@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "captured_at_unix": 1781627966.679242,
+  "captured_at_utc": "2026-06-16T16:39:26.679242+00:00",
+  "frame": {
+    "timestamp_unix": 1781627966.679242,
+    "width": 1280,
+    "height": 720,
+    "corrupt": false
+  },
+  "position": {
+    "latitude": 46.675730198632,
+    "longitude": -114.00433480650649,
+    "altitude": 1198.2141951949552,
+    "accuracy_horizontal": 0.014,
+    "accuracy_vertical": 0.01,
+    "fix_type": 6,
+    "satellites_used": 32,
+    "course_over_ground": 187.02216,
+    "timestamp": 1781627966.679242,
+    "head_vehicle": null,
+    "head_vehicle_accuracy": 4.075410000000001,
+    "altitude_msl": 1215.948,
+    "pdop": 1.06,
+    "correction_age_bin": 0,
+    "speed_over_ground": 0.747
+  },
+  "position_interpolated": true,
+  "frame_position_time_delta_s": 0.0,
+  "heading": {
+    "degrees_true": 182.8864165503796,
+    "target_degrees_true": 182.8864165503796,
+    "achieved_degrees_true": 180.7797876142807,
+    "residual_degrees": -2.1066289360989003,
+    "source": "robot_imu_calibrated",
+    "course_degrees_true": 179.62,
+    "exif_direction_source": "gps_course_posthoc"
+  },
+  "mission": {
+    "mission_name": "site_1_strip_4",
+    "mission_dir": "/media/mpg-robodog/KINGSTON1/multimodal_survey/missions/site_1/strip_4",
+    "waypoint_name": "leg07",
+    "strategy": "line_survey",
+    "target_bearing_deg_true": 182.8864165503796
+  },
+  "extra": {
+    "line_survey": {
+      "leg": "leg07",
+      "mark_index": 80,
+      "along_track_m": 80.0,
+      "interval_m": 1.0,
+      "frame_corrupt": false,
+      "frame_offset_from_mark_s": -0.0392
+    }
+  }
+}
