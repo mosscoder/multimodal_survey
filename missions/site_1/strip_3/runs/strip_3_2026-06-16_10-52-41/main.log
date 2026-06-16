@@ -1,0 +1,167 @@
+2026-06-16 10:52:41,256 [INFO] go2_survey.cli: go2-survey v0.32.0 | git 473cad6 | run dir: /media/mpg-robodog/KINGSTON1/multimodal_survey/missions/site_1/strip_3/runs/strip_3_2026-06-16_10-52-41
+2026-06-16 10:52:41,257 [INFO] go2_survey.cli: Logging to: /media/mpg-robodog/KINGSTON1/multimodal_survey/missions/site_1/strip_3/runs/strip_3_2026-06-16_10-52-41/main.log (+ imu.log, gps.log)
+2026-06-16 10:52:41,257 [INFO] go2_survey.cli: Mission dir: /media/mpg-robodog/KINGSTON1/multimodal_survey/missions/site_1/strip_3
+2026-06-16 10:52:41,260 [INFO] go2_survey.mission_runner: ============================================================
+2026-06-16 10:52:41,260 [INFO] go2_survey.mission_runner: ================= MISSION: site_1_strip_3 ==================
+2026-06-16 10:52:41,260 [INFO] go2_survey.mission_runner: ============================================================
+2026-06-16 10:52:41,260 [INFO] go2_survey.mission_runner: Lawnmower line survey of site 1, strip 3: the strip polygon boxified to a 150 m × 20 m grid — 4 identical 150.3 m legs at exact 5 m spacing along the strip axis (auto bearing 113.4°), starting at the southern corner, walked at 1 m/s, capturing a clean frame every 1 m of along-track travel (~600 frames over ~601 m of survey legs), steered by cross_track (GPS-course pure pursuit). Waypoints generated from seed_poly.geojson (QGIS polygon, EPSG:6514).
+2026-06-16 10:52:41,260 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:41,260 [INFO] go2_survey.mission_runner: ------------------------ MODE: nav -------------------------
+2026-06-16 10:52:41,261 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:41,261 [INFO] go2_survey.waypoints: Loaded 8 waypoints from /media/mpg-robodog/KINGSTON1/multimodal_survey/missions/site_1/strip_3/waypoints.geojson
+2026-06-16 10:52:41,261 [INFO] go2_survey.mission_runner: Loaded 8 waypoint(s):
+2026-06-16 10:52:41,261 [INFO] go2_survey.mission_runner:   1. wp_001: (46.67524945, -114.00504418)
+2026-06-16 10:52:41,262 [INFO] go2_survey.mission_runner:   2. wp_002: (46.67651923, -114.00436793)
+2026-06-16 10:52:41,262 [INFO] go2_survey.mission_runner:   3. wp_003: (46.67653472, -114.00442932)
+2026-06-16 10:52:41,262 [INFO] go2_survey.mission_runner:   4. wp_004: (46.67526494, -114.00510557)
+2026-06-16 10:52:41,262 [INFO] go2_survey.mission_runner:   5. wp_005: (46.67528043, -114.00516697)
+2026-06-16 10:52:41,262 [INFO] go2_survey.mission_runner:   6. wp_006: (46.67655021, -114.00449071)
+2026-06-16 10:52:41,262 [INFO] go2_survey.mission_runner:   7. wp_007: (46.67656570, -114.00455210)
+2026-06-16 10:52:41,262 [INFO] go2_survey.mission_runner:   8. wp_008: (46.67529592, -114.00522836)
+2026-06-16 10:52:41,262 [INFO] go2_survey.mission_runner: GPS: /dev/ttyACM0 @ 38400 | NTRIP: caster.emlid.com:2101 mountpoints=['MP22385', 'MP22385a'] | Robot: LocalSTA
+2026-06-16 10:52:41,262 [INFO] go2_survey.mission_runner: Nav: tol=0.25m vmax=1.0m/s rot=0.8rad/s minFix=4 maxHacc=0.1m
+2026-06-16 10:52:41,263 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:41,263 [INFO] go2_survey.mission_runner:  AUTO-DISCOVERING ROBOT IP (up to 4 attempts, 10s between) -
+2026-06-16 10:52:41,263 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:41,263 [INFO] go2_survey.mission_runner: robot.ip not set in mission.toml and ROBOT_IP env var not set; scanning local network for a Go2 (nmap ports 8081/9991)...
+2026-06-16 10:52:41,263 [INFO] go2_survey.mission_runner: Discovery attempt 1/4: scanning for Go2 on ports 8081/9991...
+2026-06-16 10:52:41,271 [INFO] go2_survey.discovery: Scanning 10.111.114.241/24 for Go2 ports 8081/9991...
+2026-06-16 10:52:43,682 [INFO] go2_survey.mission_runner: Discovery attempt 1: found Go2 at 10.111.114.5
+2026-06-16 10:52:43,683 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:43,684 [INFO] go2_survey.mission_runner: ------------ ROBOT IP DISCOVERED | 10.111.114.5 ------------
+2026-06-16 10:52:43,684 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:43,684 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:43,684 [INFO] go2_survey.mission_runner: ----------------------- PHASE 1: GPS -----------------------
+2026-06-16 10:52:43,684 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:43,686 [INFO] go2_survey.gps: Connected to GPS on /dev/ttyACM0 @ 38400 baud
+2026-06-16 10:52:43,687 [INFO] go2_survey.gps: NTRIP: trying primary mountpoint MP22385 (1/2, attempt 1/3)
+2026-06-16 10:52:43,687 [INFO] go2_survey.ntrip: Connecting to NTRIP caster at caster.emlid.com:2101
+2026-06-16 10:52:44,164 [INFO] go2_survey.ntrip: Connected to NTRIP mountpoint: MP22385
+2026-06-16 10:52:44,165 [INFO] go2_survey.gps: NTRIP: connected via primary mountpoint MP22385 (took 0s, 1 attempt(s))
+2026-06-16 10:52:44,167 [INFO] go2_survey.ntrip: Started RTCM correction stream
+2026-06-16 10:52:44,167 [INFO] go2_survey.gps: Waiting for GPS fix (min type 4, NTRIP state=connected)...
+2026-06-16 10:52:44,169 [WARNING] go2_survey.gps: wait_for_fix: RTCM stalled (state=connected, rtcm_age=∞, alive=True) — firing reconnect_ntrip_async()
+2026-06-16 10:52:44,171 [INFO] go2_survey.ntrip: RTCM correction worker stopped
+2026-06-16 10:52:44,171 [INFO] go2_survey.ntrip: Disconnected from NTRIP. Forwarded 0 messages.
+2026-06-16 10:52:44,171 [INFO] go2_survey.gps: NTRIP reconnect: starting retry loop
+2026-06-16 10:52:44,171 [INFO] go2_survey.gps: NTRIP: trying primary mountpoint MP22385 (1/2, attempt 1/3)
+2026-06-16 10:52:44,172 [INFO] go2_survey.ntrip: Connecting to NTRIP caster at caster.emlid.com:2101
+2026-06-16 10:52:44,561 [INFO] go2_survey.ntrip: Connected to NTRIP mountpoint: MP22385
+2026-06-16 10:52:44,562 [INFO] go2_survey.gps: NTRIP: connected via primary mountpoint MP22385 (took 0s, 1 attempt(s))
+2026-06-16 10:52:44,563 [INFO] go2_survey.ntrip: Started RTCM correction stream
+2026-06-16 10:52:44,563 [INFO] go2_survey.gps: NTRIP reconnect: stream restored
+2026-06-16 10:52:46,284 [INFO] go2_survey.gps: wait_for_fix: RTCM flow restored; re-arming stall-reconnect trigger
+2026-06-16 10:52:48,409 [INFO] go2_survey.gps: RTK Float achieved! Lat: 46.67518000, Lon: -114.00497730, h: 1193.74m, hMSL: 1211.47m hAcc: 0.066m pDOP: 1.02
+2026-06-16 10:52:48,410 [INFO] go2_survey.gps: ============================================================
+2026-06-16 10:52:48,410 [INFO] go2_survey.gps:  GPS RTK Float ACHIEVED | hAcc: 0.066m pDOP: 1.02 | rtcm_age=2.0s msgs=6 
+2026-06-16 10:52:48,410 [INFO] go2_survey.gps: ============================================================
+2026-06-16 10:52:48,519 [INFO] go2_survey.mission_runner: Start position: (46.67517030, -114.00494870) hAcc: 0.014m
+2026-06-16 10:52:48,519 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:48,520 [INFO] go2_survey.mission_runner: ------------- PHASE 2: GPS STABILIZATION (60s) -------------
+2026-06-16 10:52:48,520 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:48,520 [INFO] go2_survey.gps: ------------------------------------------------------------
+2026-06-16 10:52:48,520 [INFO] go2_survey.gps:  DWELL: 60s — robot stationary, RTK soaking (early-exit on 3s trusted Fixed) 
+2026-06-16 10:52:48,520 [INFO] go2_survey.gps: ------------------------------------------------------------
+2026-06-16 10:52:52,136 [INFO] go2_survey.gps: ============================================================
+2026-06-16 10:52:52,136 [INFO] go2_survey.gps:  DWELL EARLY EXIT | best=RTK Fixed min_hAcc=0.014m | mean hAcc=0.014m sats=32.0 | TTFloat=0s TTFixed=0s | early@4s/60s (held trusted Fixed 3s) 
+2026-06-16 10:52:52,136 [INFO] go2_survey.gps: ============================================================
+2026-06-16 10:52:52,136 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:52,137 [INFO] go2_survey.mission_runner: ---------------------- PHASE 3: ROBOT ----------------------
+2026-06-16 10:52:52,137 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:52,137 [INFO] go2_survey.robot: Connecting via LocalSTA (IP: 10.111.114.5)
+2026-06-16 10:52:52,202 [INFO] root: Creating offer...
+2026-06-16 10:52:52,702 [INFO] root: Track received: audio
+2026-06-16 10:52:52,702 [INFO] root: Track received: video
+2026-06-16 10:52:52,905 [INFO] root: Received message on data channel: {"type":"validation","data":"n6TUmi79j0CZvGhG4ui"}
+2026-06-16 10:52:52,906 [INFO] root: Data channel opened
+2026-06-16 10:52:52,907 [INFO] root: > message sent: {"type": "validation", "topic": "", "data": "p2bdpPwwUibnDpW49edpug=="}
+2026-06-16 10:52:52,918 [INFO] root: Received message on data channel: {"type":"validation", "data":"Validation Ok."}
+2026-06-16 10:52:52,918 [INFO] root: Validation succeed
+2026-06-16 10:52:52,919 [INFO] root: Received message on data channel: {"type":"errors","data":[]}
+2026-06-16 10:52:53,006 [INFO] go2_survey.robot: WebRTC connected
+2026-06-16 10:52:53,006 [INFO] root: > message sent: {"type": "req", "topic": "rt/api/motion_switcher/request", "data": {"header": {"identity": {"id": 1364829768, "api_id": 1001}}, "parameter": ""}}
+2026-06-16 10:52:53,028 [INFO] root: Received message on data channel: {"type":"res","topic":"rt/api/motion_switcher/response","data":{"header":{"identity":{"api_id":1001,"id":1364829768},"status":{"code":0}},"data":"{\"form\":\"0\",\"name\":\"mcf\"}"}}
+2026-06-16 10:52:53,028 [INFO] go2_survey.robot: Robot API ready
+2026-06-16 10:52:53,029 [INFO] go2_survey.robot: Subscribed to sport mode state (IMU)
+2026-06-16 10:52:53,030 [INFO] root: > message sent: {"type": "subscribe", "topic": "rt/lf/lowstate"}
+2026-06-16 10:52:53,030 [INFO] go2_survey.robot: Subscribed to low state (battery)
+2026-06-16 10:52:53,030 [INFO] root: > message sent: {"type": "req", "topic": "rt/api/motion_switcher/request", "data": {"header": {"identity": {"id": 1364829072, "api_id": 1001}}, "parameter": ""}}
+2026-06-16 10:52:53,064 [INFO] root: Received message on data channel: {"type":"res","topic":"rt/api/motion_switcher/response","data":{"header":{"identity":{"api_id":1001,"id":1364829072},"status":{"code":0}},"data":"{\"form\":\"0\",\"name\":\"mcf\"}"}}
+2026-06-16 10:52:53,064 [INFO] go2_survey.robot: Current motion mode: mcf
+2026-06-16 10:52:53,065 [INFO] go2_survey.robot: Switching to normal mode...
+2026-06-16 10:52:53,065 [INFO] root: > message sent: {"type": "req", "topic": "rt/api/motion_switcher/request", "data": {"header": {"identity": {"id": 1364829150, "api_id": 1002}}, "parameter": "{\"name\": \"normal\"}"}}
+2026-06-16 10:52:53,076 [INFO] root: Received message on data channel: {"type":"res","topic":"rt/api/motion_switcher/response","data":{"header":{"identity":{"api_id":1002,"id":1364829150},"status":{"code":7004}},"data":""}}
+2026-06-16 10:52:53,646 [INFO] root: Received message on data channel: {"type":"msg","topic":"rt/lf/lowstate","data":{"imu_state":{"rpy":[-0.138054,0.046123,-2.975594]},"motor_state":[{"q":-0.028862,"temperature":39,"lost":0,"reserve":[0,607]},{"q":0.794194,"temperature":49,"lost":9,"reserve":[0,607]},{"q":-1.562629,"temperature":51,"lost":5,"reserve":[0,607]},{"q":-0.070660,"temperature":40,"lost":5,"reserve":[0,607]},{"q":0.639869,"temperature":53,"lost":8,"reserve":[0,607]},{"q":-1.624143,"temperature":53,"lost":5,"reserve":[0,607]},{"q":-0.042552,"temperature":40,"lost":14,"reserve":[0,607]},{"q":0.579279,"temperature":53,"lost":5,"reserve":[0,607]},{"q":-1.596340,"temperature":53,"lost":0,"reserve":[0,607]},{"q":0.039464,"temperature":44,"lost":5,"reserve":[0,607]},{"q":0.666417,"temperature":46,"lost":6,"reserve":[0,607]},{"q":-1.575804,"temperature":51,"lost":0,"reserve":[0,607]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]}],"bms_state":{"version_high":1,"version_low":18,"soc":69,"current":-4101,"cycle":3,"bq_ntc":[27,28],"mcu_ntc":[33,30]},"foot_force":[53,44,41,68],"temperature_ntc1":44,"power_v":29.561674}}
+2026-06-16 10:52:53,919 [INFO] root: > message sent: {"type": "rtc_inner_req", "topic": "", "data": {"req_type": "public_network_status", "uuid": "5dc69e5b-08c7-493a-a4fb-96979b6a735b"}}
+2026-06-16 10:52:53,929 [INFO] root: Received message on data channel: {"type":"rtc_inner_req","info":{"req_type":"public_network_status","status":"Undefined","uuid":"5dc69e5b-08c7-493a-a4fb-96979b6a735b"}}
+2026-06-16 10:52:53,929 [INFO] root: Network status message received.
+2026-06-16 10:52:54,430 [INFO] root: > message sent: {"type": "rtc_inner_req", "topic": "", "data": {"req_type": "public_network_status", "uuid": "3bae3d62-221d-4aaf-81c4-56002a710735"}}
+2026-06-16 10:52:54,440 [INFO] root: Received message on data channel: {"type":"rtc_inner_req","info":{"req_type":"public_network_status","status":"Undefined","uuid":"3bae3d62-221d-4aaf-81c4-56002a710735"}}
+2026-06-16 10:52:54,440 [INFO] root: Network status message received.
+2026-06-16 10:52:54,645 [INFO] root: Received message on data channel: {"type":"msg","topic":"rt/lf/lowstate","data":{"imu_state":{"rpy":[-0.137833,0.046278,-2.975414]},"motor_state":[{"q":-0.029074,"temperature":39,"lost":0,"reserve":[0,595]},{"q":0.794194,"temperature":49,"lost":9,"reserve":[0,595]},{"q":-1.562677,"temperature":51,"lost":5,"reserve":[0,595]},{"q":-0.070812,"temperature":40,"lost":5,"reserve":[0,595]},{"q":0.639809,"temperature":53,"lost":8,"reserve":[0,595]},{"q":-1.624127,"temperature":53,"lost":5,"reserve":[0,595]},{"q":-0.042492,"temperature":40,"lost":14,"reserve":[0,595]},{"q":0.579309,"temperature":53,"lost":5,"reserve":[0,595]},{"q":-1.596293,"temperature":53,"lost":0,"reserve":[0,595]},{"q":0.039373,"temperature":44,"lost":5,"reserve":[0,595]},{"q":0.666448,"temperature":46,"lost":6,"reserve":[0,595]},{"q":-1.575851,"temperature":51,"lost":0,"reserve":[0,595]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]}],"bms_state":{"version_high":1,"version_low":18,"soc":69,"current":-4007,"cycle":3,"bq_ntc":[27,28],"mcu_ntc":[33,30]},"foot_force":[53,44,41,68],"temperature_ntc1":44,"power_v":29.552820}}
+2026-06-16 10:52:54,667 [INFO] root: Received message on data channel: {"type":"rtc_inner_req","info":{"req_type":"rtt_probe_send_from_mechine","send_time_stamp":1781628774,"uuid":"f5e63b5a-e123-43fc-9f02-bcb30ad04a5c"}}
+2026-06-16 10:52:54,667 [INFO] root: > message sent: {"type": "rtc_inner_req", "topic": "", "data": {"req_type": "rtt_probe_send_from_mechine", "send_time_stamp": 1781628774, "uuid": "f5e63b5a-e123-43fc-9f02-bcb30ad04a5c"}}
+2026-06-16 10:52:54,919 [INFO] root: > message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2026-06-16 10:52:54", "timeInNum": 1781628774}}
+2026-06-16 10:52:54,929 [INFO] root: Received message on data channel: {"type":"heartbeat"}
+2026-06-16 10:52:54,929 [INFO] root: Heartbeat response received.
+2026-06-16 10:52:54,941 [INFO] root: > message sent: {"type": "rtc_inner_req", "topic": "", "data": {"req_type": "public_network_status", "uuid": "e74914f0-df59-4f2b-ae11-3a2fee54cb50"}}
+2026-06-16 10:52:54,949 [INFO] root: Received message on data channel: {"type":"rtc_inner_req","info":{"req_type":"public_network_status","status":"Undefined","uuid":"e74914f0-df59-4f2b-ae11-3a2fee54cb50"}}
+2026-06-16 10:52:54,950 [INFO] root: Network status message received.
+2026-06-16 10:52:55,451 [INFO] root: > message sent: {"type": "rtc_inner_req", "topic": "", "data": {"req_type": "public_network_status", "uuid": "b93eaab1-8038-4833-bb75-f4ec6d52b2b3"}}
+2026-06-16 10:52:55,460 [INFO] root: Received message on data channel: {"type":"rtc_inner_req","info":{"req_type":"public_network_status","status":"Undefined","uuid":"b93eaab1-8038-4833-bb75-f4ec6d52b2b3"}}
+2026-06-16 10:52:55,461 [INFO] root: Network status message received.
+2026-06-16 10:52:55,645 [INFO] root: Received message on data channel: {"type":"msg","topic":"rt/lf/lowstate","data":{"imu_state":{"rpy":[-0.138060,0.046260,-2.975140]},"motor_state":[{"q":-0.029104,"temperature":39,"lost":0,"reserve":[0,595]},{"q":0.794103,"temperature":49,"lost":9,"reserve":[0,595]},{"q":-1.562677,"temperature":51,"lost":5,"reserve":[0,595]},{"q":-0.070903,"temperature":40,"lost":5,"reserve":[0,595]},{"q":0.639778,"temperature":53,"lost":8,"reserve":[0,595]},{"q":-1.624080,"temperature":53,"lost":5,"reserve":[0,595]},{"q":-0.042462,"temperature":40,"lost":14,"reserve":[0,595]},{"q":0.579218,"temperature":53,"lost":5,"reserve":[0,595]},{"q":-1.596245,"temperature":53,"lost":0,"reserve":[0,595]},{"q":0.039313,"temperature":44,"lost":5,"reserve":[0,595]},{"q":0.666448,"temperature":46,"lost":6,"reserve":[0,595]},{"q":-1.575820,"temperature":51,"lost":0,"reserve":[0,595]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]}],"bms_state":{"version_high":1,"version_low":18,"soc":69,"current":-4033,"cycle":3,"bq_ntc":[27,28],"mcu_ntc":[33,30]},"foot_force":[53,44,41,68],"temperature_ntc1":44,"power_v":29.561674}}
+2026-06-16 10:52:55,962 [INFO] root: > message sent: {"type": "rtc_inner_req", "topic": "", "data": {"req_type": "public_network_status", "uuid": "5ba72063-7771-48cc-903a-bb852f712f83"}}
+2026-06-16 10:52:55,971 [INFO] root: Received message on data channel: {"type":"rtc_inner_req","info":{"req_type":"public_network_status","status":"Undefined","uuid":"5ba72063-7771-48cc-903a-bb852f712f83"}}
+2026-06-16 10:52:55,971 [INFO] root: Network status message received.
+2026-06-16 10:52:56,473 [INFO] root: > message sent: {"type": "rtc_inner_req", "topic": "", "data": {"req_type": "public_network_status", "uuid": "5086a013-9456-469a-a245-396d0917b469"}}
+2026-06-16 10:52:56,510 [INFO] root: Received message on data channel: {"type":"rtc_inner_req","info":{"req_type":"public_network_status","status":"NetworkStatus.ON_WIFI_CONNECTED","uuid":"5086a013-9456-469a-a245-396d0917b469"}}
+2026-06-16 10:52:56,511 [INFO] root: Network status message received.
+2026-06-16 10:52:56,645 [INFO] root: Received message on data channel: {"type":"msg","topic":"rt/lf/lowstate","data":{"imu_state":{"rpy":[-0.138224,0.046109,-2.975818]},"motor_state":[{"q":-0.029044,"temperature":39,"lost":0,"reserve":[0,588]},{"q":0.793982,"temperature":49,"lost":9,"reserve":[0,588]},{"q":-1.562629,"temperature":51,"lost":5,"reserve":[0,588]},{"q":-0.070630,"temperature":40,"lost":5,"reserve":[0,588]},{"q":0.639869,"temperature":53,"lost":8,"reserve":[0,588]},{"q":-1.624174,"temperature":53,"lost":5,"reserve":[0,588]},{"q":-0.042552,"temperature":40,"lost":14,"reserve":[0,588]},{"q":0.579157,"temperature":53,"lost":5,"reserve":[0,588]},{"q":-1.596324,"temperature":53,"lost":0,"reserve":[0,588]},{"q":0.039071,"temperature":44,"lost":5,"reserve":[0,588]},{"q":0.666629,"temperature":46,"lost":6,"reserve":[0,588]},{"q":-1.575820,"temperature":51,"lost":0,"reserve":[0,588]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]}],"bms_state":{"version_high":1,"version_low":18,"soc":69,"current":-4081,"cycle":3,"bq_ntc":[27,28],"mcu_ntc":[33,30]},"foot_force":[53,44,41,66],"temperature_ntc1":44,"power_v":29.552820}}
+2026-06-16 10:52:56,920 [INFO] root: > message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2026-06-16 10:52:56", "timeInNum": 1781628776}}
+2026-06-16 10:52:56,929 [INFO] root: Received message on data channel: {"type":"heartbeat"}
+2026-06-16 10:52:56,929 [INFO] root: Heartbeat response received.
+2026-06-16 10:52:57,712 [INFO] root: Received message on data channel: {"type":"msg","topic":"rt/lf/lowstate","data":{"imu_state":{"rpy":[-0.138554,0.046195,-2.976023]},"motor_state":[{"q":-0.029104,"temperature":39,"lost":0,"reserve":[0,596]},{"q":0.793891,"temperature":49,"lost":9,"reserve":[0,596]},{"q":-1.562661,"temperature":51,"lost":5,"reserve":[0,596]},{"q":-0.070781,"temperature":40,"lost":5,"reserve":[0,596]},{"q":0.639809,"temperature":53,"lost":8,"reserve":[0,596]},{"q":-1.624127,"temperature":53,"lost":5,"reserve":[0,596]},{"q":-0.042522,"temperature":40,"lost":14,"reserve":[0,596]},{"q":0.579067,"temperature":53,"lost":5,"reserve":[0,596]},{"q":-1.596293,"temperature":53,"lost":0,"reserve":[0,596]},{"q":0.039040,"temperature":44,"lost":5,"reserve":[0,596]},{"q":0.666569,"temperature":47,"lost":6,"reserve":[0,596]},{"q":-1.575836,"temperature":51,"lost":0,"reserve":[0,596]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]}],"bms_state":{"version_high":1,"version_low":18,"soc":69,"current":-4052,"cycle":3,"bq_ntc":[27,28],"mcu_ntc":[33,30]},"foot_force":[53,44,41,66],"temperature_ntc1":44,"power_v":29.561674}}
+2026-06-16 10:52:58,077 [INFO] go2_survey.robot: BalanceStand...
+2026-06-16 10:52:58,078 [INFO] root: > message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 1364834223, "api_id": 1002}}, "parameter": ""}}
+2026-06-16 10:52:58,090 [INFO] root: Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1002,"id":1364834223},"status":{"code":0}},"data":""}}
+2026-06-16 10:52:58,646 [INFO] root: Received message on data channel: {"type":"msg","topic":"rt/lf/lowstate","data":{"imu_state":{"rpy":[-0.138521,0.046139,-2.976214]},"motor_state":[{"q":-0.029134,"temperature":39,"lost":0,"reserve":[0,590]},{"q":0.793800,"temperature":49,"lost":9,"reserve":[0,590]},{"q":-1.562629,"temperature":51,"lost":5,"reserve":[0,590]},{"q":-0.070781,"temperature":40,"lost":5,"reserve":[0,590]},{"q":0.639748,"temperature":53,"lost":8,"reserve":[0,590]},{"q":-1.624127,"temperature":53,"lost":5,"reserve":[0,590]},{"q":-0.042431,"temperature":40,"lost":14,"reserve":[0,590]},{"q":0.579036,"temperature":53,"lost":5,"reserve":[0,590]},{"q":-1.596245,"temperature":53,"lost":0,"reserve":[0,590]},{"q":0.038949,"temperature":44,"lost":5,"reserve":[0,590]},{"q":0.666538,"temperature":46,"lost":6,"reserve":[0,590]},{"q":-1.575804,"temperature":51,"lost":0,"reserve":[0,590]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]}],"bms_state":{"version_high":1,"version_low":18,"soc":69,"current":-4087,"cycle":3,"bq_ntc":[27,28],"mcu_ntc":[33,30]},"foot_force":[53,44,41,66],"temperature_ntc1":44,"power_v":29.552820}}
+2026-06-16 10:52:58,922 [INFO] root: > message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2026-06-16 10:52:58", "timeInNum": 1781628778}}
+2026-06-16 10:52:58,931 [INFO] root: Received message on data channel: {"type":"heartbeat"}
+2026-06-16 10:52:58,932 [INFO] root: Heartbeat response received.
+2026-06-16 10:52:59,091 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:59,092 [INFO] go2_survey.mission_runner: ----------- BATTERY AT START: 69% | 29.6V | 28°C -----------
+2026-06-16 10:52:59,092 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:59,092 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:59,093 [INFO] go2_survey.mission_runner: -------------- CAPTURE STRATEGY: line_survey ---------------
+2026-06-16 10:52:59,093 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:59,093 [INFO] go2_survey.robot: ------------------------------------------------------------
+2026-06-16 10:52:59,093 [INFO] go2_survey.robot: ------------------ ENABLING VIDEO CHANNEL ------------------
+2026-06-16 10:52:59,093 [INFO] go2_survey.robot: ------------------------------------------------------------
+2026-06-16 10:52:59,094 [INFO] root: > message sent: {"type": "vid", "topic": "", "data": "on"}
+2026-06-16 10:52:59,094 [INFO] go2_survey.robot: Video channel turned on; waiting for first frame
+2026-06-16 10:52:59,094 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:59,094 [INFO] go2_survey.mission_runner: ------------- PHASE 4: NAVIGATE 8 WAYPOINT(S) --------------
+2026-06-16 10:52:59,095 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:59,095 [INFO] go2_survey.navigator: ============================================================
+2026-06-16 10:52:59,095 [INFO] go2_survey.navigator:  LINE SURVEY | 8 corners / 7 legs | 1.00m/s | capture every 1.0m 
+2026-06-16 10:52:59,095 [INFO] go2_survey.navigator: ============================================================
+2026-06-16 10:52:59,724 [ERROR] go2_survey.navigator: No quality GPS fix at line-survey start
+2026-06-16 10:52:59,727 [INFO] go2_survey.bearings: finalize_bearings: no line-survey captures in /media/mpg-robodog/KINGSTON1/multimodal_survey/missions/site_1/strip_3/runs/strip_3_2026-06-16_10-52-41/captures
+2026-06-16 10:52:59,727 [ERROR] go2_survey.mission_runner: Line-survey route failed
+2026-06-16 10:52:59,729 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:59,729 [INFO] go2_survey.mission_runner: ---- BATTERY AT END: 69% | 29.6V | 28°C (+0% over run) -----
+2026-06-16 10:52:59,730 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-16 10:52:59,730 [INFO] root: > message sent: {"type": "vid", "topic": "", "data": "off"}
+2026-06-16 10:52:59,730 [INFO] go2_survey.robot: ------------------------------------------------------------
+2026-06-16 10:52:59,731 [INFO] go2_survey.robot: -------------------- VIDEO CHANNEL OFF ---------------------
+2026-06-16 10:52:59,731 [INFO] go2_survey.robot: ------------------------------------------------------------
+2026-06-16 10:52:59,731 [INFO] go2_survey.robot: Stopping robot
+2026-06-16 10:52:59,731 [INFO] root: > message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 1364835583, "api_id": 1003}}, "parameter": ""}}
+2026-06-16 10:52:59,748 [INFO] root: Received message on data channel: {"type":"msg","topic":"rt/lf/lowstate","data":{"imu_state":{"rpy":[-0.138763,0.046283,-2.976065]},"motor_state":[{"q":-0.029134,"temperature":39,"lost":0,"reserve":[0,592]},{"q":0.793891,"temperature":49,"lost":9,"reserve":[0,592]},{"q":-1.562645,"temperature":51,"lost":5,"reserve":[0,592]},{"q":-0.070842,"temperature":40,"lost":5,"reserve":[0,592]},{"q":0.639778,"temperature":53,"lost":8,"reserve":[0,592]},{"q":-1.624080,"temperature":53,"lost":5,"reserve":[0,592]},{"q":-0.042492,"temperature":40,"lost":14,"reserve":[0,592]},{"q":0.579036,"temperature":53,"lost":5,"reserve":[0,592]},{"q":-1.596293,"temperature":53,"lost":0,"reserve":[0,592]},{"q":0.038980,"temperature":44,"lost":5,"reserve":[0,592]},{"q":0.666508,"temperature":46,"lost":6,"reserve":[0,592]},{"q":-1.575804,"temperature":51,"lost":0,"reserve":[0,592]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]},{"q":0,"temperature":0,"lost":0,"reserve":[0,0]}],"bms_state":{"version_high":1,"version_low":18,"soc":69,"current":-3993,"cycle":3,"bq_ntc":[27,28],"mcu_ntc":[33,30]},"foot_force":[53,44,41,66],"temperature_ntc1":44,"power_v":29.552820}}
+2026-06-16 10:52:59,750 [INFO] root: Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1003,"id":1364835583},"status":{"code":0}},"data":""}}
+2026-06-16 10:52:59,754 [INFO] root: Data channel closed
+2026-06-16 10:52:59,758 [INFO] go2_survey.ntrip: RTCM correction worker stopped
+2026-06-16 10:52:59,758 [INFO] go2_survey.ntrip: Disconnected from NTRIP. Forwarded 32 messages.
+2026-06-16 10:52:59,761 [INFO] go2_survey.gps: GPS connection closed
+2026-06-16 10:52:59,761 [INFO] go2_survey.mission_runner: Connections closed
