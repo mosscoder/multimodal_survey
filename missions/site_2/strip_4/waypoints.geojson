@@ -1,0 +1,198 @@
+{
+  "type": "FeatureCollection",
+  "name": "generated_waypoints",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "generation": {
+    "source": "strip_4/seed_poly.geojson",
+    "projection_epsg": 6514,
+    "bearing_deg": 171.56,
+    "bearing_source": "auto_longest_edge",
+    "leg_space_m": 5.0,
+    "start_corner": "south",
+    "source_polygon": [
+      [
+        -114.01663568599886,
+        46.69793542181799
+      ],
+      [
+        -114.01598961973896,
+        46.698007705551
+      ],
+      [
+        -114.01590994510988,
+        46.69778678596495
+      ],
+      [
+        -114.01656754822596,
+        46.69769271607223
+      ],
+      [
+        -114.01663568599886,
+        46.69793542181799
+      ]
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_001"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01657082390703,
+          46.69770355558499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01591322066365,
+          46.69779762549406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_003"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.015926535778,
+          46.69784168809525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_004"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01658413953582,
+          46.6977476181096
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_005"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01659745518637,
+          46.69779168063251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_006"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01593985091412,
+          46.69788575069477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_007"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.015953166072,
+          46.69792981329254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_008"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0166107708587,
+          46.69783574315371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01662408655282,
+          46.697879805673196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01596648125167,
+          46.6979738758886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_011"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01597979645311,
+          46.69801793848296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "wp_012"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0166374022687,
+          46.69792386819097
+        ]
+      }
+    }
+  ]
+}

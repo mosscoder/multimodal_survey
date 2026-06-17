@@ -1,0 +1,48 @@
+name        = "site_2_strip_3"
+description = "Lawnmower line survey of site 2, strip 3: the strip polygon boxified to a 51 m × 35 m grid (7 legs), then hand-reduced to 6 legs during field planning to clear a sagebrush at the east edge — 6 identical 50.7 m legs at exact 5 m spacing along the strip axis (auto bearing 80.2°), starting at the southern corner, walked at 1 m/s, capturing a clean frame every 1 m of along-track travel (~300 frames over ~304 m of survey legs), steered by cross_track (GPS-course pure pursuit). Waypoints generated from seed_poly.geojson (QGIS polygon, EPSG:6514), then hand-edited."
+mode        = "nav"
+
+# Run by path. On the dog's Jetson (repo cloned on the KINGSTON datastick):
+#   go2-survey run /media/mpg-robodog/KINGSTON/multimodal_survey/missions/site_2/strip_3
+# Run outputs (logs, captures, sidecars) land in ./runs/site_2_strip_3_<timestamp>/
+# next to this file — on the datastick, git-ignored. For throwaway dev
+# dry-runs elsewhere:
+#   GO2_SURVEY_OUTPUT_DIR=/tmp/go2-out go2-survey run missions/site_2/strip_3 --dry-run
+
+[gps]
+port = "/dev/ttyACM0"
+baud = 38400
+
+[ntrip]
+host        = "caster.emlid.com"
+port        = 2101
+mountpoints = ["MP22385", "MP22385a"]
+usernames   = ["u26787",  "u26787"]
+passwords   = ["492utz",  "492utz"]
+
+[robot]
+connection_mode = "LocalSTA"
+
+[navigation]
+arrival_tolerance = 0.25
+max_velocity      = 1.0
+rotation_rate     = 0.8
+min_fix_type      = 4
+max_hacc          = 0.10
+gps_fix_timeout   = 300
+max_rtcm_age_s    = 12.0   # pause if corrections older than this; raised 5->12
+                           # (RTCM audit: field-link jitter, not caster; hAcc/fix still gate)
+
+[capture]
+# Line survey with cross_track leg steering — the 09-validated config:
+# drive straight legs between the corner waypoints at [navigation]
+# max_velocity, turn in place at each corner, and capture a clean frame
+# every capture_interval_m of along-track travel. Capture points are not
+# waypoints — each image is geotagged with its own interpolated RTK
+# position; EXIF bearing is finalized post-hoc from the RTK track.
+strategy           = "line_survey"
+capture_interval_m = 1.0
+output_subdir      = "captures"
+leg_steering       = "cross_track"
+lookahead_m        = 4.0
+course_lookback_m  = 1.0
