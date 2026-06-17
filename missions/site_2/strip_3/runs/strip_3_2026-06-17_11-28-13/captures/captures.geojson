@@ -1,0 +1,1760 @@
+{
+  "type": "FeatureCollection",
+  "name": "captures",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m000_b346_2026-06-17T11-28-47.jpg",
+        "leg": "leg01",
+        "mark_index": 0,
+        "along_track_m": 0.0,
+        "achieved_heading": 345.23447924532724,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:28:47.922605+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.015799,
+          46.6971243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m001_b346_2026-06-17T11-28-49.jpg",
+        "leg": "leg01",
+        "mark_index": 1,
+        "along_track_m": 1.0,
+        "achieved_heading": 341.58989471050006,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:28:49.615155+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158063,
+          46.6971333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m002_b346_2026-06-17T11-28-50.jpg",
+        "leg": "leg01",
+        "mark_index": 2,
+        "along_track_m": 2.0,
+        "achieved_heading": 353.6126119004072,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:28:50.599539+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01581256593916,
+          46.69714065355342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m003_b346_2026-06-17T11-28-51.jpg",
+        "leg": "leg01",
+        "mark_index": 3,
+        "along_track_m": 3.0,
+        "achieved_heading": 12.440176935744606,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:28:51.705951+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01581464263627,
+          46.69714987518339
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m004_b346_2026-06-17T11-28-52.jpg",
+        "leg": "leg01",
+        "mark_index": 4,
+        "along_track_m": 4.0,
+        "achieved_heading": 13.448697246733879,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:28:52.828927+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158144,
+          46.697159299999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m005_b346_2026-06-17T11-28-54.jpg",
+        "leg": "leg01",
+        "mark_index": 5,
+        "along_track_m": 5.0,
+        "achieved_heading": 6.537279251409295,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:28:53.748138+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01581478202061,
+          46.69716749435048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m006_b346_2026-06-17T11-28-55.jpg",
+        "leg": "leg01",
+        "mark_index": 6,
+        "along_track_m": 6.0,
+        "achieved_heading": 0.1619453077845634,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:28:54.919060+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01581638498095,
+          46.69717714822545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m007_b346_2026-06-17T11-28-56.jpg",
+        "leg": "leg01",
+        "mark_index": 7,
+        "along_track_m": 7.0,
+        "achieved_heading": 357.18277623433755,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:28:56.052012+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158194,
+          46.6971857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m008_b346_2026-06-17T11-28-57.jpg",
+        "leg": "leg01",
+        "mark_index": 8,
+        "along_track_m": 8.0,
+        "achieved_heading": 358.8609696162757,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:28:57.171079+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01582302174293,
+          46.69719547827167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m009_b346_2026-06-17T11-28-58.jpg",
+        "leg": "leg01",
+        "mark_index": 9,
+        "along_track_m": 9.0,
+        "achieved_heading": 359.6041820473691,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:28:58.151930+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01582550975414,
+          46.69720353901658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m010_b346_2026-06-17T11-28-59.jpg",
+        "leg": "leg01",
+        "mark_index": 10,
+        "along_track_m": 10.0,
+        "achieved_heading": 359.88450751896283,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:28:59.275233+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158281,
+          46.697212199999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m011_b346_2026-06-17T11-29-00.jpg",
+        "leg": "leg01",
+        "mark_index": 11,
+        "along_track_m": 11.0,
+        "achieved_heading": 358.3120453912976,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:00.370839+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01583053506903,
+          46.69722217923471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m012_b346_2026-06-17T11-29-01.jpg",
+        "leg": "leg01",
+        "mark_index": 12,
+        "along_track_m": 12.0,
+        "achieved_heading": 358.19443272812754,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:01.440551+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158337,
+          46.697230399999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m013_b346_2026-06-17T11-29-02.jpg",
+        "leg": "leg01",
+        "mark_index": 13,
+        "along_track_m": 13.0,
+        "achieved_heading": 359.57226774525407,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:02.413939+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.015836,
+          46.6972388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m014_b346_2026-06-17T11-29-04.jpg",
+        "leg": "leg01",
+        "mark_index": 14,
+        "along_track_m": 14.0,
+        "achieved_heading": 355.9318467514191,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:03.543178+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01583865564312,
+          46.697248115048346
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m015_b346_2026-06-17T11-29-04.jpg",
+        "leg": "leg01",
+        "mark_index": 15,
+        "along_track_m": 15.0,
+        "achieved_heading": 353.5113192056806,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:04.654603+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158418938007,
+          46.6972572876014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m016_b346_2026-06-17T11-29-05.jpg",
+        "leg": "leg01",
+        "mark_index": 16,
+        "along_track_m": 16.0,
+        "achieved_heading": 355.0791034266529,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:05.640347+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.015845,
+          46.697265099999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m017_b346_2026-06-17T11-29-06.jpg",
+        "leg": "leg01",
+        "mark_index": 17,
+        "along_track_m": 17.0,
+        "achieved_heading": 356.3537131455764,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:06.676301+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158484,
+          46.6972734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m018_b346_2026-06-17T11-29-07.jpg",
+        "leg": "leg01",
+        "mark_index": 18,
+        "along_track_m": 18.0,
+        "achieved_heading": 357.6735260840914,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:07.727049+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01585186809736,
+          46.6972829053651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m019_b346_2026-06-17T11-29-08.jpg",
+        "leg": "leg01",
+        "mark_index": 19,
+        "along_track_m": 19.0,
+        "achieved_heading": 357.7230425434708,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:08.719609+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01585447949608,
+          46.697291117144495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m020_b346_2026-06-17T11-29-09.jpg",
+        "leg": "leg01",
+        "mark_index": 20,
+        "along_track_m": 20.0,
+        "achieved_heading": 357.1081903882227,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:09.763353+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158571367329,
+          46.69730001529806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m021_b346_2026-06-17T11-29-11.jpg",
+        "leg": "leg01",
+        "mark_index": 21,
+        "along_track_m": 21.0,
+        "achieved_heading": 356.57179584869283,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:10.884794+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01586043859477,
+          46.69730909297388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m022_b346_2026-06-17T11-29-12.jpg",
+        "leg": "leg01",
+        "mark_index": 22,
+        "along_track_m": 22.0,
+        "achieved_heading": 356.88052974249536,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:11.969022+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01586324752424,
+          46.69731822158241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m023_b346_2026-06-17T11-29-13.jpg",
+        "leg": "leg01",
+        "mark_index": 23,
+        "along_track_m": 23.0,
+        "achieved_heading": 354.7293723542867,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:13.065370+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01586614589486,
+          46.69732722005322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m024_b346_2026-06-17T11-29-14.jpg",
+        "leg": "leg01",
+        "mark_index": 24,
+        "along_track_m": 24.0,
+        "achieved_heading": 352.82690168700265,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:14.040857+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158689,
+          46.697334999999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m025_b346_2026-06-17T11-29-15.jpg",
+        "leg": "leg01",
+        "mark_index": 25,
+        "along_track_m": 25.0,
+        "achieved_heading": 353.4711637375759,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:15.096125+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01587224348754,
+          46.697344085114366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m026_b346_2026-06-17T11-29-16.jpg",
+        "leg": "leg01",
+        "mark_index": 26,
+        "along_track_m": 26.0,
+        "achieved_heading": 355.54653269730704,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:16.139357+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158750125576,
+          46.6973527689132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m027_b346_2026-06-17T11-29-17.jpg",
+        "leg": "leg01",
+        "mark_index": 27,
+        "along_track_m": 27.0,
+        "achieved_heading": 356.11164075009947,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:17.120910+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01587731871085,
+          46.697361367099404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m028_b346_2026-06-17T11-29-18.jpg",
+        "leg": "leg01",
+        "mark_index": 28,
+        "along_track_m": 28.0,
+        "achieved_heading": 353.55985456609494,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:18.228820+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158798,
+          46.6973706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m029_b346_2026-06-17T11-29-19.jpg",
+        "leg": "leg01",
+        "mark_index": 29,
+        "along_track_m": 29.0,
+        "achieved_heading": 352.424778562198,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:19.296006+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158823,
+          46.6973789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m030_b346_2026-06-17T11-29-20.jpg",
+        "leg": "leg01",
+        "mark_index": 30,
+        "along_track_m": 30.0,
+        "achieved_heading": 351.1910181090469,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:20.413722+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01588629999999,
+          46.697389099999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m031_b346_2026-06-17T11-29-21.jpg",
+        "leg": "leg01",
+        "mark_index": 31,
+        "along_track_m": 31.0,
+        "achieved_heading": 351.4037110524335,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:21.391977+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01588919999999,
+          46.6973973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m032_b346_2026-06-17T11-29-22.jpg",
+        "leg": "leg01",
+        "mark_index": 32,
+        "along_track_m": 32.0,
+        "achieved_heading": 352.0105558809064,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:22.447658+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158924,
+          46.697405599999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m033_b346_2026-06-17T11-29-23.jpg",
+        "leg": "leg01",
+        "mark_index": 33,
+        "along_track_m": 33.0,
+        "achieved_heading": 351.8112858554264,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:23.498675+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158957,
+          46.697414099999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m034_b346_2026-06-17T11-29-24.jpg",
+        "leg": "leg01",
+        "mark_index": 34,
+        "along_track_m": 34.0,
+        "achieved_heading": 352.7222123775126,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:24.412861+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158987,
+          46.6974228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m035_b346_2026-06-17T11-29-25.jpg",
+        "leg": "leg01",
+        "mark_index": 35,
+        "along_track_m": 35.0,
+        "achieved_heading": 353.51663970282306,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:25.604304+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01590209999999,
+          46.6974325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m036_b346_2026-06-17T11-29-26.jpg",
+        "leg": "leg01",
+        "mark_index": 36,
+        "along_track_m": 36.0,
+        "achieved_heading": 352.98244474215,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:26.571689+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01590493193098,
+          46.697440776672146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m037_b346_2026-06-17T11-29-27.jpg",
+        "leg": "leg01",
+        "mark_index": 37,
+        "along_track_m": 37.0,
+        "achieved_heading": 352.93183878630384,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:27.561607+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01590753988137,
+          46.69744935952549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m038_b346_2026-06-17T11-29-28.jpg",
+        "leg": "leg01",
+        "mark_index": 38,
+        "along_track_m": 38.0,
+        "achieved_heading": 350.8681328754404,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:28.746850+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01591049999999,
+          46.6974577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m039_b346_2026-06-17T11-29-29.jpg",
+        "leg": "leg01",
+        "mark_index": 39,
+        "along_track_m": 39.0,
+        "achieved_heading": 351.17729489262615,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:29.598941+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01591379999999,
+          46.6974661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m040_b346_2026-06-17T11-29-30.jpg",
+        "leg": "leg01",
+        "mark_index": 40,
+        "along_track_m": 40.0,
+        "achieved_heading": 351.87053430035945,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:30.777158+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01591704255503,
+          46.69747595638759
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m041_b346_2026-06-17T11-29-31.jpg",
+        "leg": "leg01",
+        "mark_index": 41,
+        "along_track_m": 41.0,
+        "achieved_heading": 351.8315069201688,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:31.808127+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01592,
+          46.697484599999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m042_b346_2026-06-17T11-29-32.jpg",
+        "leg": "leg01",
+        "mark_index": 42,
+        "along_track_m": 42.0,
+        "achieved_heading": 352.49971162357906,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:32.815611+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.015923,
+          46.697493099999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m043_b346_2026-06-17T11-29-34.jpg",
+        "leg": "leg01",
+        "mark_index": 43,
+        "along_track_m": 43.0,
+        "achieved_heading": 354.1701283670751,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:33.958231+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01592514722907,
+          46.69750233614534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m044_b346_2026-06-17T11-29-35.jpg",
+        "leg": "leg01",
+        "mark_index": 44,
+        "along_track_m": 44.0,
+        "achieved_heading": 350.6559444144634,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:35.050560+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01592799999999,
+          46.697511299999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m045_b346_2026-06-17T11-29-36.jpg",
+        "leg": "leg01",
+        "mark_index": 45,
+        "along_track_m": 45.0,
+        "achieved_heading": 350.53609305831606,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:36.001149+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01593129999999,
+          46.697519899999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m046_b346_2026-06-17T11-29-37.jpg",
+        "leg": "leg01",
+        "mark_index": 46,
+        "along_track_m": 46.0,
+        "achieved_heading": 351.3526814411455,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:37.091447+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01593454854071,
+          46.69752904687298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m047_b346_2026-06-17T11-29-38.jpg",
+        "leg": "leg01",
+        "mark_index": 47,
+        "along_track_m": 47.0,
+        "achieved_heading": 352.4174796938628,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:38.019429+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01593688777216,
+          46.69753692569984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m048_b346_2026-06-17T11-29-39.jpg",
+        "leg": "leg01",
+        "mark_index": 48,
+        "along_track_m": 48.0,
+        "achieved_heading": 351.0963772554395,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:39.327063+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01594029139636,
+          46.697546043723634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m049_b346_2026-06-17T11-29-40.jpg",
+        "leg": "leg01",
+        "mark_index": 49,
+        "along_track_m": 49.0,
+        "achieved_heading": 351.3453486245043,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:40.377850+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01594304949,
+          46.697554956888325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg01_m050_b346_2026-06-17T11-29-41.jpg",
+        "leg": "leg01",
+        "mark_index": 50,
+        "along_track_m": 50.0,
+        "achieved_heading": 354.13718167141076,
+        "target_bearing": 346.9099224645077,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:41.359310+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0159454937698,
+          46.69756309901448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg02_m000_b076_2026-06-17T11-29-47.jpg",
+        "leg": "leg02",
+        "mark_index": 0,
+        "along_track_m": 0.0,
+        "achieved_heading": 76.8600259914858,
+        "target_bearing": 76.82957323268175,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:47.227423+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0159474,
+          46.6975736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg02_m001_b076_2026-06-17T11-29-49.jpg",
+        "leg": "leg02",
+        "mark_index": 1,
+        "along_track_m": 1.0,
+        "achieved_heading": 76.015600793022,
+        "target_bearing": 76.82957323268175,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:48.981942+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0159332294286,
+          46.69757726593984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg02_m002_b076_2026-06-17T11-29-50.jpg",
+        "leg": "leg02",
+        "mark_index": 2,
+        "along_track_m": 2.0,
+        "achieved_heading": 77.48174249498226,
+        "target_bearing": 76.82957323268175,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:49.991638+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0159216194851,
+          46.69758019454417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg02_m003_b076_2026-06-17T11-29-51.jpg",
+        "leg": "leg02",
+        "mark_index": 3,
+        "along_track_m": 3.0,
+        "achieved_heading": 98.98668201118647,
+        "target_bearing": 76.82957323268175,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:51.157564+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01590778020827,
+          46.697581753583336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg02_m004_b076_2026-06-17T11-29-53.jpg",
+        "leg": "leg02",
+        "mark_index": 4,
+        "along_track_m": 4.0,
+        "achieved_heading": 113.66517317308401,
+        "target_bearing": 76.82957323268175,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:52.274836+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01589500340651,
+          46.697580718956026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg02_m005_b076_2026-06-17T11-29-53.jpg",
+        "leg": "leg02",
+        "mark_index": 5,
+        "along_track_m": 4.757,
+        "achieved_heading": 113.66517317308401,
+        "target_bearing": 76.82957323268175,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:53.185343+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01588491653465,
+          46.69757814293382
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m000_b166_2026-06-17T11-29-56.jpg",
+        "leg": "leg03",
+        "mark_index": 0,
+        "along_track_m": 0.0,
+        "achieved_heading": 164.7523820181287,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:56.023257+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158792,
+          46.6975765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m001_b166_2026-06-17T11-29-57.jpg",
+        "leg": "leg03",
+        "mark_index": 1,
+        "along_track_m": 1.0,
+        "achieved_heading": 163.53501859081427,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:57.241845+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158758896405,
+          46.697571179281006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m002_b166_2026-06-17T11-29-58.jpg",
+        "leg": "leg03",
+        "mark_index": 2,
+        "along_track_m": 2.0,
+        "achieved_heading": 170.0056028585652,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:58.383141+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01587076047691,
+          46.69756204687251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m003_b166_2026-06-17T11-29-59.jpg",
+        "leg": "leg03",
+        "mark_index": 3,
+        "along_track_m": 3.0,
+        "achieved_heading": 178.29435409760475,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:29:59.420469+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158687,
+          46.6975537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m004_b166_2026-06-17T11-30-00.jpg",
+        "leg": "leg03",
+        "mark_index": 4,
+        "along_track_m": 4.0,
+        "achieved_heading": 177.92640060157174,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:00.617786+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01586739999999,
+          46.6975437
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m005_b166_2026-06-17T11-30-01.jpg",
+        "leg": "leg03",
+        "mark_index": 5,
+        "along_track_m": 5.0,
+        "achieved_heading": 173.96130347614837,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:01.662097+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158659,
+          46.6975353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m006_b166_2026-06-17T11-30-02.jpg",
+        "leg": "leg03",
+        "mark_index": 6,
+        "along_track_m": 6.0,
+        "achieved_heading": 172.09506297195787,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:02.697968+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01586356819226,
+          46.697526165492164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m007_b166_2026-06-17T11-30-03.jpg",
+        "leg": "leg03",
+        "mark_index": 7,
+        "along_track_m": 7.0,
+        "achieved_heading": 170.90793725047192,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:03.826074+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.015861,
+          46.6975171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m008_b166_2026-06-17T11-30-05.jpg",
+        "leg": "leg03",
+        "mark_index": 8,
+        "along_track_m": 8.0,
+        "achieved_heading": 171.83863463449853,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:04.948824+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158579064333,
+          46.69750775234155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m009_b166_2026-06-17T11-30-06.jpg",
+        "leg": "leg03",
+        "mark_index": 9,
+        "along_track_m": 9.0,
+        "achieved_heading": 169.91948514583606,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:05.990351+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01585540821009,
+          46.697499321893574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m010_b166_2026-06-17T11-30-07.jpg",
+        "leg": "leg03",
+        "mark_index": 10,
+        "along_track_m": 10.0,
+        "achieved_heading": 170.59445444457333,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:07.053701+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158522,
+          46.6974911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m011_b166_2026-06-17T11-30-08.jpg",
+        "leg": "leg03",
+        "mark_index": 11,
+        "along_track_m": 11.0,
+        "achieved_heading": 172.8107593671084,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:08.172110+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01584910202719,
+          46.697481955067985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m012_b166_2026-06-17T11-30-09.jpg",
+        "leg": "leg03",
+        "mark_index": 12,
+        "along_track_m": 12.0,
+        "achieved_heading": 173.88349792619715,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:09.285311+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158472,
+          46.697474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m013_b166_2026-06-17T11-30-10.jpg",
+        "leg": "leg03",
+        "mark_index": 13,
+        "along_track_m": 13.0,
+        "achieved_heading": 170.97524271277155,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:10.435893+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01584419999999,
+          46.697464599999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m014_b166_2026-06-17T11-30-11.jpg",
+        "leg": "leg03",
+        "mark_index": 14,
+        "along_track_m": 14.0,
+        "achieved_heading": 169.140430117841,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:11.393202+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01584151415274,
+          46.697456545288794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m015_b166_2026-06-17T11-30-12.jpg",
+        "leg": "leg03",
+        "mark_index": 15,
+        "along_track_m": 15.0,
+        "achieved_heading": 169.78775709472106,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:12.648563+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01583769999999,
+          46.697446899999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m016_b166_2026-06-17T11-30-13.jpg",
+        "leg": "leg03",
+        "mark_index": 16,
+        "along_track_m": 16.0,
+        "achieved_heading": 170.0000272208635,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:13.631340+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158352,
+          46.6974388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m017_b166_2026-06-17T11-30-15.jpg",
+        "leg": "leg03",
+        "mark_index": 17,
+        "along_track_m": 17.0,
+        "achieved_heading": 170.94950432033926,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:14.843398+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.01583179388442,
+          46.69742916043015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "file": "leg03_m018_b166_2026-06-17T11-30-15.jpg",
+        "leg": "leg03",
+        "mark_index": 18,
+        "along_track_m": 18.0,
+        "achieved_heading": 170.90435103054048,
+        "target_bearing": 166.90985932736248,
+        "fix_type": 6,
+        "hacc_m": 0.014,
+        "corrupt": false,
+        "position_interpolated": true,
+        "captured_at_utc": "2026-06-17T17:30:15.961122+00:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0158293,
+          46.6974215
+        ]
+      }
+    }
+  ]
+}

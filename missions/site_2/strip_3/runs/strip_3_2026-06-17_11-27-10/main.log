@@ -1,0 +1,85 @@
+2026-06-17 11:27:10,555 [INFO] go2_survey.cli: go2-survey v0.34.0 | git 62b70f8 | run dir: /media/mpg-robodog/KINGSTON1/multimodal_survey/missions/site_2/strip_3/runs/strip_3_2026-06-17_11-27-10
+2026-06-17 11:27:10,556 [INFO] go2_survey.cli: Logging to: /media/mpg-robodog/KINGSTON1/multimodal_survey/missions/site_2/strip_3/runs/strip_3_2026-06-17_11-27-10/main.log (+ imu.log, gps.log)
+2026-06-17 11:27:10,557 [INFO] go2_survey.cli: Mission dir: /media/mpg-robodog/KINGSTON1/multimodal_survey/missions/site_2/strip_3
+2026-06-17 11:27:10,562 [INFO] go2_survey.mission_runner: ============================================================
+2026-06-17 11:27:10,562 [INFO] go2_survey.mission_runner: ================= MISSION: site_2_strip_3 ==================
+2026-06-17 11:27:10,562 [INFO] go2_survey.mission_runner: ============================================================
+2026-06-17 11:27:10,563 [INFO] go2_survey.mission_runner: Lawnmower line survey of site 2, strip 3: the strip polygon boxified to a 51 m × 35 m grid (7 legs), then hand-reduced to 6 legs during field planning to clear a sagebrush at the east edge — 6 identical 50.7 m legs at exact 5 m spacing along the strip axis (auto bearing 80.2°), starting at the southern corner, walked at 1 m/s, capturing a clean frame every 1 m of along-track travel (~300 frames over ~304 m of survey legs), steered by cross_track (GPS-course pure pursuit). Waypoints generated from seed_poly.geojson (QGIS polygon, EPSG:6514), then hand-edited.
+2026-06-17 11:27:10,563 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:10,563 [INFO] go2_survey.mission_runner: ------------------------ MODE: nav -------------------------
+2026-06-17 11:27:10,563 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:10,565 [INFO] go2_survey.waypoints: Loaded 12 waypoints from /media/mpg-robodog/KINGSTON1/multimodal_survey/missions/site_2/strip_3/waypoints.geojson
+2026-06-17 11:27:10,565 [INFO] go2_survey.mission_runner: Loaded 12 waypoint(s):
+2026-06-17 11:27:10,565 [INFO] go2_survey.mission_runner:   1. wp_001: (46.69712492, -114.01579520)
+2026-06-17 11:27:10,566 [INFO] go2_survey.mission_runner:   2. wp_002: (46.69756909, -114.01594579)
+2026-06-17 11:27:10,566 [INFO] go2_survey.mission_runner:   3. wp_003: (46.69757931, -114.01588209)
+2026-06-17 11:27:10,566 [INFO] go2_survey.mission_runner:   4. wp_004: (46.69713514, -114.01573150)
+2026-06-17 11:27:10,566 [INFO] go2_survey.mission_runner:   5. wp_005: (46.69714536, -114.01566780)
+2026-06-17 11:27:10,566 [INFO] go2_survey.mission_runner:   6. wp_006: (46.69758953, -114.01581839)
+2026-06-17 11:27:10,567 [INFO] go2_survey.mission_runner:   7. wp_007: (46.69759976, -114.01575468)
+2026-06-17 11:27:10,567 [INFO] go2_survey.mission_runner:   8. wp_008: (46.69715559, -114.01560410)
+2026-06-17 11:27:10,567 [INFO] go2_survey.mission_runner:   9. wp_009: (46.69716581, -114.01554040)
+2026-06-17 11:27:10,567 [INFO] go2_survey.mission_runner:   10. wp_010: (46.69760998, -114.01569098)
+2026-06-17 11:27:10,567 [INFO] go2_survey.mission_runner:   11. wp_011: (46.69762020, -114.01562728)
+2026-06-17 11:27:10,567 [INFO] go2_survey.mission_runner:   12. wp_012: (46.69717603, -114.01547670)
+2026-06-17 11:27:10,568 [INFO] go2_survey.mission_runner: GPS: /dev/ttyACM0 @ 38400 | NTRIP: caster.emlid.com:2101 mountpoints=['MP22385', 'MP22385a'] | Robot: LocalSTA
+2026-06-17 11:27:10,568 [INFO] go2_survey.mission_runner: Nav: tol=0.25m vmax=1.0m/s rot=0.8rad/s minFix=4 maxHacc=0.1m
+2026-06-17 11:27:10,568 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:10,568 [INFO] go2_survey.mission_runner:  AUTO-DISCOVERING ROBOT IP (up to 4 attempts, 10s between) -
+2026-06-17 11:27:10,569 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:10,569 [INFO] go2_survey.mission_runner: robot.ip not set in mission.toml and ROBOT_IP env var not set; scanning local network for a Go2 (nmap ports 8081/9991)...
+2026-06-17 11:27:10,569 [INFO] go2_survey.mission_runner: Discovery attempt 1/4: scanning for Go2 on ports 8081/9991...
+2026-06-17 11:27:10,581 [INFO] go2_survey.discovery: Scanning 10.255.106.241/24 for Go2 ports 8081/9991...
+2026-06-17 11:27:28,080 [INFO] go2_survey.mission_runner: Discovery attempt 1: found Go2 at 10.255.106.5
+2026-06-17 11:27:28,082 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:28,082 [INFO] go2_survey.mission_runner: ------------ ROBOT IP DISCOVERED | 10.255.106.5 ------------
+2026-06-17 11:27:28,082 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:28,082 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:28,083 [INFO] go2_survey.mission_runner: ----------------------- PHASE 1: GPS -----------------------
+2026-06-17 11:27:28,083 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:28,087 [INFO] go2_survey.gps: Connected to GPS on /dev/ttyACM0 @ 38400 baud
+2026-06-17 11:27:28,088 [INFO] go2_survey.gps: NTRIP: trying primary mountpoint MP22385 (1/2, attempt 1/3)
+2026-06-17 11:27:28,089 [INFO] go2_survey.ntrip: Connecting to NTRIP caster at caster.emlid.com:2101
+2026-06-17 11:27:28,517 [INFO] go2_survey.ntrip: Connected to NTRIP mountpoint: MP22385
+2026-06-17 11:27:28,518 [INFO] go2_survey.gps: NTRIP: connected via primary mountpoint MP22385 (took 0s, 1 attempt(s))
+2026-06-17 11:27:28,520 [INFO] go2_survey.ntrip: Started RTCM correction stream
+2026-06-17 11:27:28,520 [INFO] go2_survey.gps: Waiting for GPS fix (min type 4, NTRIP state=connected)...
+2026-06-17 11:27:28,521 [WARNING] go2_survey.gps: wait_for_fix: RTCM stalled (state=connected, rtcm_age=∞, alive=True) — firing reconnect_ntrip_async()
+2026-06-17 11:27:28,522 [INFO] go2_survey.ntrip: RTCM correction worker stopped
+2026-06-17 11:27:28,522 [INFO] go2_survey.ntrip: Disconnected from NTRIP. Forwarded 0 messages.
+2026-06-17 11:27:28,523 [INFO] go2_survey.gps: NTRIP reconnect: starting retry loop
+2026-06-17 11:27:28,523 [INFO] go2_survey.gps: NTRIP: trying primary mountpoint MP22385 (1/2, attempt 1/3)
+2026-06-17 11:27:28,523 [INFO] go2_survey.ntrip: Connecting to NTRIP caster at caster.emlid.com:2101
+2026-06-17 11:27:28,907 [INFO] go2_survey.ntrip: Connected to NTRIP mountpoint: MP22385
+2026-06-17 11:27:28,908 [INFO] go2_survey.gps: NTRIP: connected via primary mountpoint MP22385 (took 0s, 1 attempt(s))
+2026-06-17 11:27:28,909 [INFO] go2_survey.ntrip: Started RTCM correction stream
+2026-06-17 11:27:28,909 [INFO] go2_survey.gps: NTRIP reconnect: stream restored
+2026-06-17 11:27:32,534 [INFO] go2_survey.gps: wait_for_fix: RTCM flow restored; re-arming stall-reconnect trigger
+2026-06-17 11:27:37,550 [INFO] go2_survey.gps: RTK Float achieved! Lat: 46.69715550, Lon: -114.01566600, h: 1195.03m, hMSL: 1212.76m hAcc: 0.103m pDOP: 1.02
+2026-06-17 11:27:37,550 [INFO] go2_survey.gps: ============================================================
+2026-06-17 11:27:37,551 [INFO] go2_survey.gps:  GPS RTK Float ACHIEVED | hAcc: 0.103m pDOP: 1.02 | rtcm_age=1.1s msgs=18 
+2026-06-17 11:27:37,551 [INFO] go2_survey.gps: ============================================================
+2026-06-17 11:27:37,551 [INFO] go2_survey.mission_runner: Start position: (46.69715550, -114.01566600) hAcc: 0.103m
+2026-06-17 11:27:37,551 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:37,552 [INFO] go2_survey.mission_runner: ------------- PHASE 2: GPS STABILIZATION (60s) -------------
+2026-06-17 11:27:37,552 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:37,552 [INFO] go2_survey.gps: ------------------------------------------------------------
+2026-06-17 11:27:37,552 [INFO] go2_survey.gps:  DWELL: 60s — robot stationary, RTK soaking (early-exit on 3s trusted Fixed) 
+2026-06-17 11:27:37,552 [INFO] go2_survey.gps: ------------------------------------------------------------
+2026-06-17 11:27:50,590 [INFO] go2_survey.gps: ============================================================
+2026-06-17 11:27:50,591 [INFO] go2_survey.gps:  DWELL EARLY EXIT | best=RTK Fixed min_hAcc=0.014m | mean hAcc=0.047m sats=30.0 | TTFloat=0s TTFixed=11s | early@13s/60s (held trusted Fixed 3s) 
+2026-06-17 11:27:50,591 [INFO] go2_survey.gps: ============================================================
+2026-06-17 11:27:50,591 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:50,591 [INFO] go2_survey.mission_runner: ---------------------- PHASE 3: ROBOT ----------------------
+2026-06-17 11:27:50,592 [INFO] go2_survey.mission_runner: ------------------------------------------------------------
+2026-06-17 11:27:50,592 [INFO] go2_survey.robot: Connecting via LocalSTA (IP: 10.255.106.5)
+2026-06-17 11:27:50,760 [INFO] root: Creating offer...
+2026-06-17 11:27:51,318 [INFO] root: Track received: audio
+2026-06-17 11:27:51,320 [INFO] root: Track received: video
+2026-06-17 11:28:06,320 [ERROR] go2_survey.robot: Failed to connect to robot: Data channel setup timed out after 15s — the WebRTC peer never reached `connected` (peer=connecting, ice=checking). This usually means ICE/DTLS failed — another WebRTC client is probably holding the slot, the network is flaky, or a stale peer on the robot hasn't been released yet. Try again in 10–20 s, or kill any other connected client (mobile apk, second script).
+2026-06-17 11:28:06,321 [ERROR] go2_survey.mission_runner: Failed to connect to robot
+2026-06-17 11:28:06,322 [INFO] go2_survey.robot: Stopping robot
+2026-06-17 11:28:06,483 [INFO] go2_survey.ntrip: RTCM correction worker stopped
+2026-06-17 11:28:06,484 [INFO] go2_survey.ntrip: Disconnected from NTRIP. Forwarded 84 messages.
+2026-06-17 11:28:06,488 [INFO] go2_survey.gps: GPS connection closed
+2026-06-17 11:28:06,488 [INFO] go2_survey.mission_runner: Connections closed
