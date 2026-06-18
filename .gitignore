@@ -1,0 +1,3 @@
+# Generated map-review videos — large binaries, rebuildable from runs/ via the
+# robot_dog_viz aerial-render pipeline. Keep out of the repo.
+missions/video_review/
