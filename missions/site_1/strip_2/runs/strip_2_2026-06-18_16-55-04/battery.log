@@ -92,3 +92,17 @@
 2026-06-18 17:10:36,745 [INFO] go2_survey.battery.telemetry: SOC  69% | 29.36V | -7.6A (discharging) | batt 37°C | mcu 40°C | cycles 4
 2026-06-18 17:10:46,747 [INFO] go2_survey.battery.telemetry: SOC  68% | 29.54V | -1.3A (discharging) | batt 37°C | mcu 40°C | cycles 4
 2026-06-18 17:10:56,749 [INFO] go2_survey.battery.telemetry: SOC  68% | 29.56V | -1.3A (discharging) | batt 37°C | mcu 40°C | cycles 4
+2026-06-19 10:48:29,322 [INFO] go2_survey.battery.telemetry: SOC  77% | 30.12V | -2.9A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:48:39,333 [INFO] go2_survey.battery.telemetry: SOC  77% | 29.71V | -8.4A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:48:49,335 [INFO] go2_survey.battery.telemetry: SOC  76% | 29.78V | -7.5A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:48:59,337 [INFO] go2_survey.battery.telemetry: SOC  76% | 29.73V | -7.7A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:49:09,340 [INFO] go2_survey.battery.telemetry: SOC  76% | 29.92V | -7.6A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:49:19,342 [INFO] go2_survey.battery.telemetry: SOC  76% | 29.74V | -7.9A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:49:29,344 [INFO] go2_survey.battery.telemetry: SOC  75% | 29.74V | -7.1A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:49:39,351 [INFO] go2_survey.battery.telemetry: SOC  75% | 29.84V | -7.5A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:49:49,360 [INFO] go2_survey.battery.telemetry: SOC  75% | 29.80V | -7.9A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:49:59,362 [INFO] go2_survey.battery.telemetry: SOC  74% | 29.79V | -6.7A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:50:09,365 [INFO] go2_survey.battery.telemetry: SOC  74% | 29.78V | -7.6A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:50:19,367 [INFO] go2_survey.battery.telemetry: SOC  74% | 29.77V | -11.0A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:50:29,431 [INFO] go2_survey.battery.telemetry: SOC  74% | 29.66V | -7.9A (discharging) | batt 26°C | mcu 29°C | cycles 4
+2026-06-19 10:50:39,433 [INFO] go2_survey.battery.telemetry: SOC  73% | 29.63V | -8.5A (discharging) | batt 26°C | mcu 29°C | cycles 4

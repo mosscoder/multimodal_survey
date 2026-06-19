@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "captured_at_unix": 1781824227.25575,
   "captured_at_utc": "2026-06-18T23:10:27.255750+00:00",
   "frame": {
@@ -32,7 +32,9 @@
     "target_degrees_true": 15.240654888140853,
     "achieved_degrees_true": 15.879983255874265,
     "residual_degrees": 0.6393283677334125,
-    "source": "robot_imu_calibrated"
+    "source": "robot_imu_calibrated",
+    "course_degrees_true": 14.58,
+    "exif_direction_source": "gps_course_posthoc"
   },
   "mission": {
     "mission_name": "site_1_strip_2",
