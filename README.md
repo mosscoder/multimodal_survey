@@ -1,178 +1,95 @@
-# multimodal_survey
+<p align="center">
+  <img src="assets/multmodal_survey_logo.png" alt="multimodal_survey" width="200">
+</p>
 
-Mission definitions for Go2 robot line surveys at MPG Ranch. Each mission
-directory under `dev/` holds everything the dog needs to walk a survey
-(`mission.toml` + `waypoints.geojson`) plus the planning artifacts
-(`seed_poly.geojson`, `mission_layout.png`). **Survey outputs (logs and
-captures) nest under each mission's `runs/` folder and are committed and
-pushed back to this repo after each run.**
+# Multimodal Survey
 
----
-
-## Field walkthrough: running `site_1_strip_3` on the dog
-
-### TL;DR — routine field day (Jetson)
-
-```
-git -C /media/mpg-robodog/KINGSTON/multimodal_survey pull
-go2-survey run /media/mpg-robodog/KINGSTON/multimodal_survey/dev/site_1_strip_3
-```
-
-…and after the run, push the results (see ["Push the results"](#push-the-results)):
-
-```
-cd /media/mpg-robodog/KINGSTON/multimodal_survey
-git add dev/site_1_strip_3/runs/ && git commit -m "site_1_strip_3 run $(date +%F)" && git push
-```
-
-These commands work from any directory — no need to `cd` into either repo
-except to push. You only touch the `mpg-ai-edge` (go2-survey) checkout
-during one-time setup, or when Kyle announces a software update.
-
-### One-time setup (per datastick)
-
-1. Insert the KINGSTON datastick into the dog's Jetson and confirm it
-   mounted:
-
-   ```
-   ls /media/mpg-robodog/KINGSTON
-   ```
-
-2. Clone this repo onto the stick:
-
-   ```
-   cd /media/mpg-robodog/KINGSTON
-   git clone https://github.com/mosscoder/multimodal_survey.git
-   ```
-
-3. Make sure the `go2-survey` software on the Jetson is current — it needs
-   the **`refactor` branch of `mpg-ai-edge`, v0.29.0 or later** (the
-   self-calibrating line-survey walk this mission uses). In the Jetson's
-   `mpg-ai-edge` checkout:
-
-   ```
-   git fetch && git checkout refactor && git pull
-   go2-survey list   # sanity check: command runs; the run banner shows the version
-   ```
-
-### Before every field day
-
-```
-cd /media/mpg-robodog/KINGSTON/multimodal_survey && git pull
-```
-
-Check free space on the stick — budget **~1 GB per run** (~300 JPEGs plus
-logs):
-
-```
-df -h /media/mpg-robodog/KINGSTON
-```
-
-### Pre-flight checklist (each run)
-
-- Dog powered and connected to the field hotspot; Jetson on the same
-  network.
-- GPS receiver plugged into the Jetson (shows up as `/dev/ttyACM0`).
-- **Place the dog about 5 m outside the SOUTH corner of the strip, roughly
-  facing it.** The route starts at the southern corner (`wp_001`) and the
-  IMU self-calibrates from the approach walk, so the placement matters.
-- `dev/site_1_strip_3/mission_layout.png` shows the route if you want to
-  orient yourself: 4 parallel legs of ~150 m, snaking south → north.
-
-### Run it
-
-```
-go2-survey run /media/mpg-robodog/KINGSTON/multimodal_survey/dev/site_1_strip_3
-```
-
-What you'll see, in order:
-
-1. **GPS + NTRIP connect**, then an RTK stabilization dwell (up to 60 s —
-   exits early once the fix is solid).
-2. **Robot discovery + connect**, video stream on.
-3. The dog walks to the south corner, then drives the 4 legs at 1 m/s,
-   taking a geotagged photo every 2 m (~300 captures, ~600 m of track).
-   Expect **15–20 minutes** end to end.
-4. At mission end the photo compass bearings are recomputed from the RTK
-   track and the capture manifest is written — automatic, even if the run
-   was aborted.
-
-### Outputs
-
-Everything from one run lands in one timestamped folder inside the
-mission directory:
-
-```
-/media/mpg-robodog/KINGSTON/multimodal_survey/dev/site_1_strip_3/runs/site_1_strip_3_<timestamp>/
-├── main.log              ← mission narrative (read this first)
-├── gps.log               ← dense RTK/NTRIP telemetry
-├── imu.log               ← IMU stream
-└── captures/
-    ├── legNN_mNNN_*.jpg  ← survey photos (EXIF geotag + true bearing)
-    ├── legNN_mNNN_*.json ← per-photo sidecars
-    └── captures.geojson  ← manifest of all captures
-```
-
-### Push the results
-
-After the run (whenever the Jetson has connectivity):
-
-```
-cd /media/mpg-robodog/KINGSTON/multimodal_survey
-git pull
-git add dev/site_1_strip_3/runs/
-git commit -m "site_1_strip_3 run $(date +%F)"
-git push
-```
-
-**One-time before the first push** (per Jetson — pushing needs write
-access even though cloning doesn't):
-
-1. Generate a machine key and send the printed `ssh-ed25519 …` line to
-   Kyle, who registers it on the repo with write access:
-
-   ```
-   ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519 -C "mpg-robodog jetson"
-   cat ~/.ssh/id_ed25519.pub
-   ```
-
-2. Switch the remote to SSH and set the commit identity:
-
-   ```
-   git -C /media/mpg-robodog/KINGSTON/multimodal_survey remote set-url origin git@github.com:mosscoder/multimodal_survey.git
-   git config --global user.name  "MPG Robodog"
-   git config --global user.email robodog@mpgranch.com
-   ```
-
-### If something goes wrong
-
-- **Ctrl-C** aborts the mission; the dog stops, and all logs/captures up to
-  that point are kept and finalized.
-- **"GPS fix timeout"** — antenna needs open sky and the NTRIP caster needs
-  cell coverage; reposition and rerun.
-- **Robot not found** — confirm the dog and Jetson share the hotspot, then
-  `go2-survey discover-ip` to diagnose.
-- For anything else, push the run (see above) and tell Kyle the run
-  timestamp — the folder is self-contained.
-
----
+This project explores the Unitree Go2 robot as a platform for botanical surveys in a wildlands setting. Our Go2 traversed several kilometers of transects across the grasslands at MPG Ranch and photographed the vegetation at regular intervals. Aerial drone data were also gathered at the same time. In addition to targeting the paired dataset for release, the project explores how DINOv3 models fine-tuned on iNaturalist images transfer to the task of plant ID on the robot-gathered images. Additionally, we hope to learn how joint captures of a scene from terrestrial and aerial perspectives can improve plant detection and mapping.
 
 ## Repo layout
 
 ```
 multimodal_survey/
-├── README.md                      ← this walkthrough
-├── dev/
-│   └── site_1_strip_3/            ← one directory per survey mission
-│       ├── mission.toml           ← run config
-│       ├── seed_poly.geojson      ← survey area drawn in QGIS (EPSG:6514)
-│       ├── waypoints.geojson      ← generated leg corners (do not hand-edit)
-│       ├── mission_layout.png     ← route preview
-│       └── runs/                  ← field data; committed + pushed after each run
-│           └── site_1_strip_3_<timestamp>/
-└── planning/                      ← QGIS project + ranch basemap
+├── missions/              survey definitions + everything the robot recorded
+│   ├── <site>/<strip>/    one folder per strip surveyed (config, runs, labels)
+│   ├── inventory.csv      per-run status + quality tracker
+│   └── planning/          QGIS project + basemap for laying out strips
+├── inat_dataset/          training photos, harvested from iNaturalist via pixelflora
+├── multimodal_dataset/    turns robot missions into one dataset, plus the labeling app
+├── dev/                   experiments + scratch; the model is in lupins_dinov3_demo/
+└── docs/                  standalone guides (e.g. the field walkthrough)
 ```
 
-Waypoints are generated from the seed polygon with `go2-survey
-make-waypoints` (boxified grid, south start corner) — regenerating is a
-dev task, not a field task.
+### `missions/` — what the robot did
+
+One folder per strip surveyed, named `<site>/<strip>/` (e.g. `site_1/strip_3`).
+Each holds:
+
+* `mission.toml` — the run configuration (leg geometry, capture interval, steering).
+* `seed_poly.geojson` — the strip's boundary, drawn by hand in QGIS.
+* `waypoints.geojson` — the leg corners, generated from the seed polygon by
+  `go2-survey make-waypoints` (regenerating this is a desk task, not a field
+  task — don't hand-edit it).
+* `mission_layout.png` — a preview image of the route.
+* `runs/<run_id>/` — one folder per time the robot actually walked the strip (a
+  strip is often walked more than once, on different days). Each run holds the
+  photos (`captures/*.jpg`, geotagged and bearing-tagged, with a JSON sidecar per
+  photo and a `captures.geojson` manifest), the field logs (`main.log`, `gps.log`,
+  `imu.log`, `battery.log`), and, once a person has labeled it,
+  `labels/image_multilabel.json`.
+
+`inventory.csv`, at the top of `missions/`, tracks every run's status (complete /
+partial / aborted) and basic quality checks. A run only counts as usable once its
+`main.log` reaches `MISSION COMPLETE`.
+
+`missions/planning/` holds the QGIS project (`ranch_map.qgz`) and basemap
+(`ranch_map.gpkg`) used to lay out strips before they become each mission's
+`seed_poly.geojson`.
+
+**Running a survey in the field** — the full procedure (clone onto the dog,
+pre-flight, run, push the results) lives in
+[`docs/field-walkthrough.md`](docs/field-walkthrough.md).
+
+### `inat_dataset/` — training photos
+
+Not robot photos — these come from iNaturalist, harvested by
+[**pixelflora**](https://github.com/mosscoder/pixelflora). Two requests live
+here, each pairing a `request.toml` (which species, which filters) with the
+`out/` it produced (a Hugging Face dataset, plus the images and manifests
+[pixelflora](https://github.com/mosscoder/pixelflora) writes alongside it):
+
+* `plants/` — the candidate pool of rangeland species (native and invasive forbs
+  and grasses) the model is trained and tuned against.
+* `birds/` — bald-eagle-in-flight photos, used to build the "Sky" negative class.
+
+### `multimodal_dataset/` — bridging robot data and the model
+
+A small, self-contained package that reads every completed mission out of
+`missions/` and assembles them into one Hugging Face dataset — one row per photo,
+carrying its location, time, heading, and (once labeled) its species labels. Run
+with `python -m multimodal_dataset`.
+
+It also holds the **labeling app**, a local web tool used to hand-label robot
+photos:
+
+```bash
+python -m multimodal_dataset.labeling label  --mission site_1/strip_5            # unbiased ground-truth labeling
+```
+
+## Roadmap
+
+- [x] **Review the robot mission data for completeness.** Every run reached
+  `MISSION COMPLETE` with its captures, sidecars, and logs intact (status
+  tracked in `missions/inventory.csv`).
+- [ ] **Label the target species in the robot imagery and push to Hugging
+  Face.** Hand-label the captures with the labeling app, then build the dataset
+  (`python -m multimodal_dataset`) and publish it.
+- [ ] **Process the drone imagery and add it to the dataset** as its own drone
+  configuration, co-registered with the robot captures by location and time.
+- [ ] **Benchmark the iNaturalist-trained CV stack on the robot imagery** —
+  robot captures alone, then the union with the drone imagery — to measure how a
+  model trained only on free iNaturalist photos transfers to the field.
+- [ ] **Fuse the terrestrial and aerial views:** pair each robot capture with the
+  overlapping drone imagery and test whether the joint signal improves plant
+  detection and mapping over either source alone.
+

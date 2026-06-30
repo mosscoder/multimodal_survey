@@ -1,0 +1,9 @@
+[pixelflora] inaturalist: resolved Haliaeetus leucocephalus (taxon_key=5305) for class 'Haliaeetus leucocephalus'
+[pixelflora] harvested 1500 occurrences across 1 class(es)
+[pixelflora] filter+cap: kept 1499 candidate occurrences; per-class candidates={'Haliaeetus leucocephalus': 1499}; rejections={'license_not_allowed': 1, 'no_images_after_image_filters': 1}
+[pixelflora] download: {'ok': 1000, 'failed': 0, 'duplicate': 0, 'too_small': 5, 'reused': 0}; per-class kept={'Haliaeetus leucocephalus': 1000}
+[pixelflora] assemble: 1 configuration(s): {'haliaeetus_leucocephalus': {'test': 200, 'train': 800}}
+Saving the dataset (0/1 shards):   0%|          | 0/200 [00:00<?, ? examples/s]Saving the dataset (1/1 shards): 100%|██████████| 200/200 [00:00<00:00, 4250.97 examples/s]Saving the dataset (1/1 shards): 100%|██████████| 200/200 [00:00<00:00, 4231.73 examples/s]
+Saving the dataset (0/1 shards):   0%|          | 0/800 [00:00<?, ? examples/s]Saving the dataset (0/1 shards): 100%|██████████| 800/800 [00:00<00:00, 5753.37 examples/s]Saving the dataset (1/1 shards): 100%|██████████| 800/800 [00:00<00:00, 5753.37 examples/s]Saving the dataset (1/1 shards): 100%|██████████| 800/800 [00:00<00:00, 5736.16 examples/s]
+[pixelflora] publish: {'pushed': False, 'repo_id': 'sky-cloud-hard-negatives-bald-eagle-in-flight', 'private': True, 'configs': ['haliaeetus_leucocephalus'], 'reason': 'push not requested (dry run); artifacts written locally'}
+[pixelflora] done -> /Users/kdoherty/multimodal_survey/inat_dataset/birds/out

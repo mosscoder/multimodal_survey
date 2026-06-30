@@ -1,3 +1,51 @@
-# Generated map-review videos — large binaries, rebuildable from runs/ via the
-# robot_dog_viz aerial-render pipeline. Keep out of the repo.
-missions/video_review/
+# Secrets — API tokens such as HF_TOKEN. Never commit.
+.env
+
+# macOS / editor cruft. Previously only caught by a personal global gitignore;
+# pinned here so it's ignored for every collaborator, not just one machine.
+.DS_Store
+
+# Python bytecode.
+**/__pycache__/
+
+# Local archives / backups (e.g. dev/purged_lupins_code_*.tgz). Not versioned.
+*.tgz
+*.tar.gz
+*.zip
+
+# Model training artifacts under dev/lupins_dinov3_demo/ — feature caches,
+# checkpoints, inference overlays, preview-render videos, plus
+# weights/arrays/orthomosaics by extension. Large and rebuildable.
+# (Consolidated here from that directory's own .gitignore.) Note: this is a
+# dev-scoped video rule, NOT a global *.mp4 — the mission video_review/ clips
+# are versioned on purpose.
+dev/lupins_dinov3_demo/cache/
+dev/lupins_dinov3_demo/checkpoints/
+dev/lupins_dinov3_demo/inference_viz/overlays/
+dev/**/*.mp4
+*.pt
+*.npz
+*.npy
+*.tif
+
+# Built HF dataset artifacts (large binaries, rebuildable from missions/ via
+# `python -m multimodal_dataset`). Keep out of the repo.
+multimodal_dataset/out/
+
+# iNaturalist harvest outputs — images, the Arrow dataset, manifests, the
+# metadata.csv exports, and the pixelflora HTTP cache. All large and rebuildable
+# from inat_dataset/*/request.toml via `pixelflora run`. Ignore the whole out/
+# tree EXCEPT the small provenance files worth versioning (license report,
+# citation, bibliography, summary/rejections JSON, the dataset README).
+inat_dataset/*/out/*
+!inat_dataset/*/out/*.json
+!inat_dataset/*/out/*.cff
+!inat_dataset/*/out/*.bib
+!inat_dataset/*/out/README.md
+**/.pixelflora_cache/
+
+# Pre-reorg mission dir, already committed: 3 early runs (2026-06-11/-15) not
+# duplicated under missions/site_1/strip_3/ — NOT a redundant copy, leave as
+# is. This rule only keeps new stray files out; existing tracked files are
+# unaffected.
+dev/site_1_strip_3/*

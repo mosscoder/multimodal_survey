@@ -1,0 +1,69 @@
+{
+  "experiment": "superpatch_pool",
+  "grids": [
+    14,
+    7,
+    4,
+    2,
+    1
+  ],
+  "grid": [
+    {
+      "grid": 14,
+      "px": 16,
+      "val_all9": 0.636,
+      "val_meas": 0.6529,
+      "test_all9": 0.6028,
+      "test_meas": 0.6279
+    },
+    {
+      "grid": 7,
+      "px": 32,
+      "val_all9": 0.5952,
+      "val_meas": 0.6119,
+      "test_all9": 0.568,
+      "test_meas": 0.5869
+    },
+    {
+      "grid": 4,
+      "px": 56,
+      "val_all9": 0.4915,
+      "val_meas": 0.5216,
+      "test_all9": 0.4828,
+      "test_meas": 0.6024
+    },
+    {
+      "grid": 2,
+      "px": 112,
+      "val_all9": 0.4481,
+      "val_meas": 0.4849,
+      "test_all9": 0.441,
+      "test_meas": 0.6204
+    },
+    {
+      "grid": 1,
+      "px": 224,
+      "val_all9": 0.4257,
+      "val_meas": 0.4633,
+      "test_all9": 0.3846,
+      "test_meas": 0.6122
+    }
+  ],
+  "winner": {
+    "grid": 14,
+    "px": 16,
+    "val_all9": 0.636,
+    "val_meas": 0.6529,
+    "test_all9": 0.6028,
+    "test_meas": 0.6279
+  },
+  "meas_winner": {
+    "grid": 14,
+    "px": 16,
+    "val_all9": 0.636,
+    "val_meas": 0.6529,
+    "test_all9": 0.6028,
+    "test_meas": 0.6279
+  },
+  "disagree": false
+}

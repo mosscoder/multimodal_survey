@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: Sky / cloud hard negatives (bald eagle, in flight)
+message: >-
+  This private dataset aggregates third-party biodiversity media. Cite the
+  underlying source datasets (see bibliography.bib) when publishing.
+type: dataset
+date-released: 2026-06-29
+keywords:
+  - botany
+  - biodiversity
+  - image-classification
+abstract: >-
+  1003 attributed botanical images harvested from inaturalist for model training.

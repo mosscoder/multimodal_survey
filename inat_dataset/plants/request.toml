@@ -1,0 +1,231 @@
+# pixelflora request: western Montana rangeland plants (38 species)
+#
+# A species level image classifier built from iNaturalist observations. The
+# species are grouped below into four functional groups (native forbs, native
+# grasses, invasive grasses, invasive forbs). pixelflora has no group field, so
+# that grouping lives in these comments only. Every species becomes its own
+# Hugging Face configuration with its own train and test split, so a single
+# species can be added or refreshed later without disturbing the others.
+#
+# Nomenclature notes:
+#   Several names were corrected or updated to the taxon iNaturalist treats as
+#   accepted (see the inline comments). Run "pixelflora resolve <this file>" first
+#   to confirm all 36 map to the taxa you intend before harvesting anything.
+
+# Native forbs
+
+[[species]]
+genus = "Balsamorhiza"
+species = "sagittata"
+
+[[species]]
+genus = "Lupinus"
+species = "sericeus"
+
+[[species]]
+genus = "Gaillardia"
+species = "aristata"
+
+[[species]]
+genus = "Achillea"
+species = "millefolium"
+
+[[species]]
+genus = "Helianthus"
+species = "annuus"          # corrected from "annua"
+
+[[species]]
+genus = "Helianthus"
+species = "maximiliani"
+
+[[species]]
+genus = "Antennaria"
+species = "parvifolia"
+
+# Boechera pendulocarpa excluded: iNaturalist has only 53 matching observations, far below the cap
+# [[species]]
+# genus = "Boechera"
+# species = "pendulocarpa"
+
+[[species]]
+genus = "Collomia"
+species = "linearis"
+
+[[species]]
+genus = "Lithophragma"
+species = "glabrum"         # corrected from "glabra", the genus is neuter so the epithet is glabrum
+
+[[species]]
+genus = "Lomatium"
+species = "triternatum"
+
+[[species]]
+genus = "Microsteris"
+species = "gracilis"        # iNaturalist may list this under Phlox gracilis, verify with resolve
+
+[[species]]
+genus = "Myosotis"
+species = "stricta"
+
+[[species]]
+genus = "Phacelia"
+species = "linearis"
+
+# added from partridge site review (colleague), native forbs:
+[[species]]
+genus = "Cirsium"
+species = "undulatum"       # wavyleaf thistle (native), 6,379 on iNaturalist
+
+[[species]]
+genus = "Collinsia"
+species = "parviflora"      # maiden blue eyed Mary (corrected from sheet "Collomia parviflora"), 9,194
+
+[[species]]
+genus = "Erigeron"
+species = "pumilus"         # shaggy fleabane, 1,583
+
+# Helianthella uniflora: only ~535 on iNaturalist (below the 1000 cap) — included anyway as a small class
+[[species]]
+genus = "Helianthella"
+species = "uniflora"
+
+[[species]]
+genus = "Linum"
+species = "lewisii"         # Lewis flax, 11,397
+
+[[species]]
+genus = "Plantago"
+species = "patagonica"      # woolly plantain (native annual), 5,393
+
+# Polygonum douglasii: only ~313 on iNaturalist (below the 1000 cap) — included anyway as a small class
+[[species]]
+genus = "Polygonum"
+species = "douglasii"
+
+# Native grasses
+
+[[species]]
+genus = "Poa"
+species = "secunda"
+
+[[species]]
+genus = "Pseudoroegneria"
+species = "spicata"
+
+[[species]]
+genus = "Hesperostipa"
+species = "comata"          # iNaturalist current name is Hesperostipa comata, verify with resolve
+
+# added from partridge site review (colleague), native grass:
+# Festuca idahoensis excluded: only 597 on iNaturalist, below the 1000 target
+# [[species]]
+# genus = "Festuca"
+# species = "idahoensis"
+
+# Invasive grasses
+
+[[species]]
+genus = "Thinopyrum"
+species = "intermedium"
+
+[[species]]
+genus = "Bromus"
+species = "tectorum"
+
+[[species]]
+genus = "Poa"
+species = "bulbosa"
+
+# Invasive forbs
+
+[[species]]
+genus = "Euphorbia"
+species = "virgata"         # corrected from "Euphoriba virgata"
+
+[[species]]
+genus = "Sisymbrium"
+species = "altissimum"
+
+[[species]]
+genus = "Holosteum"
+species = "umbellatum"
+
+[[species]]
+genus = "Taraxacum"
+species = "officinale"
+
+[[species]]
+genus = "Tragopogon"
+species = "dubius"
+
+[[species]]
+genus = "Verbascum"
+species = "blattaria"
+
+[[species]]
+genus = "Veronica"
+species = "verna"
+
+# added from partridge site review (colleague), invasive or introduced forbs:
+[[species]]
+genus = "Chenopodium"
+species = "album"           # lambsquarters, 40,271 on iNaturalist
+
+[[species]]
+genus = "Filago"
+species = "arvensis"        # field cottonrose, 2,360
+
+[[species]]
+genus = "Bassia"
+species = "scoparia"        # kochia (iNaturalist accepted name for sheet "Kochia scoparia"), 7,057
+
+[[species]]
+genus = "Salsola"
+species = "tragus"          # Russian thistle (iNaturalist accepted name for sheet "Salsola kali"), 6,708
+
+[[species]]
+genus = "Silene"
+species = "latifolia"       # white campion, 100,673
+
+# Sources, filters, media, split, and publishing
+
+[sources]
+enabled = ["inaturalist"]
+
+[filters]
+has_coordinates        = true   # keep records that carry a location, needed for the geographic split
+require_research_grade = true   # community confirmed identifications only
+exclude_captive        = true   # wild plants only, drop cultivated or planted individuals
+# license keep-list (opt-in): only these redistributable / iNat-default licenses are kept (drops all-rights-reserved)
+license = ["CC0", "PUBLIC-DOMAIN", "CC-BY", "CC-BY-SA", "CC-BY-NC", "CC-BY-NC-SA"]
+# year_range           = [2010, 2026]   # optional, restrict to recent years (this cuts data for rare species)
+# max_coordinate_uncertainty_m = 1000   # optional, reject locations vaguer than this many meters
+
+[media]
+max_images            = 1000       # target per species (license-filtered); only 512/species is ever used by the size sweep
+images_per_occurrence = 1          # one photo per observation, for diversity and a clean train and test split
+min_pixels            = 256        # skip an image whose shorter side is below this many pixels
+max_dimension         = 1024       # shrink the longer side to this many pixels, keeping proportions
+prefer_size           = "original" # request the full resolution iNaturalist image
+sampling              = "month_balanced"  # equalize candidates across observed month-of-year, water-filled
+                                          # to per-month availability, so seasonal/phenological coverage is
+                                          # uniform rather than a recency snapshot. See RESEARCH_LOG 2026-06-29.
+
+[output]
+dir = "/Users/kdoherty/multimodal_survey/inat_dataset/plants/out"
+
+[split]
+strategy      = "random"   # random, geographic (spatial blocking), or temporal
+test_fraction = 0.2        # the share of each species held back for testing
+seed          = 1312       # a fixed seed so the same division repeats exactly
+# cell_size_deg   = 1.0    # for geographic, the size of the grid cells in degrees
+# test_after_year = 2024   # for temporal, send observations from this year onward into the test set
+
+[publish]
+private = true    # create the dataset as private on the Hugging Face Hub
+push    = false   # set to true to actually upload, which needs HF_TOKEN in the environment
+# repo_id = "mosscoder/montana_rangeland_plants"   # optional, the dataset name on the Hub
+
+[dataset]
+name        = "Montana native and invasive plants (38 species)"
+description = "A set of 38 plant species of western Montana rangeland, spanning native forbs and grasses and invasive forbs and grasses, harvested from iNaturalist for a species level image classifier. Each species is its own configuration with its own train and test split. Candidates are sampled month-balanced across the year (not newest-first) for even seasonal coverage."

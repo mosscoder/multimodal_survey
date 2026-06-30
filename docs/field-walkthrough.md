@@ -1,0 +1,146 @@
+# Field walkthrough: running `site_1/strip_3` on the dog
+
+## TL;DR — routine field day (Jetson)
+
+```
+git -C /media/mpg-robodog/KINGSTON/multimodal_survey pull
+go2-survey run /media/mpg-robodog/KINGSTON/multimodal_survey/missions/site_1/strip_3
+```
+
+…and after the run, push the results (see ["Push the results"](#push-the-results)):
+
+```
+cd /media/mpg-robodog/KINGSTON/multimodal_survey
+git add missions/site_1/strip_3/runs/ && git commit -m "site_1/strip_3 run $(date +%F)" && git push
+```
+
+These commands work from any directory — no need to `cd` into either repo
+except to push. You only touch the `mpg-ai-edge` (go2-survey) checkout
+during one-time setup, or when Kyle announces a software update.
+
+## One-time setup (per datastick)
+
+1. Insert the KINGSTON datastick into the dog's Jetson and confirm it
+   mounted:
+
+   ```
+   ls /media/mpg-robodog/KINGSTON
+   ```
+
+2. Clone this repo onto the stick:
+
+   ```
+   cd /media/mpg-robodog/KINGSTON
+   git clone https://github.com/mosscoder/multimodal_survey.git
+   ```
+
+3. Make sure the `go2-survey` software on the Jetson is current — it needs
+   the **`refactor` branch of `mpg-ai-edge`, v0.29.0 or later** (the
+   self-calibrating line-survey walk this mission uses). In the Jetson's
+   `mpg-ai-edge` checkout:
+
+   ```
+   git fetch && git checkout refactor && git pull
+   go2-survey list   # sanity check: command runs; the run banner shows the version
+   ```
+
+## Before every field day
+
+```
+cd /media/mpg-robodog/KINGSTON/multimodal_survey && git pull
+```
+
+Check free space on the stick — budget **~1 GB per run** (~600 JPEGs plus
+logs):
+
+```
+df -h /media/mpg-robodog/KINGSTON
+```
+
+## Pre-flight checklist (each run)
+
+- Dog powered and connected to the field hotspot; Jetson on the same
+  network.
+- GPS receiver plugged into the Jetson (shows up as `/dev/ttyACM0`).
+- **Place the dog about 5 m outside the SOUTH corner of the strip, roughly
+  facing it.** The route starts at the southern corner (`wp_001`) and the
+  IMU self-calibrates from the approach walk, so the placement matters.
+- `missions/site_1/strip_3/mission_layout.png` shows the route if you want
+  to orient yourself: 4 parallel legs of ~150 m, snaking south → north.
+
+## Run it
+
+```
+go2-survey run /media/mpg-robodog/KINGSTON/multimodal_survey/missions/site_1/strip_3
+```
+
+What you'll see, in order:
+
+1. **GPS + NTRIP connect**, then an RTK stabilization dwell (up to 60 s —
+   exits early once the fix is solid).
+2. **Robot discovery + connect**, video stream on.
+3. The dog walks to the south corner, then drives the 4 legs at 1 m/s,
+   taking a geotagged photo every 1 m (~600 captures, ~600 m of track).
+   Expect **15–20 minutes** end to end.
+4. At mission end the photo compass bearings are recomputed from the RTK
+   track and the capture manifest is written — automatic, even if the run
+   was aborted.
+
+## Outputs
+
+Everything from one run lands in one timestamped folder inside the
+mission directory:
+
+```
+/media/mpg-robodog/KINGSTON/multimodal_survey/missions/site_1/strip_3/runs/strip_3_<timestamp>/
+├── main.log              ← mission narrative (read this first)
+├── battery.log           ← battery telemetry
+├── gps.log               ← dense RTK/NTRIP telemetry
+├── imu.log               ← IMU stream
+└── captures/
+    ├── legNN_mNNN_*.jpg  ← survey photos (EXIF geotag + true bearing)
+    ├── legNN_mNNN_*.json ← per-photo sidecars
+    └── captures.geojson  ← manifest of all captures
+```
+
+## Push the results
+
+After the run (whenever the Jetson has connectivity):
+
+```
+cd /media/mpg-robodog/KINGSTON/multimodal_survey
+git pull
+git add missions/site_1/strip_3/runs/
+git commit -m "site_1/strip_3 run $(date +%F)"
+git push
+```
+
+**One-time before the first push** (per Jetson — pushing needs write
+access even though cloning doesn't):
+
+1. Generate a machine key and send the printed `ssh-ed25519 …` line to
+   Kyle, who registers it on the repo with write access:
+
+   ```
+   ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519 -C "mpg-robodog jetson"
+   cat ~/.ssh/id_ed25519.pub
+   ```
+
+2. Switch the remote to SSH and set the commit identity:
+
+   ```
+   git -C /media/mpg-robodog/KINGSTON/multimodal_survey remote set-url origin git@github.com:mosscoder/multimodal_survey.git
+   git config --global user.name  "MPG Robodog"
+   git config --global user.email robodog@mpgranch.com
+   ```
+
+## If something goes wrong
+
+- **Ctrl-C** aborts the mission; the dog stops, and all logs/captures up to
+  that point are kept and finalized.
+- **"GPS fix timeout"** — antenna needs open sky and the NTRIP caster needs
+  cell coverage; reposition and rerun.
+- **Robot not found** — confirm the dog and Jetson share the hotspot, then
+  `go2-survey discover-ip` to diagnose.
+- For anything else, push the run (see above) and tell Kyle the run
+  timestamp — the folder is self-contained.

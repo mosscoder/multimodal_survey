@@ -1,0 +1,59 @@
+{
+  "experiment": "tta_shift",
+  "offsets": [
+    [
+      0,
+      0
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      8,
+      8
+    ]
+  ],
+  "grid": [
+    {
+      "config": "single",
+      "passes": 1,
+      "val_sel7": 0.7785,
+      "val_all9": 0.6702,
+      "test_sel7": 0.6955,
+      "test_all9": 0.6218,
+      "test_meas": 0.6955
+    },
+    {
+      "config": "2-pass",
+      "passes": 2,
+      "val_sel7": 0.7648,
+      "val_all9": 0.6766,
+      "test_sel7": 0.7081,
+      "test_all9": 0.6322,
+      "test_meas": 0.7081
+    },
+    {
+      "config": "4-pass",
+      "passes": 4,
+      "val_sel7": 0.7662,
+      "val_all9": 0.6762,
+      "test_sel7": 0.7074,
+      "test_all9": 0.6613,
+      "test_meas": 0.7074
+    }
+  ],
+  "winner": {
+    "config": "single",
+    "passes": 1,
+    "val_sel7": 0.7785,
+    "val_all9": 0.6702,
+    "test_sel7": 0.6955,
+    "test_all9": 0.6218,
+    "test_meas": 0.6955
+  }
+}

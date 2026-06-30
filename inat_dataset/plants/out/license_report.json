@@ -1,0 +1,13 @@
+{
+  "total_images": 36510,
+  "by_license": {
+    "CC0": 1682,
+    "CC-BY": 4182,
+    "CC-BY-NC": 30181,
+    "CC-BY-SA": 116,
+    "CC-BY-NC-SA": 349
+  },
+  "redistributable_images": 5980,
+  "non_redistributable_images": 30530,
+  "note": "Dataset is PRIVATE training data for a model; non-redistributable licenses are retained and used internally, not republished."
+}

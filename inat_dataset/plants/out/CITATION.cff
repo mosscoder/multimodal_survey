@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: Montana native and invasive plants (38 species)
+message: >-
+  This private dataset aggregates third-party biodiversity media. Cite the
+  underlying source datasets (see bibliography.bib) when publishing.
+type: dataset
+date-released: 2026-06-29
+keywords:
+  - botany
+  - biodiversity
+  - image-classification
+abstract: >-
+  36510 attributed botanical images harvested from inaturalist for model training.
