@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/multmodal_survey_logo.png" alt="multimodal_survey" width="200">
+  <img src="assets/multmodal_survey_logo.png" alt="multimodal_survey" width="400">
 </p>
 
 # Multimodal Survey
