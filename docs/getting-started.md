@@ -62,6 +62,19 @@ the intended taxa. Note: `out/`, manifests, and `.pixelflora_cache/` are gitigno
 provenance artifacts — `summary.json`, `README.md`, `CITATION.cff`, `bibliography.bib`,
 `license_report.json` — are kept); don't commit images or manifests.
 
+**The "Sky" negative class (birds).** There's a second request,
+`inat_dataset/birds/request.toml`, that harvests bald-eagle-in-flight photos
+(*Haliaeetus leucocephalus*) — very frequently shot against open sky/cloud — as a
+single auxiliary hard-negative class. At train time the detector crops the
+upper-left/upper-right 224-px corners of each image (the bird is centered, so the
+corners are sky/cloud), teaching the head that bright sky/cloud is **not** a target
+plant. It's the same pixelflora pipeline — just point it at the birds request:
+
+```bash
+cd inat_dataset/birds
+mamba run -n pixelflora pixelflora --config ~/pixelflora/config.toml run request.toml
+```
+
 ## 3. Initial work — the strip 5 MIL experiments
 
 This work exists to **test multiple-instance-learning (MIL) methods on a single strip
