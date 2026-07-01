@@ -66,11 +66,11 @@ provenance artifacts — `summary.json`, `README.md`, `CITATION.cff`, `bibliogra
 
 This work exists to **test multiple-instance-learning (MIL) methods on a single strip
 (strip 5) in site 1** — a controlled, one-strip testbed for the robot model before
-scaling to more strips/sites. It lives in `**dev/site_1_strip_5_MIL_exploration/`**: a
+scaling to more strips/sites. It lives in **`dev/site_1_strip_5_MIL_exploration/`**: a
 frozen DINOv3 backbone feeds a small MIL head, and the experiments compare MIL variants
 (losses, pooling, tiling, inference tricks) against that one strip's ground truth. It has
 heavier dependencies (PyTorch, transformers/DINOv3) — see the directory's own docs for its
-environment. Start with `**RESEARCH_LOG.md**` and `**CLAUDE.md**` for the current state
+environment. Start with **`RESEARCH_LOG.md`** and **`CLAUDE.md`** for the current state
 (rev-5 is deployed), then:
 
 - `sweeps/sweep_mil.py` — the sweep harness (config + `sweep_state.json`)
