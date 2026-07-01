@@ -21,7 +21,7 @@ queue is sorted by model confidence (most-confident first). Fixing a checkbox wr
 the whole GT file atomically (a one-time .bak is made on startup).
 
 Run:
-    mamba run -n pixelflora python dev/lupins_dinov3_demo/labeling/review_server.py
+    mamba run -n pixelflora python dev/site_1_strip_5_MIL_exploration/labeling/review_server.py
 then open http://127.0.0.1:8766 .
 
 Keyboard:  1-9 toggle species | a accept model for the queued species | ->/Enter next

@@ -6,6 +6,8 @@ per patch, which target species it looks like. The backbone is never trained.
 """
 from __future__ import annotations
 
+from pathlib import Path
+
 import numpy as np
 import torch
 from PIL import Image
@@ -19,7 +21,9 @@ MEAN = torch.tensor([0.485, 0.456, 0.406]).view(1, 3, 1, 1)
 STD = torch.tensor([0.229, 0.224, 0.225]).view(1, 3, 1, 1)
 
 # --- paths --------------------------------------------------------------
-DEMO_DIR = "/Users/kdoherty/multimodal_survey/dev/lupins_dinov3_demo"
+# this package's own directory (…/dev/site_1_strip_5_MIL_exploration), derived from
+# __file__ so renaming the directory can't break the path again
+DEMO_DIR = str(Path(__file__).resolve().parents[1])
 INAT_ROOT = "/Users/kdoherty/multimodal_survey/inat_dataset"   # plants under plants/, birds under birds/
 INAT_IMAGES = f"{INAT_ROOT}/plants/out/images"
 CAPTURES = ("/Users/kdoherty/multimodal_survey/missions/site_1/strip_5/runs/"

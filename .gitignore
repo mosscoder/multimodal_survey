@@ -13,15 +13,15 @@
 *.tar.gz
 *.zip
 
-# Model training artifacts under dev/lupins_dinov3_demo/ — feature caches,
-# checkpoints, inference overlays, preview-render videos, plus
+# Model training artifacts under dev/site_1_strip_5_MIL_exploration/ — feature
+# caches, checkpoints, inference overlays, preview-render videos, plus
 # weights/arrays/orthomosaics by extension. Large and rebuildable.
 # (Consolidated here from that directory's own .gitignore.) Note: this is a
 # dev-scoped video rule, NOT a global *.mp4 — the mission video_review/ clips
 # are versioned on purpose.
-dev/lupins_dinov3_demo/cache/
-dev/lupins_dinov3_demo/checkpoints/
-dev/lupins_dinov3_demo/inference_viz/overlays/
+dev/site_1_strip_5_MIL_exploration/cache/
+dev/site_1_strip_5_MIL_exploration/checkpoints/
+dev/site_1_strip_5_MIL_exploration/inference_viz/overlays/
 dev/**/*.mp4
 *.pt
 *.npz
@@ -48,4 +48,4 @@ inat_dataset/*/out/*
 # duplicated under missions/site_1/strip_3/ — NOT a redundant copy, leave as
 # is. This rule only keeps new stray files out; existing tracked files are
 # unaffected.
-dev/site_1_strip_3/*
+dev/site_1_strip_3_test_run/*

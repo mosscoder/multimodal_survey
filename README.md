@@ -16,7 +16,7 @@ multimodal_survey/
 │   └── planning/          QGIS project + basemap for laying out strips
 ├── inat_dataset/          training photos, harvested from iNaturalist via pixelflora
 ├── multimodal_dataset/    turns robot missions into one dataset, plus the labeling app
-├── dev/                   experiments + scratch; the model is in lupins_dinov3_demo/
+├── dev/                   experiments + scratch; the model is in site_1_strip_5_MIL_exploration/
 └── docs/                  standalone guides (e.g. the field walkthrough)
 ```
 
