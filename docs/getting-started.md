@@ -41,7 +41,9 @@ mamba run -n pixelflora pip install -e .          # editable install; the `pixel
 Then edit `pixelflora/config.toml` (non-secret settings): set `user_agent`/`contact_email`
 to **your** email so iNaturalist can reach you — required etiquette for their API, and
 it avoids throttling. Everything is a **dry run / private by default**; you only need a
-Hugging Face token (`export HF_TOKEN=…`) if you flip `push = true` to publish. The
+Hugging Face token (`export HF_TOKEN=…`) if you flip `push = true` to publish. Create a
+token at <https://huggingface.co/settings/tokens> (a read token is enough to download
+models; you need a write token to push a dataset). The
 pipeline is `resolve → harvest → filter → download → assemble → split → publish`, and
 written records are kept apart from image files so you can refilter/redivide without
 re-downloading.
@@ -83,7 +85,16 @@ scaling to more strips/sites. It lives in **`dev/site_1_strip_5_MIL_exploration/
 frozen DINOv3 backbone feeds a small MIL head, and the experiments compare MIL variants
 (losses, pooling, tiling, inference tricks) against that one strip's ground truth. It has
 heavier dependencies (PyTorch, transformers/DINOv3) — see the directory's own docs for its
-environment. Start with **`RESEARCH_LOG.md`** and **`CLAUDE.md`** for the current state
+environment.
+
+> **Model access (required).** The backbone is `facebook/dinov3-vitb16-pretrain-lvd1689m`,
+> a **gated** model on Hugging Face — you must **request access** on its model page
+> (<https://huggingface.co/facebook/dinov3-vitb16-pretrain-lvd1689m>) and be approved
+> before you can download it. Then authenticate so `transformers` can pull the weights:
+> `huggingface-cli login` (or `export HF_TOKEN=…`) with a token that has access. Until
+> access is granted the first `from_pretrained` call fails with a 401/403.
+
+Start with **`RESEARCH_LOG.md`** and **`CLAUDE.md`** for the current state
 (rev-5 is deployed), then:
 
 - `sweeps/sweep_mil.py` — the sweep harness (config + `sweep_state.json`)
