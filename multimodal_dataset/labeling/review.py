@@ -44,7 +44,7 @@ import numpy as np
 # Model-prediction artifacts (summary.json / overlays / scores) are passed in as
 # args, so this app stays decoupled from the MIL program. Scored species come from
 # the package's single canonical source (matches the MIL program by value).
-from ..classes import CLASSES as CLASS_ORDER
+from ..classes import CLASSES as CLASS_ORDER, DEFAULT_ON
 
 DEFAULT_SPECIES = "Gaillardia aristata"   # initial hunt; --species overrides; switchable in the UI
 LOCK = threading.Lock()
@@ -141,7 +141,7 @@ class Store:
             payload = {
                 "schema": "strip-image-multilabel/v1",
                 "classes": self.classes,
-                "default_on": ["Thinopyrum intermedium"],
+                "default_on": ([DEFAULT_ON] if DEFAULT_ON else []),
                 "captures_dir": self.captures,
                 "meta": {"updated": now_iso(), "cursor": self.gt_meta.get("cursor"), **self.counts()},
                 "labels": {fid: {"vector": lab["vector"], "present": self.present(lab["vector"]),

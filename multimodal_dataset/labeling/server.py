@@ -1,21 +1,26 @@
 #!/usr/bin/env python3
-"""Strip image-level multilabel labeller (stdlib only, no install).
+"""Image-level multilabel labeller for robot survey captures (stdlib only, no install).
 
-A tiny local web app for image-level multilabel annotation of the strip
-captures: for each frame, which of the 8 focal species are present. Checkboxes
-start blank except *Thinopyrum intermedium*, which is on by default (it occurs
-in essentially every frame). The model's predictions are NOT loaded into the UI,
-so the labels are an unbiased human ground truth. Everything autosaves to a JSON
-file in the exact class order the pipeline uses, and the tool is resumable: stop
-any time, rerun, and you land back on the last frame.
+A tiny local web app for image-level multilabel annotation of a mission's strip
+captures: for each frame, which of the 8 target species (4 wildflowers + 4 weeds)
+are present. The UI groups the checkboxes Wildflowers / Weeds; nothing is checked
+by default, so the labels are an unbiased human ground truth (the model's
+predictions are NOT loaded into the UI). Everything autosaves to a JSON file in
+the exact class order the pipeline uses, and the tool is resumable: stop any time,
+rerun, and you land back on the last frame.
+
+Missions are switchable live from the header dropdown — no relaunch. Every
+completed run under ``missions/`` is offered; each keeps its own
+``labels/image_multilabel.json``.
 
 Run (from anywhere):
-    mamba run -n pixelflora python /Users/kdoherty/multimodal_survey/dev/strip5_image_labeler/label_server.py
+    python -m multimodal_dataset.labeling label                          # starts on the first mission
+    python -m multimodal_dataset.labeling label --mission site_1/strip_5 # start on a specific one
 
 then open the printed http://127.0.0.1:8765 URL.
 
-Keyboard:  1-9 toggle species  |  ->/Space/Enter confirm + next  |  <- prev
-           c copy previous frame  |  u jump to next unreviewed  |  o toggle sort
+Keyboard:  1-4 wildflowers, A/S/D/F weeds  |  ->/Space/Enter confirm + next
+           <- prev  |  c copy previous frame  |  u jump to next unreviewed
 """
 from __future__ import annotations
 
@@ -28,11 +33,14 @@ import urllib.parse
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-# Focal species (display + vector order) and the always-present default come from
-# the package's single canonical source. Saved labels migrate by NAME, so this
-# order can change without scrambling them.
-from ..classes import CLASSES as CLASS_ORDER, DEFAULT_ON
-BAND = 0.2  # |score - threshold| < BAND  =>  the model's call here is "borderline" (used only to order the optional "hardest first" sort)
+# Focal species (display + vector order), the wildflower/weed grouping, and the
+# fresh-frame default come from the package's single canonical source. Saved
+# labels migrate by NAME, so this order can change without scrambling them.
+from ..classes import CLASSES as CLASS_ORDER, DEFAULT_ON, GROUPS
+
+# Keyboard shortcut rows, one per GROUPS entry: wildflowers -> number keys,
+# weeds -> the ASDF home row. Displayed on each species row.
+GROUP_KEYS = [["1", "2", "3", "4"], ["a", "s", "d", "f"]]
 
 LOCK = threading.Lock()
 
@@ -50,50 +58,34 @@ class Store:
         self.preds_path = preds_path
         self.out_path = out_path
 
-        # Self-contained label set — the 9 target species in display order. No model
+        # Self-contained label set — the target species in display order. No model
         # predictions are loaded; labels are pure human ground truth (CLAUDE.md).
         self.classes: list[str] = list(CLASS_ORDER)
-        self.thresholds: dict[str, float] = {}
-        by_id = {}
 
-        # Fresh frames start blank except the always-present grass.
-        self.default_vec = [1 if DEFAULT_ON in c else 0 for c in self.classes]
+        # Fresh frames start blank unless a canonical default species is set.
+        self.default_vec = [1 if c == DEFAULT_ON else 0 for c in self.classes]
 
-        # Canonical frame order comes from captures.geojson (capture/leg order).
+        # Frames are shown in capture/leg order, straight from captures.geojson.
         geo = json.load(open(os.path.join(captures, "captures.geojson")))
         self.frames: list[dict] = []
         for feat in geo["features"]:
             p = feat["properties"]
             if p.get("corrupt"):
                 continue
-            fid = os.path.splitext(p["file"])[0]
-            # Model scores are used ONLY to compute the optional "hardest first"
-            # ordering; they are never sent to the UI or used to seed a label.
-            scores = by_id.get(fid, {}).get("scores", {})
-            ambiguity = sum(max(0.0, BAND - abs(scores.get(c, 0.0) - self.thresholds[c]))
-                            for c in self.classes if c in self.thresholds)
-            self.frames.append(
-                {
-                    "id": fid,
-                    "file": p["file"],
-                    "leg": p.get("leg"),
-                    "mark": p.get("mark_index"),
-                    "along": p.get("along_track_m"),
-                    "_ambiguity": ambiguity,
-                }
-            )
+            self.frames.append({
+                "id": os.path.splitext(p["file"])[0],
+                "file": p["file"],
+                "leg": p.get("leg"),
+                "mark": p.get("mark_index"),
+                "along": p.get("along_track_m"),
+            })
 
         self.by_id = {f["id"]: f for f in self.frames}
-        seq_index = {f["id"]: i for i, f in enumerate(self.frames)}
-        self.order_sequence = [f["id"] for f in self.frames]
-        self.order_uncertain = sorted(
-            (f["id"] for f in self.frames),
-            key=lambda fid: (-self.by_id[fid]["_ambiguity"], seq_index[fid]),
-        )
+        self.order = [f["id"] for f in self.frames]
 
         # Labels: resume from disk if present, else seed from the default prior.
         self.labels: dict[str, dict] = {}
-        self.cursor = self.order_sequence[0] if self.order_sequence else None
+        self.cursor = self.order[0] if self.order else None
         if os.path.exists(out_path):
             saved = json.load(open(out_path))
             self.cursor = saved.get("meta", {}).get("cursor") or self.cursor
@@ -161,10 +153,17 @@ class Store:
         # Deliberately ships NO model scores/predictions to the client.
         return {
             "classes": self.classes,
+            "groups": [{"name": name, "members": members,
+                        "keys": (GROUP_KEYS[gi] if gi < len(GROUP_KEYS) else [""] * len(members))}
+                       for gi, (name, members) in enumerate(GROUPS)],
             "default_vec": self.default_vec,
             "out_path": self.out_path,
+            "mission": CURRENT.mission_name if CURRENT else None,
+            "run_id": CURRENT.run_id if CURRENT else None,
+            "run_label": (f"{CURRENT.site}/{CURRENT.strip}" if CURRENT else None),
+            "runs": [_run_choice(r) for r in RUNS],
             "frames": [{"id": f["id"], "leg": f["leg"], "mark": f["mark"], "along": f["along"]} for f in self.frames],
-            "orders": {"sequence": self.order_sequence, "uncertain": self.order_uncertain},
+            "order": self.order,
             "labels": {fid: {k: lab[k] for k in ("vector", "reviewed", "source")} for fid, lab in self.labels.items()},
             "cursor": self.cursor,
             "counts": self.counts(),
@@ -172,6 +171,28 @@ class Store:
 
 
 STORE: Store | None = None
+RUNS: list = []          # every completed run under missions/, for the in-app switcher
+CURRENT = None           # the active RunInfo
+
+
+def _run_choice(r) -> dict:
+    """A run as the header dropdown sees it: stable id + a human label."""
+    return {"run_id": r.run_id, "mission": r.mission_name,
+            "label": f"{r.site}/{r.strip} · {r.run_date or r.run_id}"}
+
+
+def activate(run_id: str) -> bool:
+    """Point STORE at the given completed run — rebuilds its frames + labels."""
+    global STORE, CURRENT
+    match = next((r for r in RUNS if r.run_id == run_id), None)
+    if match is None:
+        return False
+    out = str(match.run_dir / "labels" / "image_multilabel.json")
+    os.makedirs(os.path.dirname(out), exist_ok=True)   # first label of a new mission
+    with LOCK:
+        STORE = Store(str(match.captures_dir), None, out)
+        CURRENT = match
+    return True
 
 
 # --------------------------------------------------------------------------- #
@@ -193,6 +214,13 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header(k, v)
         self.end_headers()
         self.wfile.write(body)
+
+    def _read_json(self):
+        n = int(self.headers.get("Content-Length", 0))
+        try:
+            return json.loads(self.rfile.read(n) or b"{}")
+        except json.JSONDecodeError:
+            return None
 
     def do_GET(self):
         u = urllib.parse.urlparse(self.path)
@@ -217,12 +245,20 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         u = urllib.parse.urlparse(self.path)
+
+        # Switch the active mission/run without a relaunch; returns a fresh init.
+        if u.path == "/api/select":
+            body = self._read_json()
+            if body is None:
+                return self._send(400, {"error": "bad json"})
+            if not activate(body.get("run_id")):
+                return self._send(400, {"error": "unknown run"})
+            return self._send(200, STORE.init_payload())
+
         if u.path != "/api/save":
             return self._send(404, {"error": "not found"})
-        n = int(self.headers.get("Content-Length", 0))
-        try:
-            body = json.loads(self.rfile.read(n) or b"{}")
-        except json.JSONDecodeError:
+        body = self._read_json()
+        if body is None:
             return self._send(400, {"error": "bad json"})
         fid = body.get("id")
         if fid not in STORE.by_id:
@@ -248,7 +284,7 @@ class Handler(BaseHTTPRequestHandler):
 # Frontend                                                                    #
 # --------------------------------------------------------------------------- #
 HTML = r"""<!doctype html>
-<html><head><meta charset="utf-8"><title>strip-5 image labels</title>
+<html><head><meta charset="utf-8"><title>image labels</title>
 <style>
   :root{--bg:#14171c;--panel:#1d222b;--line:#2c333f;--ink:#e7ecf3;--mut:#8b97a8;
         --on:#3fb950;--onbg:#16341f;--accent:#4493f8;}
@@ -275,6 +311,9 @@ HTML = r"""<!doctype html>
   #meta b{font-size:14px}
   #meta .sub{color:var(--mut);font-size:12.5px;margin-top:3px}
   #rows{flex:1;overflow:auto;padding:10px}
+  .grp{color:var(--mut);font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;
+       margin:12px 6px 7px}
+  .grp:first-child{margin-top:2px}
   .row{display:flex;align-items:center;gap:12px;padding:13px 12px;border:1px solid var(--line);
        border-radius:9px;margin-bottom:8px;cursor:pointer;background:#1a1f28}
   .row:hover{border-color:var(--accent)}
@@ -301,13 +340,8 @@ HTML = r"""<!doctype html>
 </style></head>
 <body>
 <header>
-  <span class="title">strip-5 image labels</span>
-  <span class="sortlab">Sort
-    <select id="sort">
-      <option value="sequence">capture order — walk the strip</option>
-      <option value="uncertain">hardest first — model least sure</option>
-    </select>
-  </span>
+  <span class="title" id="title">image labels</span>
+  <span class="sortlab">Mission <select id="mission"></select></span>
   <span class="pill" id="unrevBtn" title="u">jump to next unreviewed</span>
   <span class="grow"></span>
   <span id="posLbl"></span>
@@ -327,22 +361,51 @@ HTML = r"""<!doctype html>
   </div>
 </main>
 <footer>
-  <kbd>1</kbd>–<kbd>9</kbd> toggle species &nbsp;·&nbsp; <kbd>→</kbd>/<kbd>Space</kbd>/<kbd>Enter</kbd> confirm + next
-  &nbsp;·&nbsp; <kbd>←</kbd> prev &nbsp;·&nbsp; <kbd>c</kbd> copy previous frame
-  &nbsp;·&nbsp; <kbd>u</kbd> next unreviewed &nbsp;·&nbsp; autosaves to <span id="outp"></span>
+  <kbd>1</kbd>–<kbd>4</kbd> wildflowers &nbsp;·&nbsp; <kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd> weeds
+  &nbsp;·&nbsp; <kbd>→</kbd>/<kbd>Space</kbd>/<kbd>Enter</kbd> confirm + next &nbsp;·&nbsp; <kbd>←</kbd> prev
+  &nbsp;·&nbsp; <kbd>c</kbd> copy previous frame &nbsp;·&nbsp; <kbd>u</kbd> next unreviewed &nbsp;·&nbsp; autosaves to <span id="outp"></span>
 </footer>
 <script>
-let S=null, order='sequence', pos=0, frameById={};
+let S=null, pos=0, frameById={}, keyToIndex={};
 const $=s=>document.querySelector(s);
 
-async function init(){
-  S=await (await fetch('/api/init')).json();
-  S.frames.forEach(f=>frameById[f.id]=f);
-  $('#outp').textContent=S.out_path;
-  let i=S.orders[order].indexOf(S.cursor); pos=i<0?0:i;
-  bindUI(); show(); progress();
+async function boot(){
+  bindUI();                                   // listeners are attached once, survive mission switches
+  apply(await (await fetch('/api/init')).json());
 }
-const ids=()=>S.orders[order];
+
+// (Re)load the whole view from an init payload — used on first load AND after a
+// live mission switch, so both paths share one code path.
+function apply(p){
+  S=p; frameById={}; S.frames.forEach(f=>frameById[f.id]=f);
+  keyToIndex={};                              // key char -> class index (1-4 wildflowers, ASDF weeds)
+  S.groups.forEach(g=>g.members.forEach((name,j)=>{
+    const k=(g.keys[j]||'').toLowerCase(); if(k) keyToIndex[k]=S.classes.indexOf(name);
+  }));
+  $('#outp').textContent=S.out_path;
+  $('#title').textContent=(S.run_label?S.run_label+' — ':'')+'image labels';
+  document.title=(S.run_label?S.run_label+' ':'')+'image labels';
+  fillMissions();
+  const i=S.order.indexOf(S.cursor); pos=i<0?0:i;
+  show(); progress();
+}
+
+function fillMissions(){
+  $('#mission').innerHTML=S.runs.map(r=>
+    `<option value="${r.run_id}"${r.run_id===S.run_id?' selected':''}>${r.label}</option>`).join('');
+}
+async function switchMission(rid){
+  if(!rid||rid===S.run_id)return;
+  let p;
+  try{ p=await (await fetch('/api/select',{method:'POST',headers:{'Content-Type':'application/json'},
+                                           body:JSON.stringify({run_id:rid})})).json(); }
+  catch(e){ p={error:'request failed'}; }
+  if(p.error){$('#progLbl').textContent='⚠ '+p.error;$('#progLbl').style.color='#d9a441';fillMissions();return;}
+  apply(p);
+  $('#mission').blur();                        // return focus so shortcuts work immediately
+}
+
+const ids=()=>S.order;
 const curId=()=>ids()[pos];
 
 function show(){
@@ -357,10 +420,15 @@ function show(){
 function rows(){
   const lab=S.labels[curId()];
   let h='';
-  S.classes.forEach((c,i)=>{
-    h+=`<div class="row ${lab.vector[i]?'on':''}" data-i="${i}">
-      <div class="key">${i+1}</div><div class="box"></div>
-      <div class="name"><i>${c}</i></div></div>`;
+  S.groups.forEach(g=>{
+    h+=`<div class="grp">${g.name}</div>`;
+    g.members.forEach((name,j)=>{
+      const i=S.classes.indexOf(name);          // vector slot
+      const key=(g.keys[j]||'').toUpperCase();  // shortcut shown on the row
+      h+=`<div class="row ${lab.vector[i]?'on':''}" data-i="${i}">
+        <div class="key">${key}</div><div class="box"></div>
+        <div class="name"><i>${name}</i></div></div>`;
+    });
   });
   $('#rows').innerHTML=h;
   $('#rows').querySelectorAll('.row').forEach(r=>r.onclick=()=>toggle(+r.dataset.i));
@@ -383,14 +451,13 @@ function copyPrev(){if(pos===0)return;const src=S.labels[ids()[pos-1]].vector;co
   lab.vector=src.slice();lab.source='human';rows();save(false);}
 function nextUnreviewed(){const a=ids();for(let k=1;k<=a.length;k++){const j=(pos+k)%a.length;
   if(!S.labels[a[j]].reviewed){pos=j;show();return;}}}
-function setOrder(o){const id=curId();order=o;$('#sort').value=o;const j=ids().indexOf(id);pos=j<0?0:j;show();}
 
 function progress(){let r=0;for(const k in S.labels)if(S.labels[k].reviewed)r++;setCounts({reviewed:r,total:S.frames.length});}
 function setCounts(c){const pct=c.total?Math.round(100*c.reviewed/c.total):0;
-  $('#prog').style.width=pct+'%';$('#progLbl').textContent=`${c.reviewed} / ${c.total}`;}
+  $('#prog').style.width=pct+'%';$('#progLbl').textContent=`${c.reviewed} / ${c.total}`;$('#progLbl').style.color='';}
 
 function bindUI(){
-  $('#sort').onchange=e=>setOrder(e.target.value);
+  $('#mission').onchange=e=>switchMission(e.target.value);
   $('#unrevBtn').onclick=nextUnreviewed;
   $('#prevBtn').onclick=()=>go(-1);
   $('#nextBtn').onclick=()=>go(1);
@@ -398,46 +465,51 @@ function bindUI(){
   document.addEventListener('keydown',e=>{
     if(e.metaKey||e.ctrlKey||e.altKey)return;
     if(e.target.tagName==='SELECT')return;
-    if(e.key>='1'&&e.key<='9'){const n=+e.key-1; if(n<S.classes.length){toggle(n);e.preventDefault();} return;}
+    const k=e.key.length===1?e.key.toLowerCase():e.key;
+    if(k in keyToIndex){toggle(keyToIndex[k]);e.preventDefault();return;}
     switch(e.key){
       case'ArrowRight':case' ':case'Enter':go(1);e.preventDefault();break;
       case'ArrowLeft':go(-1);e.preventDefault();break;
       case'c':copyPrev();break;
       case'u':nextUnreviewed();break;
-      case'o':setOrder(order==='sequence'?'uncertain':'sequence');break;
     }
   });
 }
-init();
+boot();
 </script>
 </body></html>
 """
 
 
 def main(argv=None):
-    global STORE
-    import os
-    from . import select_run
-    ap = argparse.ArgumentParser(description="Strip image-level multilabel labeller")
-    ap.add_argument("--mission", help="which mission to label: site_x/strip_y")
-    ap.add_argument("--run", help="exact run id (use when a mission has multiple completed runs)")
+    global RUNS
+    from . import select_run, _MISSIONS_ROOT
+    from ..discover import completed_runs
+    ap = argparse.ArgumentParser(description="Image-level multilabel labeller")
+    ap.add_argument("--mission", help="start on this mission: site_x/strip_y (optional; switchable in-app)")
+    ap.add_argument("--run", help="start on this exact run id (optional; switchable in-app)")
     ap.add_argument("--missions-root", default=None, help="missions/ tree (default: the repo's)")
     ap.add_argument("--port", type=int, default=8765)
     ap.add_argument("--no-open", action="store_true", help="don't auto-open the browser")
     args = ap.parse_args(argv)
 
-    run = select_run(mission=args.mission, run=args.run, missions_root=args.missions_root)
-    captures = str(run.captures_dir)
-    out = str(run.run_dir / "labels" / "image_multilabel.json")
-    os.makedirs(os.path.dirname(out), exist_ok=True)   # first label of a new mission
+    root = args.missions_root or _MISSIONS_ROOT
+    RUNS = completed_runs(root)
+    if not RUNS:
+        raise SystemExit(f"no completed runs under {root}")
 
-    STORE = Store(captures, None, out)
+    # Initial run: honor --mission/--run if given (nice for jumping straight in),
+    # else start on the first completed run — any mission is switchable in-app.
+    start = select_run(mission=args.mission, run=args.run, missions_root=root) \
+        if (args.mission or args.run) else RUNS[0]
+    activate(start.run_id)
+
     c = STORE.counts()
     url = f"http://127.0.0.1:{args.port}"
-    print(f"labelling {run.mission_name} / {run.run_id}")
-    print(f"strip image labeller  ·  {c['total']} frames  ·  {c['reviewed']} already reviewed")
+    print(f"labelling {CURRENT.mission_name} / {CURRENT.run_id}  ({len(RUNS)} missions available — switch in-app)")
+    print(f"image labeller  ·  {c['total']} frames  ·  {c['reviewed']} already reviewed")
     print(f"default-on: {', '.join(STORE.present(STORE.default_vec)) or '(none)'}")
-    print(f"labels -> {out}")
+    print(f"labels -> {STORE.out_path}")
     print(f"open    {url}")
     if not args.no_open:
         try:
@@ -448,7 +520,7 @@ def main(argv=None):
     try:
         srv.serve_forever()
     except KeyboardInterrupt:
-        print("\nstopped. labels saved at", out)
+        print("\nstopped. labels saved at", STORE.out_path)
 
 
 if __name__ == "__main__":
