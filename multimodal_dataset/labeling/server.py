@@ -22,8 +22,7 @@ header dropdowns in the app — never on the CLI. --mission/--run only pick whic
 mission to land on first.
 
 Run (from anywhere):
-    python -m multimodal_dataset.labeling label                          # first mission, Species task
-    python -m multimodal_dataset.labeling label --mission site_1/strip_5 # land on a specific mission
+    python -m multimodal_dataset.labeling label   # opens on the Species task; switch task + mission in-app
 
 then open the printed http://127.0.0.1:8765 URL.
 

@@ -91,8 +91,7 @@ the mission are both chosen from the header dropdowns in-app — never on the CL
 `--mission`/`--run` only pick which mission to land on first.
 
 ```bash
-python -m multimodal_dataset.labeling label                             # first mission (Species task); switch task + mission in-app
-python -m multimodal_dataset.labeling label  --mission site_1/strip_5   # land on a specific mission
+python -m multimodal_dataset.labeling label    # opens on the Species task; switch task + mission from the header
 ```
 
 ## Roadmap
