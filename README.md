@@ -70,10 +70,28 @@ carrying its location, time, heading, and (once labeled) its species labels. Run
 with `python -m multimodal_dataset`.
 
 It also holds the **labeling app**, a local web tool used to hand-label robot
-photos:
+photos. It carries two switchable tasks over the same frames — pick either from
+the header dropdowns, alongside the mission switcher, with no relaunch:
+
+* **Species** (multilabel) — for each frame, which of the 8 target species are
+  present. The checkboxes are grouped Wildflowers / Weeds and nothing is checked
+  by default, so the labels are unbiased human ground truth (the model's own
+  predictions are never shown). Hot-keys: `1`–`4` wildflowers, `A`/`S`/`D`/`F`
+  weeds. Saved to `labels/image_multilabel.json`.
+* **Image quality** (single-select) — one ordinal judgement per frame: how much
+  of the image is degraded by visual artifacts (motion blur, smear, glare,
+  compression), in quartile bands `0–25` / `25–50` / `50–75` / `75–100`% of the
+  frame affected, stored behind the scenes as `1`–`4`. Hot-keys `1`–`4` pick the
+  band. Saved to `labels/image_quality.json`.
+
+Each task keeps its own labels file, cursor, and progress; both autosave and are
+resumable. Navigation is shared: `→`/`Space`/`Enter` confirm + next, `←` prev,
+`c` copy the previous frame, `u` jump to the next unreviewed frame.
 
 ```bash
-python -m multimodal_dataset.labeling label  --mission site_1/strip_5            # unbiased ground-truth labeling
+python -m multimodal_dataset.labeling label                             # first mission, Species task
+python -m multimodal_dataset.labeling label  --mission site_1/strip_5   # start on a specific mission
+python -m multimodal_dataset.labeling label  --task quality             # start on the Image quality task
 ```
 
 ## Roadmap

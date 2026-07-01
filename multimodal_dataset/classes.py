@@ -33,3 +33,20 @@ CLASSES = [sp for _group, species in GROUPS for sp in species]
 
 # Species pre-checked on a fresh frame; None = blank start.
 DEFAULT_ON = None
+
+
+# --------------------------------------------------------------------------- #
+# Image-quality task                                                          #
+# --------------------------------------------------------------------------- #
+# A second, independent labelling task: instead of which species are present, a
+# single ordinal judgement per frame — how much of the image is degraded by
+# visual artifacts (motion blur, smear, glare, compression, exposure). Four equal
+# quartile bands over the *share of the frame affected*; stored behind the scenes
+# as the integer 1..4 (0 = unset). Hot-keys 1–4 map to the four bands in order.
+QUALITY_LABEL = "Artifact prevalence"
+QUALITY_BINS = [
+    ("0–25%",   "clean — few/no visual artifacts"),
+    ("25–50%",  "light — artifacts over a minority of the frame"),
+    ("50–75%",  "heavy — artifacts over most of the frame"),
+    ("75–100%", "severe — frame dominated by artifacts"),
+]
