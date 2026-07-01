@@ -14,8 +14,8 @@
   "default_on": [],
   "captures_dir": "/Users/kdoherty/multimodal_survey/missions/site_1/strip_1/runs/strip_1_2026-06-16_16-11-51/captures",
   "meta": {
-    "updated": "2026-07-01T21:19:16+00:00",
-    "cursor": "leg01_m001_b023_2026-06-16T16-13-28",
+    "updated": "2026-07-01T21:20:32+00:00",
+    "cursor": "leg01_m008_b023_2026-06-16T16-13-35",
     "total": 552,
     "reviewed": 552,
     "edited": 445
@@ -38,7 +38,7 @@
       ],
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-01T21:19:16+00:00"
+      "updated": "2026-07-01T21:20:30+00:00"
     },
     "leg01_m002_b023_2026-06-16T16-13-29": {
       "vector": [
@@ -57,7 +57,7 @@
       ],
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-01T21:19:16+00:00"
+      "updated": "2026-07-01T21:20:30+00:00"
     },
     "leg01_m003_b023_2026-06-16T16-13-30": {
       "vector": [
@@ -76,7 +76,7 @@
       ],
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-01T21:19:15+00:00"
+      "updated": "2026-07-01T21:20:30+00:00"
     },
     "leg01_m004_b023_2026-06-16T16-13-31": {
       "vector": [
@@ -95,7 +95,7 @@
       ],
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-01T21:19:15+00:00"
+      "updated": "2026-07-01T21:20:31+00:00"
     },
     "leg01_m005_b023_2026-06-16T16-13-32": {
       "vector": [
@@ -114,7 +114,7 @@
       ],
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-01T21:19:15+00:00"
+      "updated": "2026-07-01T21:20:31+00:00"
     },
     "leg01_m006_b023_2026-06-16T16-13-33": {
       "vector": [
@@ -132,7 +132,7 @@
       ],
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-01T21:19:15+00:00"
+      "updated": "2026-07-01T21:20:31+00:00"
     },
     "leg01_m007_b023_2026-06-16T16-13-34": {
       "vector": [
@@ -151,7 +151,7 @@
       ],
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-01T21:19:15+00:00"
+      "updated": "2026-07-01T21:20:31+00:00"
     },
     "leg01_m008_b023_2026-06-16T16-13-35": {
       "vector": [
@@ -169,7 +169,7 @@
       ],
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-01T18:15:23+00:00"
+      "updated": "2026-07-01T21:20:32+00:00"
     },
     "leg01_m009_b023_2026-06-16T16-13-36": {
       "vector": [
@@ -9909,7 +9909,7 @@
       ],
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-01T21:01:28+00:00"
+      "updated": "2026-07-01T21:20:30+00:00"
     }
   }
 }
