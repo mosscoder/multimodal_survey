@@ -2,25 +2,22 @@
   "schema": "strip-image-multilabel/v1",
   "classes": [
     "Lupinus sericeus",
-    "Poa bulbosa",
-    "Tragopogon dubius",
-    "Gaillardia aristata",
     "Balsamorhiza sagittata",
-    "Bromus tectorum",
+    "Gaillardia aristata",
     "Achillea millefolium",
+    "Euphorbia virgata",
     "Sisymbrium altissimum",
-    "Thinopyrum intermedium"
+    "Bromus tectorum",
+    "Poa bulbosa"
   ],
-  "default_on": [
-    "Thinopyrum intermedium"
-  ],
+  "default_on": [],
   "captures_dir": "/Users/kdoherty/multimodal_survey/missions/site_1/strip_5/runs/strip_5_2026-06-16_12-36-44/captures",
   "meta": {
-    "updated": "2026-06-29T22:29:44+00:00",
+    "updated": "2026-07-01T17:29:32+00:00",
     "cursor": "leg11_m001_b265_2026-06-16T12-45-02",
     "total": 533,
     "reviewed": 533,
-    "review_edits": 202
+    "edited": 298
   },
   "labels": {
     "leg01_m000_b085_2026-06-16T12-37-38": {
@@ -32,12 +29,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:29:17+00:00"
@@ -51,19 +45,15 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:47:50+00:00"
     },
     "leg01_m002_b085_2026-06-16T12-37-42": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -75,8 +65,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -85,7 +74,6 @@
     "leg01_m003_b085_2026-06-16T12-37-43": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -95,8 +83,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -105,7 +92,6 @@
     "leg01_m004_b085_2026-06-16T12-37-44": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -115,8 +101,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -125,7 +110,6 @@
     "leg01_m005_b085_2026-06-16T12-37-45": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -135,8 +119,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -145,7 +128,6 @@
     "leg01_m006_b085_2026-06-16T12-37-46": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -155,8 +137,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -165,8 +146,7 @@
     "leg01_m007_b085_2026-06-16T12-37-47": {
       "vector": [
         0,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -175,9 +155,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -192,12 +170,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:26:57+00:00"
@@ -211,12 +186,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:48:28+00:00"
@@ -230,12 +202,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -244,7 +214,6 @@
     "leg01_m011_b085_2026-06-16T12-37-52": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -255,8 +224,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -265,7 +233,6 @@
     "leg01_m012_b085_2026-06-16T12-37-53": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -276,8 +243,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -286,7 +252,6 @@
     "leg01_m013_b085_2026-06-16T12-37-54": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -297,8 +262,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -307,7 +271,6 @@
     "leg01_m014_b085_2026-06-16T12-37-55": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -318,8 +281,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -328,7 +290,6 @@
     "leg01_m015_b085_2026-06-16T12-37-56": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -339,8 +300,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -349,7 +309,6 @@
     "leg01_m016_b085_2026-06-16T12-37-57": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -360,8 +319,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -370,7 +328,6 @@
     "leg01_m017_b085_2026-06-16T12-37-58": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -381,9 +338,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -392,7 +348,6 @@
     "leg01_m018_b085_2026-06-16T12-37-59": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -403,9 +358,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -420,12 +374,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -434,7 +386,6 @@
     "leg01_m020_b085_2026-06-16T12-38-01": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -445,8 +396,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -455,19 +405,17 @@
     "leg01_m021_b085_2026-06-16T12-38-02": {
       "vector": [
         0,
+        0,
+        0,
+        0,
+        0,
         1,
         0,
-        0,
-        0,
-        0,
-        0,
-        1,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -476,7 +424,6 @@
     "leg01_m022_b085_2026-06-16T12-38-04": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -487,8 +434,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -497,7 +443,6 @@
     "leg01_m023_b085_2026-06-16T12-38-04": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -508,8 +453,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -518,7 +462,6 @@
     "leg01_m024_b085_2026-06-16T12-38-06": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -529,8 +472,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -539,7 +481,6 @@
     "leg01_m025_b085_2026-06-16T12-38-07": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -549,8 +490,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -559,7 +499,6 @@
     "leg01_m026_b085_2026-06-16T12-38-08": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -569,8 +508,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -579,7 +517,6 @@
     "leg01_m027_b085_2026-06-16T12-38-09": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -589,8 +526,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -599,7 +535,6 @@
     "leg01_m028_b085_2026-06-16T12-38-10": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -609,8 +544,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -619,7 +553,6 @@
     "leg01_m029_b085_2026-06-16T12-38-11": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -629,8 +562,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -645,12 +577,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:50:41+00:00"
@@ -658,7 +587,6 @@
     "leg01_m031_b085_2026-06-16T12-38-13": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -668,8 +596,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -684,19 +611,15 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:25:23+00:00"
     },
     "leg01_m033_b085_2026-06-16T12-38-16": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -708,8 +631,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -718,7 +640,6 @@
     "leg01_m034_b085_2026-06-16T12-38-17": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -729,8 +650,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -745,12 +665,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -759,7 +677,6 @@
     "leg01_m036_b085_2026-06-16T12-38-19": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -770,8 +687,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -780,7 +696,6 @@
     "leg01_m037_b085_2026-06-16T12-38-20": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -791,8 +706,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -801,7 +715,6 @@
     "leg01_m038_b085_2026-06-16T12-38-21": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -812,8 +725,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -822,7 +734,6 @@
     "leg01_m039_b085_2026-06-16T12-38-22": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -832,8 +743,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -842,7 +752,6 @@
     "leg01_m040_b085_2026-06-16T12-38-23": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -852,8 +761,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -862,7 +770,6 @@
     "leg01_m041_b085_2026-06-16T12-38-24": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -872,8 +779,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -882,7 +788,6 @@
     "leg01_m042_b085_2026-06-16T12-38-25": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -892,8 +797,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -902,19 +806,17 @@
     "leg01_m043_b085_2026-06-16T12-38-26": {
       "vector": [
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -923,19 +825,17 @@
     "leg01_m044_b085_2026-06-16T12-38-28": {
       "vector": [
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -950,12 +850,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:29:08+00:00"
@@ -963,7 +860,6 @@
     "leg01_m046_b085_2026-06-16T12-38-30": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -973,8 +869,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -983,7 +878,6 @@
     "leg01_m047_b085_2026-06-16T12-38-31": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -993,8 +887,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1003,7 +896,6 @@
     "leg01_m048_b085_2026-06-16T12-38-32": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1013,8 +905,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1023,7 +914,6 @@
     "leg01_m049_b085_2026-06-16T12-38-33": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1033,8 +923,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1043,7 +932,6 @@
     "leg01_m050_b085_2026-06-16T12-38-34": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1053,8 +941,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1062,7 +949,6 @@
     },
     "leg01_m051_b085_2026-06-16T12-38-36": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -1074,8 +960,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1090,12 +975,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:52:18+00:00"
@@ -1103,7 +985,6 @@
     "leg01_m053_b085_2026-06-16T12-38-38": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1113,8 +994,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1123,7 +1003,6 @@
     "leg01_m054_b085_2026-06-16T12-38-39": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -1134,8 +1013,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1144,7 +1022,6 @@
     "leg01_m055_b085_2026-06-16T12-38-40": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1154,8 +1031,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1164,7 +1040,6 @@
     "leg01_m056_b085_2026-06-16T12-38-41": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -1175,8 +1050,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -1185,7 +1059,6 @@
     "leg01_m057_b085_2026-06-16T12-38-42": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -1196,8 +1069,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1212,12 +1084,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -1226,7 +1096,6 @@
     "leg01_m059_b085_2026-06-16T12-38-45": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -1237,8 +1106,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1247,7 +1115,6 @@
     "leg01_m060_b085_2026-06-16T12-38-46": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1257,8 +1124,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1266,7 +1132,6 @@
     },
     "leg01_m061_b085_2026-06-16T12-38-47": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -1278,8 +1143,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -1294,12 +1158,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:52:58+00:00"
@@ -1307,7 +1168,6 @@
     "leg01_m063_b085_2026-06-16T12-38-49": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1317,8 +1177,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1326,7 +1185,6 @@
     },
     "leg01_m064_b085_2026-06-16T12-38-50": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -1338,8 +1196,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1348,7 +1205,6 @@
     "leg01_m065_b085_2026-06-16T12-38-51": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1358,8 +1214,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1374,12 +1229,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:27:05+00:00"
@@ -1393,12 +1245,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:53:15+00:00"
@@ -1412,12 +1261,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:53:18+00:00"
@@ -1431,12 +1277,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:24:24+00:00"
@@ -1450,12 +1293,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:53:24+00:00"
@@ -1463,7 +1303,6 @@
     "leg02_m000_b355_2026-06-16T12-39-01": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1473,8 +1312,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1489,12 +1327,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:53:29+00:00"
@@ -1508,12 +1343,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:26:04+00:00"
@@ -1527,12 +1359,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:27:09+00:00"
@@ -1546,12 +1375,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -1566,12 +1393,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -1580,8 +1405,7 @@
     "leg03_m000_b265_2026-06-16T12-39-11": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -1591,9 +1415,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1602,7 +1424,6 @@
     "leg03_m001_b265_2026-06-16T12-39-13": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -1613,8 +1434,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1623,7 +1443,6 @@
     "leg03_m002_b265_2026-06-16T12-39-14": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -1634,8 +1453,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -1644,7 +1462,6 @@
     "leg03_m003_b265_2026-06-16T12-39-15": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1654,8 +1471,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -1663,7 +1479,6 @@
     },
     "leg03_m004_b265_2026-06-16T12-39-16": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -1675,8 +1490,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1685,7 +1499,6 @@
     "leg03_m005_b265_2026-06-16T12-39-17": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1695,8 +1508,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1711,12 +1523,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:24:21+00:00"
@@ -1724,7 +1533,6 @@
     "leg03_m007_b265_2026-06-16T12-39-19": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1734,8 +1542,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -1744,7 +1551,6 @@
     "leg03_m008_b265_2026-06-16T12-39-20": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -1755,8 +1561,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -1765,7 +1570,6 @@
     "leg03_m009_b265_2026-06-16T12-39-21": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -1776,8 +1580,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1786,7 +1589,6 @@
     "leg03_m010_b265_2026-06-16T12-39-22": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -1797,8 +1599,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1808,18 +1609,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -1828,7 +1626,6 @@
     "leg03_m012_b265_2026-06-16T12-39-24": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -1839,8 +1636,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1855,12 +1651,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:54:46+00:00"
@@ -1868,7 +1661,6 @@
     "leg03_m014_b265_2026-06-16T12-39-26": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1878,8 +1670,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1889,18 +1680,14 @@
       "vector": [
         0,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
-      "present": [
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:26:13+00:00"
@@ -1914,12 +1701,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:54:58+00:00"
@@ -1927,7 +1711,6 @@
     "leg03_m017_b265_2026-06-16T12-39-29": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1937,8 +1720,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -1953,12 +1735,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -1967,7 +1747,6 @@
     "leg03_m019_b265_2026-06-16T12-39-31": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -1978,8 +1757,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -1988,7 +1766,6 @@
     "leg03_m020_b265_2026-06-16T12-39-32": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -1998,8 +1775,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2008,7 +1784,6 @@
     "leg03_m021_b265_2026-06-16T12-39-33": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -2018,8 +1793,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -2034,12 +1808,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -2054,12 +1826,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -2068,7 +1838,6 @@
     "leg03_m024_b265_2026-06-16T12-39-36": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2079,8 +1848,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -2089,7 +1857,6 @@
     "leg03_m025_b265_2026-06-16T12-39-37": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -2100,9 +1867,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2111,8 +1877,7 @@
     "leg03_m026_b265_2026-06-16T12-39-38": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         1,
         0,
         0,
@@ -2122,10 +1887,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2134,7 +1897,6 @@
     "leg03_m027_b265_2026-06-16T12-39-39": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -2145,9 +1907,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2156,7 +1917,6 @@
     "leg03_m028_b265_2026-06-16T12-39-40": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -2167,9 +1927,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2178,8 +1937,7 @@
     "leg03_m029_b265_2026-06-16T12-39-41": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         1,
         0,
         0,
@@ -2189,10 +1947,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2201,21 +1957,19 @@
     "leg03_m030_b265_2026-06-16T12-39-42": {
       "vector": [
         1,
-        1,
         0,
         1,
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
         "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2224,22 +1978,19 @@
     "leg03_m031_b265_2026-06-16T12-39-43": {
       "vector": [
         1,
-        1,
+        0,
         1,
         1,
         0,
         0,
-        1,
         0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Gaillardia aristata",
         "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2248,21 +1999,19 @@
     "leg03_m032_b265_2026-06-16T12-39-44": {
       "vector": [
         1,
-        1,
         0,
         1,
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
         "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -2271,21 +2020,19 @@
     "leg03_m033_b265_2026-06-16T12-39-44": {
       "vector": [
         1,
-        1,
         0,
         1,
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
         "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2294,7 +2041,6 @@
     "leg03_m034_b265_2026-06-16T12-39-46": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -2305,9 +2051,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2316,7 +2061,6 @@
     "leg03_m035_b265_2026-06-16T12-39-47": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2327,8 +2071,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2337,7 +2080,6 @@
     "leg03_m036_b265_2026-06-16T12-39-47": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -2348,9 +2090,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -2359,7 +2100,6 @@
     "leg03_m037_b265_2026-06-16T12-39-49": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -2370,9 +2110,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2381,7 +2120,6 @@
     "leg03_m038_b265_2026-06-16T12-39-50": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2392,8 +2130,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -2402,7 +2139,6 @@
     "leg03_m039_b265_2026-06-16T12-39-51": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2413,8 +2149,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2423,7 +2158,6 @@
     "leg03_m040_b265_2026-06-16T12-39-51": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2434,8 +2168,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2444,8 +2177,7 @@
     "leg03_m041_b265_2026-06-16T12-39-52": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -2455,9 +2187,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -2466,8 +2196,7 @@
     "leg03_m042_b265_2026-06-16T12-39-53": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         1,
         0,
         0,
@@ -2477,10 +2206,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2489,7 +2216,6 @@
     "leg03_m043_b265_2026-06-16T12-39-55": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2500,8 +2226,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2510,8 +2235,7 @@
     "leg03_m044_b265_2026-06-16T12-39-56": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -2521,9 +2245,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -2532,7 +2254,6 @@
     "leg03_m045_b265_2026-06-16T12-39-57": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2543,8 +2264,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2553,8 +2273,7 @@
     "leg03_m046_b265_2026-06-16T12-39-58": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -2564,9 +2283,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2575,7 +2292,6 @@
     "leg03_m047_b265_2026-06-16T12-39-59": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2586,8 +2302,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2596,7 +2311,6 @@
     "leg03_m048_b265_2026-06-16T12-39-59": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2607,8 +2321,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2617,7 +2330,6 @@
     "leg03_m049_b265_2026-06-16T12-40-00": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2628,8 +2340,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2638,7 +2349,6 @@
     "leg03_m050_b265_2026-06-16T12-40-01": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2649,8 +2359,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2659,7 +2368,6 @@
     "leg03_m051_b265_2026-06-16T12-40-03": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2670,8 +2378,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2686,12 +2393,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -2700,7 +2405,6 @@
     "leg03_m053_b265_2026-06-16T12-40-05": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2711,8 +2415,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2721,7 +2424,6 @@
     "leg03_m054_b265_2026-06-16T12-40-05": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2732,8 +2434,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2748,12 +2449,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -2762,7 +2461,6 @@
     "leg03_m056_b265_2026-06-16T12-40-07": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -2773,8 +2471,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -2783,7 +2480,6 @@
     "leg03_m057_b265_2026-06-16T12-40-08": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -2794,9 +2490,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -2805,7 +2500,6 @@
     "leg03_m058_b265_2026-06-16T12-40-09": {
       "vector": [
         0,
-        1,
         0,
         1,
         0,
@@ -2815,9 +2509,8 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2826,7 +2519,6 @@
     "leg03_m059_b265_2026-06-16T12-40-10": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -2836,8 +2528,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2846,7 +2537,6 @@
     "leg03_m060_b265_2026-06-16T12-40-11": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -2856,8 +2546,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2866,7 +2555,6 @@
     "leg03_m061_b265_2026-06-16T12-40-12": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -2876,8 +2564,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2886,7 +2573,6 @@
     "leg03_m062_b265_2026-06-16T12-40-13": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -2896,8 +2582,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2906,7 +2591,6 @@
     "leg03_m063_b265_2026-06-16T12-40-14": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -2916,8 +2600,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2926,7 +2609,6 @@
     "leg03_m064_b265_2026-06-16T12-40-15": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -2936,8 +2618,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -2946,8 +2627,7 @@
     "leg03_m065_b265_2026-06-16T12-40-16": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -2957,9 +2637,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -2974,12 +2652,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -2988,7 +2664,6 @@
     "leg03_m067_b265_2026-06-16T12-40-18": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -2998,8 +2673,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3014,12 +2688,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -3028,7 +2700,6 @@
     "leg03_m069_b265_2026-06-16T12-40-20": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3039,8 +2710,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3049,7 +2719,6 @@
     "leg03_m070_b265_2026-06-16T12-40-21": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3060,8 +2729,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3071,18 +2739,14 @@
       "vector": [
         0,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
-      "present": [
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:26:21+00:00"
@@ -3090,7 +2754,6 @@
     "leg04_m001_b355_2026-06-16T12-40-26": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -3100,8 +2763,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3116,19 +2778,15 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T16:02:13+00:00"
     },
     "leg04_m003_b355_2026-06-16T12-40-28": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -3140,8 +2798,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3150,7 +2807,6 @@
     "leg04_m004_b355_2026-06-16T12-40-29": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3161,8 +2817,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3171,20 +2826,18 @@
     "leg04_m005_b355_2026-06-16T12-40-30": {
       "vector": [
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -3193,7 +2846,6 @@
     "leg05_m000_b085_2026-06-16T12-40-33": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3204,8 +2856,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3220,12 +2871,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -3240,12 +2889,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -3254,7 +2901,6 @@
     "leg05_m003_b085_2026-06-16T12-40-37": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3265,8 +2911,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3275,7 +2920,6 @@
     "leg05_m004_b085_2026-06-16T12-40-38": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3286,8 +2930,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3296,8 +2939,7 @@
     "leg05_m005_b085_2026-06-16T12-40-40": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -3307,9 +2949,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3318,8 +2958,7 @@
     "leg05_m006_b085_2026-06-16T12-40-41": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -3329,9 +2968,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3340,8 +2977,7 @@
     "leg05_m007_b085_2026-06-16T12-40-42": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -3351,9 +2987,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3362,8 +2996,7 @@
     "leg05_m008_b085_2026-06-16T12-40-43": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -3373,9 +3006,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3384,8 +3015,7 @@
     "leg05_m009_b085_2026-06-16T12-40-44": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -3395,9 +3025,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3406,7 +3034,6 @@
     "leg05_m010_b085_2026-06-16T12-40-45": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3417,8 +3044,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3427,7 +3053,6 @@
     "leg05_m011_b085_2026-06-16T12-40-46": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3438,8 +3063,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3448,7 +3072,6 @@
     "leg05_m012_b085_2026-06-16T12-40-47": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3459,8 +3082,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3469,7 +3091,6 @@
     "leg05_m013_b085_2026-06-16T12-40-48": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3480,8 +3101,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -3490,20 +3110,18 @@
     "leg05_m014_b085_2026-06-16T12-40-50": {
       "vector": [
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -3512,7 +3130,6 @@
     "leg05_m015_b085_2026-06-16T12-40-51": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -3523,9 +3140,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3534,7 +3150,6 @@
     "leg05_m016_b085_2026-06-16T12-40-52": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3545,8 +3160,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3555,7 +3169,6 @@
     "leg05_m017_b085_2026-06-16T12-40-53": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3566,8 +3179,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -3576,8 +3188,7 @@
     "leg05_m018_b085_2026-06-16T12-40-54": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -3587,9 +3198,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3598,7 +3207,6 @@
     "leg05_m019_b085_2026-06-16T12-40-55": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3609,8 +3217,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3619,8 +3226,7 @@
     "leg05_m020_b085_2026-06-16T12-40-56": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -3630,9 +3236,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3641,7 +3245,6 @@
     "leg05_m021_b085_2026-06-16T12-40-57": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3652,8 +3255,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3665,18 +3267,16 @@
         1,
         0,
         0,
-        1,
-        1,
         0,
         0,
+        1,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Balsamorhiza sagittata",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3686,20 +3286,17 @@
       "vector": [
         0,
         1,
-        1,
-        0,
-        1,
-        1,
         0,
         0,
+        0,
+        0,
+        1,
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Balsamorhiza sagittata",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -3711,17 +3308,15 @@
         1,
         0,
         0,
-        1,
-        1,
         0,
         0,
+        1,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Balsamorhiza sagittata",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3730,20 +3325,18 @@
     "leg05_m025_b085_2026-06-16T12-41-01": {
       "vector": [
         0,
-        1,
         0,
         1,
         0,
+        0,
+        0,
         1,
-        0,
-        0,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Gaillardia aristata",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3752,8 +3345,7 @@
     "leg05_m026_b085_2026-06-16T12-41-02": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -3763,9 +3355,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -3774,7 +3364,6 @@
     "leg05_m027_b085_2026-06-16T12-41-03": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3785,8 +3374,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -3795,7 +3383,6 @@
     "leg05_m028_b085_2026-06-16T12-41-05": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3806,8 +3393,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3816,7 +3402,6 @@
     "leg05_m029_b085_2026-06-16T12-41-06": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -3827,9 +3412,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3838,7 +3422,6 @@
     "leg05_m030_b085_2026-06-16T12-41-07": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -3849,8 +3432,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3859,7 +3441,6 @@
     "leg05_m031_b085_2026-06-16T12-41-08": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -3870,9 +3451,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3881,7 +3461,6 @@
     "leg05_m032_b085_2026-06-16T12-41-09": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -3892,9 +3471,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3904,18 +3482,16 @@
       "vector": [
         1,
         0,
-        0,
         1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "human",
@@ -3924,21 +3500,19 @@
     "leg05_m034_b085_2026-06-16T12-41-11": {
       "vector": [
         1,
-        1,
         0,
         1,
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
         "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3947,21 +3521,19 @@
     "leg05_m035_b085_2026-06-16T12-41-12": {
       "vector": [
         1,
-        1,
         0,
         1,
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
         "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -3970,7 +3542,6 @@
     "leg05_m036_b085_2026-06-16T12-41-14": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -3981,9 +3552,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -3992,7 +3562,6 @@
     "leg05_m037_b085_2026-06-16T12-41-14": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -4003,9 +3572,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4014,21 +3582,19 @@
     "leg05_m038_b085_2026-06-16T12-41-16": {
       "vector": [
         1,
-        1,
         0,
         1,
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
         "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4037,22 +3603,19 @@
     "leg05_m039_b085_2026-06-16T12-41-17": {
       "vector": [
         1,
-        1,
+        0,
         1,
         1,
         0,
         0,
-        1,
         0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Gaillardia aristata",
         "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4061,21 +3624,19 @@
     "leg05_m040_b085_2026-06-16T12-41-18": {
       "vector": [
         1,
-        1,
         0,
         1,
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
         "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -4084,7 +3645,6 @@
     "leg05_m041_b085_2026-06-16T12-41-19": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -4095,9 +3655,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4107,18 +3666,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -4127,7 +3683,6 @@
     "leg05_m043_b085_2026-06-16T12-41-21": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -4138,8 +3693,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4148,8 +3702,7 @@
     "leg05_m044_b085_2026-06-16T12-41-22": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -4159,9 +3712,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -4170,7 +3721,6 @@
     "leg05_m045_b085_2026-06-16T12-41-23": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -4181,8 +3731,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -4197,12 +3746,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -4211,7 +3758,6 @@
     "leg05_m047_b085_2026-06-16T12-41-25": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4221,8 +3767,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -4237,12 +3782,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -4251,8 +3794,7 @@
     "leg05_m049_b085_2026-06-16T12-41-28": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -4262,9 +3804,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4273,8 +3813,7 @@
     "leg05_m050_b085_2026-06-16T12-41-29": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -4284,9 +3823,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4295,7 +3832,6 @@
     "leg05_m051_b085_2026-06-16T12-41-30": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -4306,8 +3842,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4316,7 +3851,6 @@
     "leg05_m052_b085_2026-06-16T12-41-31": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -4327,8 +3861,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4337,7 +3870,6 @@
     "leg05_m053_b085_2026-06-16T12-41-32": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -4348,8 +3880,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4358,7 +3889,6 @@
     "leg05_m054_b085_2026-06-16T12-41-34": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4368,8 +3898,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4378,7 +3907,6 @@
     "leg05_m055_b085_2026-06-16T12-41-34": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4388,8 +3916,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4398,8 +3925,7 @@
     "leg05_m056_b085_2026-06-16T12-41-36": {
       "vector": [
         0,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -4408,9 +3934,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4419,8 +3943,7 @@
     "leg05_m057_b085_2026-06-16T12-41-37": {
       "vector": [
         0,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -4429,9 +3952,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4440,7 +3961,6 @@
     "leg05_m058_b085_2026-06-16T12-41-38": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4450,8 +3970,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4460,7 +3979,6 @@
     "leg05_m059_b085_2026-06-16T12-41-39": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4470,8 +3988,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4480,7 +3997,6 @@
     "leg05_m060_b085_2026-06-16T12-41-40": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4490,8 +4006,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4500,7 +4015,6 @@
     "leg05_m061_b085_2026-06-16T12-41-41": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4510,8 +4024,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4520,7 +4033,6 @@
     "leg05_m062_b085_2026-06-16T12-41-42": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4530,8 +4042,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4539,7 +4050,6 @@
     },
     "leg05_m063_b085_2026-06-16T12-41-43": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -4551,8 +4061,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4561,7 +4070,6 @@
     "leg05_m064_b085_2026-06-16T12-41-45": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4571,8 +4079,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4581,7 +4088,6 @@
     "leg05_m065_b085_2026-06-16T12-41-46": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4591,8 +4097,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4601,7 +4106,6 @@
     "leg05_m066_b085_2026-06-16T12-41-47": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4611,8 +4115,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4621,7 +4124,6 @@
     "leg05_m067_b085_2026-06-16T12-41-48": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4631,8 +4133,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4647,12 +4148,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T16:13:10+00:00"
@@ -4660,8 +4158,7 @@
     "leg05_m069_b085_2026-06-16T12-41-50": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -4671,9 +4168,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4682,7 +4177,6 @@
     "leg05_m070_b085_2026-06-16T12-41-51": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -4693,8 +4187,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4709,12 +4202,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T16:13:26+00:00"
@@ -4728,12 +4218,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -4742,7 +4230,6 @@
     "leg06_m002_b355_2026-06-16T12-41-58": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -4753,8 +4240,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4763,7 +4249,6 @@
     "leg06_m003_b355_2026-06-16T12-41-59": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -4774,8 +4259,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4784,7 +4268,6 @@
     "leg06_m004_b355_2026-06-16T12-42-00": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4794,8 +4277,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4804,7 +4286,6 @@
     "leg06_m005_b355_2026-06-16T12-42-01": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4814,8 +4295,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4824,19 +4304,17 @@
     "leg07_m000_b265_2026-06-16T12-42-06": {
       "vector": [
         0,
+        0,
+        0,
+        0,
+        0,
         1,
         0,
-        0,
-        0,
-        0,
-        0,
-        1,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4845,19 +4323,17 @@
     "leg07_m001_b265_2026-06-16T12-42-07": {
       "vector": [
         0,
+        0,
+        0,
+        0,
+        0,
         1,
         0,
-        0,
-        0,
-        0,
-        0,
-        1,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -4866,7 +4342,6 @@
     "leg07_m002_b265_2026-06-16T12-42-08": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4876,8 +4351,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4886,7 +4360,6 @@
     "leg07_m003_b265_2026-06-16T12-42-09": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4896,8 +4369,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4905,7 +4377,6 @@
     },
     "leg07_m004_b265_2026-06-16T12-42-10": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -4917,8 +4388,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4927,7 +4397,6 @@
     "leg07_m005_b265_2026-06-16T12-42-11": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4937,8 +4406,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -4947,7 +4415,6 @@
     "leg07_m006_b265_2026-06-16T12-42-12": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -4957,8 +4424,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -4969,17 +4435,15 @@
         1,
         0,
         0,
-        0,
-        0,
-        0,
         1,
         0,
-        1
+        0,
+        0,
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Achillea millefolium"
       ],
       "reviewed": true,
       "source": "review",
@@ -4990,16 +4454,14 @@
         0,
         0,
         0,
-        0,
-        0,
-        0,
         1,
         0,
-        1
+        0,
+        0,
+        0
       ],
       "present": [
-        "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Achillea millefolium"
       ],
       "reviewed": true,
       "source": "human",
@@ -5008,20 +4470,18 @@
     "leg07_m009_b265_2026-06-16T12-42-15": {
       "vector": [
         1,
-        1,
-        0,
-        0,
         0,
         0,
         1,
+        0,
+        0,
         0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Achillea millefolium",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5030,7 +4490,6 @@
     "leg07_m010_b265_2026-06-16T12-42-16": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -5041,8 +4500,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5054,7 +4512,6 @@
         1,
         0,
         0,
-        1,
         0,
         0,
         0,
@@ -5062,9 +4519,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5073,19 +4529,17 @@
     "leg07_m012_b265_2026-06-16T12-42-18": {
       "vector": [
         1,
-        0,
-        0,
-        0,
         1,
         0,
         0,
         0,
-        1
+        0,
+        0,
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Balsamorhiza sagittata"
       ],
       "reviewed": true,
       "source": "human",
@@ -5097,7 +4551,6 @@
         1,
         0,
         0,
-        1,
         0,
         0,
         0,
@@ -5105,9 +4558,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5116,19 +4568,17 @@
     "leg07_m014_b265_2026-06-16T12-42-20": {
       "vector": [
         1,
-        0,
-        0,
-        0,
         1,
         0,
         0,
         0,
-        1
+        0,
+        0,
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Balsamorhiza sagittata"
       ],
       "reviewed": true,
       "source": "review",
@@ -5138,9 +4588,8 @@
       "vector": [
         1,
         1,
-        1,
         0,
-        1,
+        0,
         0,
         0,
         0,
@@ -5148,10 +4597,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5160,19 +4607,17 @@
     "leg07_m016_b265_2026-06-16T12-42-22": {
       "vector": [
         1,
-        0,
-        0,
-        0,
         1,
         0,
         0,
         0,
-        1
+        0,
+        0,
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Balsamorhiza sagittata"
       ],
       "reviewed": true,
       "source": "review",
@@ -5181,19 +4626,17 @@
     "leg07_m017_b265_2026-06-16T12-42-23": {
       "vector": [
         1,
-        0,
-        0,
-        0,
         1,
         0,
         0,
         0,
-        1
+        0,
+        0,
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Balsamorhiza sagittata"
       ],
       "reviewed": true,
       "source": "human",
@@ -5205,7 +4648,6 @@
         1,
         0,
         0,
-        1,
         0,
         0,
         0,
@@ -5213,9 +4655,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5224,7 +4665,6 @@
     "leg07_m019_b265_2026-06-16T12-42-25": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -5235,8 +4675,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5245,7 +4684,6 @@
     "leg07_m020_b265_2026-06-16T12-42-26": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -5256,8 +4694,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5266,7 +4703,6 @@
     "leg07_m021_b265_2026-06-16T12-42-27": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -5277,8 +4713,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5293,12 +4728,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -5308,18 +4741,16 @@
       "vector": [
         1,
         0,
-        0,
         1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "review",
@@ -5328,7 +4759,6 @@
     "leg07_m024_b265_2026-06-16T12-42-30": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -5339,9 +4769,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5350,8 +4779,7 @@
     "leg07_m025_b265_2026-06-16T12-42-31": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         1,
         0,
         0,
@@ -5361,10 +4789,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5374,18 +4800,16 @@
       "vector": [
         1,
         0,
-        0,
         1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "review",
@@ -5394,7 +4818,6 @@
     "leg07_m027_b265_2026-06-16T12-42-33": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -5405,8 +4828,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5415,7 +4837,6 @@
     "leg07_m028_b265_2026-06-16T12-42-34": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -5426,9 +4847,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5438,18 +4858,16 @@
       "vector": [
         1,
         0,
-        0,
         1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "human",
@@ -5464,12 +4882,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -5478,7 +4894,6 @@
     "leg07_m031_b265_2026-06-16T12-42-37": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -5489,9 +4904,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5500,7 +4914,6 @@
     "leg07_m032_b265_2026-06-16T12-42-38": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -5511,9 +4924,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5522,7 +4934,6 @@
     "leg07_m033_b265_2026-06-16T12-42-39": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -5533,8 +4944,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5549,12 +4959,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -5563,8 +4971,7 @@
     "leg07_m035_b265_2026-06-16T12-42-41": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -5574,9 +4981,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5585,7 +4990,6 @@
     "leg07_m036_b265_2026-06-16T12-42-42": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -5596,8 +5000,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5606,20 +5009,18 @@
     "leg07_m037_b265_2026-06-16T12-42-43": {
       "vector": [
         1,
+        0,
+        0,
+        0,
+        0,
         1,
         0,
-        0,
-        0,
-        0,
-        0,
-        1,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5634,12 +5035,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -5648,20 +5047,18 @@
     "leg07_m039_b265_2026-06-16T12-42-45": {
       "vector": [
         1,
+        1,
         0,
         0,
         0,
         1,
         0,
-        0,
-        1,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
         "Balsamorhiza sagittata",
-        "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Sisymbrium altissimum"
       ],
       "reviewed": true,
       "source": "review",
@@ -5670,20 +5067,18 @@
     "leg07_m040_b265_2026-06-16T12-42-46": {
       "vector": [
         1,
+        1,
         0,
         0,
         0,
         1,
         0,
-        0,
-        1,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
         "Balsamorhiza sagittata",
-        "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Sisymbrium altissimum"
       ],
       "reviewed": true,
       "source": "review",
@@ -5692,20 +5087,18 @@
     "leg07_m041_b265_2026-06-16T12-42-47": {
       "vector": [
         1,
+        1,
         0,
         0,
         0,
         1,
         0,
-        0,
-        1,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
         "Balsamorhiza sagittata",
-        "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Sisymbrium altissimum"
       ],
       "reviewed": true,
       "source": "review",
@@ -5715,22 +5108,20 @@
       "vector": [
         1,
         1,
-        0,
-        1,
-        1,
         1,
         0,
+        0,
+        1,
         1,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Gaillardia aristata",
         "Balsamorhiza sagittata",
-        "Bromus tectorum",
+        "Gaillardia aristata",
         "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Bromus tectorum",
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5739,20 +5130,18 @@
     "leg07_m043_b265_2026-06-16T12-42-49": {
       "vector": [
         1,
+        1,
         0,
         0,
         0,
         1,
         0,
-        0,
-        1,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
         "Balsamorhiza sagittata",
-        "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Sisymbrium altissimum"
       ],
       "reviewed": true,
       "source": "review",
@@ -5761,20 +5150,18 @@
     "leg07_m044_b265_2026-06-16T12-42-50": {
       "vector": [
         1,
+        1,
+        0,
         0,
         0,
         0,
         1,
-        1,
-        0,
-        0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
         "Balsamorhiza sagittata",
-        "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Bromus tectorum"
       ],
       "reviewed": true,
       "source": "review",
@@ -5783,19 +5170,17 @@
     "leg07_m045_b265_2026-06-16T12-42-51": {
       "vector": [
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5804,7 +5189,6 @@
     "leg07_m046_b265_2026-06-16T12-42-52": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -5814,8 +5198,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5827,16 +5210,14 @@
         1,
         0,
         0,
-        1,
         0,
         0,
         0,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5844,7 +5225,6 @@
     },
     "leg07_m048_b265_2026-06-16T12-42-54": {
       "vector": [
-        1,
         1,
         0,
         1,
@@ -5856,9 +5236,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5868,9 +5247,8 @@
       "vector": [
         1,
         1,
+        1,
         0,
-        1,
-        1,
         0,
         0,
         0,
@@ -5878,10 +5256,9 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Gaillardia aristata",
         "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata",
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5890,7 +5267,6 @@
     "leg07_m050_b265_2026-06-16T12-42-56": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -5901,8 +5277,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5911,7 +5286,6 @@
     "leg07_m051_b265_2026-06-16T12-42-57": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -5922,8 +5296,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -5938,12 +5311,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -5952,7 +5323,6 @@
     "leg07_m053_b265_2026-06-16T12-42-59": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -5963,8 +5333,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5973,7 +5342,6 @@
     "leg07_m054_b265_2026-06-16T12-43-00": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -5984,8 +5352,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -5994,7 +5361,6 @@
     "leg07_m055_b265_2026-06-16T12-43-01": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6005,8 +5371,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6015,8 +5380,7 @@
     "leg07_m056_b265_2026-06-16T12-43-02": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -6026,9 +5390,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6037,7 +5399,6 @@
     "leg07_m057_b265_2026-06-16T12-43-03": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6048,8 +5409,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6058,7 +5418,6 @@
     "leg07_m058_b265_2026-06-16T12-43-04": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6069,8 +5428,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6079,7 +5437,6 @@
     "leg07_m059_b265_2026-06-16T12-43-05": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -6089,8 +5446,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6099,8 +5455,7 @@
     "leg07_m060_b265_2026-06-16T12-43-06": {
       "vector": [
         0,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -6109,9 +5464,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6120,7 +5473,6 @@
     "leg07_m061_b265_2026-06-16T12-43-07": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -6131,9 +5483,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6142,7 +5493,6 @@
     "leg07_m062_b265_2026-06-16T12-43-08": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6153,8 +5503,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6169,12 +5518,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -6183,7 +5530,6 @@
     "leg07_m064_b265_2026-06-16T12-43-10": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6194,8 +5540,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6210,12 +5555,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -6224,7 +5567,6 @@
     "leg07_m066_b265_2026-06-16T12-43-12": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6235,8 +5577,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6245,7 +5586,6 @@
     "leg07_m067_b265_2026-06-16T12-43-13": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6256,8 +5596,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6266,7 +5605,6 @@
     "leg07_m068_b265_2026-06-16T12-43-14": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6277,8 +5615,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6287,19 +5624,17 @@
     "leg07_m069_b265_2026-06-16T12-43-15": {
       "vector": [
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6308,20 +5643,18 @@
     "leg07_m070_b265_2026-06-16T12-43-16": {
       "vector": [
         0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        1,
-        0,
         1,
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Bromus tectorum",
         "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Bromus tectorum",
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6330,7 +5663,6 @@
     "leg08_m000_b355_2026-06-16T12-43-20": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6341,8 +5673,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6351,7 +5682,6 @@
     "leg08_m001_b355_2026-06-16T12-43-21": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6362,8 +5692,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6372,7 +5701,6 @@
     "leg08_m002_b355_2026-06-16T12-43-22": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6383,8 +5711,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6393,7 +5720,6 @@
     "leg08_m003_b355_2026-06-16T12-43-23": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6404,8 +5730,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6415,18 +5740,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -6436,18 +5758,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -6457,18 +5776,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -6477,7 +5793,6 @@
     "leg09_m001_b085_2026-06-16T12-43-30": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6488,8 +5803,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6498,7 +5812,6 @@
     "leg09_m002_b085_2026-06-16T12-43-31": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6509,8 +5822,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6519,8 +5831,7 @@
     "leg09_m003_b085_2026-06-16T12-43-32": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -6530,9 +5841,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6541,7 +5850,6 @@
     "leg09_m004_b085_2026-06-16T12-43-33": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6552,8 +5860,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6563,18 +5870,16 @@
       "vector": [
         1,
         0,
-        0,
         1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "human",
@@ -6589,12 +5894,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -6603,8 +5906,7 @@
     "leg09_m007_b085_2026-06-16T12-43-37": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -6614,9 +5916,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6625,8 +5925,7 @@
     "leg09_m008_b085_2026-06-16T12-43-38": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -6636,9 +5935,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6647,7 +5944,6 @@
     "leg09_m009_b085_2026-06-16T12-43-39": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6658,8 +5954,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6674,12 +5969,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -6688,7 +5981,6 @@
     "leg09_m011_b085_2026-06-16T12-43-41": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6699,8 +5991,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6709,7 +6000,6 @@
     "leg09_m012_b085_2026-06-16T12-43-42": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6720,8 +6010,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6734,15 +6023,13 @@
         0,
         0,
         0,
+        0,
         1,
-        0,
-        0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Bromus tectorum"
       ],
       "reviewed": true,
       "source": "review",
@@ -6751,20 +6038,18 @@
     "leg09_m014_b085_2026-06-16T12-43-44": {
       "vector": [
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6773,21 +6058,18 @@
     "leg09_m015_b085_2026-06-16T12-43-46": {
       "vector": [
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        1,
-        0,
-        0,
-        1,
-        0,
-        0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6796,19 +6078,17 @@
     "leg09_m016_b085_2026-06-16T12-43-47": {
       "vector": [
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6817,19 +6097,17 @@
     "leg09_m017_b085_2026-06-16T12-43-48": {
       "vector": [
         0,
+        0,
+        0,
+        0,
+        0,
         1,
         0,
-        0,
-        0,
-        0,
-        0,
-        1,
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6838,8 +6116,7 @@
     "leg09_m018_b085_2026-06-16T12-43-49": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -6849,9 +6126,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6860,20 +6135,18 @@
     "leg09_m019_b085_2026-06-16T12-43-50": {
       "vector": [
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6882,7 +6155,6 @@
     "leg09_m020_b085_2026-06-16T12-43-51": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -6893,8 +6165,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6903,7 +6174,6 @@
     "leg09_m021_b085_2026-06-16T12-43-52": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -6913,8 +6183,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6922,7 +6191,6 @@
     },
     "leg09_m022_b085_2026-06-16T12-43-53": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -6934,8 +6202,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -6947,18 +6214,16 @@
         1,
         0,
         0,
-        1,
-        1,
         0,
         0,
+        1,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Balsamorhiza sagittata",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -6967,19 +6232,17 @@
     "leg09_m024_b085_2026-06-16T12-43-55": {
       "vector": [
         0,
+        1,
+        0,
         0,
         0,
         0,
         1,
-        1,
-        0,
-        0,
-        1
+        0
       ],
       "present": [
         "Balsamorhiza sagittata",
-        "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Bromus tectorum"
       ],
       "reviewed": true,
       "source": "review",
@@ -6988,20 +6251,18 @@
     "leg09_m025_b085_2026-06-16T12-43-57": {
       "vector": [
         1,
+        1,
+        0,
         0,
         0,
         0,
         1,
-        1,
-        0,
-        0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
         "Balsamorhiza sagittata",
-        "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Bromus tectorum"
       ],
       "reviewed": true,
       "source": "review",
@@ -7010,21 +6271,19 @@
     "leg09_m026_b085_2026-06-16T12-43-58": {
       "vector": [
         1,
-        0,
-        0,
-        1,
         1,
         1,
         0,
         0,
-        1
+        0,
+        1,
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
         "Balsamorhiza sagittata",
-        "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata",
+        "Bromus tectorum"
       ],
       "reviewed": true,
       "source": "review",
@@ -7033,22 +6292,20 @@
     "leg09_m027_b085_2026-06-16T12-43-59": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
-        1,
         0,
+        1,
         1,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Bromus tectorum",
         "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Bromus tectorum",
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7058,21 +6315,19 @@
       "vector": [
         1,
         1,
-        0,
-        1,
-        1,
         1,
         0,
         0,
+        0,
+        1,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Gaillardia aristata",
         "Balsamorhiza sagittata",
+        "Gaillardia aristata",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -7081,8 +6336,7 @@
     "leg09_m029_b085_2026-06-16T12-44-01": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         1,
         0,
         0,
@@ -7092,10 +6346,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7106,8 +6358,7 @@
         1,
         1,
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -7115,11 +6366,9 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Gaillardia aristata",
         "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata",
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7130,18 +6379,15 @@
         1,
         0,
         1,
-        1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "review",
@@ -7150,7 +6396,6 @@
     "leg09_m032_b085_2026-06-16T12-44-04": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -7160,8 +6405,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7170,7 +6414,6 @@
     "leg09_m033_b085_2026-06-16T12-44-06": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7181,8 +6424,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7191,7 +6433,6 @@
     "leg09_m034_b085_2026-06-16T12-44-07": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7202,8 +6443,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7212,7 +6452,6 @@
     "leg09_m035_b085_2026-06-16T12-44-08": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -7223,9 +6462,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7234,7 +6472,6 @@
     "leg09_m036_b085_2026-06-16T12-44-09": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -7245,9 +6482,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7256,7 +6492,6 @@
     "leg09_m037_b085_2026-06-16T12-44-10": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -7267,9 +6502,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7278,7 +6512,6 @@
     "leg09_m038_b085_2026-06-16T12-44-11": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7289,8 +6522,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7299,7 +6531,6 @@
     "leg09_m039_b085_2026-06-16T12-44-12": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7310,8 +6541,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -7320,7 +6550,6 @@
     "leg09_m040_b085_2026-06-16T12-44-13": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7331,8 +6560,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7341,8 +6569,7 @@
     "leg09_m041_b085_2026-06-16T12-44-14": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -7352,9 +6579,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -7363,7 +6588,6 @@
     "leg09_m042_b085_2026-06-16T12-44-15": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -7374,9 +6598,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7385,8 +6608,7 @@
     "leg09_m043_b085_2026-06-16T12-44-16": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -7396,9 +6618,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7413,12 +6633,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -7427,7 +6645,6 @@
     "leg09_m045_b085_2026-06-16T12-44-19": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7438,8 +6655,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7448,7 +6664,6 @@
     "leg09_m046_b085_2026-06-16T12-44-20": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7459,8 +6674,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7469,7 +6683,6 @@
     "leg09_m047_b085_2026-06-16T12-44-21": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7480,8 +6693,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -7490,7 +6702,6 @@
     "leg09_m048_b085_2026-06-16T12-44-22": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -7501,9 +6712,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7512,7 +6722,6 @@
     "leg09_m049_b085_2026-06-16T12-44-23": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -7523,9 +6732,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7534,7 +6742,6 @@
     "leg09_m050_b085_2026-06-16T12-44-24": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7545,8 +6752,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7561,12 +6767,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -7581,12 +6785,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -7601,12 +6803,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -7615,7 +6815,6 @@
     "leg09_m054_b085_2026-06-16T12-44-29": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7626,8 +6825,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -7642,12 +6840,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -7662,12 +6858,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -7682,12 +6876,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -7702,12 +6894,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -7716,7 +6906,6 @@
     "leg09_m059_b085_2026-06-16T12-44-34": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7727,8 +6916,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7737,7 +6925,6 @@
     "leg09_m060_b085_2026-06-16T12-44-36": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7748,8 +6935,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7758,7 +6944,6 @@
     "leg09_m061_b085_2026-06-16T12-44-37": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -7769,9 +6954,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -7786,12 +6970,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -7800,7 +6982,6 @@
     "leg09_m063_b085_2026-06-16T12-44-39": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -7811,9 +6992,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -7824,18 +7004,15 @@
         1,
         0,
         1,
-        1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "human",
@@ -7844,8 +7021,7 @@
     "leg09_m065_b085_2026-06-16T12-44-41": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         1,
         0,
         0,
@@ -7855,10 +7031,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -7867,7 +7041,6 @@
     "leg09_m066_b085_2026-06-16T12-44-42": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -7878,8 +7051,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7888,7 +7060,6 @@
     "leg09_m067_b085_2026-06-16T12-44-43": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -7898,8 +7069,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7914,12 +7084,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T16:31:56+00:00"
@@ -7927,7 +7094,6 @@
     "leg09_m069_b085_2026-06-16T12-44-46": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -7937,8 +7103,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -7947,8 +7112,7 @@
     "leg09_m070_b085_2026-06-16T12-44-46": {
       "vector": [
         0,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -7957,9 +7121,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -7974,12 +7136,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T16:32:06+00:00"
@@ -7987,7 +7146,6 @@
     "leg10_m001_b355_2026-06-16T12-44-52": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -7997,8 +7155,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8013,12 +7170,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -8027,7 +7182,6 @@
     "leg10_m003_b355_2026-06-16T12-44-54": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -8038,8 +7192,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8054,12 +7207,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -8068,7 +7219,6 @@
     "leg10_m005_b355_2026-06-16T12-44-56": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -8079,8 +7229,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -8089,7 +7238,6 @@
     "leg11_m000_b265_2026-06-16T12-45-00": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -8100,9 +7248,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -8117,12 +7264,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -8137,12 +7282,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -8157,12 +7300,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -8172,18 +7313,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -8193,18 +7331,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -8219,12 +7354,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -8239,12 +7372,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -8253,19 +7384,17 @@
     "leg11_m008_b265_2026-06-16T12-45-09": {
       "vector": [
         1,
-        0,
-        0,
-        0,
         1,
         0,
         0,
         0,
-        1
+        0,
+        0,
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Balsamorhiza sagittata"
       ],
       "reviewed": true,
       "source": "review",
@@ -8274,20 +7403,17 @@
     "leg11_m009_b265_2026-06-16T12-45-10": {
       "vector": [
         1,
-        0,
-        1,
-        0,
         1,
         0,
         0,
         0,
-        1
+        0,
+        0,
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Balsamorhiza sagittata"
       ],
       "reviewed": true,
       "source": "human",
@@ -8299,7 +7425,6 @@
         1,
         0,
         0,
-        1,
         0,
         0,
         0,
@@ -8307,9 +7432,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8324,12 +7448,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -8338,19 +7460,17 @@
     "leg11_m012_b265_2026-06-16T12-45-13": {
       "vector": [
         1,
-        0,
-        0,
-        0,
         1,
         0,
         0,
         0,
-        1
+        0,
+        0,
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Balsamorhiza sagittata"
       ],
       "reviewed": true,
       "source": "human",
@@ -8365,12 +7485,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -8379,7 +7497,6 @@
     "leg11_m014_b265_2026-06-16T12-45-15": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -8390,8 +7507,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -8400,7 +7516,6 @@
     "leg11_m015_b265_2026-06-16T12-45-16": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -8411,8 +7526,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8427,12 +7541,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -8441,7 +7553,6 @@
     "leg11_m017_b265_2026-06-16T12-45-18": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -8452,8 +7563,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8468,12 +7578,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -8482,7 +7590,6 @@
     "leg11_m019_b265_2026-06-16T12-45-20": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -8493,8 +7600,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -8503,7 +7609,6 @@
     "leg11_m020_b265_2026-06-16T12-45-21": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -8514,8 +7619,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8524,7 +7628,6 @@
     "leg11_m021_b265_2026-06-16T12-45-22": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -8535,8 +7638,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8545,7 +7647,6 @@
     "leg11_m022_b265_2026-06-16T12-45-23": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -8556,9 +7657,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -8569,18 +7669,15 @@
         1,
         0,
         1,
-        1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "review",
@@ -8589,7 +7686,6 @@
     "leg11_m024_b265_2026-06-16T12-45-25": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -8600,9 +7696,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8612,18 +7707,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -8632,7 +7724,6 @@
     "leg11_m026_b265_2026-06-16T12-45-27": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -8643,9 +7734,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8654,7 +7744,6 @@
     "leg11_m027_b265_2026-06-16T12-45-28": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -8665,9 +7754,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8676,8 +7764,7 @@
     "leg11_m028_b265_2026-06-16T12-45-29": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         1,
         0,
         0,
@@ -8687,10 +7774,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8701,18 +7786,15 @@
         1,
         0,
         1,
-        1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "human",
@@ -8721,7 +7803,6 @@
     "leg11_m030_b265_2026-06-16T12-45-31": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -8732,9 +7813,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8744,18 +7824,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -8765,18 +7842,16 @@
       "vector": [
         1,
         0,
-        0,
         1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "review",
@@ -8785,7 +7860,6 @@
     "leg11_m033_b265_2026-06-16T12-45-34": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -8796,8 +7870,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -8806,7 +7879,6 @@
     "leg11_m034_b265_2026-06-16T12-45-35": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -8817,9 +7889,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -8829,18 +7900,16 @@
       "vector": [
         1,
         0,
-        0,
         1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "review",
@@ -8849,7 +7918,6 @@
     "leg11_m036_b265_2026-06-16T12-45-37": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -8860,9 +7928,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8871,20 +7938,18 @@
     "leg11_m037_b265_2026-06-16T12-45-38": {
       "vector": [
         1,
-        0,
-        0,
         1,
         1,
         0,
         0,
         0,
-        1
+        0,
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
         "Balsamorhiza sagittata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "human",
@@ -8894,18 +7959,16 @@
       "vector": [
         1,
         0,
-        0,
         1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "review",
@@ -8915,18 +7978,16 @@
       "vector": [
         1,
         0,
-        0,
         1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "review",
@@ -8935,7 +7996,6 @@
     "leg11_m040_b265_2026-06-16T12-45-41": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -8946,9 +8006,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -8957,7 +8016,6 @@
     "leg11_m041_b265_2026-06-16T12-45-42": {
       "vector": [
         0,
-        1,
         0,
         1,
         0,
@@ -8967,9 +8025,8 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -8978,7 +8035,6 @@
     "leg11_m042_b265_2026-06-16T12-45-43": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -8989,9 +8045,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9000,7 +8055,6 @@
     "leg11_m043_b265_2026-06-16T12-45-44": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -9011,9 +8065,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -9023,18 +8076,16 @@
       "vector": [
         1,
         0,
-        0,
         1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "review",
@@ -9043,7 +8094,6 @@
     "leg11_m045_b265_2026-06-16T12-45-46": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -9054,9 +8104,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -9065,8 +8114,7 @@
     "leg11_m046_b265_2026-06-16T12-45-47": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -9076,9 +8124,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9087,20 +8133,18 @@
     "leg11_m047_b265_2026-06-16T12-45-48": {
       "vector": [
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
         1
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9115,12 +8159,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -9135,12 +8177,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -9155,12 +8195,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:29:22+00:00"
@@ -9174,12 +8211,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -9194,12 +8229,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -9214,12 +8247,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -9228,7 +8259,6 @@
     "leg11_m054_b265_2026-06-16T12-45-55": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -9239,8 +8269,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9255,12 +8284,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -9270,18 +8297,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -9291,18 +8315,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -9317,12 +8338,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "review",
       "updated": "2026-06-29T22:26:33+00:00"
@@ -9330,8 +8348,7 @@
     "leg11_m059_b265_2026-06-16T12-46-00": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -9341,9 +8358,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9352,7 +8367,6 @@
     "leg11_m060_b265_2026-06-16T12-46-01": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -9363,8 +8377,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9379,12 +8392,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -9399,12 +8410,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:46:20+00:00"
@@ -9412,7 +8420,6 @@
     "leg11_m063_b265_2026-06-16T12-46-04": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -9422,8 +8429,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9432,7 +8438,6 @@
     "leg11_m064_b265_2026-06-16T12-46-05": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -9443,8 +8448,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9453,7 +8457,6 @@
     "leg11_m065_b265_2026-06-16T12-46-06": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -9464,8 +8467,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9475,18 +8477,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -9496,18 +8495,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -9522,12 +8518,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -9542,12 +8536,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -9557,18 +8549,14 @@
       "vector": [
         0,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
-      "present": [
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "human",
       "updated": "2026-06-25T15:46:19+00:00"
@@ -9577,25 +8565,20 @@
       "vector": [
         0,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
-      "present": [
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "human",
       "updated": "2026-06-25T15:46:19+00:00"
     },
     "leg12_m001_b355_2026-06-16T12-46-16": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -9607,8 +8590,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9617,7 +8599,6 @@
     "leg12_m002_b355_2026-06-16T12-46-17": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -9628,8 +8609,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9638,7 +8618,6 @@
     "leg12_m003_b355_2026-06-16T12-46-18": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -9648,8 +8627,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9658,7 +8636,6 @@
     "leg12_m004_b355_2026-06-16T12-46-19": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -9668,8 +8645,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -9678,7 +8654,6 @@
     "leg12_m005_b355_2026-06-16T12-46-20": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -9688,8 +8663,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9698,7 +8672,6 @@
     "leg13_m000_b085_2026-06-16T12-46-23": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -9708,8 +8681,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -9718,7 +8690,6 @@
     "leg13_m001_b085_2026-06-16T12-46-25": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -9728,8 +8699,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -9744,12 +8714,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -9764,12 +8732,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -9778,8 +8744,7 @@
     "leg13_m004_b085_2026-06-16T12-46-28": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -9789,9 +8754,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9801,18 +8764,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -9821,8 +8781,7 @@
     "leg13_m006_b085_2026-06-16T12-46-31": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -9832,9 +8791,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9844,18 +8801,14 @@
       "vector": [
         0,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
-      "present": [
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "human",
       "updated": "2026-06-25T15:46:16+00:00"
@@ -9869,12 +8822,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:46:16+00:00"
@@ -9882,7 +8832,6 @@
     "leg13_m009_b085_2026-06-16T12-46-34": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -9892,8 +8841,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9902,7 +8850,6 @@
     "leg13_m010_b085_2026-06-16T12-46-35": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -9912,8 +8859,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -9928,12 +8874,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:46:15+00:00"
@@ -9947,12 +8890,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -9967,12 +8908,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "human",
@@ -9987,12 +8926,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:46:15+00:00"
@@ -10000,7 +8936,6 @@
     "leg13_m015_b085_2026-06-16T12-46-41": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10010,8 +8945,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10026,12 +8960,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:46:14+00:00"
@@ -10040,18 +8971,15 @@
       "vector": [
         1,
         0,
-        1,
         0,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -10066,12 +8994,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -10080,7 +9006,6 @@
     "leg13_m019_b085_2026-06-16T12-46-45": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -10091,8 +9016,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10107,19 +9031,15 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:46:14+00:00"
     },
     "leg13_m021_b085_2026-06-16T12-46-48": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -10131,8 +9051,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10147,12 +9066,10 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Lupinus sericeus",
-        "Thinopyrum intermedium"
+        "Lupinus sericeus"
       ],
       "reviewed": true,
       "source": "review",
@@ -10161,8 +9078,7 @@
     "leg13_m023_b085_2026-06-16T12-46-49": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -10172,9 +9088,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10183,7 +9097,6 @@
     "leg13_m024_b085_2026-06-16T12-46-51": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -10194,8 +9107,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10204,7 +9116,6 @@
     "leg13_m025_b085_2026-06-16T12-46-52": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -10215,8 +9126,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10225,7 +9135,6 @@
     "leg13_m026_b085_2026-06-16T12-46-53": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -10236,9 +9145,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10247,7 +9155,6 @@
     "leg13_m027_b085_2026-06-16T12-46-54": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -10258,9 +9165,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10269,7 +9175,6 @@
     "leg13_m028_b085_2026-06-16T12-46-55": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -10280,8 +9185,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10290,7 +9194,6 @@
     "leg13_m029_b085_2026-06-16T12-46-56": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -10301,8 +9204,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10311,8 +9213,7 @@
     "leg13_m030_b085_2026-06-16T12-46-57": {
       "vector": [
         1,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -10322,9 +9223,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10333,7 +9232,6 @@
     "leg13_m031_b085_2026-06-16T12-46-58": {
       "vector": [
         1,
-        1,
         0,
         0,
         0,
@@ -10344,8 +9242,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10354,8 +9251,7 @@
     "leg13_m032_b085_2026-06-16T12-47-00": {
       "vector": [
         0,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -10364,9 +9260,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10376,18 +9270,16 @@
       "vector": [
         1,
         0,
-        0,
         1,
         0,
         0,
         0,
         0,
-        1
+        0
       ],
       "present": [
         "Lupinus sericeus",
-        "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Gaillardia aristata"
       ],
       "reviewed": true,
       "source": "human",
@@ -10396,7 +9288,6 @@
     "leg13_m034_b085_2026-06-16T12-47-02": {
       "vector": [
         1,
-        1,
         0,
         1,
         0,
@@ -10407,9 +9298,8 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10418,8 +9308,7 @@
     "leg13_m035_b085_2026-06-16T12-47-03": {
       "vector": [
         0,
-        1,
-        1,
+        0,
         1,
         0,
         0,
@@ -10428,10 +9317,8 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Tragopogon dubius",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10440,7 +9327,6 @@
     "leg13_m036_b085_2026-06-16T12-47-04": {
       "vector": [
         0,
-        1,
         0,
         1,
         0,
@@ -10450,9 +9336,8 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
         "Gaillardia aristata",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10467,12 +9352,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:45:59+00:00"
@@ -10480,7 +9362,6 @@
     "leg13_m038_b085_2026-06-16T12-47-06": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10490,8 +9371,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10500,8 +9380,7 @@
     "leg13_m039_b085_2026-06-16T12-47-07": {
       "vector": [
         0,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -10510,9 +9389,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10527,12 +9404,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:45:59+00:00"
@@ -10546,12 +9420,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:45:59+00:00"
@@ -10559,7 +9430,6 @@
     "leg13_m042_b085_2026-06-16T12-47-10": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10569,8 +9439,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10579,7 +9448,6 @@
     "leg13_m043_b085_2026-06-16T12-47-12": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10589,8 +9457,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10605,12 +9472,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:45:59+00:00"
@@ -10624,12 +9488,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:45:59+00:00"
@@ -10643,12 +9504,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:45:59+00:00"
@@ -10662,12 +9520,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:45:59+00:00"
@@ -10681,12 +9536,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:45:58+00:00"
@@ -10694,7 +9546,6 @@
     "leg13_m049_b085_2026-06-16T12-47-19": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10704,8 +9555,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10720,12 +9570,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:45:58+00:00"
@@ -10733,7 +9580,6 @@
     "leg13_m051_b085_2026-06-16T12-47-21": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10743,8 +9589,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10752,7 +9597,6 @@
     },
     "leg13_m052_b085_2026-06-16T12-47-22": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -10764,8 +9608,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10774,8 +9617,7 @@
     "leg13_m053_b085_2026-06-16T12-47-23": {
       "vector": [
         0,
-        1,
-        1,
+        0,
         0,
         0,
         0,
@@ -10784,9 +9626,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10795,7 +9635,6 @@
     "leg13_m054_b085_2026-06-16T12-47-24": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10805,8 +9644,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10815,7 +9653,6 @@
     "leg13_m055_b085_2026-06-16T12-47-25": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10825,8 +9662,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10835,7 +9671,6 @@
     "leg13_m056_b085_2026-06-16T12-47-26": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10845,8 +9680,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10859,14 +9693,12 @@
         0,
         0,
         0,
+        0,
         1,
-        0,
-        0,
-        1
+        0
       ],
       "present": [
-        "Bromus tectorum",
-        "Thinopyrum intermedium"
+        "Bromus tectorum"
       ],
       "reviewed": true,
       "source": "review",
@@ -10875,7 +9707,6 @@
     "leg13_m058_b085_2026-06-16T12-47-28": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10885,8 +9716,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10895,21 +9725,18 @@
     "leg13_m059_b085_2026-06-16T12-47-30": {
       "vector": [
         0,
-        1,
-        1,
+        0,
+        0,
         0,
         0,
         1,
-        0,
         1,
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Tragopogon dubius",
-        "Bromus tectorum",
         "Sisymbrium altissimum",
-        "Thinopyrum intermedium"
+        "Bromus tectorum",
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10917,7 +9744,6 @@
     },
     "leg13_m060_b085_2026-06-16T12-47-31": {
       "vector": [
-        1,
         1,
         0,
         0,
@@ -10929,8 +9755,7 @@
       ],
       "present": [
         "Lupinus sericeus",
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10939,7 +9764,6 @@
     "leg13_m061_b085_2026-06-16T12-47-32": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10949,8 +9773,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10959,7 +9782,6 @@
     "leg13_m062_b085_2026-06-16T12-47-33": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10969,8 +9791,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -10979,7 +9800,6 @@
     "leg13_m063_b085_2026-06-16T12-47-35": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -10989,8 +9809,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "review",
@@ -10999,7 +9818,6 @@
     "leg13_m064_b085_2026-06-16T12-47-36": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -11009,8 +9827,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -11019,7 +9836,6 @@
     "leg13_m065_b085_2026-06-16T12-47-37": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -11029,8 +9845,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -11039,7 +9854,6 @@
     "leg13_m066_b085_2026-06-16T12-47-38": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -11049,8 +9863,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -11065,12 +9878,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:45:56+00:00"
@@ -11084,12 +9894,9 @@
         0,
         0,
         0,
-        0,
-        1
+        0
       ],
-      "present": [
-        "Thinopyrum intermedium"
-      ],
+      "present": [],
       "reviewed": true,
       "source": "default",
       "updated": "2026-06-25T15:45:56+00:00"
@@ -11097,7 +9904,6 @@
     "leg13_m069_b085_2026-06-16T12-47-41": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -11107,8 +9913,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
@@ -11117,7 +9922,6 @@
     "leg13_m070_b085_2026-06-16T12-47-42": {
       "vector": [
         0,
-        1,
         0,
         0,
         0,
@@ -11127,8 +9931,7 @@
         1
       ],
       "present": [
-        "Poa bulbosa",
-        "Thinopyrum intermedium"
+        "Poa bulbosa"
       ],
       "reviewed": true,
       "source": "human",
