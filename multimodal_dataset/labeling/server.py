@@ -17,10 +17,13 @@ header — no relaunch. Each keeps its own labels file, its own cursor, and its 
 progress. Everything autosaves and is resumable: stop any time, rerun, and you land
 back on the last frame of whichever task/mission you pick.
 
+Both the task (Species / Image quality) and the mission are switched live from the
+header dropdowns in the app — never on the CLI. --mission/--run only pick which
+mission to land on first.
+
 Run (from anywhere):
     python -m multimodal_dataset.labeling label                          # first mission, Species task
-    python -m multimodal_dataset.labeling label --mission site_1/strip_5 # start on a specific mission
-    python -m multimodal_dataset.labeling label --task quality           # start on the Quality task
+    python -m multimodal_dataset.labeling label --mission site_1/strip_5 # land on a specific mission
 
 then open the printed http://127.0.0.1:8765 URL.
 
@@ -725,8 +728,6 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description="Image-level labeller (species + image quality)")
     ap.add_argument("--mission", help="start on this mission: site_x/strip_y (optional; switchable in-app)")
     ap.add_argument("--run", help="start on this exact run id (optional; switchable in-app)")
-    ap.add_argument("--task", choices=[t["id"] for t in TASKS], default="species",
-                    help="start on this task (optional; switchable in-app)")
     ap.add_argument("--missions-root", default=None, help="missions/ tree (default: the repo's)")
     ap.add_argument("--port", type=int, default=8765)
     ap.add_argument("--no-open", action="store_true", help="don't auto-open the browser")
@@ -738,16 +739,17 @@ def main(argv=None):
         raise SystemExit(f"no completed runs under {root}")
 
     # Initial run: honor --mission/--run if given (nice for jumping straight in),
-    # else start on the first completed run — any mission/task is switchable in-app.
+    # else start on the first completed run. Both the mission and the task (Species
+    # vs Image quality) are switched from the header in-app, never on the CLI.
     start = select_run(mission=args.mission, run=args.run, missions_root=root) \
         if (args.mission or args.run) else RUNS[0]
-    activate(start.run_id, args.task)
+    activate(start.run_id)
 
     c = STORE.counts()
-    task_name = next(t["name"] for t in TASKS if t["id"] == args.task)
     url = f"http://127.0.0.1:{args.port}"
     print(f"labelling {CURRENT.mission_name} / {CURRENT.run_id}  ({len(RUNS)} missions available — switch in-app)")
-    print(f"task: {task_name}  ·  {c['total']} frames  ·  {c['reviewed']} already reviewed")
+    print(f"task: {TASKS[0]['name']} (switch task + mission in the app header)  ·  "
+          f"{c['total']} frames  ·  {c['reviewed']} already reviewed")
     if isinstance(STORE, Store):
         print(f"default-on: {', '.join(STORE.present(STORE.default_vec)) or '(none)'}")
     print(f"labels -> {STORE.out_path}")
