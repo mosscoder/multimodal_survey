@@ -6,13 +6,14 @@
     "Achillea millefolium": 1000,
     "Helianthus annuus": 1000,
     "Helianthus maximiliani": 1000,
-    "Antennaria parvifolia": 976,
+    "Antennaria parvifolia": 977,
     "Collomia linearis": 1000,
     "Lithophragma glabrum": 1000,
     "Lomatium triternatum": 1000,
     "Microsteris gracilis": 1000,
     "Myosotis stricta": 1000,
     "Phacelia linearis": 1000,
+    "Lithospermum ruderale": 1000,
     "Cirsium undulatum": 1000,
     "Collinsia parviflora": 1000,
     "Erigeron pumilus": 1000,
@@ -20,18 +21,29 @@
     "Linum lewisii": 1000,
     "Plantago patagonica": 1000,
     "Polygonum douglasii": 258,
-    "Poa secunda": 804,
+    "Artemisia frigida": 1000,
+    "Artemisia tridentata": 1000,
+    "Erigeron speciosus": 1000,
+    "Eriophyllum lanatum": 1000,
+    "Grindelia squarrosa": 1000,
+    "Phacelia hastata": 1000,
+    "Ratibida columnifera": 1000,
+    "Rosa woodsii": 1000,
+    "Poa secunda": 805,
     "Pseudoroegneria spicata": 1000,
     "Hesperostipa comata": 1000,
+    "Festuca idahoensis": 464,
     "Thinopyrum intermedium": 1000,
     "Bromus tectorum": 1000,
     "Poa bulbosa": 1000,
+    "Poa compressa": 1000,
     "Euphorbia virgata": 1000,
     "Sisymbrium altissimum": 1000,
     "Holosteum umbellatum": 1000,
     "Taraxacum officinale": 1000,
     "Tragopogon dubius": 1000,
     "Verbascum blattaria": 1000,
+    "Verbascum thapsus": 1000,
     "Veronica verna": 1000,
     "Chenopodium album": 1000,
     "Filago arvensis": 1000,
@@ -66,7 +78,7 @@
     },
     "antennaria_parvifolia": {
       "test": 196,
-      "train": 780
+      "train": 781
     },
     "collomia_linearis": {
       "test": 200,
@@ -89,6 +101,10 @@
       "train": 800
     },
     "phacelia_linearis": {
+      "test": 200,
+      "train": 800
+    },
+    "lithospermum_ruderale": {
       "test": 200,
       "train": 800
     },
@@ -120,9 +136,41 @@
       "train": 206,
       "test": 52
     },
+    "artemisia_frigida": {
+      "test": 200,
+      "train": 800
+    },
+    "artemisia_tridentata": {
+      "test": 200,
+      "train": 800
+    },
+    "erigeron_speciosus": {
+      "test": 200,
+      "train": 800
+    },
+    "eriophyllum_lanatum": {
+      "test": 200,
+      "train": 800
+    },
+    "grindelia_squarrosa": {
+      "test": 200,
+      "train": 800
+    },
+    "phacelia_hastata": {
+      "test": 200,
+      "train": 800
+    },
+    "ratibida_columnifera": {
+      "test": 200,
+      "train": 800
+    },
+    "rosa_woodsii": {
+      "test": 200,
+      "train": 800
+    },
     "poa_secunda": {
       "test": 161,
-      "train": 643
+      "train": 644
     },
     "pseudoroegneria_spicata": {
       "test": 200,
@@ -131,6 +179,10 @@
     "hesperostipa_comata": {
       "test": 200,
       "train": 800
+    },
+    "festuca_idahoensis": {
+      "test": 93,
+      "train": 371
     },
     "thinopyrum_intermedium": {
       "test": 200,
@@ -141,6 +193,10 @@
       "train": 800
     },
     "poa_bulbosa": {
+      "test": 200,
+      "train": 800
+    },
+    "poa_compressa": {
       "test": 200,
       "train": 800
     },
@@ -165,6 +221,10 @@
       "train": 800
     },
     "verbascum_blattaria": {
+      "test": 200,
+      "train": 800
+    },
+    "verbascum_thapsus": {
       "test": 200,
       "train": 800
     },
@@ -352,6 +412,18 @@
     },
     {
       "source": "inaturalist",
+      "taxon_key": "77795",
+      "scientific_name": "Lithospermum ruderale",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Lithospermum",
+      "species": "ruderale",
+      "accepted_name": "Lithospermum ruderale",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
       "taxon_key": "76358",
       "scientific_name": "Cirsium undulatum",
       "rank": "species",
@@ -436,6 +508,102 @@
     },
     {
       "source": "inaturalist",
+      "taxon_key": "146898",
+      "scientific_name": "Artemisia frigida",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Artemisia",
+      "species": "frigida",
+      "accepted_name": "Artemisia frigida",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
+      "taxon_key": "75598",
+      "scientific_name": "Artemisia tridentata",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Artemisia",
+      "species": "tridentata",
+      "accepted_name": "Artemisia tridentata",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
+      "taxon_key": "84732",
+      "scientific_name": "Erigeron speciosus",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Erigeron",
+      "species": "speciosus",
+      "accepted_name": "Erigeron speciosus",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
+      "taxon_key": "77049",
+      "scientific_name": "Eriophyllum lanatum",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Eriophyllum",
+      "species": "lanatum",
+      "accepted_name": "Eriophyllum lanatum",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
+      "taxon_key": "77305",
+      "scientific_name": "Grindelia squarrosa",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Grindelia",
+      "species": "squarrosa",
+      "accepted_name": "Grindelia squarrosa",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
+      "taxon_key": "59982",
+      "scientific_name": "Phacelia hastata",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Phacelia",
+      "species": "hastata",
+      "accepted_name": "Phacelia hastata",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
+      "taxon_key": "78836",
+      "scientific_name": "Ratibida columnifera",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Ratibida",
+      "species": "columnifera",
+      "accepted_name": "Ratibida columnifera",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
+      "taxon_key": "78887",
+      "scientific_name": "Rosa woodsii",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Rosa",
+      "species": "woodsii",
+      "accepted_name": "Rosa woodsii",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
       "taxon_key": "57198",
       "scientific_name": "Poa secunda",
       "rank": "species",
@@ -472,6 +640,18 @@
     },
     {
       "source": "inaturalist",
+      "taxon_key": "61200",
+      "scientific_name": "Festuca idahoensis",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Festuca",
+      "species": "idahoensis",
+      "accepted_name": "Festuca idahoensis",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
       "taxon_key": "155848",
       "scientific_name": "Thinopyrum intermedium",
       "rank": "species",
@@ -504,6 +684,18 @@
       "genus": "Poa",
       "species": "bulbosa",
       "accepted_name": "Poa bulbosa",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
+      "taxon_key": "78636",
+      "scientific_name": "Poa compressa",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Poa",
+      "species": "compressa",
+      "accepted_name": "Poa compressa",
       "match_confidence": null
     },
     {
@@ -576,6 +768,18 @@
       "genus": "Verbascum",
       "species": "blattaria",
       "accepted_name": "Verbascum blattaria",
+      "match_confidence": null
+    },
+    {
+      "source": "inaturalist",
+      "taxon_key": "59029",
+      "scientific_name": "Verbascum thapsus",
+      "rank": "species",
+      "kingdom": "Plantae",
+      "family": null,
+      "genus": "Verbascum",
+      "species": "thapsus",
+      "accepted_name": "Verbascum thapsus",
       "match_confidence": null
     },
     {
@@ -654,31 +858,31 @@
   "sources": [
     "inaturalist"
   ],
-  "occurrences_kept": 52804,
+  "occurrences_kept": 69782,
   "download_stats": {
-    "ok": 11014,
+    "ok": 12093,
     "failed": 0,
-    "duplicate": 11,
-    "too_small": 6,
-    "reused": 25485
+    "duplicate": 35,
+    "too_small": 3,
+    "reused": 35883
   },
   "license_report": {
-    "total_images": 36510,
+    "total_images": 48011,
     "by_license": {
-      "CC0": 1682,
-      "CC-BY": 4182,
-      "CC-BY-NC": 30181,
-      "CC-BY-SA": 116,
-      "CC-BY-NC-SA": 349
+      "CC0": 2162,
+      "CC-BY": 5456,
+      "CC-BY-NC": 39799,
+      "CC-BY-SA": 151,
+      "CC-BY-NC-SA": 443
     },
-    "redistributable_images": 5980,
-    "non_redistributable_images": 30530,
+    "redistributable_images": 7769,
+    "non_redistributable_images": 40242,
     "note": "Dataset is PRIVATE training data for a model; non-redistributable licenses are retained and used internally, not republished."
   },
-  "repo_id": "montana-native-and-invasive-plants-38-species",
+  "repo_id": "montana-native-and-invasive-plants-50-species",
   "publish": {
     "pushed": false,
-    "repo_id": "montana-native-and-invasive-plants-38-species",
+    "repo_id": "montana-native-and-invasive-plants-50-species",
     "private": true,
     "configs": [
       "balsamorhiza_sagittata",
@@ -694,6 +898,7 @@
       "microsteris_gracilis",
       "myosotis_stricta",
       "phacelia_linearis",
+      "lithospermum_ruderale",
       "cirsium_undulatum",
       "collinsia_parviflora",
       "erigeron_pumilus",
@@ -701,18 +906,29 @@
       "linum_lewisii",
       "plantago_patagonica",
       "polygonum_douglasii",
+      "artemisia_frigida",
+      "artemisia_tridentata",
+      "erigeron_speciosus",
+      "eriophyllum_lanatum",
+      "grindelia_squarrosa",
+      "phacelia_hastata",
+      "ratibida_columnifera",
+      "rosa_woodsii",
       "poa_secunda",
       "pseudoroegneria_spicata",
       "hesperostipa_comata",
+      "festuca_idahoensis",
       "thinopyrum_intermedium",
       "bromus_tectorum",
       "poa_bulbosa",
+      "poa_compressa",
       "euphorbia_virgata",
       "sisymbrium_altissimum",
       "holosteum_umbellatum",
       "taraxacum_officinale",
       "tragopogon_dubius",
       "verbascum_blattaria",
+      "verbascum_thapsus",
       "veronica_verna",
       "chenopodium_album",
       "filago_arvensis",
