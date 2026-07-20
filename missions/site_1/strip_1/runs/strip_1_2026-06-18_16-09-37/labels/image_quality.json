@@ -11,8 +11,8 @@
   "bin_meaning": "share of the frame degraded by visual artifacts (quartile band, 1..4; 0=unset)",
   "captures_dir": "C:\\Users\\psala\\MPG\\multimodal_survey\\missions\\site_1\\strip_1\\runs\\strip_1_2026-06-18_16-09-37\\captures",
   "meta": {
-    "updated": "2026-07-04T23:37:15+00:00",
-    "cursor": "leg05_m021_b023_2026-06-18T16-15-46",
+    "updated": "2026-07-19T23:53:28+00:00",
+    "cursor": "leg05_m023_b023_2026-06-18T16-15-48",
     "total": 551,
     "reviewed": 551,
     "edited": 551
@@ -2116,21 +2116,21 @@
       "band": "75\u2013100%",
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-04T23:37:15+00:00"
+      "updated": "2026-07-19T23:53:27+00:00"
     },
     "leg05_m022_b023_2026-06-18T16-15-47": {
       "bin": 4,
       "band": "75\u2013100%",
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-04T23:37:14+00:00"
+      "updated": "2026-07-19T23:53:28+00:00"
     },
     "leg05_m023_b023_2026-06-18T16-15-48": {
       "bin": 1,
       "band": "0\u201325%",
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-04T23:37:07+00:00"
+      "updated": "2026-07-19T23:53:28+00:00"
     },
     "leg05_m024_b023_2026-06-18T16-15-49": {
       "bin": 1,
