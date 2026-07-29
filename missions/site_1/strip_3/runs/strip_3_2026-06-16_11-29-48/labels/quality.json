@@ -11,8 +11,8 @@
   "bin_meaning": "share of the frame degraded by visual artifacts (quartile band, 1..4; 0=unset)",
   "captures_dir": "missions/site_1/strip_3/runs/strip_3_2026-06-16_11-29-48/captures",
   "meta": {
-    "updated": "2026-07-04T23:59:07+00:00",
-    "cursor": "leg07_m150_b200_2026-06-16T11-47-15",
+    "updated": "2026-07-29T22:56:39+00:00",
+    "cursor": "leg07_m111_b200_2026-06-16T11-46-05",
     "total": 570,
     "reviewed": 570,
     "edited": 570
@@ -2714,11 +2714,11 @@
       "updated": "2026-07-04T23:56:28+00:00"
     },
     "leg05_m100_b020_2026-06-16T11-40-57": {
-      "bin": 0,
-      "band": null,
+      "bin": 4,
+      "band": "75\u2013100%",
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-04T23:56:29+00:00"
+      "updated": "2026-07-29T22:56:39+00:00"
     },
     "leg05_m101_b020_2026-06-16T11-40-59": {
       "bin": 4,
@@ -3764,11 +3764,11 @@
       "updated": "2026-07-04T23:58:41+00:00"
     },
     "leg07_m111_b200_2026-06-16T11-46-05": {
-      "bin": 0,
-      "band": null,
+      "bin": 4,
+      "band": "75\u2013100%",
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-04T23:58:41+00:00"
+      "updated": "2026-07-29T22:56:39+00:00"
     },
     "leg07_m113_b200_2026-06-16T11-46-13": {
       "bin": 4,

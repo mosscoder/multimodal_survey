@@ -11,11 +11,11 @@
   "bin_meaning": "share of the frame degraded by visual artifacts (quartile band, 1..4; 0=unset)",
   "captures_dir": "missions/site_1/strip_2/runs/strip_2_2026-06-16_15-06-20/captures",
   "meta": {
-    "updated": "2026-07-04T23:43:11+00:00",
-    "cursor": "leg09_m120_b015_2026-06-16T15-18-42",
+    "updated": "2026-07-29T22:57:49+00:00",
+    "cursor": "leg09_m076_b015_2026-06-16T15-17-56",
     "total": 628,
     "reviewed": 628,
-    "edited": 627
+    "edited": 628
   },
   "labels": {
     "leg01_m000_b015_2026-06-16T15-07-02": {
@@ -551,11 +551,11 @@
       "updated": "2026-07-04T23:38:53+00:00"
     },
     "leg01_m077_b015_2026-06-16T15-08-28": {
-      "bin": 0,
-      "band": null,
+      "bin": 1,
+      "band": "0\u201325%",
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-04T23:38:54+00:00"
+      "updated": "2026-07-29T22:57:49+00:00"
     },
     "leg01_m078_b015_2026-06-16T15-08-29": {
       "bin": 1,
@@ -1034,11 +1034,11 @@
       "updated": "2026-07-04T23:39:24+00:00"
     },
     "leg03_m019_b195_2026-06-16T15-09-47": {
-      "bin": 0,
-      "band": null,
+      "bin": 1,
+      "band": "0\u201325%",
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-04T23:39:26+00:00"
+      "updated": "2026-07-29T22:57:49+00:00"
     },
     "leg03_m020_b195_2026-06-16T15-09-48": {
       "bin": 1,
@@ -1902,11 +1902,11 @@
       "updated": "2026-07-04T23:40:27+00:00"
     },
     "leg05_m016_b015_2026-06-16T15-12-05": {
-      "bin": 0,
-      "band": null,
+      "bin": 1,
+      "band": "0\u201325%",
       "reviewed": true,
-      "source": "default",
-      "updated": "2026-07-04T23:40:28+00:00"
+      "source": "human",
+      "updated": "2026-07-29T22:57:49+00:00"
     },
     "leg05_m017_b015_2026-06-16T15-12-07": {
       "bin": 1,
@@ -2511,11 +2511,11 @@
       "updated": "2026-07-04T23:41:00+00:00"
     },
     "leg05_m103_b015_2026-06-16T15-13-40": {
-      "bin": 0,
-      "band": null,
+      "bin": 1,
+      "band": "0\u201325%",
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-04T23:41:00+00:00"
+      "updated": "2026-07-29T22:57:49+00:00"
     },
     "leg05_m104_b015_2026-06-16T15-13-41": {
       "bin": 1,
@@ -4100,11 +4100,11 @@
       "updated": "2026-07-04T23:42:47+00:00"
     },
     "leg09_m076_b015_2026-06-16T15-17-56": {
-      "bin": 0,
-      "band": null,
+      "bin": 1,
+      "band": "0\u201325%",
       "reviewed": true,
       "source": "human",
-      "updated": "2026-07-04T23:42:48+00:00"
+      "updated": "2026-07-29T22:57:49+00:00"
     },
     "leg09_m077_b015_2026-06-16T15-17-57": {
       "bin": 1,
