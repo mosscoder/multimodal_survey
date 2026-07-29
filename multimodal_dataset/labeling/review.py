@@ -5,7 +5,7 @@ A sibling of label_server.py. Where the labeller hides the model and collects an
 UNBIASED human ground truth, this app does the opposite: it puts the model's
 prediction front-and-centre so you can AUDIT the disagreements and fix the labels.
 
-It loads the SAME label source the labeller writes — `labels/image_multilabel.json`
+It loads the SAME label source the labeller writes — `labels/species.json`
 — so the two apps share one source of truth (an edit here shows up there, and vice
 versa). Edits made here are tagged `source:"review"` so the labeller's blind work and
 the review corrections stay distinguishable in the one file.
@@ -45,6 +45,7 @@ import numpy as np
 # args, so this app stays decoupled from the MIL program. Scored species come from
 # the package's single canonical source (matches the MIL program by value).
 from ..classes import CLASSES as CLASS_ORDER, DEFAULT_ON
+from .server import repo_rel               # committed label files store repo-relative paths
 
 DEFAULT_SPECIES = "Gaillardia aristata"   # initial hunt; --species overrides; switchable in the UI
 LOCK = threading.Lock()
@@ -139,10 +140,10 @@ class Store:
         edited frames change). Schema-compatible with label_server.py."""
         with LOCK:
             payload = {
-                "schema": "strip-image-multilabel/v1",
+                "schema": "strip-species/v1",
                 "classes": self.classes,
                 "default_on": ([DEFAULT_ON] if DEFAULT_ON else []),
-                "captures_dir": self.captures,
+                "captures_dir": repo_rel(self.captures),
                 "meta": {"updated": now_iso(), "cursor": self.gt_meta.get("cursor"), **self.counts()},
                 "labels": {fid: {"vector": lab["vector"], "present": self.present(lab["vector"]),
                                  "reviewed": lab["reviewed"], "source": lab["source"],
@@ -425,7 +426,7 @@ def main(argv=None):
     DEFAULT_SPECIES = args.species
     run = select_run(mission=args.mission, run=args.run, missions_root=args.missions_root)
     captures = str(run.captures_dir)
-    gt = str(run.run_dir / "labels" / "image_multilabel.json")
+    gt = str(run.run_dir / "labels" / "species.json")
 
     # one-time safety backup of the shared GT before this app can write it
     if os.path.exists(gt):

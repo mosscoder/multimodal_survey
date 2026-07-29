@@ -1,0 +1,6085 @@
+{
+  "schema": "strip-species/v1",
+  "task": "species",
+  "classes": [
+    "Lupinus sericeus",
+    "Balsamorhiza sagittata",
+    "Gaillardia aristata",
+    "Achillea millefolium",
+    "Euphorbia virgata",
+    "Sisymbrium altissimum",
+    "Bromus tectorum",
+    "Poa bulbosa"
+  ],
+  "default_on": [],
+  "captures_dir": "missions/site_2/strip_2/runs/strip_2_2026-06-17_14-10-44/captures",
+  "meta": {
+    "updated": "2026-07-21T18:51:44+00:00",
+    "cursor": "leg09_m055_b076_2026-06-17T14-17-56",
+    "total": 333,
+    "reviewed": 333,
+    "edited": 292
+  },
+  "labels": {
+    "leg01_m000_b076_2026-06-17T14-11-19": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:38:55+00:00"
+    },
+    "leg01_m001_b076_2026-06-17T14-11-20": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:38:57+00:00"
+    },
+    "leg01_m002_b076_2026-06-17T14-11-21": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:38:58+00:00"
+    },
+    "leg01_m003_b076_2026-06-17T14-11-22": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:02+00:00"
+    },
+    "leg01_m004_b076_2026-06-17T14-11-23": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:09+00:00"
+    },
+    "leg01_m005_b076_2026-06-17T14-11-24": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:10+00:00"
+    },
+    "leg01_m006_b076_2026-06-17T14-11-26": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:11+00:00"
+    },
+    "leg01_m007_b076_2026-06-17T14-11-27": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:39:14+00:00"
+    },
+    "leg01_m008_b076_2026-06-17T14-11-28": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:19+00:00"
+    },
+    "leg01_m009_b076_2026-06-17T14-11-29": {
+      "vector": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Achillea millefolium",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:25+00:00"
+    },
+    "leg01_m010_b076_2026-06-17T14-11-30": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:28+00:00"
+    },
+    "leg01_m011_b076_2026-06-17T14-11-31": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:31+00:00"
+    },
+    "leg01_m012_b076_2026-06-17T14-11-32": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:35+00:00"
+    },
+    "leg01_m013_b076_2026-06-17T14-11-33": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:39+00:00"
+    },
+    "leg01_m014_b076_2026-06-17T14-11-34": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:45+00:00"
+    },
+    "leg01_m015_b076_2026-06-17T14-11-35": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Bromus tectorum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:50+00:00"
+    },
+    "leg01_m016_b076_2026-06-17T14-11-36": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:39:58+00:00"
+    },
+    "leg01_m017_b076_2026-06-17T14-11-38": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:40:01+00:00"
+    },
+    "leg01_m018_b076_2026-06-17T14-11-38": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:04+00:00"
+    },
+    "leg01_m019_b076_2026-06-17T14-11-40": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:07+00:00"
+    },
+    "leg01_m020_b076_2026-06-17T14-11-41": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:13+00:00"
+    },
+    "leg01_m021_b076_2026-06-17T14-11-42": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:40:14+00:00"
+    },
+    "leg01_m022_b076_2026-06-17T14-11-43": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:16+00:00"
+    },
+    "leg01_m023_b076_2026-06-17T14-11-44": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:18+00:00"
+    },
+    "leg01_m024_b076_2026-06-17T14-11-45": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:40:20+00:00"
+    },
+    "leg01_m025_b076_2026-06-17T14-11-46": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:23+00:00"
+    },
+    "leg01_m026_b076_2026-06-17T14-11-47": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:24+00:00"
+    },
+    "leg01_m027_b076_2026-06-17T14-11-48": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:29+00:00"
+    },
+    "leg01_m028_b076_2026-06-17T14-11-49": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:33+00:00"
+    },
+    "leg01_m029_b076_2026-06-17T14-11-50": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:36+00:00"
+    },
+    "leg01_m030_b076_2026-06-17T14-11-51": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:41+00:00"
+    },
+    "leg01_m031_b076_2026-06-17T14-11-52": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:45+00:00"
+    },
+    "leg01_m032_b076_2026-06-17T14-11-54": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:47+00:00"
+    },
+    "leg01_m033_b076_2026-06-17T14-11-55": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:48+00:00"
+    },
+    "leg01_m034_b076_2026-06-17T14-11-56": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:40:50+00:00"
+    },
+    "leg01_m035_b076_2026-06-17T14-11-57": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:40:52+00:00"
+    },
+    "leg01_m036_b076_2026-06-17T14-11-58": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:54+00:00"
+    },
+    "leg01_m037_b076_2026-06-17T14-11-59": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:55+00:00"
+    },
+    "leg01_m038_b076_2026-06-17T14-12-00": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:56+00:00"
+    },
+    "leg01_m039_b076_2026-06-17T14-12-01": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:57+00:00"
+    },
+    "leg01_m040_b076_2026-06-17T14-12-02": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:40:58+00:00"
+    },
+    "leg01_m041_b076_2026-06-17T14-12-03": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:02+00:00"
+    },
+    "leg01_m042_b076_2026-06-17T14-12-05": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:05+00:00"
+    },
+    "leg01_m043_b076_2026-06-17T14-12-06": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:08+00:00"
+    },
+    "leg01_m044_b076_2026-06-17T14-12-07": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:11+00:00"
+    },
+    "leg01_m045_b076_2026-06-17T14-12-08": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:13+00:00"
+    },
+    "leg01_m046_b076_2026-06-17T14-12-09": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:14+00:00"
+    },
+    "leg01_m047_b076_2026-06-17T14-12-10": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:20+00:00"
+    },
+    "leg01_m048_b076_2026-06-17T14-12-11": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:22+00:00"
+    },
+    "leg01_m049_b076_2026-06-17T14-12-12": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:24+00:00"
+    },
+    "leg01_m050_b076_2026-06-17T14-12-13": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:27+00:00"
+    },
+    "leg01_m051_b076_2026-06-17T14-12-14": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:30+00:00"
+    },
+    "leg01_m052_b076_2026-06-17T14-12-15": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:41:32+00:00"
+    },
+    "leg01_m053_b076_2026-06-17T14-12-16": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:02+00:00"
+    },
+    "leg01_m054_b076_2026-06-17T14-12-18": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "present": [
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:12+00:00"
+    },
+    "leg01_m055_b076_2026-06-17T14-12-19": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:14+00:00"
+    },
+    "leg01_m056_b076_2026-06-17T14-12-20": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:16+00:00"
+    },
+    "leg01_m057_b076_2026-06-17T14-12-21": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:20+00:00"
+    },
+    "leg01_m058_b076_2026-06-17T14-12-22": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:21+00:00"
+    },
+    "leg01_m059_b076_2026-06-17T14-12-23": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:23+00:00"
+    },
+    "leg01_m060_b076_2026-06-17T14-12-24": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:24+00:00"
+    },
+    "leg01_m061_b076_2026-06-17T14-12-25": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "present": [
+        "Bromus tectorum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:27+00:00"
+    },
+    "leg01_m062_b076_2026-06-17T14-12-26": {
+      "vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Achillea millefolium",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:30+00:00"
+    },
+    "leg02_m000_b346_2026-06-17T14-12-31": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:42:31+00:00"
+    },
+    "leg02_m001_b346_2026-06-17T14-12-32": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:42:33+00:00"
+    },
+    "leg02_m002_b346_2026-06-17T14-12-34": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:34+00:00"
+    },
+    "leg02_m003_b346_2026-06-17T14-12-34": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:35+00:00"
+    },
+    "leg02_m004_b346_2026-06-17T14-12-36": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:36+00:00"
+    },
+    "leg02_m005_b346_2026-06-17T14-12-37": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:37+00:00"
+    },
+    "leg03_m000_b256_2026-06-17T14-12-41": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:41+00:00"
+    },
+    "leg03_m001_b256_2026-06-17T14-12-42": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Bromus tectorum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:46+00:00"
+    },
+    "leg03_m002_b256_2026-06-17T14-12-44": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:42:56+00:00"
+    },
+    "leg03_m003_b256_2026-06-17T14-12-44": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:43:03+00:00"
+    },
+    "leg03_m004_b256_2026-06-17T14-12-45": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:43:06+00:00"
+    },
+    "leg03_m005_b256_2026-06-17T14-12-47": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:43:11+00:00"
+    },
+    "leg03_m006_b256_2026-06-17T14-12-47": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:43:18+00:00"
+    },
+    "leg03_m007_b256_2026-06-17T14-12-49": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:43:42+00:00"
+    },
+    "leg03_m008_b256_2026-06-17T14-12-49": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:43:46+00:00"
+    },
+    "leg03_m009_b256_2026-06-17T14-12-51": {
+      "vector": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:43:53+00:00"
+    },
+    "leg03_m010_b256_2026-06-17T14-12-52": {
+      "vector": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:43:58+00:00"
+    },
+    "leg03_m011_b256_2026-06-17T14-12-53": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:44:03+00:00"
+    },
+    "leg03_m012_b256_2026-06-17T14-12-54": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:44:16+00:00"
+    },
+    "leg03_m013_b256_2026-06-17T14-12-55": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:44:21+00:00"
+    },
+    "leg03_m014_b256_2026-06-17T14-12-56": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:44:23+00:00"
+    },
+    "leg03_m015_b256_2026-06-17T14-12-57": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:44:53+00:00"
+    },
+    "leg03_m016_b256_2026-06-17T14-12-58": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:45:00+00:00"
+    },
+    "leg03_m017_b256_2026-06-17T14-12-59": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Sisymbrium altissimum",
+        "Bromus tectorum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:45:17+00:00"
+    },
+    "leg03_m018_b256_2026-06-17T14-13-00": {
+      "vector": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Achillea millefolium",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:45:36+00:00"
+    },
+    "leg03_m019_b256_2026-06-17T14-13-01": {
+      "vector": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Balsamorhiza sagittata",
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:45:49+00:00"
+    },
+    "leg03_m020_b256_2026-06-17T14-13-02": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:46:03+00:00"
+    },
+    "leg03_m021_b256_2026-06-17T14-13-03": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:46:11+00:00"
+    },
+    "leg03_m022_b256_2026-06-17T14-13-04": {
+      "vector": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:46:16+00:00"
+    },
+    "leg03_m023_b256_2026-06-17T14-13-05": {
+      "vector": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:46:19+00:00"
+    },
+    "leg03_m024_b256_2026-06-17T14-13-06": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:46:28+00:00"
+    },
+    "leg03_m025_b256_2026-06-17T14-13-07": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:46:32+00:00"
+    },
+    "leg03_m026_b256_2026-06-17T14-13-08": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:46:40+00:00"
+    },
+    "leg03_m027_b256_2026-06-17T14-13-09": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:46:42+00:00"
+    },
+    "leg03_m028_b256_2026-06-17T14-13-10": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:46:45+00:00"
+    },
+    "leg03_m029_b256_2026-06-17T14-13-11": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:46:50+00:00"
+    },
+    "leg03_m030_b256_2026-06-17T14-13-12": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:46:51+00:00"
+    },
+    "leg03_m031_b256_2026-06-17T14-13-13": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:46:54+00:00"
+    },
+    "leg03_m032_b256_2026-06-17T14-13-14": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:47:01+00:00"
+    },
+    "leg03_m033_b256_2026-06-17T14-13-15": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:47:06+00:00"
+    },
+    "leg03_m034_b256_2026-06-17T14-13-16": {
+      "vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Achillea millefolium",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:47:34+00:00"
+    },
+    "leg03_m035_b256_2026-06-17T14-13-17": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:47:36+00:00"
+    },
+    "leg03_m036_b256_2026-06-17T14-13-18": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:47:40+00:00"
+    },
+    "leg03_m037_b256_2026-06-17T14-13-19": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:47:44+00:00"
+    },
+    "leg03_m038_b256_2026-06-17T14-13-20": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:47:48+00:00"
+    },
+    "leg03_m039_b256_2026-06-17T14-13-21": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:47:50+00:00"
+    },
+    "leg03_m040_b256_2026-06-17T14-13-22": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Bromus tectorum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:47:54+00:00"
+    },
+    "leg03_m041_b256_2026-06-17T14-13-23": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:02+00:00"
+    },
+    "leg03_m042_b256_2026-06-17T14-13-24": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:08+00:00"
+    },
+    "leg03_m043_b256_2026-06-17T14-13-25": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:10+00:00"
+    },
+    "leg03_m044_b256_2026-06-17T14-13-26": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:13+00:00"
+    },
+    "leg03_m045_b256_2026-06-17T14-13-27": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:15+00:00"
+    },
+    "leg03_m046_b256_2026-06-17T14-13-28": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:19+00:00"
+    },
+    "leg03_m047_b256_2026-06-17T14-13-29": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:23+00:00"
+    },
+    "leg03_m048_b256_2026-06-17T14-13-30": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:24+00:00"
+    },
+    "leg03_m049_b256_2026-06-17T14-13-31": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:25+00:00"
+    },
+    "leg03_m050_b256_2026-06-17T14-13-32": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:28+00:00"
+    },
+    "leg03_m051_b256_2026-06-17T14-13-33": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:30+00:00"
+    },
+    "leg03_m052_b256_2026-06-17T14-13-34": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:48:31+00:00"
+    },
+    "leg03_m053_b256_2026-06-17T14-13-35": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:33+00:00"
+    },
+    "leg03_m054_b256_2026-06-17T14-13-37": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:35+00:00"
+    },
+    "leg03_m055_b256_2026-06-17T14-13-37": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:37+00:00"
+    },
+    "leg03_m056_b256_2026-06-17T14-13-38": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:38+00:00"
+    },
+    "leg03_m057_b256_2026-06-17T14-13-39": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:48:41+00:00"
+    },
+    "leg03_m058_b256_2026-06-17T14-13-41": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:44+00:00"
+    },
+    "leg03_m059_b256_2026-06-17T14-13-41": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:47+00:00"
+    },
+    "leg03_m060_b256_2026-06-17T14-13-43": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:48:48+00:00"
+    },
+    "leg03_m061_b256_2026-06-17T14-13-43": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:50+00:00"
+    },
+    "leg03_m062_b256_2026-06-17T14-13-45": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:56+00:00"
+    },
+    "leg04_m000_b346_2026-06-17T14-13-48": {
+      "vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Achillea millefolium",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:48:58+00:00"
+    },
+    "leg04_m001_b346_2026-06-17T14-13-49": {
+      "vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Achillea millefolium"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:49:00+00:00"
+    },
+    "leg04_m002_b346_2026-06-17T14-13-50": {
+      "vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "present": [
+        "Achillea millefolium",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:49:03+00:00"
+    },
+    "leg04_m003_b346_2026-06-17T14-13-52": {
+      "vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "present": [
+        "Achillea millefolium",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:49:09+00:00"
+    },
+    "leg04_m004_b346_2026-06-17T14-13-52": {
+      "vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "present": [
+        "Achillea millefolium",
+        "Bromus tectorum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:49:16+00:00"
+    },
+    "leg04_m005_b346_2026-06-17T14-13-53": {
+      "vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "present": [
+        "Achillea millefolium",
+        "Sisymbrium altissimum",
+        "Bromus tectorum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:49:42+00:00"
+    },
+    "leg05_m000_b076_2026-06-17T14-13-57": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:49:55+00:00"
+    },
+    "leg05_m001_b076_2026-06-17T14-13-58": {
+      "vector": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Achillea millefolium",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:01+00:00"
+    },
+    "leg05_m002_b076_2026-06-17T14-13-59": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:05+00:00"
+    },
+    "leg05_m003_b076_2026-06-17T14-14-01": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:08+00:00"
+    },
+    "leg05_m004_b076_2026-06-17T14-14-02": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:10+00:00"
+    },
+    "leg05_m005_b076_2026-06-17T14-14-03": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:12+00:00"
+    },
+    "leg05_m006_b076_2026-06-17T14-14-04": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:50:13+00:00"
+    },
+    "leg05_m007_b076_2026-06-17T14-14-05": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:50:15+00:00"
+    },
+    "leg05_m008_b076_2026-06-17T14-14-06": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:17+00:00"
+    },
+    "leg05_m009_b076_2026-06-17T14-14-07": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:19+00:00"
+    },
+    "leg05_m010_b076_2026-06-17T14-14-08": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:50:25+00:00"
+    },
+    "leg05_m011_b076_2026-06-17T14-14-09": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:27+00:00"
+    },
+    "leg05_m012_b076_2026-06-17T14-14-10": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:30+00:00"
+    },
+    "leg05_m013_b076_2026-06-17T14-14-11": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:32+00:00"
+    },
+    "leg05_m014_b076_2026-06-17T14-14-12": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:33+00:00"
+    },
+    "leg05_m015_b076_2026-06-17T14-14-13": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:37+00:00"
+    },
+    "leg05_m016_b076_2026-06-17T14-14-14": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:42+00:00"
+    },
+    "leg05_m017_b076_2026-06-17T14-14-16": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:43+00:00"
+    },
+    "leg05_m018_b076_2026-06-17T14-14-17": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:50:46+00:00"
+    },
+    "leg05_m019_b076_2026-06-17T14-14-18": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:49+00:00"
+    },
+    "leg05_m020_b076_2026-06-17T14-14-19": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:51+00:00"
+    },
+    "leg05_m021_b076_2026-06-17T14-14-20": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:52+00:00"
+    },
+    "leg05_m022_b076_2026-06-17T14-14-21": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:55+00:00"
+    },
+    "leg05_m023_b076_2026-06-17T14-14-22": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:56+00:00"
+    },
+    "leg05_m024_b076_2026-06-17T14-14-23": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:57+00:00"
+    },
+    "leg05_m025_b076_2026-06-17T14-14-24": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:58+00:00"
+    },
+    "leg05_m026_b076_2026-06-17T14-14-25": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:59+00:00"
+    },
+    "leg05_m027_b076_2026-06-17T14-14-26": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:50:59+00:00"
+    },
+    "leg05_m028_b076_2026-06-17T14-14-27": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:01+00:00"
+    },
+    "leg05_m029_b076_2026-06-17T14-14-28": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:02+00:00"
+    },
+    "leg05_m030_b076_2026-06-17T14-14-29": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:03+00:00"
+    },
+    "leg05_m031_b076_2026-06-17T14-14-30": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:04+00:00"
+    },
+    "leg05_m032_b076_2026-06-17T14-14-32": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:05+00:00"
+    },
+    "leg05_m033_b076_2026-06-17T14-14-33": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:06+00:00"
+    },
+    "leg05_m034_b076_2026-06-17T14-14-34": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:08+00:00"
+    },
+    "leg05_m035_b076_2026-06-17T14-14-35": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:13+00:00"
+    },
+    "leg05_m036_b076_2026-06-17T14-14-36": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Bromus tectorum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:20+00:00"
+    },
+    "leg05_m037_b076_2026-06-17T14-14-37": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:28+00:00"
+    },
+    "leg05_m038_b076_2026-06-17T14-14-38": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:31+00:00"
+    },
+    "leg05_m039_b076_2026-06-17T14-14-39": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:35+00:00"
+    },
+    "leg05_m040_b076_2026-06-17T14-14-40": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:37+00:00"
+    },
+    "leg05_m041_b076_2026-06-17T14-14-41": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:41+00:00"
+    },
+    "leg05_m042_b076_2026-06-17T14-14-43": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:51:43+00:00"
+    },
+    "leg05_m043_b076_2026-06-17T14-14-44": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:44+00:00"
+    },
+    "leg05_m044_b076_2026-06-17T14-14-45": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:45+00:00"
+    },
+    "leg05_m045_b076_2026-06-17T14-14-46": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:48+00:00"
+    },
+    "leg05_m046_b076_2026-06-17T14-14-47": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:50+00:00"
+    },
+    "leg05_m047_b076_2026-06-17T14-14-48": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:51:52+00:00"
+    },
+    "leg05_m048_b076_2026-06-17T14-14-49": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:51:55+00:00"
+    },
+    "leg05_m049_b076_2026-06-17T14-14-50": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:51:57+00:00"
+    },
+    "leg05_m050_b076_2026-06-17T14-14-51": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:51:58+00:00"
+    },
+    "leg05_m051_b076_2026-06-17T14-14-52": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:01+00:00"
+    },
+    "leg05_m052_b076_2026-06-17T14-14-54": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:05+00:00"
+    },
+    "leg05_m053_b076_2026-06-17T14-14-55": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:52:09+00:00"
+    },
+    "leg05_m054_b076_2026-06-17T14-14-56": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:52:10+00:00"
+    },
+    "leg05_m055_b076_2026-06-17T14-14-57": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:12+00:00"
+    },
+    "leg05_m056_b076_2026-06-17T14-14-58": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:13+00:00"
+    },
+    "leg05_m057_b076_2026-06-17T14-14-59": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:15+00:00"
+    },
+    "leg05_m058_b076_2026-06-17T14-15-00": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:16+00:00"
+    },
+    "leg05_m059_b076_2026-06-17T14-15-01": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:18+00:00"
+    },
+    "leg05_m060_b076_2026-06-17T14-15-02": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:21+00:00"
+    },
+    "leg05_m061_b076_2026-06-17T14-15-03": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:23+00:00"
+    },
+    "leg05_m062_b076_2026-06-17T14-15-04": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:24+00:00"
+    },
+    "leg06_m000_b346_2026-06-17T14-15-09": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:26+00:00"
+    },
+    "leg06_m001_b346_2026-06-17T14-15-10": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:27+00:00"
+    },
+    "leg06_m002_b346_2026-06-17T14-15-12": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:28+00:00"
+    },
+    "leg06_m003_b346_2026-06-17T14-15-12": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:29+00:00"
+    },
+    "leg06_m004_b346_2026-06-17T14-15-13": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:32+00:00"
+    },
+    "leg06_m005_b346_2026-06-17T14-15-14": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Bromus tectorum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:37+00:00"
+    },
+    "leg07_m000_b256_2026-06-17T14-15-19": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:40+00:00"
+    },
+    "leg07_m001_b256_2026-06-17T14-15-20": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:42+00:00"
+    },
+    "leg07_m002_b256_2026-06-17T14-15-21": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:44+00:00"
+    },
+    "leg07_m003_b256_2026-06-17T14-15-22": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:47+00:00"
+    },
+    "leg07_m004_b256_2026-06-17T14-15-23": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:49+00:00"
+    },
+    "leg07_m005_b256_2026-06-17T14-15-24": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:51+00:00"
+    },
+    "leg07_m006_b256_2026-06-17T14-15-25": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:52:56+00:00"
+    },
+    "leg07_m007_b256_2026-06-17T14-15-26": {
+      "vector": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Achillea millefolium",
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:03+00:00"
+    },
+    "leg07_m008_b256_2026-06-17T14-15-27": {
+      "vector": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Achillea millefolium",
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:08+00:00"
+    },
+    "leg07_m009_b256_2026-06-17T14-15-28": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:12+00:00"
+    },
+    "leg07_m010_b256_2026-06-17T14-15-29": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:14+00:00"
+    },
+    "leg07_m012_b256_2026-06-17T14-15-35": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:21+00:00"
+    },
+    "leg07_m013_b256_2026-06-17T14-15-37": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:23+00:00"
+    },
+    "leg07_m014_b256_2026-06-17T14-15-37": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:26+00:00"
+    },
+    "leg07_m016_b256_2026-06-17T14-15-44": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Bromus tectorum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:30+00:00"
+    },
+    "leg07_m017_b256_2026-06-17T14-15-45": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:37+00:00"
+    },
+    "leg07_m018_b256_2026-06-17T14-15-46": {
+      "vector": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "present": [
+        "Gaillardia aristata",
+        "Sisymbrium altissimum",
+        "Bromus tectorum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:52+00:00"
+    },
+    "leg07_m019_b256_2026-06-17T14-15-47": {
+      "vector": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Gaillardia aristata",
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:56+00:00"
+    },
+    "leg07_m020_b256_2026-06-17T14-15-48": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:57+00:00"
+    },
+    "leg07_m024_b256_2026-06-17T14-16-05": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:53:59+00:00"
+    },
+    "leg07_m025_b256_2026-06-17T14-16-06": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:14+00:00"
+    },
+    "leg07_m026_b256_2026-06-17T14-16-07": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:15+00:00"
+    },
+    "leg07_m027_b256_2026-06-17T14-16-08": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:16+00:00"
+    },
+    "leg07_m028_b256_2026-06-17T14-16-09": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:18+00:00"
+    },
+    "leg07_m029_b256_2026-06-17T14-16-10": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:20+00:00"
+    },
+    "leg07_m030_b256_2026-06-17T14-16-11": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:22+00:00"
+    },
+    "leg07_m031_b256_2026-06-17T14-16-12": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:25+00:00"
+    },
+    "leg07_m032_b256_2026-06-17T14-16-13": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:27+00:00"
+    },
+    "leg07_m033_b256_2026-06-17T14-16-14": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:28+00:00"
+    },
+    "leg07_m034_b256_2026-06-17T14-16-15": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:30+00:00"
+    },
+    "leg07_m035_b256_2026-06-17T14-16-16": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:32+00:00"
+    },
+    "leg07_m036_b256_2026-06-17T14-16-17": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:33+00:00"
+    },
+    "leg07_m037_b256_2026-06-17T14-16-18": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:34+00:00"
+    },
+    "leg07_m038_b256_2026-06-17T14-16-19": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:35+00:00"
+    },
+    "leg07_m039_b256_2026-06-17T14-16-20": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:37+00:00"
+    },
+    "leg07_m040_b256_2026-06-17T14-16-21": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:40+00:00"
+    },
+    "leg07_m041_b256_2026-06-17T14-16-22": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:41+00:00"
+    },
+    "leg07_m042_b256_2026-06-17T14-16-23": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:42+00:00"
+    },
+    "leg07_m043_b256_2026-06-17T14-16-24": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:54:43+00:00"
+    },
+    "leg07_m044_b256_2026-06-17T14-16-25": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:45+00:00"
+    },
+    "leg07_m045_b256_2026-06-17T14-16-26": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:46+00:00"
+    },
+    "leg07_m046_b256_2026-06-17T14-16-27": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:47+00:00"
+    },
+    "leg07_m047_b256_2026-06-17T14-16-28": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:48+00:00"
+    },
+    "leg07_m048_b256_2026-06-17T14-16-29": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:50+00:00"
+    },
+    "leg07_m049_b256_2026-06-17T14-16-30": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:51+00:00"
+    },
+    "leg07_m050_b256_2026-06-17T14-16-31": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:57+00:00"
+    },
+    "leg07_m051_b256_2026-06-17T14-16-32": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:54:58+00:00"
+    },
+    "leg07_m052_b256_2026-06-17T14-16-33": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:55:03+00:00"
+    },
+    "leg07_m053_b256_2026-06-17T14-16-34": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:55:16+00:00"
+    },
+    "leg07_m054_b256_2026-06-17T14-16-35": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:55:17+00:00"
+    },
+    "leg07_m055_b256_2026-06-17T14-16-36": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:55:23+00:00"
+    },
+    "leg07_m056_b256_2026-06-17T14-16-37": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:55:25+00:00"
+    },
+    "leg07_m057_b256_2026-06-17T14-16-38": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:55:27+00:00"
+    },
+    "leg07_m058_b256_2026-06-17T14-16-39": {
+      "vector": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Balsamorhiza sagittata",
+        "Gaillardia aristata",
+        "Achillea millefolium",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:55:47+00:00"
+    },
+    "leg07_m059_b256_2026-06-17T14-16-40": {
+      "vector": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Balsamorhiza sagittata",
+        "Gaillardia aristata",
+        "Achillea millefolium",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:55:54+00:00"
+    },
+    "leg07_m060_b256_2026-06-17T14-16-41": {
+      "vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Achillea millefolium",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:55:59+00:00"
+    },
+    "leg07_m061_b256_2026-06-17T14-16-42": {
+      "vector": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Achillea millefolium",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:01+00:00"
+    },
+    "leg07_m062_b256_2026-06-17T14-16-43": {
+      "vector": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Achillea millefolium"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:04+00:00"
+    },
+    "leg08_m000_b346_2026-06-17T14-16-47": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:06+00:00"
+    },
+    "leg08_m001_b346_2026-06-17T14-16-48": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:09+00:00"
+    },
+    "leg08_m002_b346_2026-06-17T14-16-49": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:14+00:00"
+    },
+    "leg08_m003_b346_2026-06-17T14-16-50": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:56:16+00:00"
+    },
+    "leg08_m004_b346_2026-06-17T14-16-52": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:22+00:00"
+    },
+    "leg08_m005_b346_2026-06-17T14-16-52": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:23+00:00"
+    },
+    "leg09_m000_b076_2026-06-17T14-16-55": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:25+00:00"
+    },
+    "leg09_m001_b076_2026-06-17T14-16-57": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:27+00:00"
+    },
+    "leg09_m002_b076_2026-06-17T14-16-58": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:28+00:00"
+    },
+    "leg09_m003_b076_2026-06-17T14-16-59": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:56:30+00:00"
+    },
+    "leg09_m004_b076_2026-06-17T14-17-00": {
+      "vector": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:32+00:00"
+    },
+    "leg09_m005_b076_2026-06-17T14-17-02": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:56:35+00:00"
+    },
+    "leg09_m006_b076_2026-06-17T14-17-03": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:38+00:00"
+    },
+    "leg09_m007_b076_2026-06-17T14-17-04": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:40+00:00"
+    },
+    "leg09_m008_b076_2026-06-17T14-17-05": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:43+00:00"
+    },
+    "leg09_m009_b076_2026-06-17T14-17-06": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:56:45+00:00"
+    },
+    "leg09_m010_b076_2026-06-17T14-17-07": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:47+00:00"
+    },
+    "leg09_m011_b076_2026-06-17T14-17-08": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:50+00:00"
+    },
+    "leg09_m012_b076_2026-06-17T14-17-09": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:56:54+00:00"
+    },
+    "leg09_m013_b076_2026-06-17T14-17-10": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:56:58+00:00"
+    },
+    "leg09_m014_b076_2026-06-17T14-17-12": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "present": [
+        "Sisymbrium altissimum"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:01+00:00"
+    },
+    "leg09_m015_b076_2026-06-17T14-17-12": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:03+00:00"
+    },
+    "leg09_m016_b076_2026-06-17T14-17-14": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:06+00:00"
+    },
+    "leg09_m017_b076_2026-06-17T14-17-15": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:07+00:00"
+    },
+    "leg09_m018_b076_2026-06-17T14-17-16": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:09+00:00"
+    },
+    "leg09_m019_b076_2026-06-17T14-17-17": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:10+00:00"
+    },
+    "leg09_m020_b076_2026-06-17T14-17-18": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:12+00:00"
+    },
+    "leg09_m021_b076_2026-06-17T14-17-19": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:15+00:00"
+    },
+    "leg09_m022_b076_2026-06-17T14-17-20": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:16+00:00"
+    },
+    "leg09_m023_b076_2026-06-17T14-17-21": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:57:19+00:00"
+    },
+    "leg09_m024_b076_2026-06-17T14-17-22": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:57:22+00:00"
+    },
+    "leg09_m025_b076_2026-06-17T14-17-23": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:57:24+00:00"
+    },
+    "leg09_m026_b076_2026-06-17T14-17-24": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:26+00:00"
+    },
+    "leg09_m027_b076_2026-06-17T14-17-26": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:28+00:00"
+    },
+    "leg09_m028_b076_2026-06-17T14-17-27": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:57:29+00:00"
+    },
+    "leg09_m029_b076_2026-06-17T14-17-28": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:57:30+00:00"
+    },
+    "leg09_m030_b076_2026-06-17T14-17-29": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:32+00:00"
+    },
+    "leg09_m031_b076_2026-06-17T14-17-30": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:57:33+00:00"
+    },
+    "leg09_m032_b076_2026-06-17T14-17-31": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:34+00:00"
+    },
+    "leg09_m033_b076_2026-06-17T14-17-32": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:35+00:00"
+    },
+    "leg09_m034_b076_2026-06-17T14-17-33": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:37+00:00"
+    },
+    "leg09_m035_b076_2026-06-17T14-17-34": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:39+00:00"
+    },
+    "leg09_m036_b076_2026-06-17T14-17-35": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "present": [
+        "Bromus tectorum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:41+00:00"
+    },
+    "leg09_m037_b076_2026-06-17T14-17-36": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:43+00:00"
+    },
+    "leg09_m038_b076_2026-06-17T14-17-38": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:57:45+00:00"
+    },
+    "leg09_m039_b076_2026-06-17T14-17-38": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:57:46+00:00"
+    },
+    "leg09_m040_b076_2026-06-17T14-17-40": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:47+00:00"
+    },
+    "leg09_m041_b076_2026-06-17T14-17-41": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:48+00:00"
+    },
+    "leg09_m042_b076_2026-06-17T14-17-42": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:49+00:00"
+    },
+    "leg09_m043_b076_2026-06-17T14-17-43": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:51+00:00"
+    },
+    "leg09_m044_b076_2026-06-17T14-17-44": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:53+00:00"
+    },
+    "leg09_m045_b076_2026-06-17T14-17-45": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:57:54+00:00"
+    },
+    "leg09_m046_b076_2026-06-17T14-17-46": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:57:55+00:00"
+    },
+    "leg09_m047_b076_2026-06-17T14-17-47": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-14T21:57:58+00:00"
+    },
+    "leg09_m048_b076_2026-06-17T14-17-48": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:58:00+00:00"
+    },
+    "leg09_m049_b076_2026-06-17T14-17-49": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "present": [
+        "Sisymbrium altissimum",
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:58:02+00:00"
+    },
+    "leg09_m050_b076_2026-06-17T14-17-50": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:58:06+00:00"
+    },
+    "leg09_m051_b076_2026-06-17T14-17-52": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:58:08+00:00"
+    },
+    "leg09_m052_b076_2026-06-17T14-17-53": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:58:10+00:00"
+    },
+    "leg09_m053_b076_2026-06-17T14-17-54": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:58:12+00:00"
+    },
+    "leg09_m054_b076_2026-06-17T14-17-55": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-14T21:58:13+00:00"
+    },
+    "leg09_m055_b076_2026-06-17T14-17-56": {
+      "vector": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Lupinus sericeus",
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-21T18:51:44+00:00"
+    },
+    "leg09_m056_b076_2026-06-17T14-17-57": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-21T18:51:44+00:00"
+    },
+    "leg09_m058_b076_2026-06-17T14-18-03": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-21T18:51:44+00:00"
+    },
+    "leg09_m059_b076_2026-06-17T14-18-05": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-21T18:51:43+00:00"
+    },
+    "leg09_m060_b076_2026-06-17T14-18-06": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "present": [
+        "Poa bulbosa"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-21T18:51:43+00:00"
+    },
+    "leg09_m061_b076_2026-06-17T14-18-07": {
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [],
+      "reviewed": true,
+      "source": "default",
+      "updated": "2026-07-21T18:51:43+00:00"
+    },
+    "leg09_m062_b076_2026-06-17T14-18-08": {
+      "vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "present": [
+        "Balsamorhiza sagittata"
+      ],
+      "reviewed": true,
+      "source": "human",
+      "updated": "2026-07-21T18:51:43+00:00"
+    }
+  }
+}

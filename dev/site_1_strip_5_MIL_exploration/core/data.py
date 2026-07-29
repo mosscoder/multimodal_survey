@@ -16,8 +16,9 @@ import common as C
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, "cache")                     # gitignored; feature caches live here
-ROBOT_LABELS = ("/Users/kdoherty/multimodal_survey/missions/site_1/strip_5/runs/"
-                "strip_5_2026-06-16_12-36-44/labels/image_multilabel.json")
+REPO = os.path.dirname(os.path.dirname(ROOT))           # …/multimodal_survey, via __file__
+ROBOT_LABELS = os.path.join(REPO, "missions", "site_1", "strip_5", "runs",
+                            "strip_5_2026-06-16_12-36-44", "labels", "species.json")
 
 # 9 target species: (display name, iNaturalist HF-dataset dir). All trained and scored.
 TARGETS = [

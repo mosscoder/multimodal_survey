@@ -7,10 +7,10 @@ with two switchable tasks over the very same frames:
   * **Species** (multilabel) — for each frame, which of the 8 target species
     (4 wildflowers + 4 weeds) are present. Grouped Wildflowers / Weeds; nothing
     checked by default, so the labels are unbiased human ground truth (the model's
-    predictions are NOT loaded into the UI). Saved to ``labels/image_multilabel.json``.
+    predictions are NOT loaded into the UI). Saved to ``labels/species.json``.
   * **Image quality** (single-select) — one ordinal judgement per frame: how much
     of the image is degraded by visual artifacts, in quartile bands (0–25 … 75–100),
-    stored behind the scenes as 1..4. Saved to ``labels/image_quality.json``.
+    stored behind the scenes as 1..4. Saved to ``labels/quality.json``.
 
 Both tasks and every completed run under ``missions/`` are switchable live from the
 header — no relaunch. Each keeps its own labels file, its own cursor, and its own
@@ -40,6 +40,9 @@ import threading
 import urllib.parse
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+
+from . import _REPO_ROOT
 
 # Focal species (display + vector order), the wildflower/weed grouping, the
 # fresh-frame default, and the image-quality bands all come from the package's
@@ -62,8 +65,8 @@ QUALITY_KEYS = ["1", "2", "3", "4"]
 # The two tasks, in header-dropdown order. Each maps to a Store class and its own
 # per-run labels file (so the tasks never collide on disk).
 TASKS = [
-    {"id": "species", "name": "Species", "file": "image_multilabel.json"},
-    {"id": "quality", "name": "Image quality", "file": "image_quality.json"},
+    {"id": "species", "name": "Species", "file": "species.json"},
+    {"id": "quality", "name": "Image quality", "file": "quality.json"},
 ]
 TASKS_META = [{"id": t["id"], "name": t["name"]} for t in TASKS]
 TASK_FILE = {t["id"]: t["file"] for t in TASKS}
@@ -73,6 +76,20 @@ LOCK = threading.Lock()
 
 def now_iso() -> str:
     return datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+
+
+def repo_rel(p: str) -> str:
+    """A path as repo-relative POSIX, for storing in the label files.
+
+    These files are committed and edited from more than one machine/OS, so an
+    absolute path ("/Users/..." vs "C:\\Users\\...") rewrites itself on every save
+    and churns the diff. Falls back to the path as-given when it lies outside the
+    repo (e.g. a --missions-root pointing elsewhere), where no relative form exists.
+    """
+    try:
+        return Path(p).resolve().relative_to(_REPO_ROOT).as_posix()
+    except ValueError:
+        return Path(p).as_posix()
 
 
 # --------------------------------------------------------------------------- #
@@ -243,11 +260,11 @@ class Store(BaseStore):
     def write(self):
         with LOCK:
             self._atomic_write({
-                "schema": "strip-image-multilabel/v1",
+                "schema": "strip-species/v1",
                 "task": "species",
                 "classes": self.classes,
                 "default_on": [self.classes[i] for i, v in enumerate(self.default_vec) if v],
-                "captures_dir": self.captures,
+                "captures_dir": repo_rel(self.captures),
                 "meta": {"updated": now_iso(), "cursor": self.cursor, **self.counts()},
                 "labels": {
                     fid: {
@@ -327,12 +344,12 @@ class QualityStore(BaseStore):
     def write(self):
         with LOCK:
             self._atomic_write({
-                "schema": "strip-image-quality/v1",
+                "schema": "strip-quality/v1",
                 "task": "quality",
                 "label": QUALITY_LABEL,
                 "bins": self.bands,
                 "bin_meaning": "share of the frame degraded by visual artifacts (quartile band, 1..4; 0=unset)",
-                "captures_dir": self.captures,
+                "captures_dir": repo_rel(self.captures),
                 "meta": {"updated": now_iso(), "cursor": self.cursor, **self.counts()},
                 "labels": {
                     fid: {

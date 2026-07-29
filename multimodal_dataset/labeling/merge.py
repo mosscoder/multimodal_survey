@@ -1,7 +1,7 @@
 """Bridge: project a run's labels onto the dataset's reserved label columns.
 
-The labelling apps write ``<run>/labels/image_multilabel.json`` (schema
-``strip-image-multilabel/v1``, name-keyed ``present`` lists). This fills the
+The labelling apps write ``<run>/labels/species.json`` (schema
+``strip-species/v1``, name-keyed ``present`` lists). This fills the
 dataset's reserved label columns (see ``multimodal_dataset.schema.features``) for
 frames present + reviewed in that file — joined by ``frame_id``, name-based
 multi-hot over ``CLASSES``. An unlabelled frame stays ``labels = null`` (NOT

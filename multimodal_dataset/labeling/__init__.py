@@ -6,7 +6,7 @@
 
 Both require a mission (no default): pick one with ``--mission site_x/strip_y`` (or
 ``--run <run_id>`` when a mission has several completed runs); both read/write that
-run's ``labels/image_multilabel.json``. Run:
+run's ``labels/species.json``. Run:
 
     python -m multimodal_dataset.labeling label  --mission site_1/strip_5 --run <run_id>
     python -m multimodal_dataset.labeling review --run <run_id> \\
@@ -18,7 +18,8 @@ from pathlib import Path
 
 from ..discover import RunInfo, completed_runs
 
-_MISSIONS_ROOT = Path(__file__).resolve().parents[2] / "missions"   # the repo's missions/
+_REPO_ROOT = Path(__file__).resolve().parents[2]                   # the repo root
+_MISSIONS_ROOT = _REPO_ROOT / "missions"                           # the repo's missions/
 
 
 def select_run(*, mission: str | None = None, run: str | None = None,

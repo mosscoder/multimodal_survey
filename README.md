@@ -36,7 +36,7 @@ Each holds:
   photos (`captures/*.jpg`, geotagged and bearing-tagged, with a JSON sidecar per
   photo and a `captures.geojson` manifest), the field logs (`main.log`, `gps.log`,
   `imu.log`, `battery.log`), and, once a person has labeled it,
-  `labels/image_multilabel.json`.
+  `labels/species.json`.
 
 `inventory.csv`, at the top of `missions/`, tracks every run's status (complete /
 partial / aborted) and basic quality checks. A run only counts as usable once its
@@ -77,12 +77,12 @@ the header dropdowns, alongside the mission switcher, with no relaunch:
   present. The checkboxes are grouped Wildflowers / Weeds and nothing is checked
   by default, so the labels are unbiased human ground truth (the model's own
   predictions are never shown). Hot-keys: `1`–`4` wildflowers, `A`/`S`/`D`/`F`
-  weeds. Saved to `labels/image_multilabel.json`.
+  weeds. Saved to `labels/species.json`.
 * **Image quality** (single-select) — one ordinal judgement per frame: how much
   of the image is degraded by visual artifacts (motion blur, smear, glare,
   compression), in quartile bands `0–25` / `25–50` / `50–75` / `75–100`% of the
   frame affected, stored behind the scenes as `1`–`4`. Hot-keys `1`–`4` pick the
-  band. Saved to `labels/image_quality.json`.
+  band. Saved to `labels/quality.json`.
 
 Each task keeps its own labels file, cursor, and progress; both autosave and are
 resumable. Navigation is shared: `→`/`Space`/`Enter` confirm + next, `←` prev,

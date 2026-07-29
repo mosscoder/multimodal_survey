@@ -19,7 +19,7 @@ dropdown in the header (no relaunch). Choose **Image quality**: for each frame, 
 **1–4** for how much of the image is degraded by visual artifacts (blur, smear,
 glare, compression) — quartile bands `0–25 / 25–50 / 50–75 / 75–100 %`. Single-select,
 autosaves, resumable. `→`/`Space` confirm + next, `←` back, `c` copy previous, `u`
-jump to next unreviewed. Quality labels write to each run's `labels/image_quality.json`,
+jump to next unreviewed. Quality labels write to each run's `labels/quality.json`,
 separate from species labels so the two tasks never collide. Switch missions from the
 **Mission** dropdown. Both task and mission are chosen in-app — never on the CLI.
 

@@ -60,5 +60,5 @@ $ENV inference_viz/infer_mil.py   # overlays for all robot frames (deployed tili
 (cd ../.. && $ENV -m multimodal_dataset.labeling label --run <run_id>)  # relabel GT (repo root, port 8765)
 ```
 
-Robot labels live in the run dir (`missions/.../labels/image_multilabel.json`),
+Robot labels live in the run dir (`missions/.../labels/species.json`),
 not here. Feature caches and checkpoints regenerate on first run.
