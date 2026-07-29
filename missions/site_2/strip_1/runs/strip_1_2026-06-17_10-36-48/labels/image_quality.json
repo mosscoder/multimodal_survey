@@ -9,12 +9,12 @@
     "75\u2013100%"
   ],
   "bin_meaning": "share of the frame degraded by visual artifacts (quartile band, 1..4; 0=unset)",
-  "captures_dir": "C:\\Users\\psala\\MPG\\multimodal_survey\\missions\\site_2\\strip_1\\runs\\strip_1_2026-06-17_10-36-48\\captures",
+  "captures_dir": "/Users/kdoherty/multimodal_survey/missions/site_2/strip_1/runs/strip_1_2026-06-17_10-36-48/captures",
   "meta": {
-    "updated": "2026-07-19T23:20:11+00:00",
+    "updated": "2026-07-29T19:04:05+00:00",
     "cursor": "leg11_m051_b149_2026-06-17T10-44-11",
     "total": 336,
-    "reviewed": 335,
+    "reviewed": 336,
     "edited": 336
   },
   "labels": {
@@ -2366,9 +2366,9 @@
     "leg11_m051_b149_2026-06-17T10-44-11": {
       "bin": 1,
       "band": "0\u201325%",
-      "reviewed": false,
+      "reviewed": true,
       "source": "human",
-      "updated": "2026-07-19T23:20:11+00:00"
+      "updated": "2026-07-29T19:04:05+00:00"
     }
   }
 }
