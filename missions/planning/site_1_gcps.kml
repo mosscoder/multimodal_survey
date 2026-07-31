@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<name>Site 1 GCPS.kml</name>
+<Schema name="Points" id="Points">
+	<SimpleField name="Code" type="string"></SimpleField>
+	<SimpleField name="Code description" type="string"></SimpleField>
+	<SimpleField name="Easting" type="string"></SimpleField>
+	<SimpleField name="Northing" type="string"></SimpleField>
+	<SimpleField name="Elevation" type="string"></SimpleField>
+	<SimpleField name="Longitude" type="string"></SimpleField>
+	<SimpleField name="Latitude" type="string"></SimpleField>
+	<SimpleField name="Ellipsoidal height" type="string"></SimpleField>
+	<SimpleField name="Origin" type="string"></SimpleField>
+	<SimpleField name="Tilt angle" type="string"></SimpleField>
+	<SimpleField name="Easting RMS" type="string"></SimpleField>
+	<SimpleField name="Northing RMS" type="string"></SimpleField>
+	<SimpleField name="Elevation RMS" type="string"></SimpleField>
+	<SimpleField name="Lateral RMS" type="string"></SimpleField>
+	<SimpleField name="Antenna height" type="string"></SimpleField>
+	<SimpleField name="Antenna height units" type="string"></SimpleField>
+	<SimpleField name="Solution status" type="string"></SimpleField>
+	<SimpleField name="Correction type" type="string"></SimpleField>
+	<SimpleField name="Averaging start" type="string"></SimpleField>
+	<SimpleField name="Averaging end" type="string"></SimpleField>
+	<SimpleField name="Samples" type="string"></SimpleField>
+	<SimpleField name="GDOP" type="string"></SimpleField>
+	<SimpleField name="Base easting" type="string"></SimpleField>
+	<SimpleField name="Base northing" type="string"></SimpleField>
+	<SimpleField name="Base elevation" type="string"></SimpleField>
+	<SimpleField name="Base longitude" type="string"></SimpleField>
+	<SimpleField name="Base latitude" type="string"></SimpleField>
+	<SimpleField name="Base ellipsoidal height" type="string"></SimpleField>
+	<SimpleField name="Baseline" type="string"></SimpleField>
+	<SimpleField name="Mount point" type="string"></SimpleField>
+	<SimpleField name="CS name" type="string"></SimpleField>
+	<SimpleField name="GPS Satellites" type="string"></SimpleField>
+	<SimpleField name="GLONASS Satellites" type="string"></SimpleField>
+	<SimpleField name="Galileo Satellites" type="string"></SimpleField>
+	<SimpleField name="BeiDou Satellites" type="string"></SimpleField>
+	<SimpleField name="QZSS Satellites" type="string"></SimpleField>
+	<SimpleField name="Device type" type="string"></SimpleField>
+	<SimpleField name="Device serial number" type="string"></SimpleField>
+	<SimpleField name="Author" type="string"></SimpleField>
+</Schema>
+<Folder><name>Points</name>
+  <Placemark>
+	<name>SE</name>
+	<description>46.6753070N, -114.0041466E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">PRE</SimpleData>
+		<SimpleData name="Code description">Prescription</SimpleData>
+		<SimpleData name="Longitude">-114.00414660</SimpleData>
+		<SimpleData name="Latitude">46.67530700</SimpleData>
+		<SimpleData name="Ellipsoidal height">0.000</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.0041466,46.675307,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SW</name>
+	<description>46.6750391N, -114.0062634E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">PRE</SimpleData>
+		<SimpleData name="Code description">Prescription</SimpleData>
+		<SimpleData name="Longitude">-114.00626340</SimpleData>
+		<SimpleData name="Latitude">46.67503910</SimpleData>
+		<SimpleData name="Ellipsoidal height">0.000</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.0062634,46.6750391,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>NE</name>
+	<description>46.6766755N, -114.0040092E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">PRE</SimpleData>
+		<SimpleData name="Code description">Prescription</SimpleData>
+		<SimpleData name="Longitude">-114.00400920</SimpleData>
+		<SimpleData name="Latitude">46.67667550</SimpleData>
+		<SimpleData name="Ellipsoidal height">0.000</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.0040092,46.6766755,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>NW</name>
+	<description>46.6766029N, -114.0061000E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">PRE</SimpleData>
+		<SimpleData name="Code description">Prescription</SimpleData>
+		<SimpleData name="Longitude">-114.00610000</SimpleData>
+		<SimpleData name="Latitude">46.67660290</SimpleData>
+		<SimpleData name="Ellipsoidal height">0.000</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.0061,46.6766029,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Center</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">PRE</SimpleData>
+		<SimpleData name="Code description">Prescription</SimpleData>
+		<SimpleData name="Longitude">-114.00504250</SimpleData>
+		<SimpleData name="Latitude">46.67586290</SimpleData>
+		<SimpleData name="Ellipsoidal height">0.000</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.0050425,46.6758629,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SE</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.00414073</SimpleData>
+		<SimpleData name="Latitude">46.67531526</SimpleData>
+		<SimpleData name="Ellipsoidal height">1199.819</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">5.6</SimpleData>
+		<SimpleData name="Easting RMS">0.013</SimpleData>
+		<SimpleData name="Northing RMS">0.013</SimpleData>
+		<SimpleData name="Elevation RMS">0.013</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 11:55:59.8 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 11:56:04.8 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.1</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">956.703</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">9</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">8</SimpleData>
+		<SimpleData name="BeiDou Satellites">4</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.00414073,46.67531526,1199.819</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SE1</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.00503739</SimpleData>
+		<SimpleData name="Latitude">46.67586351</SimpleData>
+		<SimpleData name="Ellipsoidal height">1189.947</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">5.1</SimpleData>
+		<SimpleData name="Easting RMS">0.013</SimpleData>
+		<SimpleData name="Northing RMS">0.013</SimpleData>
+		<SimpleData name="Elevation RMS">0.013</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 12:04:42.6 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 12:04:47.6 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.2</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">902.906</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">8</SimpleData>
+		<SimpleData name="BeiDou Satellites">4</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.00503739,46.67586351,1189.947</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Center</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.00503732</SimpleData>
+		<SimpleData name="Latitude">46.67586356</SimpleData>
+		<SimpleData name="Ellipsoidal height">1189.947</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">5.3</SimpleData>
+		<SimpleData name="Easting RMS">0.013</SimpleData>
+		<SimpleData name="Northing RMS">0.013</SimpleData>
+		<SimpleData name="Elevation RMS">0.013</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 12:05:08.8 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 12:05:13.8 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.2</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">902.890</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">8</SimpleData>
+		<SimpleData name="BeiDou Satellites">4</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.00503732,46.67586356,1189.947</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SW</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.00626368</SimpleData>
+		<SimpleData name="Latitude">46.67504520</SimpleData>
+		<SimpleData name="Ellipsoidal height">1183.518</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">2.5</SimpleData>
+		<SimpleData name="Easting RMS">0.012</SimpleData>
+		<SimpleData name="Northing RMS">0.012</SimpleData>
+		<SimpleData name="Elevation RMS">0.012</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 12:10:49.6 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 12:10:54.6 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.1</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">790.853</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">7</SimpleData>
+		<SimpleData name="Galileo Satellites">9</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.00626368,46.6750452,1183.518</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>NW</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.00610924</SimpleData>
+		<SimpleData name="Latitude">46.67661015</SimpleData>
+		<SimpleData name="Ellipsoidal height">1171.216</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">4.7</SimpleData>
+		<SimpleData name="Easting RMS">0.013</SimpleData>
+		<SimpleData name="Northing RMS">0.013</SimpleData>
+		<SimpleData name="Elevation RMS">0.012</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 12:16:43.6 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 12:16:48.6 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.1</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">850.473</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">7</SimpleData>
+		<SimpleData name="Galileo Satellites">9</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.00610924,46.67661015,1171.216</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>NE</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.00399889</SimpleData>
+		<SimpleData name="Latitude">46.67667700</SimpleData>
+		<SimpleData name="Ellipsoidal height">1196.155</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">3.7</SimpleData>
+		<SimpleData name="Easting RMS">0.013</SimpleData>
+		<SimpleData name="Northing RMS">0.013</SimpleData>
+		<SimpleData name="Elevation RMS">0.012</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 12:23:39.8 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 12:23:44.8 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.0</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">1006.126</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">9</SimpleData>
+		<SimpleData name="BeiDou Satellites">6</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.00399889,46.676677,1196.155</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SE</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.01553285</SimpleData>
+		<SimpleData name="Latitude">46.69711012</SimpleData>
+		<SimpleData name="Ellipsoidal height">1191.136</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">5.8</SimpleData>
+		<SimpleData name="Easting RMS">0.013</SimpleData>
+		<SimpleData name="Northing RMS">0.013</SimpleData>
+		<SimpleData name="Elevation RMS">0.012</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 14:11:23.0 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 14:11:28.0 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.0</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">2603.642</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">7</SimpleData>
+		<SimpleData name="GLONASS Satellites">5</SimpleData>
+		<SimpleData name="Galileo Satellites">10</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.01553285,46.69711012,1191.136</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SE</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.01553292</SimpleData>
+		<SimpleData name="Latitude">46.69711021</SimpleData>
+		<SimpleData name="Ellipsoidal height">1191.129</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">5.7</SimpleData>
+		<SimpleData name="Easting RMS">0.013</SimpleData>
+		<SimpleData name="Northing RMS">0.015</SimpleData>
+		<SimpleData name="Elevation RMS">0.012</SimpleData>
+		<SimpleData name="Lateral RMS">0.020</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 14:11:42.4 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 14:11:47.4 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.0</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">2603.742</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">5</SimpleData>
+		<SimpleData name="Galileo Satellites">10</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.01553292,46.69711021,1191.129</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>NE</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.01564976</SimpleData>
+		<SimpleData name="Latitude">46.69799226</SimpleData>
+		<SimpleData name="Ellipsoidal height">1186.236</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">2.8</SimpleData>
+		<SimpleData name="Easting RMS">0.012</SimpleData>
+		<SimpleData name="Northing RMS">0.014</SimpleData>
+		<SimpleData name="Elevation RMS">0.011</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 14:15:38.4 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 14:15:43.4 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.0</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">2701.458</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">10</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.01564976,46.69799226,1186.236</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>NW</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.01744792</SimpleData>
+		<SimpleData name="Latitude">46.69760975</SimpleData>
+		<SimpleData name="Ellipsoidal height">1177.149</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">4.8</SimpleData>
+		<SimpleData name="Easting RMS">0.019</SimpleData>
+		<SimpleData name="Northing RMS">0.022</SimpleData>
+		<SimpleData name="Elevation RMS">0.013</SimpleData>
+		<SimpleData name="Lateral RMS">0.029</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 14:19:52.6 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 14:19:57.6 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.0</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">2659.471</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">7</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">10</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.01744792,46.69760975,1177.149</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SW</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.01714908</SimpleData>
+		<SimpleData name="Latitude">46.69686932</SimpleData>
+		<SimpleData name="Ellipsoidal height">1181.498</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">4.1</SimpleData>
+		<SimpleData name="Easting RMS">0.013</SimpleData>
+		<SimpleData name="Northing RMS">0.013</SimpleData>
+		<SimpleData name="Elevation RMS">0.012</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 14:23:34.0 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 14:23:39.0 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.0</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">2576.727</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">10</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.01714908,46.69686932,1181.498</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Center</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.01653600</SimpleData>
+		<SimpleData name="Latitude">46.69745644</SimpleData>
+		<SimpleData name="Ellipsoidal height">1184.142</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">2.7</SimpleData>
+		<SimpleData name="Easting RMS">0.013</SimpleData>
+		<SimpleData name="Northing RMS">0.013</SimpleData>
+		<SimpleData name="Elevation RMS">0.011</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 14:27:50.8 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 14:27:55.8 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.0</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">2641.370</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">10</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.016536,46.69745644,1184.142</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>sticks</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.01641549</SimpleData>
+		<SimpleData name="Latitude">46.69743568</SimpleData>
+		<SimpleData name="Ellipsoidal height">1185.241</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">6.2</SimpleData>
+		<SimpleData name="Easting RMS">0.020</SimpleData>
+		<SimpleData name="Northing RMS">0.016</SimpleData>
+		<SimpleData name="Elevation RMS">0.013</SimpleData>
+		<SimpleData name="Lateral RMS">0.026</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 14:29:23.8 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 14:29:28.8 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.0</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">2639.112</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">10</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.01641549,46.69743568,1185.241</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>sticks1</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.01606333</SimpleData>
+		<SimpleData name="Latitude">46.69745861</SimpleData>
+		<SimpleData name="Ellipsoidal height">1187.293</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">3.8</SimpleData>
+		<SimpleData name="Easting RMS">0.013</SimpleData>
+		<SimpleData name="Northing RMS">0.015</SimpleData>
+		<SimpleData name="Elevation RMS">0.011</SimpleData>
+		<SimpleData name="Lateral RMS">0.020</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 14:30:09.0 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 14:30:14.0 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.0</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">2641.753</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">10</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.01606333,46.69745861,1187.293</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>sticks2</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.01610044</SimpleData>
+		<SimpleData name="Latitude">46.69767030</SimpleData>
+		<SimpleData name="Ellipsoidal height">1185.946</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">2.1</SimpleData>
+		<SimpleData name="Easting RMS">0.012</SimpleData>
+		<SimpleData name="Northing RMS">0.013</SimpleData>
+		<SimpleData name="Elevation RMS">0.011</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 14:30:48.8 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 14:30:53.8 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.0</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">2665.225</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">10</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.01610044,46.6976703,1185.946</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>sticks3</name>
+	<description>46.6758629N, -114.0050425E</description>
+	<ExtendedData><SchemaData schemaUrl="#Points">
+		<SimpleData name="Code">GT</SimpleData>
+		<SimpleData name="Code description">Ground Truth</SimpleData>
+		<SimpleData name="Longitude">-114.01655678</SimpleData>
+		<SimpleData name="Latitude">46.69760465</SimpleData>
+		<SimpleData name="Ellipsoidal height">1183.260</SimpleData>
+		<SimpleData name="Origin">Global</SimpleData>
+		<SimpleData name="Tilt angle">2.9</SimpleData>
+		<SimpleData name="Easting RMS">0.013</SimpleData>
+		<SimpleData name="Northing RMS">0.012</SimpleData>
+		<SimpleData name="Elevation RMS">0.011</SimpleData>
+		<SimpleData name="Lateral RMS">0.018</SimpleData>
+		<SimpleData name="Antenna height">2.134</SimpleData>
+		<SimpleData name="Antenna height units">m</SimpleData>
+		<SimpleData name="Solution status">FIX</SimpleData>
+		<SimpleData name="Correction type">RTK</SimpleData>
+		<SimpleData name="Averaging start">2026-06-15 14:31:40.6 UTC-06:00</SimpleData>
+		<SimpleData name="Averaging end">2026-06-15 14:31:45.6 UTC-06:00</SimpleData>
+		<SimpleData name="Samples">26</SimpleData>
+		<SimpleData name="GDOP">1.0</SimpleData>
+		<SimpleData name="Base longitude">-114.01634709</SimpleData>
+		<SimpleData name="Base latitude">46.67371442</SimpleData>
+		<SimpleData name="Base ellipsoidal height">1095.571</SimpleData>
+		<SimpleData name="Baseline">2657.753</SimpleData>
+		<SimpleData name="Mount point">MP22385</SimpleData>
+		<SimpleData name="CS name">Global CS</SimpleData>
+		<SimpleData name="GPS Satellites">8</SimpleData>
+		<SimpleData name="GLONASS Satellites">6</SimpleData>
+		<SimpleData name="Galileo Satellites">10</SimpleData>
+		<SimpleData name="BeiDou Satellites">5</SimpleData>
+		<SimpleData name="QZSS Satellites">0</SimpleData>
+		<SimpleData name="Device type">Reach RS3</SimpleData>
+		<SimpleData name="Device serial number">824322499DBD1F6F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-114.01655678,46.69760465,1183.26</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
