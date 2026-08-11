@@ -43,3 +43,21 @@ python -m multimodal_dataset push      # upload to the private HF repo
 Pushing needs a Hugging Face **write** token in `.env` (`HF_TOKEN=…`); create
 one at <https://huggingface.co/settings/tokens>. Build and verify need no
 credentials (the orthomosaics are public).
+
+## 3. The manuscript (Overleaf submodule)
+
+`manuscript/` is the Overleaf project as a git submodule. Overleaf is the
+editor and viewer; the local checkout exists to add figures and other build
+products. The loop:
+
+```bash
+git -C manuscript pull --rebase     # take Overleaf's latest edits first
+cp <new figure> manuscript/figures/
+git -C manuscript add figures && git -C manuscript commit -m "figures: ..."
+git -C manuscript push              # appears in Overleaf immediately
+git add manuscript && git commit -m "manuscript: advance pointer"   # parent repo tracks the state
+```
+
+Always pull before pushing: Overleaf commits every editor save, so the remote
+moves on its own. Cloning fresh needs `git submodule update --init` and an
+Overleaf git token (username `git`).
