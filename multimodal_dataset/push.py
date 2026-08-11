@@ -31,6 +31,11 @@ def hf_token() -> str:
 
 
 def source_commit() -> str:
+    """The commit the build ran from: stamped by ``build`` into ``out/``,
+    falling back to the current HEAD for builds made before the stamp existed."""
+    stamp = Path(OUT_DIR) / "source_commit.txt"
+    if stamp.exists():
+        return stamp.read_text().strip()
     return subprocess.run(["git", "-C", str(_ROOT), "rev-parse", "HEAD"],
                           capture_output=True, text=True, check=True).stdout.strip()
 

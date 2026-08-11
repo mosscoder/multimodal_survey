@@ -72,6 +72,13 @@ def build(missions_root: str | Path = MISSIONS_ROOT, out_dir: str | Path = OUT_D
             {col: [r[col] for r in split_rows] for col in COLUMNS}, features=feats)
     ds = DatasetDict(parts)
     ds.save_to_disk(str(out_dir))
+    try:
+        import subprocess
+        sha = subprocess.run(["git", "-C", str(_PKG.parent), "rev-parse", "HEAD"],
+                             capture_output=True, text=True, check=True).stdout.strip()
+        (Path(out_dir) / "source_commit.txt").write_text(sha + "\n")
+    except Exception:
+        pass                       # provenance stamp is best-effort outside a checkout
     counts = {split: parts[split].num_rows for split in SPLITS}
     print(f"[build] saved {sum(counts.values())} rows {counts} -> {out_dir}")
     return ds
