@@ -8,41 +8,22 @@
 # Python bytecode.
 **/__pycache__/
 
-# Local archives / backups (e.g. dev/purged_lupins_code_*.tgz). Not versioned.
+# Local archives / backups. Not versioned.
 *.tgz
 *.tar.gz
 *.zip
 
-# Model training artifacts under dev/site_1_strip_5_MIL_exploration/ — feature
-# caches, checkpoints, inference overlays, preview-render videos, plus
-# weights/arrays/orthomosaics by extension. Large and rebuildable.
-# (Consolidated here from that directory's own .gitignore.) Note: this is a
-# dev-scoped video rule, NOT a global *.mp4 — the mission video_review/ clips
-# are versioned on purpose.
-dev/site_1_strip_5_MIL_exploration/cache/
-dev/site_1_strip_5_MIL_exploration/checkpoints/
-dev/site_1_strip_5_MIL_exploration/inference_viz/overlays/
-dev/**/*.mp4
+# Large binary formats — weights/arrays/orthomosaics by extension. The build's
+# local ortho cache and any scratch rasters fall under *.tif.
 *.pt
 *.npz
 *.npy
 *.tif
 
-# Built HF dataset artifacts (large binaries, rebuildable from missions/ via
-# `python -m multimodal_dataset`). Keep out of the repo.
+# Built HF dataset artifacts and the ortho download cache (large, rebuildable
+# from missions/ + GCS via `python -m multimodal_dataset build`).
 multimodal_dataset/out/
-
-# iNaturalist harvest outputs — images, the Arrow dataset, manifests, the
-# metadata.csv exports, and the pixelflora HTTP cache. All large and rebuildable
-# from inat_dataset/*/request.toml via `pixelflora run`. Ignore the whole out/
-# tree EXCEPT the small provenance files worth versioning (license report,
-# citation, bibliography, summary/rejections JSON, the dataset README).
-inat_dataset/*/out/*
-!inat_dataset/*/out/*.json
-!inat_dataset/*/out/*.cff
-!inat_dataset/*/out/*.bib
-!inat_dataset/*/out/README.md
-**/.pixelflora_cache/
+multimodal_dataset/cache/
 
 # Pre-reorg mission dir, already committed: 3 early runs (2026-06-11/-15) not
 # duplicated under missions/site_1/strip_3/ — NOT a redundant copy, leave as

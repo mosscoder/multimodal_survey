@@ -4,7 +4,7 @@
 
 # Multimodal Survey
 
-This project explores the Unitree Go2 robot as a platform for botanical surveys in a wildlands setting. Our Go2 traversed several kilometers of transects across the grasslands at MPG Ranch and photographed the vegetation at regular intervals. Aerial drone data were also gathered at the same time. In addition to targeting the paired dataset for release, the project explores how DINOv3 models fine-tuned on iNaturalist images transfer to the task of plant ID on the robot-gathered images. Additionally, we hope to learn how joint captures of a scene from terrestrial and aerial perspectives can improve plant detection and mapping.
+This project explores the Unitree Go2 robot as a platform for botanical surveys in a wildlands setting. Our Go2 traversed several kilometers of transects across the grasslands at MPG Ranch and photographed the vegetation at regular intervals. Aerial drone imagery of the same ground was gathered within hours of each walk. The repo holds exactly two things: the field data the robot recorded (`missions/`) and the pipeline that turns it into the paired ground-and-aerial Hugging Face dataset (`multimodal_dataset/`). Modeling work built on this data lives elsewhere and will surface in applied papers.
 
 ## Repo layout
 
@@ -14,10 +14,9 @@ multimodal_survey/
 │   ├── <site>/<strip>/    one folder per strip surveyed (config, runs, labels)
 │   ├── inventory.csv      per-run status + quality tracker
 │   └── planning/          QGIS project + basemap for laying out strips
-├── inat_dataset/          training photos, harvested from iNaturalist via pixelflora
-├── multimodal_dataset/    turns robot missions into one dataset, plus the labeling app
-├── dev/                   experiments + scratch; the model is in site_1_strip_5_MIL_exploration/
-└── docs/                  standalone guides (e.g. the field walkthrough)
+├── multimodal_dataset/    builds the Hugging Face dataset, plus the (historical) labeling app
+├── dev/                   the pre-reorg field shakedown (site_1_strip_3_test_run/)
+└── docs/                  the dataset overview, field walkthrough, and figures
 ```
 
 ### `missions/` — what the robot did
@@ -50,27 +49,17 @@ partial / aborted) and basic quality checks. A run only counts as usable once it
 pre-flight, run, push the results) lives in
 [`docs/field-walkthrough.md`](docs/field-walkthrough.md).
 
-### `inat_dataset/` — training photos
-
-Not robot photos — these come from iNaturalist, harvested by
-[**pixelflora**](https://github.com/mosscoder/pixelflora). Two requests live
-here, each pairing a `request.toml` (which species, which filters) with the
-`out/` it produced (a Hugging Face dataset, plus the images and manifests
-[pixelflora](https://github.com/mosscoder/pixelflora) writes alongside it):
-
-* `plants/` — the candidate pool of rangeland species (native and invasive forbs
-  and grasses) the model is trained and tuned against.
-* `birds/` — bald-eagle-in-flight photos, used to build the "Sky" negative class.
-
-### `multimodal_dataset/` — bridging robot data and the model
+### `multimodal_dataset/` — building the Hugging Face dataset
 
 A small, self-contained package that reads every completed mission out of
-`missions/` and assembles them into one Hugging Face dataset — one row per photo,
-carrying its location, time, heading, and (once labeled) its species labels. Run
-with `python -m multimodal_dataset`.
+`missions/` and assembles the release: one row per photo, pairing the robot
+frame with a nadir drone-orthomosaic crop of the ground ahead of it, plus
+location, time, heading, and species labels. Run with `python -m
+multimodal_dataset`. The release-facing description of every column lives in
+[`docs/dataset-overview.html`](docs/dataset-overview.html).
 
-It also holds the **labeling app**, a local web tool used to hand-label robot
-photos. It carries two switchable tasks over the same frames — pick either from
+It also holds the **labeling app**, the local web tool that produced the
+shipped labels (labeling is complete; the app stays as provenance). It carries two switchable tasks over the same frames — pick either from
 the header dropdowns, alongside the mission switcher, with no relaunch:
 
 * **Species** (multilabel) — for each frame, which of the 8 target species are
@@ -99,15 +88,11 @@ python -m multimodal_dataset.labeling label    # opens on the Species task; swit
 - [x] **Review the robot mission data for completeness.** Every run reached
   `MISSION COMPLETE` with its captures, sidecars, and logs intact (status
   tracked in `missions/inventory.csv`).
-- [ ] **Label the target species in the robot imagery and push to Hugging
-  Face.** Hand-label the captures with the labeling app, then build the dataset
-  (`python -m multimodal_dataset`) and publish it.
-- [ ] **Process the drone imagery and add it to the dataset** as its own drone
-  configuration, co-registered with the robot captures by location and time.
-- [ ] **Benchmark the iNaturalist-trained CV stack on the robot imagery** —
-  robot captures alone, then the union with the drone imagery — to measure how a
-  model trained only on free iNaturalist photos transfers to the field.
-- [ ] **Fuse the terrestrial and aerial views:** pair each robot capture with the
-  overlapping drone imagery and test whether the joint signal improves plant
-  detection and mapping over either source alone.
+- [x] **Label the imagery.** All 8,287 frames hand-labeled for the 8 target
+  species (`labels/species.json`) and image quality (`labels/quality.json`).
+- [ ] **Build and push the paired dataset.** One row per robot frame with its
+  4 m nadir drone crop, 34 columns, real train/test splits. Ships private to
+  `mpg-ranch/multimodal-survey` first.
+- [ ] **Add the multispectral crop** (`drone_image_ms`) from the Mavic 3M
+  orthomosaics as a follow-up column.
 
