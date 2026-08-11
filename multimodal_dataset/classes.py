@@ -50,3 +50,7 @@ QUALITY_BINS = [
     ("50–75%",  "heavy — artifacts over most of the frame"),
     ("75–100%", "severe — frame dominated by artifacts"),
 ]
+
+# Release names for the quality bands (the dataset's `artifact_level` ClassLabel).
+# Plain hyphens, unlike the en-dashed UI strings above; index = stored bin - 1.
+ARTIFACT_LEVELS = ["0-25%", "25-50%", "50-75%", "75-100%"]

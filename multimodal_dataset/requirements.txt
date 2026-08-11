@@ -1,0 +1,9 @@
+# Build/verify/push dependencies for the multimodal_dataset pipeline.
+# (The labeling app is standard-library only and needs none of these.)
+datasets>=3.6
+huggingface_hub>=0.34
+numpy
+pillow
+pyproj
+rasterio
+shapely>=2.0

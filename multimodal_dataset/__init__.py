@@ -1,7 +1,9 @@
-"""Build the robot-survey Hugging Face dataset from completed missions in ``missions/``.
+"""Build the multimodal-survey Hugging Face release from ``missions/``.
 
-Self-contained (only ``datasets`` + ``pillow``). Run: ``python -m multimodal_dataset``.
-See ``schema.features`` (target features), ``discover`` (mission gate),
-``extract`` (per-frame row), ``build`` (assemble + save).
+Run: ``python -m multimodal_dataset {build|verify|push}``. See ``schema``
+(the 34 release features), ``discover`` (mission gate), ``extract`` (rows,
+pairs, restarts), ``crops`` (drone-crop geometry), ``splits`` (test-leg rule),
+``verify`` (release gates), ``push`` (private HF upload). Dependencies in
+``requirements.txt``; the release spec is ``docs/dataset-overview.html``.
 """
 from __future__ import annotations
