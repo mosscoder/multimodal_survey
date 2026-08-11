@@ -90,9 +90,15 @@ python -m multimodal_dataset.labeling label    # opens on the Species task; swit
   tracked in `missions/inventory.csv`).
 - [x] **Label the imagery.** All 8,287 frames hand-labeled for the 8 target
   species (`labels/species.json`) and image quality (`labels/quality.json`).
-- [ ] **Build and push the paired dataset.** One row per robot frame with its
-  4 m nadir drone crop, 34 columns, real train/test splits. Ships private to
-  `mpg-ranch/multimodal-survey` first.
+- [x] **Build and push the paired dataset.** One row per robot frame with its
+  4 m nadir drone crop, 34 columns, real train/test splits. Live as a private
+  Hugging Face dataset at `mpg-ranch/multimodal-survey`, with every release
+  invariant verified by `python -m multimodal_dataset verify`.
+- [ ] **Finish the release metadata.** Fill the remaining `CITATION.cff`
+  author names and backfill the 5 missing `missions/inventory.csv` rows.
+- [ ] **Take the dataset public.** Gated on a coordinate-precision review and
+  a dataset-viewer check (the viewer activates once the repo is public).
 - [ ] **Add the multispectral crop** (`drone_image_ms`) from the Mavic 3M
-  orthomosaics as a follow-up column.
+  orthomosaics as a follow-up column: bands Red, Green, NIR, RedEdge at
+  2.24 cm GSD, values as scaled digital numbers rather than reflectance.
 
