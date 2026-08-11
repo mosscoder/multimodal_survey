@@ -354,9 +354,10 @@ def pixel_to_ground(row, px, py, S=4.0, N=312):
 <h2><span class="n">6</span>Prior work</h2>
 <p class="lede">Several lines of research connect overhead and ground-level views for organism
 classification, but only the first below fuses the two as joint classifier input. The others use one
-view to supervise, label, or direct the other. To our knowledge none pairs a ground robot's
-photographs with centimeter-scale drone orthoimagery of the same footprint. The closest
-neighbors:</p>
+view to supervise, label, or direct the other. Releases that combine aerial and ground platforms
+serve SLAM, registration, navigation, and crop phenotyping. To our knowledge none pairs ground-robot
+photographs with coincident centimeter-scale orthomosaic crops of the same footprints, labeled for
+plant species in natural vegetation. The closest neighbors:</p>
 
 <h3><a href="https://openaccess.thecvf.com/content/CVPR2022/html/Beery_The_Auto_Arborist_Dataset_A_Large-Scale_Benchmark_for_Multiview_Urban_CVPR_2022_paper.html">The Auto Arborist Dataset</a> (CVPR 2022)</h3>
 <p class="lede">Pairs aerial and street-level imagery of more than two million urban trees across 23
@@ -392,6 +393,28 @@ classifying crops and weeds from both platforms over the same field, the closest
 precedent for the drone-plus-robot pairing here. The demonstrated loop runs from a multispectral
 drone survey to a weed map co-registered into the ground robot's frame, which the robot then acts on
 plant by plant with targeted spraying or mechanical stamping.</p>
+
+<h3><a href="https://www.nature.com/articles/s41597-025-06462-y">MuST-C</a> (Scientific Data 2026)</h3>
+<p class="lede">Releases ground-robot photographs and drone orthophotos at millimeter GSD of the
+same crop plots across a season, co-registered through shared GNSS georeferencing, the closest
+dataset precedent to the pairing here. The trial is a monoculture experiment where species are known
+by design, annotations are plant traits rather than species labels, and no per-footprint image pairs
+are curated.</p>
+
+<h3>Outdoor robot imagery datasets (RUGD, RELLIS-3D, GOOSE)</h3>
+<p class="lede">A ground-robot lineage releases outdoor imagery for semantic segmentation.
+<a href="https://doi.org/10.1109/IROS40897.2019.8968283">RUGD</a> and
+<a href="https://github.com/unmannedlab/RELLIS-3D">RELLIS-3D</a> established the off-road benchmark
+line, <a href="https://goose-dataset.de/">GOOSE</a> carries the finest current ontology at 64
+classes, and its GOOSE-Ex extension adds the only annotated quadruped-mounted imagery to date, with
+vegetation appearing throughout as coarse structural classes such as grass, bush, and tree, never as
+botanical species.</p>
+
+<h3><a href="https://www.nature.com/articles/s41598-018-38343-3">DeepWeeds</a> (Scientific Reports 2019)</h3>
+<p class="lede">Releases 17,509 ground-level images of eight named weed species across Australian
+rangeland, the nearest ecosystem and label-type match to this dataset. Capture used a fixed camera
+rig at robot height rather than a robot in motion, labels are image-level, and no aerial imagery is
+paired.</p>
 
 <div class="note">
   <b>Citation and license.</b> Data are released under CC BY 4.0. Code in the source repository

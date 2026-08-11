@@ -435,9 +435,12 @@ def pixel_to_ground(row, px, py, S=4.0, N=312):
 
 Several lines of research connect overhead and ground-level views for organism
 classification, but only the first below fuses the two as joint classifier
-input. The others use one view to supervise, label, or direct the other. To
-our knowledge none pairs a ground robot's photographs with centimeter-scale
-drone orthoimagery of the same footprint. The closest neighbors:
+input. The others use one view to supervise, label, or direct the other.
+Releases that combine aerial and ground platforms serve SLAM, registration,
+navigation, and crop phenotyping. To our knowledge none pairs ground-robot
+photographs with coincident centimeter-scale orthomosaic crops of the same
+footprints, labeled for plant species in natural vegetation. The closest
+neighbors:
 
 ### The Auto Arborist Dataset (CVPR 2022)
 
@@ -483,6 +486,36 @@ the closest operational precedent for the drone-plus-robot pairing here. The
 demonstrated loop runs from a multispectral drone survey to a weed map
 co-registered into the ground robot's frame, which the robot then acts on
 plant by plant with targeted spraying or mechanical stamping.
+
+### MuST-C (Scientific Data 2026)
+
+Chong et al. ([paper](https://www.nature.com/articles/s41597-025-06462-y)).
+Releases ground-robot photographs and drone orthophotos at millimeter GSD of
+the same crop plots across a season, co-registered through shared GNSS
+georeferencing, the closest dataset precedent to the pairing here. The trial
+is a monoculture experiment where species are known by design, annotations
+are plant traits rather than species labels, and no per-footprint image pairs
+are curated.
+
+### Outdoor robot imagery datasets (RUGD, RELLIS-3D, GOOSE)
+
+A ground-robot lineage releases outdoor imagery for semantic segmentation.
+RUGD ([Wigness et al.](https://doi.org/10.1109/IROS40897.2019.8968283)) and
+RELLIS-3D ([Jiang et al.](https://github.com/unmannedlab/RELLIS-3D))
+established the off-road benchmark line, GOOSE
+([Mortimer et al.](https://goose-dataset.de/)) carries the finest current
+ontology at 64 classes, and its GOOSE-Ex extension adds the only annotated
+quadruped-mounted imagery to date, with vegetation appearing throughout as
+coarse structural classes such as grass, bush, and tree, never as botanical
+species.
+
+### DeepWeeds (Scientific Reports 2019)
+
+Olsen et al. ([paper](https://www.nature.com/articles/s41598-018-38343-3)).
+Releases 17,509 ground-level images of eight named weed species across
+Australian rangeland, the nearest ecosystem and label-type match to this
+dataset. Capture used a fixed camera rig at robot height rather than a robot
+in motion, labels are image-level, and no aerial imagery is paired.
 
 ## Citation and license
 
