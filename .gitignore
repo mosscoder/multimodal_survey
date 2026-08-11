@@ -1,6 +1,9 @@
 # Secrets — API tokens such as HF_TOKEN. Never commit.
 .env
 
+# Local-only Claude session guidance.
+CLAUDE.md
+
 # macOS / editor cruft. Previously only caught by a personal global gitignore;
 # pinned here so it's ignored for every collaborator, not just one machine.
 .DS_Store
