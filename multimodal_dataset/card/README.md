@@ -439,45 +439,45 @@ input. The others use one view to supervise, label, or direct the other. To
 our knowledge none pairs a ground robot's photographs with centimeter-scale
 drone orthoimagery of the same footprint. The closest neighbors:
 
-### [The Auto Arborist Dataset](https://openaccess.thecvf.com/content/CVPR2022/html/Beery_The_Auto_Arborist_Dataset_A_Large-Scale_Benchmark_for_Multiview_Urban_CVPR_2022_paper.html) (CVPR 2022)
+### The Auto Arborist Dataset (CVPR 2022)
 
-Pairs aerial and street-level imagery of more than two million urban trees
+Beery et al. ([paper](https://openaccess.thecvf.com/content/CVPR2022/html/Beery_The_Auto_Arborist_Dataset_A_Large-Scale_Benchmark_for_Multiview_Urban_CVPR_2022_paper.html)). Pairs aerial and street-level imagery of more than two million urban trees
 across 23 North American cities for genus-level classification, with baselines
 for each view alone and for the two combined. It was assembled by joining the
 cities' public tree censuses to Street View and overhead imagery, and its
 central experiment is geographic generalization. Models are evaluated in
 cities held out of training.
 
-### [TaxaBind](https://arxiv.org/abs/2411.00683) (WACV 2025)
+### TaxaBind (WACV 2025)
 
-Learns a joint embedding over six modalities, using ground-level species
+Sastry et al. ([paper](https://arxiv.org/abs/2411.00683)). Learns a joint embedding over six modalities, using ground-level species
 photos as the anchor that binds satellite imagery, location, text, audio, and
 environmental features, and evaluates it on zero-shot species classification.
 The core technique, multimodal patching, distills each pairwise alignment into
 the shared ground-image encoder without erasing the ones learned before it,
 trained on 2.7 million satellite-to-species-photo pairs.
 
-### [WildSAT](https://arxiv.org/abs/2412.14428) (ICCV 2025)
+### WildSAT (ICCV 2025)
 
-Trains satellite-image encoders by contrasting them against millions of
+Daroya et al. ([paper](https://arxiv.org/abs/2412.14428)). Trains satellite-image encoders by contrasting them against millions of
 geotagged citizen-science wildlife observations and habitat descriptions,
 transferring ground-level signal into the overhead view. Its contribution is
 the training signal itself: a contrastive objective linking a satellite patch
 to the species recorded there and to Wikipedia habitat text, which beats both
 ImageNet and satellite-specific pretraining on downstream recognition tasks.
 
-### [GeoLifeCLEF](https://hal.inrae.fr/hal-04720817v1) (annual benchmark)
+### GeoLifeCLEF (annual benchmark)
 
-Predicts plant species composition at ground-observation sites from satellite
+Picek et al. ([2024 overview](https://hal.inrae.fr/hal-04720817v1)). Predicts plant species composition at ground-observation sites from satellite
 imagery and environmental rasters, linking the overhead view to species
 recorded in person at the same coordinates. Recent editions pair roughly five
 million occurrence records and 100,000 standardized survey plots across Europe
 with Sentinel-2 patches, Landsat time series, and climate and soil rasters,
 scored as multi-label species composition prediction.
 
-### [Aerial-ground robotics for precision farming](https://arxiv.org/abs/1911.03098) (IEEE RAM 2021)
+### Aerial-ground robotics for precision farming (IEEE RAM 2021)
 
-The EU Flourish project teamed a survey drone with an intervention ground
+Pretto et al. ([paper](https://arxiv.org/abs/1911.03098)). The EU Flourish project teamed a survey drone with an intervention ground
 robot, classifying crops and weeds from both platforms over the same field,
 the closest operational precedent for the drone-plus-robot pairing here. The
 demonstrated loop runs from a multispectral drone survey to a weed map
