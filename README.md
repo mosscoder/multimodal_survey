@@ -6,6 +6,13 @@
 
 This project explores the Unitree Go2 robot as a platform for botanical surveys in a wildlands setting. Our Go2 traversed several kilometers of transects across the grasslands at MPG Ranch and photographed the vegetation at regular intervals. Aerial drone imagery of the same ground was gathered within hours of each walk. The repo holds exactly two things: the field data the robot recorded (`missions/`) and the pipeline that turns it into the paired ground-and-aerial Hugging Face dataset (`multimodal_dataset/`). Modeling work built on this data lives elsewhere and will surface in applied papers.
 
+<p align="center">
+  <img src="assets/sample_pairs_animation.gif" alt="Animated robot photographs beside their paired drone crops along one survey leg" width="900">
+</p>
+<p align="center">
+  <sub>Thirty five consecutive capture positions along one survey leg. The robot photograph is on the left. Its paired 4 m by 4 m drone crop is on the right, rotated so the robot's bearing points up, with the antenna position in yellow and a 1 m scale bar.</sub>
+</p>
+
 ## Repo layout
 
 ```

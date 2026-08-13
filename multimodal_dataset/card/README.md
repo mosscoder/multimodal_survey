@@ -23,6 +23,13 @@ hand-labeled for 8 plant species, built to answer that question.
 **8,287** labeled frames · **8** target species · **2** sites, 9 strips ·
 **1.4 cm** RTK accuracy · **1.28 cm** drone GSD · **34** columns
 
+![Animated robot photographs beside their paired drone crops along one survey leg](images/sample_pairs_animation.gif)
+
+Thirty five consecutive capture positions along one survey leg. The robot
+photograph is on the left. Its paired 4 m by 4 m drone crop is on the right,
+rotated so the robot's bearing points up, with the antenna position in yellow
+and a 1 m scale bar.
+
 ## 1. Contents and motivation
 
 Identifying plant species from photographs is hard from any single vantage
