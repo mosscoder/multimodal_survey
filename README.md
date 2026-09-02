@@ -75,8 +75,7 @@ the header dropdowns, alongside the mission switcher, with no relaunch:
   predictions are never shown). Hot-keys: `1`–`4` wildflowers, `A`/`S`/`D`/`F`
   weeds. Saved to `labels/species.json`.
 * **Image quality** (single-select) — one ordinal judgement per frame: how much
-  of the image is degraded by visual artifacts (motion blur, smear, glare,
-  compression), in quartile bands `0–25` / `25–50` / `50–75` / `75–100`% of the
+  of the image is degraded by video decoder artifacts, in quartile bands `0–25` / `25–50` / `50–75` / `75–100`% of the
   frame affected, stored behind the scenes as `1`–`4`. Hot-keys `1`–`4` pick the
   band. Saved to `labels/quality.json`.
 

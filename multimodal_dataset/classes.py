@@ -40,7 +40,7 @@ DEFAULT_ON = None
 # --------------------------------------------------------------------------- #
 # A second, independent labelling task: instead of which species are present, a
 # single ordinal judgement per frame — how much of the image is degraded by
-# visual artifacts (motion blur, smear, glare, compression, exposure). Four equal
+# video decoder artifacts. Four equal
 # quartile bands over the *share of the frame affected*; stored behind the scenes
 # as the integer 1..4 (0 = unset). Hot-keys 1–4 map to the four bands in order.
 QUALITY_LABEL = "Artifact prevalence"

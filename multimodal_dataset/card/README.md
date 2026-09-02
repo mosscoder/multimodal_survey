@@ -62,7 +62,7 @@ different sets of field conditions.
 | `drone_image` | Image | Paired nadir orthomosaic crop, 4 × 4 m at 1.28 cm GSD → 312×312 px, cut at the frame's RTK antenna position. The orthomosaics were rectified against surveyed ground-control points at both sites, so crop placement and robot positions share a common geodetic frame |
 | **Labels** | | |
 | `species` | Sequence(ClassLabel) | Which of the 8 target species are present. Variable length 0 to 6. Empty means reviewed and none present |
-| `artifact_level` | ClassLabel(4) | Share of the frame degraded by visual artifacts, in quartile bands |
+| `artifact_level` | ClassLabel(4) | Share of the frame degraded by video decoder artifacts, in quartile bands |
 | **Where** | | |
 | `site` | string | `site_1` or `site_2` |
 | `strip` | string | `strip_1` … `strip_5` within a site |
@@ -140,21 +140,23 @@ the separation.
 
 ### The flights
 
-| Flight | Paired with | Photos per sensor | Duration | Median capture (UTC) | RGB GSD |
-|---|---|---|---|---|---|
-| 260616-site-1-am | `site_1` event 1 | 295 | 19.6 min | 18:02:05 | 1.28 cm |
-| 260617-site-2-am | `site_2` event 1 | 154 | 5.5 min | 17:04:07 | 1.28 cm |
-| 260617-site-2-pm | `site_2` event 2 | 147 | 5.5 min | 20:23:59 | 1.28 cm |
-| 260618-site-1-pm | `site_1` event 2 | 265 | 9.9 min | 20:33:34 | 1.28 cm |
+| Flight | Paired with | Photos per sensor | Duration | Median capture (UTC) | GCP RMSE (horizontal) | RGB GSD |
+|---|---|---|---|---|---|---|
+| 260616-site-1-am | `site_1` event 1 | 295 | 19.6 min | 18:02:05 | 3.14 cm | 1.28 cm |
+| 260617-site-2-am | `site_2` event 1 | 154 | 5.5 min | 17:04:07 | 3.22 cm | 1.28 cm |
+| 260617-site-2-pm | `site_2` event 2 | 147 | 5.5 min | 20:23:59 | 1.94 cm | 1.28 cm |
+| 260618-site-1-pm | `site_1` event 2 | 265 | 9.9 min | 20:33:34 | 1.83 cm | 1.28 cm |
 
 All four flights flew the same plan: identical footprints per site, 9 m photo
 spacing, matching altitude. The first flight of the campaign ran at 2.2 m/s,
 half the 4.4 m/s of the other three, which is the whole story behind its
 longer duration; photo spacing and overlap are unaffected. Timestamps come
-from the PPK camera logs (GPS time corrected for leap seconds). Ground-control
-targets surveyed at both sites anchored the orthomosaic rectification.
-Per-flight processing reports did not expose ground-control residuals, so
-per-flight RMSE is not available.
+from the PPK camera logs (GPS time corrected for leap seconds). Five
+ground-control targets per site, at the four corners and the center, anchored
+the orthomosaic rectification. Each flight's DroneDeploy processing report
+located all five, and GCP RMSE is the horizontal RMS residual computed from
+the per-point X and Y errors in that report. The reports sit beside the
+orthomosaics on Google Cloud Storage.
 
 ## 2. Paired examples
 
@@ -290,10 +292,11 @@ A machine-readable species table ships beside the data as
 
 ### Image quality
 
-A second annotation pass graded every frame for the share degraded by visual
-artifacts (motion blur, smear, glare, compression). The distribution is
-U-shaped rather than graded. Bands 2 and 3 are mostly motion blur, band 4
-mostly encoder corruption.
+A second annotation pass graded every frame for the share degraded by video
+decoder artifacts. The robot delivers its camera feed as an H.264 stream over
+WebRTC, and packets lost on the wireless link leave the decoder to conceal the
+missing data with content from earlier frames, which produces blocky or
+smeared regions. The distribution is U-shaped rather than graded.
 
 ![artifact_level distribution by split](images/artifact_levels.jpg)
 
