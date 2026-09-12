@@ -1,0 +1,365 @@
+pool 6089  per fold [1111, 1241, 1454, 1067, 1216]
+per-frame patch means (one memmap pass) ...
+
+== fold 0  tr 4978  va 1111 ==
+    ep  0  live 24/24
+    ep  1  live 24/24
+    ep  2  live 24/24
+    ep  3  live 24/24
+    ep  4  live 24/24
+    ep  5  live 24/24
+    ep  6  live 24/24
+    ep  7  live 24/24
+    ep  8  live 24/24
+    ep  9  live 24/24
+    ep 10  live 24/24
+    ep 11  live 24/24
+    ep 12  live 24/24
+    ep 13  live 24/24
+    ep 14  live 24/24
+    ep 15  live 24/24
+    ep 16  live 24/24
+    ep 17  live 24/24
+    ep 18  live 24/24
+    ep 19  live 24/24
+    ep 20  live 23/24
+    ep 21  live 23/24
+    ep 22  live 23/24
+    ep 23  live 23/24
+    ep 24  live 23/24
+    ep 25  live 23/24
+    ep 26  live 23/24
+    ep 27  live 23/24
+    ep 28  live 23/24
+    ep 29  live 23/24
+    ep 30  live 23/24
+    ep 31  live 23/24
+    ep 32  live 23/24
+    ep 33  live 22/24
+    ep 34  live 22/24
+    ep 35  live 22/24
+    ep 36  live 22/24
+    ep 37  live 21/24
+    ep 38  live 21/24
+    ep 39  live 21/24
+    ep 40  live 21/24
+    ep 41  live 21/24
+    ep 42  live 21/24
+    ep 43  live 21/24
+    ep 44  live 16/24
+    ep 45  live 16/24
+    ep 46  live 16/24
+    ep 47  live 16/24
+    ep 48  live 16/24
+    ep 49  live 16/24
+    ep 50  live 7/24
+    ep 51  live 6/24
+    ep 52  live 6/24
+    ep 53  live 3/24
+    ep 54  live 3/24
+    ep 55  live 2/24
+    ep 56  live 2/24
+    ep 57  live 2/24
+    ep 58  live 1/24
+    ep 59  live 1/24
+
+== fold 1  tr 4848  va 1241 ==
+    ep  0  live 24/24
+    ep  1  live 24/24
+    ep  2  live 24/24
+    ep  3  live 24/24
+    ep  4  live 24/24
+    ep  5  live 24/24
+    ep  6  live 24/24
+    ep  7  live 24/24
+    ep  8  live 24/24
+    ep  9  live 24/24
+    ep 10  live 24/24
+    ep 11  live 24/24
+    ep 12  live 24/24
+    ep 13  live 24/24
+    ep 14  live 24/24
+    ep 15  live 24/24
+    ep 16  live 24/24
+    ep 17  live 24/24
+    ep 18  live 24/24
+    ep 19  live 24/24
+    ep 20  live 24/24
+    ep 21  live 24/24
+    ep 22  live 24/24
+    ep 23  live 23/24
+    ep 24  live 23/24
+    ep 25  live 23/24
+    ep 26  live 23/24
+    ep 27  live 23/24
+    ep 28  live 23/24
+    ep 29  live 23/24
+    ep 30  live 23/24
+    ep 31  live 23/24
+    ep 32  live 23/24
+    ep 33  live 23/24
+    ep 34  live 22/24
+    ep 35  live 22/24
+    ep 36  live 22/24
+    ep 37  live 22/24
+    ep 38  live 22/24
+    ep 39  live 21/24
+    ep 40  live 21/24
+    ep 41  live 21/24
+    ep 42  live 21/24
+    ep 43  live 21/24
+    ep 44  live 21/24
+    ep 45  live 21/24
+    ep 46  live 21/24
+    ep 47  live 21/24
+    ep 48  live 16/24
+    ep 49  live 16/24
+    ep 50  live 12/24
+    ep 51  live 12/24
+    ep 52  live 12/24
+    ep 53  live 12/24
+    ep 54  live 11/24
+    ep 55  live 8/24
+    ep 56  live 7/24
+    ep 57  live 6/24
+    ep 58  live 3/24
+    ep 59  live 1/24
+
+== fold 2  tr 4635  va 1454 ==
+    ep  0  live 24/24
+    ep  1  live 24/24
+    ep  2  live 24/24
+    ep  3  live 24/24
+    ep  4  live 24/24
+    ep  5  live 24/24
+    ep  6  live 24/24
+    ep  7  live 24/24
+    ep  8  live 24/24
+    ep  9  live 24/24
+    ep 10  live 24/24
+    ep 11  live 24/24
+    ep 12  live 24/24
+    ep 13  live 24/24
+    ep 14  live 24/24
+    ep 15  live 24/24
+    ep 16  live 24/24
+    ep 17  live 24/24
+    ep 18  live 24/24
+    ep 19  live 24/24
+    ep 20  live 24/24
+    ep 21  live 24/24
+    ep 22  live 24/24
+    ep 23  live 24/24
+    ep 24  live 24/24
+    ep 25  live 24/24
+    ep 26  live 24/24
+    ep 27  live 24/24
+    ep 28  live 24/24
+    ep 29  live 24/24
+    ep 30  live 24/24
+    ep 31  live 24/24
+    ep 32  live 24/24
+    ep 33  live 24/24
+    ep 34  live 23/24
+    ep 35  live 23/24
+    ep 36  live 23/24
+    ep 37  live 22/24
+    ep 38  live 22/24
+    ep 39  live 22/24
+    ep 40  live 22/24
+    ep 41  live 22/24
+    ep 42  live 18/24
+    ep 43  live 18/24
+    ep 44  live 18/24
+    ep 45  live 17/24
+    ep 46  live 14/24
+    ep 47  live 14/24
+    ep 48  live 13/24
+    ep 49  live 13/24
+    ep 50  live 12/24
+    ep 51  live 12/24
+    ep 52  live 5/24
+    ep 53  live 5/24
+    ep 54  live 5/24
+    ep 55  live 5/24
+    ep 56  live 5/24
+    ep 57  live 5/24
+    ep 58  live 2/24
+    ep 59  live 2/24
+
+== fold 3  tr 5022  va 1067 ==
+    ep  0  live 24/24
+    ep  1  live 24/24
+    ep  2  live 24/24
+    ep  3  live 24/24
+    ep  4  live 24/24
+    ep  5  live 24/24
+    ep  6  live 24/24
+    ep  7  live 24/24
+    ep  8  live 24/24
+    ep  9  live 24/24
+    ep 10  live 24/24
+    ep 11  live 24/24
+    ep 12  live 24/24
+    ep 13  live 24/24
+    ep 14  live 24/24
+    ep 15  live 24/24
+    ep 16  live 24/24
+    ep 17  live 24/24
+    ep 18  live 24/24
+    ep 19  live 24/24
+    ep 20  live 24/24
+    ep 21  live 24/24
+    ep 22  live 24/24
+    ep 23  live 24/24
+    ep 24  live 24/24
+    ep 25  live 24/24
+    ep 26  live 24/24
+    ep 27  live 24/24
+    ep 28  live 24/24
+    ep 29  live 24/24
+    ep 30  live 24/24
+    ep 31  live 24/24
+    ep 32  live 24/24
+    ep 33  live 24/24
+    ep 34  live 24/24
+    ep 35  live 24/24
+    ep 36  live 21/24
+    ep 37  live 21/24
+    ep 38  live 21/24
+    ep 39  live 21/24
+    ep 40  live 20/24
+    ep 41  live 20/24
+    ep 42  live 20/24
+    ep 43  live 20/24
+    ep 44  live 20/24
+    ep 45  live 19/24
+    ep 46  live 19/24
+    ep 47  live 19/24
+    ep 48  live 19/24
+    ep 49  live 13/24
+    ep 50  live 12/24
+    ep 51  live 12/24
+    ep 52  live 12/24
+    ep 53  live 11/24
+    ep 54  live 11/24
+    ep 55  live 9/24
+    ep 56  live 8/24
+    ep 57  live 8/24
+    ep 58  live 8/24
+    ep 59  live 6/24
+
+== fold 4  tr 4873  va 1216 ==
+    ep  0  live 24/24
+    ep  1  live 24/24
+    ep  2  live 24/24
+    ep  3  live 24/24
+    ep  4  live 24/24
+    ep  5  live 24/24
+    ep  6  live 24/24
+    ep  7  live 24/24
+    ep  8  live 24/24
+    ep  9  live 24/24
+    ep 10  live 24/24
+    ep 11  live 24/24
+    ep 12  live 24/24
+    ep 13  live 24/24
+    ep 14  live 24/24
+    ep 15  live 24/24
+    ep 16  live 24/24
+    ep 17  live 24/24
+    ep 18  live 24/24
+    ep 19  live 24/24
+    ep 20  live 24/24
+    ep 21  live 24/24
+    ep 22  live 24/24
+    ep 23  live 24/24
+    ep 24  live 24/24
+    ep 25  live 24/24
+    ep 26  live 24/24
+    ep 27  live 24/24
+    ep 28  live 24/24
+    ep 29  live 24/24
+    ep 30  live 24/24
+    ep 31  live 24/24
+    ep 32  live 24/24
+    ep 33  live 24/24
+    ep 34  live 24/24
+    ep 35  live 24/24
+    ep 36  live 24/24
+    ep 37  live 24/24
+    ep 38  live 24/24
+    ep 39  live 24/24
+    ep 40  live 23/24
+    ep 41  live 23/24
+    ep 42  live 23/24
+    ep 43  live 22/24
+    ep 44  live 22/24
+    ep 45  live 22/24
+    ep 46  live 22/24
+    ep 47  live 20/24
+    ep 48  live 15/24
+    ep 49  live 15/24
+    ep 50  live 15/24
+    ep 51  live 8/24
+    ep 52  live 8/24
+    ep 53  live 8/24
+    ep 54  live 8/24
+    ep 55  live 7/24
+    ep 56  live 7/24
+    ep 57  live 6/24
+    ep 58  live 6/24
+    ep 59  live 6/24
+
+=== per-seed ===
+   k  seed  macro_f1  macro_ap  Lupinus  Balsamorhiza  Gaillardia  Achillea  Euphorbia  Sisymbrium  Bromus   Poa
+   1     0     0.705     0.759    0.919         0.901       0.830     0.664      0.347       0.757   0.747 0.904
+   1     1     0.706     0.757    0.919         0.909       0.828     0.659      0.329       0.765   0.751 0.900
+   1     2     0.707     0.762    0.918         0.907       0.829     0.671      0.349       0.766   0.753 0.901
+   2     0     0.702     0.755    0.918         0.904       0.832     0.645      0.323       0.762   0.759 0.899
+   2     1     0.705     0.761    0.916         0.906       0.835     0.660      0.348       0.762   0.755 0.904
+   2     2     0.704     0.758    0.917         0.904       0.830     0.661      0.328       0.759   0.760 0.903
+   4     0     0.696     0.749    0.918         0.904       0.813     0.647      0.298       0.757   0.751 0.908
+   4     1     0.695     0.749    0.918         0.906       0.811     0.644      0.294       0.759   0.751 0.906
+   4     2     0.698     0.749    0.918         0.908       0.815     0.631      0.316       0.749   0.750 0.905
+   8     0     0.689     0.741    0.920         0.900       0.792     0.619      0.294       0.757   0.741 0.905
+   8     1     0.690     0.744    0.917         0.906       0.787     0.622      0.309       0.753   0.756 0.906
+   8     2     0.690     0.745    0.918         0.901       0.798     0.626      0.308       0.758   0.746 0.905
+  16     0     0.678     0.730    0.917         0.902       0.750     0.587      0.277       0.757   0.747 0.907
+  16     1     0.678     0.729    0.918         0.899       0.743     0.599      0.271       0.757   0.740 0.907
+  16     2     0.678     0.735    0.917         0.901       0.757     0.613      0.299       0.750   0.733 0.906
+  64     0     0.645     0.709    0.904         0.890       0.670     0.546      0.290       0.745   0.732 0.897
+  64     1     0.647     0.706    0.909         0.898       0.680     0.531      0.261       0.742   0.727 0.897
+  64     2     0.649     0.712    0.906         0.893       0.670     0.537      0.315       0.745   0.736 0.896
+ 256     0     0.624     0.675    0.896         0.885       0.613     0.487      0.197       0.714   0.718 0.889
+ 256     1     0.626     0.679    0.895         0.883       0.630     0.499      0.220       0.709   0.704 0.891
+ 256     2     0.622     0.679    0.895         0.881       0.605     0.494      0.228       0.718   0.721 0.891
+3072     0     0.605     0.659    0.868         0.871       0.580     0.474      0.267       0.674   0.664 0.875
+3072     1     0.593     0.657    0.877         0.872       0.534     0.480      0.285       0.698   0.645 0.867
+3072     2     0.600     0.652    0.872         0.881       0.573     0.464      0.212       0.678   0.665 0.871
+
+=== curves (mean over 3 seeds) ===
+      macro_f1  macro_ap  Lupinus  Balsamorhiza  Gaillardia  Achillea  Euphorbia  Sisymbrium  Bromus   Poa
+k                                                                                                         
+1        0.706     0.759    0.919         0.906       0.829     0.665      0.342       0.763   0.750 0.902
+2        0.704     0.758    0.917         0.905       0.832     0.655      0.333       0.761   0.758 0.902
+4        0.696     0.749    0.918         0.906       0.813     0.641      0.303       0.755   0.751 0.906
+8        0.690     0.744    0.918         0.902       0.792     0.623      0.304       0.756   0.748 0.905
+16       0.678     0.731    0.917         0.901       0.750     0.600      0.283       0.755   0.740 0.906
+64       0.647     0.709    0.906         0.894       0.674     0.538      0.289       0.744   0.732 0.897
+256      0.624     0.678    0.896         0.883       0.616     0.493      0.215       0.714   0.714 0.890
+3072     0.599     0.656    0.872         0.875       0.563     0.473      0.255       0.683   0.658 0.871
+
+=== curves (min / max over seeds), macro_ap ===
+      mean   min   max
+k                     
+1    0.759 0.757 0.762
+2    0.758 0.755 0.761
+4    0.749 0.749 0.749
+8    0.744 0.741 0.745
+16   0.731 0.729 0.735
+64   0.709 0.706 0.712
+256  0.678 0.675 0.679
+3072 0.656 0.652 0.659
+
+wrote results/topk_curves.csv, topk_curves_perseed.csv, topk_oof.npz

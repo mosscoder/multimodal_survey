@@ -1,0 +1,386 @@
+pool frames 6089  per fold [1111, 1241, 1454, 1067, 1216]
+precomputing per-frame patch means (one memmap pass) ...
+
+== fold 0  tr 4978  va 1111 ==
+    ep  0  live 24/24
+    ep  1  live 24/24
+    ep  2  live 24/24
+    ep  3  live 24/24
+    ep  4  live 24/24
+    ep  5  live 24/24
+    ep  6  live 24/24
+    ep  7  live 24/24
+    ep  8  live 24/24
+    ep  9  live 24/24
+    ep 10  live 24/24
+    ep 11  live 24/24
+    ep 12  live 24/24
+    ep 13  live 24/24
+    ep 14  live 24/24
+    ep 15  live 24/24
+    ep 16  live 24/24
+    ep 17  live 24/24
+    ep 18  live 24/24
+    ep 19  live 24/24
+    ep 20  live 24/24
+    ep 21  live 24/24
+    ep 22  live 24/24
+    ep 23  live 24/24
+    ep 24  live 24/24
+    ep 25  live 24/24
+    ep 26  live 24/24
+    ep 27  live 24/24
+    ep 28  live 24/24
+    ep 29  live 24/24
+    ep 30  live 24/24
+    ep 31  live 24/24
+    ep 32  live 24/24
+    ep 33  live 24/24
+    ep 34  live 24/24
+    ep 35  live 24/24
+    ep 36  live 22/24
+    ep 37  live 22/24
+    ep 38  live 21/24
+    ep 39  live 21/24
+    ep 40  live 21/24
+    ep 41  live 21/24
+    ep 42  live 21/24
+    ep 43  live 21/24
+    ep 44  live 21/24
+    ep 45  live 21/24
+    ep 46  live 21/24
+    ep 47  live 10/24
+    ep 48  live 10/24
+    ep 49  live 9/24
+    ep 50  live 4/24
+    ep 51  live 4/24
+    ep 52  live 4/24
+    ep 53  live 0/24
+
+== fold 1  tr 4848  va 1241 ==
+    ep  0  live 24/24
+    ep  1  live 24/24
+    ep  2  live 24/24
+    ep  3  live 24/24
+    ep  4  live 24/24
+    ep  5  live 24/24
+    ep  6  live 24/24
+    ep  7  live 24/24
+    ep  8  live 24/24
+    ep  9  live 24/24
+    ep 10  live 24/24
+    ep 11  live 24/24
+    ep 12  live 24/24
+    ep 13  live 24/24
+    ep 14  live 24/24
+    ep 15  live 24/24
+    ep 16  live 24/24
+    ep 17  live 24/24
+    ep 18  live 24/24
+    ep 19  live 24/24
+    ep 20  live 24/24
+    ep 21  live 24/24
+    ep 22  live 24/24
+    ep 23  live 24/24
+    ep 24  live 24/24
+    ep 25  live 24/24
+    ep 26  live 24/24
+    ep 27  live 24/24
+    ep 28  live 24/24
+    ep 29  live 24/24
+    ep 30  live 24/24
+    ep 31  live 24/24
+    ep 32  live 24/24
+    ep 33  live 24/24
+    ep 34  live 24/24
+    ep 35  live 24/24
+    ep 36  live 24/24
+    ep 37  live 24/24
+    ep 38  live 24/24
+    ep 39  live 24/24
+    ep 40  live 24/24
+    ep 41  live 24/24
+    ep 42  live 24/24
+    ep 43  live 24/24
+    ep 44  live 13/24
+    ep 45  live 13/24
+    ep 46  live 13/24
+    ep 47  live 10/24
+    ep 48  live 10/24
+    ep 49  live 10/24
+    ep 50  live 10/24
+    ep 51  live 10/24
+    ep 52  live 10/24
+    ep 53  live 10/24
+    ep 54  live 10/24
+    ep 55  live 10/24
+    ep 56  live 10/24
+    ep 57  live 9/24
+    ep 58  live 9/24
+    ep 59  live 6/24
+
+== fold 2  tr 4635  va 1454 ==
+    ep  0  live 24/24
+    ep  1  live 24/24
+    ep  2  live 24/24
+    ep  3  live 24/24
+    ep  4  live 24/24
+    ep  5  live 24/24
+    ep  6  live 24/24
+    ep  7  live 24/24
+    ep  8  live 24/24
+    ep  9  live 24/24
+    ep 10  live 24/24
+    ep 11  live 24/24
+    ep 12  live 24/24
+    ep 13  live 24/24
+    ep 14  live 24/24
+    ep 15  live 24/24
+    ep 16  live 24/24
+    ep 17  live 24/24
+    ep 18  live 24/24
+    ep 19  live 24/24
+    ep 20  live 24/24
+    ep 21  live 24/24
+    ep 22  live 24/24
+    ep 23  live 24/24
+    ep 24  live 24/24
+    ep 25  live 24/24
+    ep 26  live 24/24
+    ep 27  live 24/24
+    ep 28  live 24/24
+    ep 29  live 24/24
+    ep 30  live 24/24
+    ep 31  live 24/24
+    ep 32  live 24/24
+    ep 33  live 24/24
+    ep 34  live 24/24
+    ep 35  live 24/24
+    ep 36  live 24/24
+    ep 37  live 24/24
+    ep 38  live 24/24
+    ep 39  live 22/24
+    ep 40  live 22/24
+    ep 41  live 22/24
+    ep 42  live 22/24
+    ep 43  live 22/24
+    ep 44  live 22/24
+    ep 45  live 22/24
+    ep 46  live 21/24
+    ep 47  live 20/24
+    ep 48  live 20/24
+    ep 49  live 18/24
+    ep 50  live 18/24
+    ep 51  live 18/24
+    ep 52  live 15/24
+    ep 53  live 15/24
+    ep 54  live 15/24
+    ep 55  live 13/24
+    ep 56  live 13/24
+    ep 57  live 13/24
+    ep 58  live 11/24
+    ep 59  live 10/24
+
+== fold 3  tr 5022  va 1067 ==
+    ep  0  live 24/24
+    ep  1  live 24/24
+    ep  2  live 24/24
+    ep  3  live 24/24
+    ep  4  live 24/24
+    ep  5  live 24/24
+    ep  6  live 24/24
+    ep  7  live 24/24
+    ep  8  live 24/24
+    ep  9  live 24/24
+    ep 10  live 24/24
+    ep 11  live 24/24
+    ep 12  live 24/24
+    ep 13  live 24/24
+    ep 14  live 24/24
+    ep 15  live 24/24
+    ep 16  live 24/24
+    ep 17  live 24/24
+    ep 18  live 24/24
+    ep 19  live 24/24
+    ep 20  live 24/24
+    ep 21  live 24/24
+    ep 22  live 24/24
+    ep 23  live 24/24
+    ep 24  live 24/24
+    ep 25  live 24/24
+    ep 26  live 24/24
+    ep 27  live 24/24
+    ep 28  live 24/24
+    ep 29  live 24/24
+    ep 30  live 24/24
+    ep 31  live 24/24
+    ep 32  live 24/24
+    ep 33  live 24/24
+    ep 34  live 24/24
+    ep 35  live 24/24
+    ep 36  live 24/24
+    ep 37  live 24/24
+    ep 38  live 24/24
+    ep 39  live 24/24
+    ep 40  live 24/24
+    ep 41  live 24/24
+    ep 42  live 24/24
+    ep 43  live 24/24
+    ep 44  live 24/24
+    ep 45  live 21/24
+    ep 46  live 21/24
+    ep 47  live 21/24
+    ep 48  live 21/24
+    ep 49  live 21/24
+    ep 50  live 18/24
+    ep 51  live 16/24
+    ep 52  live 16/24
+    ep 53  live 16/24
+    ep 54  live 16/24
+    ep 55  live 16/24
+    ep 56  live 9/24
+    ep 57  live 9/24
+    ep 58  live 7/24
+    ep 59  live 6/24
+
+== fold 4  tr 4873  va 1216 ==
+    ep  0  live 24/24
+    ep  1  live 24/24
+    ep  2  live 24/24
+    ep  3  live 24/24
+    ep  4  live 24/24
+    ep  5  live 24/24
+    ep  6  live 24/24
+    ep  7  live 24/24
+    ep  8  live 24/24
+    ep  9  live 24/24
+    ep 10  live 24/24
+    ep 11  live 24/24
+    ep 12  live 24/24
+    ep 13  live 24/24
+    ep 14  live 24/24
+    ep 15  live 24/24
+    ep 16  live 24/24
+    ep 17  live 24/24
+    ep 18  live 24/24
+    ep 19  live 24/24
+    ep 20  live 24/24
+    ep 21  live 24/24
+    ep 22  live 24/24
+    ep 23  live 24/24
+    ep 24  live 24/24
+    ep 25  live 24/24
+    ep 26  live 24/24
+    ep 27  live 24/24
+    ep 28  live 24/24
+    ep 29  live 24/24
+    ep 30  live 24/24
+    ep 31  live 24/24
+    ep 32  live 24/24
+    ep 33  live 24/24
+    ep 34  live 24/24
+    ep 35  live 24/24
+    ep 36  live 24/24
+    ep 37  live 24/24
+    ep 38  live 24/24
+    ep 39  live 23/24
+    ep 40  live 23/24
+    ep 41  live 23/24
+    ep 42  live 22/24
+    ep 43  live 19/24
+    ep 44  live 16/24
+    ep 45  live 16/24
+    ep 46  live 16/24
+    ep 47  live 12/24
+    ep 48  live 11/24
+    ep 49  live 10/24
+    ep 50  live 10/24
+    ep 51  live 10/24
+    ep 52  live 10/24
+    ep 53  live 10/24
+    ep 54  live 7/24
+    ep 55  live 5/24
+    ep 56  live 2/24
+    ep 57  live 2/24
+    ep 58  live 2/24
+    ep 59  live 0/24
+k=1 s0       macroF1 0.715  macroAP 0.762  perfold 0.686+/-0.017
+k=1 s1       macroF1 0.712  macroAP 0.767  perfold 0.685+/-0.015
+k=1 s2       macroF1 0.713  macroAP 0.764  perfold 0.686+/-0.014
+k=1 ENS      macroF1 0.714  macroAP 0.766  perfold 0.687+/-0.016
+k=2 s0       macroF1 0.711  macroAP 0.762  perfold 0.684+/-0.015
+k=2 s1       macroF1 0.711  macroAP 0.765  perfold 0.683+/-0.014
+k=2 s2       macroF1 0.707  macroAP 0.760  perfold 0.680+/-0.014
+k=2 ENS      macroF1 0.710  macroAP 0.764  perfold 0.683+/-0.016
+k=4 s0       macroF1 0.707  macroAP 0.755  perfold 0.680+/-0.014
+k=4 s1       macroF1 0.703  macroAP 0.759  perfold 0.676+/-0.011
+k=4 s2       macroF1 0.706  macroAP 0.757  perfold 0.679+/-0.014
+k=4 ENS      macroF1 0.708  macroAP 0.760  perfold 0.680+/-0.011
+k=8 s0       macroF1 0.695  macroAP 0.751  perfold 0.668+/-0.017
+k=8 s1       macroF1 0.696  macroAP 0.745  perfold 0.668+/-0.016
+k=8 s2       macroF1 0.699  macroAP 0.751  perfold 0.671+/-0.015
+k=8 ENS      macroF1 0.697  macroAP 0.752  perfold 0.669+/-0.016
+k=16 s0      macroF1 0.687  macroAP 0.740  perfold 0.663+/-0.015
+k=16 s1      macroF1 0.688  macroAP 0.741  perfold 0.660+/-0.014
+k=16 s2      macroF1 0.685  macroAP 0.741  perfold 0.662+/-0.015
+k=16 ENS     macroF1 0.690  macroAP 0.743  perfold 0.663+/-0.016
+k=64 s0      macroF1 0.663  macroAP 0.715  perfold 0.638+/-0.013
+k=64 s1      macroF1 0.661  macroAP 0.719  perfold 0.636+/-0.014
+k=64 s2      macroF1 0.665  macroAP 0.717  perfold 0.638+/-0.015
+k=64 ENS     macroF1 0.665  macroAP 0.719  perfold 0.639+/-0.015
+k=256 s0     macroF1 0.634  macroAP 0.684  perfold 0.610+/-0.010
+k=256 s1     macroF1 0.637  macroAP 0.684  perfold 0.612+/-0.012
+k=256 s2     macroF1 0.639  macroAP 0.686  perfold 0.613+/-0.009
+k=256 ENS    macroF1 0.637  macroAP 0.686  perfold 0.612+/-0.011
+k=None s0    macroF1 0.609  macroAP 0.654  perfold 0.589+/-0.010
+k=None s1    macroF1 0.613  macroAP 0.664  perfold 0.590+/-0.011
+k=None s2    macroF1 0.612  macroAP 0.657  perfold 0.591+/-0.013
+k=None ENS   macroF1 0.612  macroAP 0.661  perfold 0.591+/-0.013
+
+=== summary ===
+    config  macro_F1  macro_AP  perfold_F1  perfold_sd
+    k=1 s0     0.715     0.762       0.686       0.017
+    k=1 s1     0.712     0.767       0.685       0.015
+    k=1 s2     0.713     0.764       0.686       0.014
+   k=1 ENS     0.714     0.766       0.687       0.016
+    k=2 s0     0.711     0.762       0.684       0.015
+    k=2 s1     0.711     0.765       0.683       0.014
+    k=2 s2     0.707     0.760       0.680       0.014
+   k=2 ENS     0.710     0.764       0.683       0.016
+    k=4 s0     0.707     0.755       0.680       0.014
+    k=4 s1     0.703     0.759       0.676       0.011
+    k=4 s2     0.706     0.757       0.679       0.014
+   k=4 ENS     0.708     0.760       0.680       0.011
+    k=8 s0     0.695     0.751       0.668       0.017
+    k=8 s1     0.696     0.745       0.668       0.016
+    k=8 s2     0.699     0.751       0.671       0.015
+   k=8 ENS     0.697     0.752       0.669       0.016
+   k=16 s0     0.687     0.740       0.663       0.015
+   k=16 s1     0.688     0.741       0.660       0.014
+   k=16 s2     0.685     0.741       0.662       0.015
+  k=16 ENS     0.690     0.743       0.663       0.016
+   k=64 s0     0.663     0.715       0.638       0.013
+   k=64 s1     0.661     0.719       0.636       0.014
+   k=64 s2     0.665     0.717       0.638       0.015
+  k=64 ENS     0.665     0.719       0.639       0.015
+  k=256 s0     0.634     0.684       0.610       0.010
+  k=256 s1     0.637     0.684       0.612       0.012
+  k=256 s2     0.639     0.686       0.613       0.009
+ k=256 ENS     0.637     0.686       0.612       0.011
+ k=None s0     0.609     0.654       0.589       0.010
+ k=None s1     0.613     0.664       0.590       0.011
+ k=None s2     0.612     0.657       0.591       0.013
+k=None ENS     0.612     0.661       0.591       0.013
+
+=== per-class AP (seed ensemble) ===
+    config  serice  sagitt  arista  millef  virgat  altiss  tector  bulbos
+   k=1 ENS   0.919   0.908   0.853   0.618   0.400   0.794   0.732   0.906
+   k=2 ENS   0.918   0.910   0.855   0.612   0.377   0.796   0.734   0.908
+   k=4 ENS   0.919   0.912   0.829   0.602   0.387   0.786   0.734   0.909
+   k=8 ENS   0.919   0.908   0.799   0.588   0.378   0.783   0.730   0.910
+  k=16 ENS   0.920   0.908   0.773   0.549   0.373   0.785   0.728   0.909
+  k=64 ENS   0.911   0.901   0.721   0.490   0.347   0.767   0.714   0.898
+ k=256 ENS   0.900   0.883   0.667   0.450   0.276   0.736   0.683   0.894
+k=None ENS   0.871   0.882   0.617   0.447   0.259   0.693   0.643   0.876
+
+wrote results/topk.csv

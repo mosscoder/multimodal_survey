@@ -1,0 +1,6 @@
+loading grid subset into RAM ...
+GRID (6089, 3072, 768) 28.7GB   AER (6089, 1024)
+k=1 s0         macroF1 0.682  macroAP 0.746  perfold 0.659+/-0.011
+k=1 s1         macroF1 0.685  macroAP 0.755  perfold 0.657+/-0.012
+k=1 s2         macroF1 0.683  macroAP 0.745  perfold 0.661+/-0.014
+k=1 ENS        macroF1 0.684  macroAP 0.750  perfold 0.660+/-0.012

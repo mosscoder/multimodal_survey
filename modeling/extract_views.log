@@ -1,0 +1,30 @@
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|##########| 415/415 [00:00<00:00, 6284.25it/s]
+    full: 96/6480  45 img/s
+    full: 2016/6480  51 img/s
+    full: 3936/6480  51 img/s
+    full: 5856/6480  51 img/s
+wrote feats/train.drone_image.satellite.full.npy  (6480, 2048)
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|##########| 415/415 [00:00<00:00, 5651.40it/s]
+    center3m: 96/6480  48 img/s
+    center3m: 2016/6480  53 img/s
+    center3m: 3936/6480  53 img/s
+    center3m: 5856/6480  53 img/s
+wrote feats/train.drone_image.satellite.center3m.npy  (6480, 2048)
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|##########| 415/415 [00:00<00:00, 5986.79it/s]
+    center2m: 96/6480  49 img/s
+    center2m: 2016/6480  52 img/s
+    center2m: 3936/6480  52 img/s
+    center2m: 5856/6480  52 img/s
+wrote feats/train.drone_image.satellite.center2m.npy  (6480, 2048)
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|##########| 415/415 [00:00<00:00, 5405.67it/s]
+    bottom3m: 96/6480  49 img/s
+    bottom3m: 2016/6480  53 img/s
+    bottom3m: 3936/6480  53 img/s
+    bottom3m: 5856/6480  53 img/s
+wrote feats/train.drone_image.satellite.bottom3m.npy  (6480, 2048)
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|##########| 415/415 [00:00<00:00, 6440.67it/s]
+    bottom2m: 96/6480  49 img/s
+    bottom2m: 2016/6480  53 img/s
+    bottom2m: 3936/6480  53 img/s
+    bottom2m: 5856/6480  53 img/s
+wrote feats/train.drone_image.satellite.bottom2m.npy  (6480, 2048)

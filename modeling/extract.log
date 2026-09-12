@@ -1,0 +1,67 @@
+loading mpg-ranch/multimodal-survey ...
+{'train': 6480, 'test': 1613, 'train_tier_2': 194}
+  labels__train.parquet  6480 rows  species pos/frame mean 1.13
+  labels__test.parquet  1613 rows  species pos/frame mean 1.20
+  labels__train_tier_2.parquet  194 rows  species pos/frame mean 1.07
+
+== vitb_general x ground_image ==
+Loading weights:   0%|          | 0/211 [00:00<?, ?it/s]Loading weights: 100%|##########| 211/211 [00:00<00:00, 13562.57it/s]
+    vitb_general ground_image train: 64/6480  73 img/s
+    vitb_general ground_image train: 1344/6480  93 img/s
+    vitb_general ground_image train: 2624/6480  94 img/s
+    vitb_general ground_image train: 3904/6480  93 img/s
+    vitb_general ground_image train: 5184/6480  93 img/s
+    vitb_general ground_image train: 6464/6480  93 img/s
+  wrote vitb_general__ground_image__train.npy  [6480, 768]  93 img/s  70s
+    vitb_general ground_image test: 64/1613  92 img/s
+    vitb_general ground_image test: 1344/1613  95 img/s
+  wrote vitb_general__ground_image__test.npy  [1613, 768]  94 img/s  17s
+    vitb_general ground_image train_tier_2: 64/194  93 img/s
+  wrote vitb_general__ground_image__train_tier_2.npy  [194, 768]  92 img/s  2s
+
+== vitb_general x drone_image ==
+Loading weights:   0%|          | 0/211 [00:00<?, ?it/s]Loading weights: 100%|##########| 211/211 [00:00<00:00, 12696.15it/s]
+    vitb_general drone_image train: 64/6480  141 img/s
+    vitb_general drone_image train: 1344/6480  125 img/s
+    vitb_general drone_image train: 2624/6480  125 img/s
+    vitb_general drone_image train: 3904/6480  124 img/s
+    vitb_general drone_image train: 5184/6480  124 img/s
+    vitb_general drone_image train: 6464/6480  124 img/s
+  wrote vitb_general__drone_image__train.npy  [6480, 768]  124 img/s  52s
+    vitb_general drone_image test: 64/1613  127 img/s
+    vitb_general drone_image test: 1344/1613  125 img/s
+  wrote vitb_general__drone_image__test.npy  [1613, 768]  124 img/s  13s
+    vitb_general drone_image train_tier_2: 64/194  122 img/s
+  wrote vitb_general__drone_image__train_tier_2.npy  [194, 768]  121 img/s  2s
+
+== vitl_satellite x ground_image ==
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|##########| 415/415 [00:00<00:00, 13105.32it/s]
+    vitl_satellite ground_image train: 64/6480  69 img/s
+    vitl_satellite ground_image train: 1344/6480  78 img/s
+    vitl_satellite ground_image train: 2624/6480  78 img/s
+    vitl_satellite ground_image train: 3904/6480  78 img/s
+    vitl_satellite ground_image train: 5184/6480  78 img/s
+    vitl_satellite ground_image train: 6464/6480  77 img/s
+  wrote vitl_satellite__ground_image__train.npy  [6480, 1024]  77 img/s  85s
+    vitl_satellite ground_image test: 64/1613  56 img/s
+    vitl_satellite ground_image test: 1344/1613  55 img/s
+  wrote vitl_satellite__ground_image__test.npy  [1613, 1024]  55 img/s  29s
+    vitl_satellite ground_image train_tier_2: 64/194  56 img/s
+  wrote vitl_satellite__ground_image__train_tier_2.npy  [194, 1024]  54 img/s  4s
+
+== vitl_satellite x drone_image ==
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|##########| 415/415 [00:00<00:00, 6783.22it/s]
+    vitl_satellite drone_image train: 64/6480  57 img/s
+    vitl_satellite drone_image train: 1344/6480  84 img/s
+    vitl_satellite drone_image train: 2624/6480  80 img/s
+    vitl_satellite drone_image train: 3904/6480  75 img/s
+    vitl_satellite drone_image train: 5184/6480  75 img/s
+    vitl_satellite drone_image train: 6464/6480  75 img/s
+  wrote vitl_satellite__drone_image__train.npy  [6480, 1024]  75 img/s  87s
+    vitl_satellite drone_image test: 64/1613  76 img/s
+    vitl_satellite drone_image test: 1344/1613  73 img/s
+  wrote vitl_satellite__drone_image__test.npy  [1613, 1024]  72 img/s  22s
+    vitl_satellite drone_image train_tier_2: 64/194  76 img/s
+  wrote vitl_satellite__drone_image__train_tier_2.npy  [194, 1024]  71 img/s  3s
+
+done.
