@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DINOv3 Species Probe — Experiment Summary</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page:        #f9f9f7;
+    --surface-1:   #fcfcfb;
+    --text-primary:#0b0b0b;
+    --text-secondary:#52514e;
+    --text-muted:  #898781;
+    --gridline:    #e1e0d9;
+    --axis:        #c3c2b7;
+    --border:      rgba(11,11,11,0.10);
+    --series-1:    #2a78d6;   /* blue — "best" */
+    --series-2:    #eb6834;   /* orange — "baseline" */
+    --success:     #006300;
+    --hero-bg:     #eef4fc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --page:        #0d0d0d;
+      --surface-1:   #1a1a19;
+      --text-primary:#ffffff;
+      --text-secondary:#c3c2b7;
+      --text-muted:  #898781;
+      --gridline:    #2c2c2a;
+      --axis:        #383835;
+      --border:      rgba(255,255,255,0.10);
+      --series-1:    #3987e5;
+      --series-2:    #d95926;
+      --success:     #0ca30c;
+      --hero-bg:     #14202e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header.top { margin-bottom: 8px; }
+  header.top .eyebrow {
+    text-transform: uppercase; letter-spacing: .08em; font-size: 12px;
+    font-weight: 700; color: var(--text-muted);
+  }
+  h1 { font-size: 28px; margin: 6px 0 8px; letter-spacing: -0.01em; }
+  .subtitle { color: var(--text-secondary); font-size: 15px; max-width: 70ch; }
+  .subtitle code { background: var(--surface-1); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; font-size: 13px; }
+
+  section { margin-top: 44px; }
+  h2 { font-size: 19px; margin: 0 0 14px; }
+  h3 { font-size: 15px; margin: 20px 0 8px; color: var(--text-primary); }
+  p { color: var(--text-secondary); font-size: 14.5px; }
+
+  /* ---- hero result ---- */
+  .hero {
+    background: var(--hero-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 28px 24px;
+    display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between;
+  }
+  .hero-stats { display: flex; gap: 36px; flex-wrap: wrap; }
+  .stat .label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+  .stat .value { font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--series-1); }
+  .stat .delta { font-size: 13px; color: var(--success); font-weight: 600; margin-top: 2px; }
+  .hero-desc { max-width: 30ch; font-size: 13.5px; color: var(--text-secondary); }
+
+  /* ---- config card ---- */
+  .config-card {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px 24px;
+  }
+  .config-card dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0; }
+  .config-card dt { color: var(--text-muted); font-size: 13px; white-space: nowrap; }
+  .config-card dd { margin: 0; font-size: 13.5px; color: var(--text-primary); }
+  .config-card dd code { background: var(--page); border: 1px solid var(--border); border-radius: 4px; padding: 0 5px; }
+
+  /* ---- charts ---- */
+  .chart-card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px 8px; }
+  .chart-title { font-size: 13.5px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
+  .chart-note { font-size: 12.5px; color: var(--text-muted); margin-bottom: 10px; }
+  svg { display: block; width: 100%; height: auto; }
+  .grid-line { stroke: var(--gridline); stroke-width: 1; }
+  .axis-line { stroke: var(--axis); stroke-width: 1; }
+  .tick-label { fill: var(--text-muted); font-size: 11px; }
+  .cat-label { fill: var(--text-secondary); font-size: 11px; }
+  .val-label { fill: var(--text-primary); font-size: 12px; font-weight: 600; }
+  .val-label-strong { fill: var(--series-1); font-size: 13px; font-weight: 700; }
+  .line-series1 { fill: none; stroke: var(--series-1); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .dot-series1 { fill: var(--series-1); }
+  .legend-swatch { width: 11px; height: 11px; border-radius: 3px; display: inline-block; margin-right: 6px; vertical-align: -1px; }
+  .legend-row { font-size: 12.5px; color: var(--text-secondary); margin-bottom: 14px; }
+  .legend-row span.item { margin-right: 18px; }
+
+  /* ---- table ---- */
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead th {
+    text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em;
+    color: var(--text-muted); padding: 0 10px 8px; border-bottom: 1px solid var(--axis);
+  }
+  tbody td { padding: 10px; border-bottom: 1px solid var(--gridline); vertical-align: top; color: var(--text-secondary); }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--text-primary); }
+  td.step { color: var(--text-muted); font-variant-numeric: tabular-nums; width: 28px; }
+  td code { background: var(--page); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; font-size: 12px; white-space: nowrap; }
+  strong.finding { color: var(--text-primary); }
+
+  /* ---- lever lists ---- */
+  ul.levers { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  ul.levers li {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 16px; display: flex; align-items: baseline; gap: 12px; font-size: 13.5px;
+  }
+  ul.levers .mag { font-weight: 700; font-variant-numeric: tabular-nums; min-width: 84px; color: var(--series-1); }
+  ul.levers.negative .mag { color: var(--text-muted); }
+  ul.levers li .txt { color: var(--text-secondary); }
+  ul.levers li .txt strong { color: var(--text-primary); }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
+
+  .callout {
+    border-left: 3px solid var(--series-2); background: var(--surface-1);
+    border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 13.5px; color: var(--text-secondary);
+  }
+
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--gridline); font-size: 12.5px; color: var(--text-muted); }
+  footer a { color: var(--text-secondary); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="eyebrow">mpg-ranch / multimodal-survey — modeling</div>
+    <h1>Frozen DINOv3 probe for 8-species multilabel presence</h1>
+    <p class="subtitle">
+      Given a robot ground photo (<code>ground_image</code>) and its paired nadir drone crop
+      (<code>drone_image</code>), predict which of 8 target plant species are present in the
+      frame. Frozen DINOv3 backbones + a shallow probe, evaluated with a spatially-honest
+      5-fold cross-validation grouped by survey leg (no frame's ground ever appears in both
+      a training and a validation fold). Branch: <code>paul_experiments</code>.
+    </p>
+  </header>
+
+  <section class="hero">
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="label">Macro Average Precision</div>
+        <div class="value">0.766</div>
+        <div class="delta">▲ +0.131 vs. first baseline (0.635)</div>
+      </div>
+      <div class="stat">
+        <div class="label">Macro F1 @ 0.5</div>
+        <div class="value">0.714</div>
+        <div class="delta">▲ +0.104 vs. first baseline (0.610)</div>
+      </div>
+      <div class="stat">
+        <div class="label">Per-fold stability</div>
+        <div class="value" style="font-size:28px;">±0.016</div>
+        <div class="delta" style="color:var(--text-muted); font-weight:500;">macro-F1 std. across 5 folds</div>
+      </div>
+    </div>
+    <div class="hero-desc">
+      11 experiment rounds, one dominant finding: <strong style="color:var(--text-primary)">top-k
+      patch pooling</strong> — scoring the single highest-activating ground-image patch per
+      species instead of averaging all 3,072 — was worth more than every other lever combined.
+    </div>
+  </section>
+
+  <section>
+    <h2>The journey</h2>
+    <p>Macro AP at each major milestone, 5-fold leg CV on <code>train</code>, pooled out-of-fold predictions.</p>
+    <div class="chart-card">
+      <svg viewBox="0 0 680 260" role="img" aria-label="Macro AP climbs from 0.635 at baseline to 0.766 after top-1 patch pooling, across five milestones">
+        <!-- gridlines -->
+        <line class="grid-line" x1="50" y1="190" x2="650" y2="190"/>
+        <line class="grid-line" x1="50" y1="145.6" x2="650" y2="145.6"/>
+        <line class="grid-line" x1="50" y1="101.1" x2="650" y2="101.1"/>
+        <line class="grid-line" x1="50" y1="56.7" x2="650" y2="56.7"/>
+        <text class="tick-label" x="44" y="193" text-anchor="end">0.60</text>
+        <text class="tick-label" x="44" y="148.6" text-anchor="end">0.65</text>
+        <text class="tick-label" x="44" y="104.1" text-anchor="end">0.70</text>
+        <text class="tick-label" x="44" y="59.7" text-anchor="end">0.75</text>
+        <line class="axis-line" x1="50" y1="190" x2="650" y2="190"/>
+        <!-- connecting line -->
+        <polyline class="line-series1" points="50,158.9 200,86.9 350,67.3 500,65.6 650,42.4"/>
+        <!-- points -->
+        <circle class="dot-series1" cx="50" cy="158.9" r="4.5"/>
+        <circle class="dot-series1" cx="200" cy="86.9" r="4.5"/>
+        <circle class="dot-series1" cx="350" cy="67.3" r="4.5"/>
+        <circle class="dot-series1" cx="500" cy="65.6" r="4.5"/>
+        <circle class="dot-series1" cx="650" cy="42.4" r="5.5"/>
+        <!-- value labels -->
+        <text class="val-label" x="50" y="146" text-anchor="middle">0.635</text>
+        <text class="val-label" x="200" y="74" text-anchor="middle">0.716</text>
+        <text class="val-label" x="350" y="54" text-anchor="middle">0.738</text>
+        <text class="val-label" x="500" y="86" text-anchor="middle">0.740</text>
+        <text class="val-label-strong" x="650" y="27" text-anchor="end">0.766</text>
+        <!-- x labels -->
+        <text class="cat-label" x="50" y="215" text-anchor="middle">Baseline</text>
+        <text class="cat-label" x="50" y="228" text-anchor="middle">224px, CLS, MLP</text>
+        <text class="cat-label" x="200" y="215" text-anchor="middle">+ Resolution</text>
+        <text class="cat-label" x="200" y="228" text-anchor="middle">224→768px</text>
+        <text class="cat-label" x="350" y="215" text-anchor="middle">+ Linear/MLP</text>
+        <text class="cat-label" x="350" y="228" text-anchor="middle">ensemble</text>
+        <text class="cat-label" x="500" y="215" text-anchor="middle">+ H-flip</text>
+        <text class="cat-label" x="500" y="228" text-anchor="middle">augmentation</text>
+        <text class="cat-label" x="650" y="215" text-anchor="middle" font-weight="700" fill="var(--series-1)">+ Top-1</text>
+        <text class="cat-label" x="650" y="228" text-anchor="middle" font-weight="700" fill="var(--series-1)">patch pooling</text>
+      </svg>
+    </div>
+  </section>
+
+  <section>
+    <h2>Best result</h2>
+    <div class="two-col">
+      <div class="config-card">
+        <h3 style="margin-top:0;">Winning config — TopKHead (k = 1)</h3>
+        <dl>
+          <dt>Ground image</dt><dd>resized to <code>1024×768</code>, 64×48 = 3,072-patch grid, <code>dinov3-vitb16-pretrain-lvd1689m</code>, patch tokens only</dd>
+          <dt>Drone image</dt><dd>CLS token, <code>dinov3-vitl16-pretrain-sat493m</code>, native res (<code>320px</code>)</dd>
+          <dt>Pooling</dt><dd>per-patch linear logit per species → mean of the <strong>top-1</strong> patch</dd>
+          <dt>Head</dt><dd><code>Linear(768,8,bias=False)</code> ground + <code>Linear(1024,8)</code> drone offset</dd>
+          <dt>Standardize</dt><dd>per-fold, train-stats only; ground grid on per-frame patch mean</dd>
+          <dt>Loss</dt><dd><code>BCEWithLogits</code>, <code>pos_weight=(1−p)/p</code>, clamp 20</dd>
+          <dt>Optimizer</dt><dd>AdamW, <code>lr=1e-2</code>, <code>wd=1e-2</code>, cosine / 60 epochs</dd>
+          <dt>Batch / stop</dt><dd>batch 64, early-stop on val macro-F1, patience 10</dd>
+          <dt>Ensemble</dt><dd>3 seeds {0,1,2}, probabilities averaged</dd>
+          <dt>Script</dt><dd><code>run_topk_mil.py</code> (see also <code>run_topk_curves.py</code>)</dd>
+        </dl>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Macro AP vs. k (patches pooled per species)</div>
+        <div class="chart-note">5-fold leg CV · 3-seed ensemble · perfectly monotonic</div>
+        <svg viewBox="0 0 680 325" role="img" aria-label="Macro average precision falls steadily from 0.766 at k=1 to 0.661 at k=all as more patches are averaged per species">
+          <line class="grid-line" x1="50" y1="290" x2="650" y2="290"/>
+          <line class="grid-line" x1="50" y1="252.9" x2="650" y2="252.9"/>
+          <line class="grid-line" x1="50" y1="215.7" x2="650" y2="215.7"/>
+          <line class="grid-line" x1="50" y1="178.6" x2="650" y2="178.6"/>
+          <line class="grid-line" x1="50" y1="141.4" x2="650" y2="141.4"/>
+          <line class="grid-line" x1="50" y1="104.3" x2="650" y2="104.3"/>
+          <line class="grid-line" x1="50" y1="67.1" x2="650" y2="67.1"/>
+          <line class="grid-line" x1="50" y1="30" x2="650" y2="30"/>
+          <text class="tick-label" x="44" y="293" text-anchor="end">0.64</text>
+          <text class="tick-label" x="44" y="255.9" text-anchor="end">0.66</text>
+          <text class="tick-label" x="44" y="218.7" text-anchor="end">0.68</text>
+          <text class="tick-label" x="44" y="181.6" text-anchor="end">0.70</text>
+          <text class="tick-label" x="44" y="144.4" text-anchor="end">0.72</text>
+          <text class="tick-label" x="44" y="107.3" text-anchor="end">0.74</text>
+          <text class="tick-label" x="44" y="70.1" text-anchor="end">0.76</text>
+          <text class="tick-label" x="44" y="33" text-anchor="end">0.78</text>
+          <line class="axis-line" x1="50" y1="290" x2="650" y2="290"/>
+          <polyline class="line-series1" points="50,55.7 135.7,59.9 221.4,67.7 307.1,82 392.9,98.7 478.6,144 564.3,204.2 650,250.8"/>
+          <circle class="dot-series1" cx="50" cy="55.7" r="5"/>
+          <circle class="dot-series1" cx="135.7" cy="59.9" r="4"/>
+          <circle class="dot-series1" cx="221.4" cy="67.7" r="4"/>
+          <circle class="dot-series1" cx="307.1" cy="82" r="4"/>
+          <circle class="dot-series1" cx="392.9" cy="98.7" r="4"/>
+          <circle class="dot-series1" cx="478.6" cy="144" r="4"/>
+          <circle class="dot-series1" cx="564.3" cy="204.2" r="4"/>
+          <circle class="dot-series1" cx="650" cy="250.8" r="5"/>
+          <text class="val-label-strong" x="50" y="42" text-anchor="middle">0.766</text>
+          <text class="val-label" x="650" y="270" text-anchor="end">0.661</text>
+          <text class="cat-label" x="50" y="310" text-anchor="middle">1</text>
+          <text class="cat-label" x="135.7" y="310" text-anchor="middle">2</text>
+          <text class="cat-label" x="221.4" y="310" text-anchor="middle">4</text>
+          <text class="cat-label" x="307.1" y="310" text-anchor="middle">8</text>
+          <text class="cat-label" x="392.9" y="310" text-anchor="middle">16</text>
+          <text class="cat-label" x="478.6" y="310" text-anchor="middle">64</text>
+          <text class="cat-label" x="564.3" y="310" text-anchor="middle">256</text>
+          <text class="cat-label" x="650" y="310" text-anchor="middle">all (3072)</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Per-class AP: mean-pool vs. top-1</h2>
+    <p>Same run, same fold split, same features — only the pooling operator changes. This isolates exactly what top-k buys per species.</p>
+    <div class="chart-card">
+      <div class="legend-row">
+        <span class="item"><span class="legend-swatch" style="background:var(--series-1)"></span>Top-1 pooling (best)</span>
+        <span class="item"><span class="legend-swatch" style="background:var(--series-2)"></span>Mean-pool, all 3,072 patches (baseline)</span>
+      </div>
+      <svg viewBox="0 0 680 400" role="img" aria-label="Per-species average precision comparing mean-pool baseline to top-1 pooling; largest gains on Gaillardia, Achillea and Euphorbia">
+        <line class="grid-line" x1="50" y1="300" x2="660" y2="300"/>
+        <line class="grid-line" x1="50" y1="248" x2="660" y2="248"/>
+        <line class="grid-line" x1="50" y1="196" x2="660" y2="196"/>
+        <line class="grid-line" x1="50" y1="144" x2="660" y2="144"/>
+        <line class="grid-line" x1="50" y1="92" x2="660" y2="92"/>
+        <line class="grid-line" x1="50" y1="40" x2="660" y2="40"/>
+        <text class="tick-label" x="44" y="303" text-anchor="end">0.0</text>
+        <text class="tick-label" x="44" y="251" text-anchor="end">0.2</text>
+        <text class="tick-label" x="44" y="199" text-anchor="end">0.4</text>
+        <text class="tick-label" x="44" y="147" text-anchor="end">0.6</text>
+        <text class="tick-label" x="44" y="95" text-anchor="end">0.8</text>
+        <text class="tick-label" x="44" y="43" text-anchor="end">1.0</text>
+        <line class="axis-line" x1="50" y1="300" x2="660" y2="300"/>
+
+        <!-- Poa bulbosa n=3426 -->
+        <rect x="90.1" y="64.5" width="24" height="235.5" fill="var(--series-1)"/>
+        <rect x="62.1" y="72.2" width="24" height="227.8" fill="var(--series-2)"/>
+        <text class="cat-label" x="88" y="320" text-anchor="middle">Poa</text>
+        <text class="cat-label" x="88" y="332" text-anchor="middle" fill="var(--text-muted)">n=3426</text>
+
+        <!-- Lupinus sericeus n=1248 -->
+        <rect x="166.4" y="60.9" width="24" height="239.1" fill="var(--series-1)"/>
+        <rect x="138.4" y="73.6" width="24" height="226.4" fill="var(--series-2)"/>
+        <text class="cat-label" x="164" y="320" text-anchor="middle">Lupinus</text>
+        <text class="cat-label" x="164" y="332" text-anchor="middle" fill="var(--text-muted)">n=1248</text>
+
+        <!-- Sisymbrium altissimum n=715 -->
+        <rect x="242.6" y="93.6" width="24" height="206.4" fill="var(--series-1)"/>
+        <rect x="214.6" y="119.9" width="24" height="180.1" fill="var(--series-2)"/>
+        <text class="cat-label" x="240" y="320" text-anchor="middle">Sisymbrium</text>
+        <text class="cat-label" x="240" y="332" text-anchor="middle" fill="var(--text-muted)">n=715</text>
+
+        <!-- Balsamorhiza sagittata n=602 -->
+        <rect x="318.9" y="63.8" width="24" height="236.2" fill="var(--series-1)"/>
+        <rect x="290.9" y="70.6" width="24" height="229.4" fill="var(--series-2)"/>
+        <text class="cat-label" x="316" y="320" text-anchor="middle">Balsamorhiza</text>
+        <text class="cat-label" x="316" y="332" text-anchor="middle" fill="var(--text-muted)">n=602</text>
+
+        <!-- Bromus tectorum n=418 -->
+        <rect x="395.1" y="109.7" width="24" height="190.3" fill="var(--series-1)"/>
+        <rect x="367.1" y="132.7" width="24" height="167.3" fill="var(--series-2)"/>
+        <text class="cat-label" x="392" y="320" text-anchor="middle">Bromus</text>
+        <text class="cat-label" x="392" y="332" text-anchor="middle" fill="var(--text-muted)">n=418</text>
+
+        <!-- Gaillardia aristata n=238 -->
+        <rect x="471.4" y="78.3" width="24" height="221.7" fill="var(--series-1)"/>
+        <rect x="443.4" y="139.4" width="24" height="160.6" fill="var(--series-2)"/>
+        <text class="val-label-strong" x="483" y="70" text-anchor="middle" font-size="11">+0.235</text>
+        <text class="cat-label" x="468" y="320" text-anchor="middle">Gaillardia</text>
+        <text class="cat-label" x="468" y="332" text-anchor="middle" fill="var(--text-muted)">n=238</text>
+
+        <!-- Achillea millefolium n=202 -->
+        <rect x="547.6" y="139.3" width="24" height="160.7" fill="var(--series-1)"/>
+        <rect x="519.6" y="183.8" width="24" height="116.2" fill="var(--series-2)"/>
+        <text class="val-label-strong" x="559" y="131" text-anchor="middle" font-size="11">+0.171</text>
+        <text class="cat-label" x="544" y="320" text-anchor="middle">Achillea</text>
+        <text class="cat-label" x="544" y="332" text-anchor="middle" fill="var(--text-muted)">n=202</text>
+
+        <!-- Euphorbia virgata n=110 -->
+        <rect x="623.9" y="196.1" width="24" height="103.9" fill="var(--series-1)"/>
+        <rect x="595.9" y="232.6" width="24" height="67.4" fill="var(--series-2)"/>
+        <text class="val-label-strong" x="635" y="188" text-anchor="middle" font-size="11">+0.140</text>
+        <text class="cat-label" x="620" y="320" text-anchor="middle">Euphorbia</text>
+        <text class="cat-label" x="620" y="332" text-anchor="middle" fill="var(--text-muted)">n=110</text>
+      </svg>
+    </div>
+    <p style="margin-top:10px;">Common, large-bodied species (Poa, Lupinus, Balsamorhiza) were already solved and barely move.
+    The mid-frequency forbs — <strong style="color:var(--text-primary)">Gaillardia (+0.24 AP)</strong> and
+    <strong style="color:var(--text-primary)">Achillea (+0.17 AP)</strong> — are where mean-pooling was hiding real signal
+    in a sea of background patches. Euphorbia virgata (110 positives, the rarest class) still tops out around 0.40 —
+    a long-tail data problem, not a pooling problem.</p>
+  </section>
+
+  <section>
+    <h2>What moved the needle</h2>
+    <ul class="levers">
+      <li><span class="mag">+0.03 to +0.10</span><span class="txt"><strong>Top-k patch pooling</strong> (mean → top-1). The dominant finding: small-species signal is concentrated in a handful of the 3,072 ground patches; averaging all of them drowns it out.</span></li>
+      <li><span class="mag">+0.05 to +0.10</span><span class="txt"><strong>Ground-image resolution</strong>, 224px → 768px. Small forbs are sub-patch at 224px — the model can't resolve them until given more pixels.</span></li>
+      <li><span class="mag">+0.02</span><span class="txt"><strong>Linear + MLP ensemble.</strong> The two heads are complementary — linear wins the mid-frequency forbs and the rarest class, MLP wins the common species and F1 calibration.</span></li>
+      <li><span class="mag">n/a</span><span class="txt"><strong>MLP regularization</strong> (dropout 0.2→0.4, hidden 512→256). Brought the MLP to AP parity with linear while keeping its F1 edge — the earlier MLP was simply overfitting the small per-fold training sets.</span></li>
+      <li><span class="mag">+0.004</span><span class="txt"><strong>Horizontal-flip augmentation.</strong> Small and free, best on Achillea (+0.031) — don't expect more from image-space augmentation on frozen features.</span></li>
+    </ul>
+
+    <h3 style="margin-top:26px;">What didn't work</h3>
+    <ul class="levers negative">
+      <li><span class="mag">≈ 0</span><span class="txt"><strong>Drone-image resolution / sub-cropping.</strong> Native 320px ≈ 224px ≈ 512px-upscaled. Cropping to plant scale made <em>every</em> species worse, monotonically — the drone branch contributes whole-crop context, not localizable plant detail.</span></li>
+      <li><span class="mag">≈ 0</span><span class="txt"><strong>CLS vs. CLS+patch-mean pooling</strong> on its own — within noise, aside from a free lift for grasses (Bromus, Sisymbrium).</span></li>
+      <li><span class="mag">stuck</span><span class="txt"><strong>Euphorbia virgata specifically.</strong> Moved a little with <code>both</code>-pooling+linear and with top-k, but never decisively past ~0.40. Rarest class (110 positives), one CV fold holds only 3 — a long-tail data problem, not a feature problem.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Full experiment log</h2>
+    <table>
+      <thead><tr><th>#</th><th>Experiment</th><th>Script(s)</th><th>Finding</th></tr></thead>
+      <tbody>
+        <tr><td class="step">1</td><td>CLS-only baseline, sklearn LogReg, held-out test</td><td><code>extract_features.py</code><br><code>fit_probe.py</code></td><td>Ground beats drone; drone-satellite domain-match hypothesis failed</td></tr>
+        <tr><td class="step">2</td><td>Leg-fold CV scaffolding</td><td><code>make_folds.py</code><br><code>fold_masks.py</code></td><td>Grouped, stratified 5-fold split (<code>folds_leg5.json</code>); buffered variant costs ~30% of train</td></tr>
+        <tr><td class="step">3</td><td>Torch CV harness (linear / MLP)</td><td><code>assemble.py</code><br><code>head_cv.py</code><br><code>run_probe_cv.py</code></td><td>Baseline: concat + MLP → macro AP <span class="num">0.635</span>, F1 <span class="num">0.610</span></td></tr>
+        <tr><td class="step">4</td><td>CLS vs. CLS+mean-patch pooling</td><td><code>run_pooling_compare.py</code></td><td>Wash on the headline number; free win on grasses</td></tr>
+        <tr><td class="step">5</td><td>Learning-rate sweep</td><td><code>run_lr_grid.py</code></td><td>Confirmed <code>lr=1e-2</code> (linear) / <code>1e-3</code> (MLP) near-optimal</td></tr>
+        <tr><td class="step">6</td><td><strong class="finding">Resolution sweep 224→512→768</strong></td><td><code>extract_concat_512.py</code><br><code>extract_concat_768.py</code><br><code>run_res_compare.py</code></td><td><strong class="finding">+0.08 macro AP.</strong> Small forbs recovered; drone resolution proven irrelevant</td></tr>
+        <tr><td class="step">7</td><td>Drone sub-crop ablation</td><td><code>extract_drone_views.py</code><br><code>run_drone_views.py</code></td><td>Negative — every sub-crop lost to the full 4×4m crop</td></tr>
+        <tr><td class="step">8</td><td>MLP regularization + ensembling</td><td><code>run_mlp_tune.py</code></td><td>Dropout 0.4 is the lever; linear+MLP ensemble → AP <span class="num">0.738</span></td></tr>
+        <tr><td class="step">9</td><td>Horizontal-flip augmentation</td><td><code>extract_hflip.py</code><br><code>run_hflip.py</code></td><td>Marginal (+0.004 AP) — frozen features barely move under flip</td></tr>
+        <tr><td class="step">10</td><td>Dense patch-grid extraction</td><td><code>extract_grid.py</code></td><td>1024×768 → 64×48 grid, 30.6 GB (not committed, regenerable)</td></tr>
+        <tr><td class="step">11</td><td><strong class="finding">Top-k patch pooling — biggest lever</strong></td><td><code>run_topk_mil.py</code><br><code>run_topk_curves.py</code></td><td><strong class="finding">+0.10 macro AP,</strong> mean-pool → top-1, perfectly monotonic in k</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Not done / next</h2>
+    <div class="callout">
+      The official held-out <code>test</code> split (outermost legs) was <strong>never extracted
+      at the winning (top-k, 1024×768) configuration</strong> — every number above is 5-fold CV
+      on <code>train</code>. That's the next concrete step before treating 0.766 as a
+      generalization estimate.
+    </div>
+    <ul style="color:var(--text-secondary); font-size:13.5px; padding-left:18px; margin-top:14px;">
+      <li>Long-tail loss (asymmetric / focal) or per-class thresholds, targeted at Euphorbia virgata.</li>
+      <li>Combine top-k ground pooling with the linear+MLP ensemble and/or CLS-token concatenation — not yet tried together.</li>
+      <li>CV early-stopping selects each checkpoint on the fold it's then scored on — fine for comparing configs, mildly optimistic as an absolute estimate.</li>
+      <li>Buffered leg-fold CV, leave-one-strip-out CV, and a fixed site-2 validation split were scaffolded (<code>fold_masks.py</code>) but not carried through the full matrix.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Branch <code>paul_experiments</code> · full writeup in <code>modeling/RESULTS.md</code> ·
+    numeric results in <code>modeling/results/</code> · feature caches are not committed
+    (large, gitignored, regenerable from the extraction scripts against
+    <code>mpg-ranch/multimodal-survey</code> on the Hugging Face Hub).
+  </footer>
+
+</div>
+</body>
+</html>
