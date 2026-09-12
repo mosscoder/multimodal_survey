@@ -1,0 +1,24 @@
+Loading weights:   0%|          | 0/211 [00:00<?, ?it/s]Loading weights: 100%|##########| 211/211 [00:00<00:00, 13027.51it/s]
+    general ground_image: 48/6480  28 img/s
+    general ground_image: 1008/6480  32 img/s
+    general ground_image: 1968/6480  32 img/s
+    general ground_image: 2928/6480  32 img/s
+    general ground_image: 3888/6480  31 img/s
+    general ground_image: 4848/6480  31 img/s
+    general ground_image: 5808/6480  31 img/s
+wrote feats/train.ground_image.general.r768.npy  (6480, 1536)
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|##########| 415/415 [00:00<00:00, 11896.74it/s]
+    satellite drone_image: 32/6480  14 img/s
+    satellite drone_image: 672/6480  15 img/s
+    satellite drone_image: 1312/6480  15 img/s
+    satellite drone_image: 1952/6480  15 img/s
+    satellite drone_image: 2592/6480  15 img/s
+    satellite drone_image: 3232/6480  15 img/s
+    satellite drone_image: 3872/6480  15 img/s
+    satellite drone_image: 4512/6480  15 img/s
+    satellite drone_image: 5152/6480  15 img/s
+    satellite drone_image: 5792/6480  3 img/s
+    satellite drone_image: 6432/6480  3 img/s
+wrote feats/train.drone_image.satellite.r768.npy  (6480, 2048)
+Loading weights:   0%|          | 0/211 [00:00<?, ?it/s]Loading weights: 100%|##########| 211/211 [00:00<00:00, 13146.14it/s]
+    general drone_image: 48/6480  34 img/s

@@ -11,6 +11,9 @@ CLAUDE.md
 # Python bytecode.
 **/__pycache__/
 
+# Local virtualenv for GPU feature-extraction work.
+.venv/
+
 # Local archives / backups. Not versioned.
 *.tgz
 *.tar.gz

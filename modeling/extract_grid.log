@@ -1,0 +1,12 @@
+Loading weights:   0%|          | 0/211 [00:00<?, ?it/s]Loading weights: 100%|##########| 211/211 [00:00<00:00, 9633.58it/s]
+C:\Users\psala\multimodal_survey\modeling\extract_grid.py:28: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  x = torch.stack([torch.from_numpy(np.asarray(im.convert("RGB").resize((RES_W, RES_H))))
+  48/6480  17 img/s
+  1008/6480  16 img/s
+  1968/6480  15 img/s
+  2928/6480  14 img/s
+  3888/6480  14 img/s
+  4848/6480  14 img/s
+  5808/6480  14 img/s
+wrote feats/train.ground_image.general.grid1024x768.npy  shape (6480, 3072, 768)  30.6 GB
+G.mean(1) vs r768 patch-mean: relL2 0.091 (mean) 0.198 (max)  -- large is expected, resolutions differ

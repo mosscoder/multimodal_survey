@@ -1,0 +1,86 @@
+linear/both (ref)                  macroF1 0.629  macroAP 0.716  perfold 0.608+/-0.012
+mlp h512 p0.2 wd1e-2 s0            macroF1 0.652  macroAP 0.689  perfold 0.638+/-0.034
+mlp h512 p0.2 wd1e-2 s1            macroF1 0.646  macroAP 0.685  perfold 0.634+/-0.031
+mlp h512 p0.2 wd1e-2 s2            macroF1 0.651  macroAP 0.693  perfold 0.639+/-0.025
+mlp h512 p0.2 wd1e-2 ENS(3 seeds)  macroF1 0.655  macroAP 0.697  perfold 0.642+/-0.031
+mlp h256 p0.2 wd1e-2 s0            macroF1 0.653  macroAP 0.694  perfold 0.638+/-0.030
+mlp h256 p0.2 wd1e-2 s1            macroF1 0.657  macroAP 0.704  perfold 0.638+/-0.031
+mlp h256 p0.2 wd1e-2 s2            macroF1 0.656  macroAP 0.697  perfold 0.640+/-0.024
+mlp h256 p0.2 wd1e-2 ENS(3 seeds)  macroF1 0.656  macroAP 0.709  perfold 0.641+/-0.032
+mlp h256 p0.4 wd1e-2 s0            macroF1 0.660  macroAP 0.706  perfold 0.642+/-0.021
+mlp h256 p0.4 wd1e-2 s1            macroF1 0.661  macroAP 0.711  perfold 0.644+/-0.028
+mlp h256 p0.4 wd1e-2 s2            macroF1 0.662  macroAP 0.710  perfold 0.643+/-0.026
+mlp h256 p0.4 wd1e-2 ENS(3 seeds)  macroF1 0.666  macroAP 0.718  perfold 0.648+/-0.025
+mlp h256 p0.2 wd5e-2 s0            macroF1 0.655  macroAP 0.695  perfold 0.639+/-0.031
+mlp h256 p0.2 wd5e-2 s1            macroF1 0.656  macroAP 0.704  perfold 0.638+/-0.030
+mlp h256 p0.2 wd5e-2 s2            macroF1 0.656  macroAP 0.698  perfold 0.640+/-0.025
+mlp h256 p0.2 wd5e-2 ENS(3 seeds)  macroF1 0.656  macroAP 0.709  perfold 0.640+/-0.031
+mlp h128 p0.3 wd3e-2 s0            macroF1 0.658  macroAP 0.705  perfold 0.646+/-0.029
+mlp h128 p0.3 wd3e-2 s1            macroF1 0.662  macroAP 0.705  perfold 0.644+/-0.028
+mlp h128 p0.3 wd3e-2 s2            macroF1 0.659  macroAP 0.708  perfold 0.644+/-0.028
+mlp h128 p0.3 wd3e-2 ENS(3 seeds)  macroF1 0.667  macroAP 0.716  perfold 0.651+/-0.026
+mlp h64  p0.2 wd1e-2 s0            macroF1 0.665  macroAP 0.711  perfold 0.645+/-0.026
+mlp h64  p0.2 wd1e-2 s1            macroF1 0.661  macroAP 0.706  perfold 0.641+/-0.024
+mlp h64  p0.2 wd1e-2 s2            macroF1 0.655  macroAP 0.700  perfold 0.649+/-0.034
+mlp h64  p0.2 wd1e-2 ENS(3 seeds)  macroF1 0.664  macroAP 0.717  perfold 0.644+/-0.021
+linear + mlp[h256 p0.4 wd1e-2] ENS macroF1 0.684  macroAP 0.738  perfold 0.663+/-0.028
+
+=== summary ===
+                            config  macro_F1  macro_AP  perfold_F1  perfold_sd
+                 linear/both (ref)     0.629     0.716       0.608       0.012
+           mlp h512 p0.2 wd1e-2 s0     0.652     0.689       0.638       0.034
+           mlp h512 p0.2 wd1e-2 s1     0.646     0.685       0.634       0.031
+           mlp h512 p0.2 wd1e-2 s2     0.651     0.693       0.639       0.025
+ mlp h512 p0.2 wd1e-2 ENS(3 seeds)     0.655     0.697       0.642       0.031
+           mlp h256 p0.2 wd1e-2 s0     0.653     0.694       0.638       0.030
+           mlp h256 p0.2 wd1e-2 s1     0.657     0.704       0.638       0.031
+           mlp h256 p0.2 wd1e-2 s2     0.656     0.697       0.640       0.024
+ mlp h256 p0.2 wd1e-2 ENS(3 seeds)     0.656     0.709       0.641       0.032
+           mlp h256 p0.4 wd1e-2 s0     0.660     0.706       0.642       0.021
+           mlp h256 p0.4 wd1e-2 s1     0.661     0.711       0.644       0.028
+           mlp h256 p0.4 wd1e-2 s2     0.662     0.710       0.643       0.026
+ mlp h256 p0.4 wd1e-2 ENS(3 seeds)     0.666     0.718       0.648       0.025
+           mlp h256 p0.2 wd5e-2 s0     0.655     0.695       0.639       0.031
+           mlp h256 p0.2 wd5e-2 s1     0.656     0.704       0.638       0.030
+           mlp h256 p0.2 wd5e-2 s2     0.656     0.698       0.640       0.025
+ mlp h256 p0.2 wd5e-2 ENS(3 seeds)     0.656     0.709       0.640       0.031
+           mlp h128 p0.3 wd3e-2 s0     0.658     0.705       0.646       0.029
+           mlp h128 p0.3 wd3e-2 s1     0.662     0.705       0.644       0.028
+           mlp h128 p0.3 wd3e-2 s2     0.659     0.708       0.644       0.028
+ mlp h128 p0.3 wd3e-2 ENS(3 seeds)     0.667     0.716       0.651       0.026
+           mlp h64  p0.2 wd1e-2 s0     0.665     0.711       0.645       0.026
+           mlp h64  p0.2 wd1e-2 s1     0.661     0.706       0.641       0.024
+           mlp h64  p0.2 wd1e-2 s2     0.655     0.700       0.649       0.034
+ mlp h64  p0.2 wd1e-2 ENS(3 seeds)     0.664     0.717       0.644       0.021
+linear + mlp[h256 p0.4 wd1e-2] ENS     0.684     0.738       0.663       0.028
+
+=== per-class AP ===
+                            config  serice  sagitt  arista  millef  virgat  altiss  tector  bulbos
+                 linear/both (ref)   0.888   0.901   0.731   0.571   0.369   0.722   0.666   0.880
+           mlp h512 p0.2 wd1e-2 s0   0.903   0.904   0.675   0.489   0.247   0.728   0.671   0.895
+           mlp h512 p0.2 wd1e-2 s1   0.904   0.896   0.674   0.513   0.210   0.725   0.666   0.896
+           mlp h512 p0.2 wd1e-2 s2   0.899   0.896   0.646   0.518   0.283   0.733   0.673   0.893
+ mlp h512 p0.2 wd1e-2 ENS(3 seeds)   0.906   0.902   0.677   0.517   0.251   0.740   0.680   0.901
+           mlp h256 p0.2 wd1e-2 s0   0.900   0.901   0.676   0.516   0.248   0.732   0.681   0.900
+           mlp h256 p0.2 wd1e-2 s1   0.913   0.904   0.681   0.520   0.309   0.717   0.687   0.899
+           mlp h256 p0.2 wd1e-2 s2   0.896   0.900   0.690   0.517   0.281   0.732   0.672   0.892
+ mlp h256 p0.2 wd1e-2 ENS(3 seeds)   0.909   0.905   0.693   0.526   0.303   0.741   0.691   0.903
+           mlp h256 p0.4 wd1e-2 s0   0.897   0.903   0.667   0.506   0.356   0.741   0.682   0.899
+           mlp h256 p0.4 wd1e-2 s1   0.901   0.904   0.661   0.519   0.374   0.739   0.692   0.900
+           mlp h256 p0.4 wd1e-2 s2   0.897   0.899   0.668   0.512   0.374   0.740   0.689   0.899
+ mlp h256 p0.4 wd1e-2 ENS(3 seeds)   0.902   0.905   0.677   0.526   0.384   0.749   0.697   0.903
+           mlp h256 p0.2 wd5e-2 s0   0.903   0.902   0.675   0.515   0.247   0.732   0.688   0.901
+           mlp h256 p0.2 wd5e-2 s1   0.913   0.904   0.682   0.520   0.309   0.716   0.687   0.899
+           mlp h256 p0.2 wd5e-2 s2   0.897   0.900   0.690   0.517   0.282   0.732   0.672   0.892
+ mlp h256 p0.2 wd5e-2 ENS(3 seeds)   0.910   0.905   0.691   0.525   0.302   0.741   0.693   0.903
+           mlp h128 p0.3 wd3e-2 s0   0.902   0.906   0.676   0.524   0.304   0.741   0.687   0.899
+           mlp h128 p0.3 wd3e-2 s1   0.901   0.898   0.680   0.529   0.306   0.743   0.688   0.897
+           mlp h128 p0.3 wd3e-2 s2   0.898   0.902   0.693   0.537   0.316   0.732   0.686   0.901
+ mlp h128 p0.3 wd3e-2 ENS(3 seeds)   0.904   0.906   0.699   0.544   0.325   0.747   0.699   0.904
+           mlp h64  p0.2 wd1e-2 s0   0.895   0.903   0.669   0.546   0.377   0.732   0.671   0.896
+           mlp h64  p0.2 wd1e-2 s1   0.898   0.900   0.679   0.521   0.323   0.744   0.683   0.897
+           mlp h64  p0.2 wd1e-2 s2   0.904   0.901   0.664   0.512   0.309   0.726   0.687   0.895
+ mlp h64  p0.2 wd1e-2 ENS(3 seeds)   0.905   0.906   0.684   0.543   0.358   0.746   0.695   0.902
+linear + mlp[h256 p0.4 wd1e-2] ENS   0.903   0.913   0.729   0.577   0.426   0.754   0.699   0.901
+
+wrote results/mlp_tune.csv

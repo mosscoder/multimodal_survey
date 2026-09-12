@@ -1,0 +1,16 @@
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|##########| 415/415 [00:00<00:00, 11699.55it/s]
+    satellite: 64/6480  54 img/s
+    satellite: 1344/6480  66 img/s
+    satellite: 2624/6480  67 img/s
+    satellite: 3904/6480  67 img/s
+    satellite: 5184/6480  67 img/s
+    satellite: 6464/6480  67 img/s
+wrote feats/train.drone_image.satellite.r320.npy  (6480, 2048)
+Loading weights:   0%|          | 0/211 [00:00<?, ?it/s]Loading weights: 100%|##########| 211/211 [00:00<00:00, 12925.72it/s]
+    general: 64/6480  114 img/s
+    general: 1344/6480  112 img/s
+    general: 2624/6480  111 img/s
+    general: 3904/6480  110 img/s
+    general: 5184/6480  111 img/s
+    general: 6464/6480  111 img/s
+wrote feats/train.drone_image.general.r320.npy  (6480, 1536)
