@@ -1,0 +1,31 @@
+fold,mode,seed,gate
+0,gate_scalar,0,[np.float32(-1.679596)]
+0,gate_scalar,1,[np.float32(-1.7223408)]
+0,gate_scalar,2,[np.float32(-1.6426519)]
+0,gate_perclass,0,"[np.float32(-1.391467), np.float32(-1.6426818), np.float32(-1.5883338), np.float32(1.7697172), np.float32(-1.6057893), np.float32(-1.4548999), np.float32(1.6577966), np.float32(-0.6520759)]"
+0,gate_perclass,1,"[np.float32(1.4260201), np.float32(-1.740699), np.float32(-1.557174), np.float32(1.7685082), np.float32(0.99774784), np.float32(-1.5188594), np.float32(-1.6727421), np.float32(-0.69264376)]"
+0,gate_perclass,2,"[np.float32(1.3256106), np.float32(1.6009637), np.float32(1.538224), np.float32(-1.8731287), np.float32(-1.8098738), np.float32(-1.5058287), np.float32(-1.6695868), np.float32(0.67827904)]"
+1,gate_scalar,0,[np.float32(1.7012422)]
+1,gate_scalar,1,[np.float32(1.6625081)]
+1,gate_scalar,2,[np.float32(-1.7062472)]
+1,gate_perclass,0,"[np.float32(1.40899), np.float32(-1.6839277), np.float32(1.6774644), np.float32(-1.8418758), np.float32(1.9073623), np.float32(1.6850284), np.float32(1.6160767), np.float32(-0.6811941)]"
+1,gate_perclass,1,"[np.float32(-1.4068394), np.float32(-1.6852591), np.float32(1.7698696), np.float32(1.7792344), np.float32(1.7011135), np.float32(-1.622486), np.float32(-1.5810353), np.float32(0.8125837)]"
+1,gate_perclass,2,"[np.float32(1.4594481), np.float32(1.659384), np.float32(1.3972259), np.float32(-1.822695), np.float32(-1.6800154), np.float32(1.5609081), np.float32(1.5577483), np.float32(-0.74093735)]"
+2,gate_scalar,0,[np.float32(-1.5836713)]
+2,gate_scalar,1,[np.float32(1.6939477)]
+2,gate_scalar,2,[np.float32(-1.6904111)]
+2,gate_perclass,0,"[np.float32(1.3841157), np.float32(-1.6246525), np.float32(1.447033), np.float32(1.546225), np.float32(-1.2749205), np.float32(1.4323936), np.float32(-1.5962974), np.float32(-0.7208492)]"
+2,gate_perclass,1,"[np.float32(1.3945513), np.float32(-1.7304536), np.float32(-1.6307055), np.float32(1.8172841), np.float32(-1.5432947), np.float32(1.4904019), np.float32(-1.5785751), np.float32(0.77803)]"
+2,gate_perclass,2,"[np.float32(-1.4069502), np.float32(-1.510723), np.float32(1.5152528), np.float32(1.5389925), np.float32(-1.3858302), np.float32(-1.5102682), np.float32(1.5898194), np.float32(-0.74988323)]"
+3,gate_scalar,0,[np.float32(1.6813412)]
+3,gate_scalar,1,[np.float32(1.7143701)]
+3,gate_scalar,2,[np.float32(1.6371758)]
+3,gate_perclass,0,"[np.float32(1.4961718), np.float32(1.5913336), np.float32(-1.5676817), np.float32(1.9138432), np.float32(1.9895511), np.float32(1.5523155), np.float32(-1.5003089), np.float32(0.67810047)]"
+3,gate_perclass,1,"[np.float32(0.89430267), np.float32(-1.1557013), np.float32(-1.1792198), np.float32(-1.1634464), np.float32(-1.1679481), np.float32(0.9884715), np.float32(-1.0542858), np.float32(0.53865993)]"
+3,gate_perclass,2,"[np.float32(-1.5344388), np.float32(-1.6251035), np.float32(1.6069785), np.float32(1.842864), np.float32(1.8384595), np.float32(1.5762366), np.float32(1.6244022), np.float32(-0.751494)]"
+4,gate_scalar,0,[np.float32(-1.6314697)]
+4,gate_scalar,1,[np.float32(-1.6051975)]
+4,gate_scalar,2,[np.float32(-0.9317659)]
+4,gate_perclass,0,"[np.float32(-1.494319), np.float32(1.624859), np.float32(-1.5208768), np.float32(-1.5313207), np.float32(-2.0131698), np.float32(-1.5001336), np.float32(1.6491715), np.float32(-0.6531663)]"
+4,gate_perclass,1,"[np.float32(1.370919), np.float32(-1.7200017), np.float32(-1.6130055), np.float32(-1.6256135), np.float32(2.0908227), np.float32(-1.4698128), np.float32(-1.5843191), np.float32(-0.6203197)]"
+4,gate_perclass,2,"[np.float32(-1.5082976), np.float32(-1.6058925), np.float32(1.3160396), np.float32(-1.6064931), np.float32(1.2709495), np.float32(1.4933925), np.float32(-1.5885606), np.float32(0.6342769)]"

@@ -1,0 +1,371 @@
+pool 6089  per fold [1111, 1241, 1454, 1067, 1216]
+per-frame patch means (one memmap pass) ...
+
+== fold 0  tr 4978  va 1111 ==
+    ep  0  live 18/18
+    ep  1  live 18/18
+    ep  2  live 18/18
+    ep  3  live 18/18
+    ep  4  live 18/18
+    ep  5  live 18/18
+    ep  6  live 18/18
+    ep  7  live 18/18
+    ep  8  live 18/18
+    ep  9  live 18/18
+    ep 10  live 18/18
+    ep 11  live 18/18
+    ep 12  live 17/18
+    ep 13  live 17/18
+    ep 14  live 17/18
+    ep 15  live 17/18
+    ep 16  live 17/18
+    ep 17  live 16/18
+    ep 18  live 16/18
+    ep 19  live 16/18
+    ep 20  live 16/18
+    ep 21  live 16/18
+    ep 22  live 16/18
+    ep 23  live 15/18
+    ep 24  live 14/18
+    ep 25  live 11/18
+    ep 26  live 11/18
+    ep 27  live 11/18
+    ep 28  live 11/18
+    ep 29  live 11/18
+    ep 30  live 11/18
+    ep 31  live 11/18
+    ep 32  live 10/18
+    ep 33  live 10/18
+    ep 34  live 9/18
+    ep 35  live 9/18
+    ep 36  live 8/18
+    ep 37  live 8/18
+    ep 38  live 6/18
+    ep 39  live 6/18
+    ep 40  live 6/18
+    ep 41  live 6/18
+    ep 42  live 6/18
+    ep 43  live 6/18
+    ep 44  live 6/18
+    ep 45  live 4/18
+    ep 46  live 4/18
+    ep 47  live 4/18
+    ep 48  live 3/18
+    ep 49  live 2/18
+    ep 50  live 2/18
+    ep 51  live 2/18
+    ep 52  live 2/18
+    ep 53  live 2/18
+    ep 54  live 2/18
+    ep 55  live 2/18
+    ep 56  live 2/18
+    ep 57  live 2/18
+    ep 58  live 2/18
+    ep 59  live 2/18
+
+== fold 1  tr 4848  va 1241 ==
+    ep  0  live 18/18
+    ep  1  live 18/18
+    ep  2  live 18/18
+    ep  3  live 18/18
+    ep  4  live 18/18
+    ep  5  live 18/18
+    ep  6  live 18/18
+    ep  7  live 18/18
+    ep  8  live 18/18
+    ep  9  live 18/18
+    ep 10  live 18/18
+    ep 11  live 18/18
+    ep 12  live 18/18
+    ep 13  live 18/18
+    ep 14  live 18/18
+    ep 15  live 18/18
+    ep 16  live 18/18
+    ep 17  live 18/18
+    ep 18  live 18/18
+    ep 19  live 18/18
+    ep 20  live 17/18
+    ep 21  live 17/18
+    ep 22  live 17/18
+    ep 23  live 17/18
+    ep 24  live 17/18
+    ep 25  live 17/18
+    ep 26  live 17/18
+    ep 27  live 17/18
+    ep 28  live 17/18
+    ep 29  live 17/18
+    ep 30  live 17/18
+    ep 31  live 16/18
+    ep 32  live 16/18
+    ep 33  live 15/18
+    ep 34  live 12/18
+    ep 35  live 11/18
+    ep 36  live 11/18
+    ep 37  live 11/18
+    ep 38  live 11/18
+    ep 39  live 10/18
+    ep 40  live 9/18
+    ep 41  live 9/18
+    ep 42  live 9/18
+    ep 43  live 8/18
+    ep 44  live 8/18
+    ep 45  live 8/18
+    ep 46  live 6/18
+    ep 47  live 4/18
+    ep 48  live 4/18
+    ep 49  live 4/18
+    ep 50  live 2/18
+    ep 51  live 2/18
+    ep 52  live 1/18
+    ep 53  live 1/18
+    ep 54  live 1/18
+    ep 55  live 1/18
+    ep 56  live 0/18
+
+== fold 2  tr 4635  va 1454 ==
+    ep  0  live 18/18
+    ep  1  live 18/18
+    ep  2  live 18/18
+    ep  3  live 18/18
+    ep  4  live 18/18
+    ep  5  live 18/18
+    ep  6  live 18/18
+    ep  7  live 18/18
+    ep  8  live 18/18
+    ep  9  live 18/18
+    ep 10  live 18/18
+    ep 11  live 18/18
+    ep 12  live 18/18
+    ep 13  live 17/18
+    ep 14  live 16/18
+    ep 15  live 16/18
+    ep 16  live 16/18
+    ep 17  live 16/18
+    ep 18  live 16/18
+    ep 19  live 16/18
+    ep 20  live 16/18
+    ep 21  live 16/18
+    ep 22  live 16/18
+    ep 23  live 15/18
+    ep 24  live 14/18
+    ep 25  live 14/18
+    ep 26  live 14/18
+    ep 27  live 14/18
+    ep 28  live 14/18
+    ep 29  live 14/18
+    ep 30  live 14/18
+    ep 31  live 10/18
+    ep 32  live 10/18
+    ep 33  live 9/18
+    ep 34  live 9/18
+    ep 35  live 9/18
+    ep 36  live 9/18
+    ep 37  live 9/18
+    ep 38  live 9/18
+    ep 39  live 9/18
+    ep 40  live 9/18
+    ep 41  live 8/18
+    ep 42  live 8/18
+    ep 43  live 8/18
+    ep 44  live 8/18
+    ep 45  live 8/18
+    ep 46  live 7/18
+    ep 47  live 7/18
+    ep 48  live 6/18
+    ep 49  live 6/18
+    ep 50  live 6/18
+    ep 51  live 6/18
+    ep 52  live 6/18
+    ep 53  live 6/18
+    ep 54  live 5/18
+    ep 55  live 4/18
+    ep 56  live 3/18
+    ep 57  live 3/18
+    ep 58  live 3/18
+    ep 59  live 3/18
+
+== fold 3  tr 5022  va 1067 ==
+    ep  0  live 18/18
+    ep  1  live 18/18
+    ep  2  live 18/18
+    ep  3  live 18/18
+    ep  4  live 18/18
+    ep  5  live 18/18
+    ep  6  live 18/18
+    ep  7  live 18/18
+    ep  8  live 18/18
+    ep  9  live 18/18
+    ep 10  live 18/18
+    ep 11  live 18/18
+    ep 12  live 18/18
+    ep 13  live 18/18
+    ep 14  live 18/18
+    ep 15  live 17/18
+    ep 16  live 17/18
+    ep 17  live 17/18
+    ep 18  live 17/18
+    ep 19  live 17/18
+    ep 20  live 17/18
+    ep 21  live 17/18
+    ep 22  live 17/18
+    ep 23  live 17/18
+    ep 24  live 17/18
+    ep 25  live 17/18
+    ep 26  live 17/18
+    ep 27  live 17/18
+    ep 28  live 17/18
+    ep 29  live 17/18
+    ep 30  live 17/18
+    ep 31  live 17/18
+    ep 32  live 17/18
+    ep 33  live 17/18
+    ep 34  live 17/18
+    ep 35  live 17/18
+    ep 36  live 16/18
+    ep 37  live 16/18
+    ep 38  live 15/18
+    ep 39  live 15/18
+    ep 40  live 15/18
+    ep 41  live 15/18
+    ep 42  live 12/18
+    ep 43  live 12/18
+    ep 44  live 10/18
+    ep 45  live 9/18
+    ep 46  live 9/18
+    ep 47  live 9/18
+    ep 48  live 9/18
+    ep 49  live 8/18
+    ep 50  live 8/18
+    ep 51  live 8/18
+    ep 52  live 8/18
+    ep 53  live 7/18
+    ep 54  live 7/18
+    ep 55  live 6/18
+    ep 56  live 4/18
+    ep 57  live 4/18
+    ep 58  live 4/18
+    ep 59  live 4/18
+
+== fold 4  tr 4873  va 1216 ==
+    ep  0  live 18/18
+    ep  1  live 18/18
+    ep  2  live 18/18
+    ep  3  live 18/18
+    ep  4  live 18/18
+    ep  5  live 18/18
+    ep  6  live 18/18
+    ep  7  live 18/18
+    ep  8  live 18/18
+    ep  9  live 18/18
+    ep 10  live 18/18
+    ep 11  live 18/18
+    ep 12  live 18/18
+    ep 13  live 18/18
+    ep 14  live 18/18
+    ep 15  live 18/18
+    ep 16  live 18/18
+    ep 17  live 17/18
+    ep 18  live 17/18
+    ep 19  live 17/18
+    ep 20  live 17/18
+    ep 21  live 16/18
+    ep 22  live 16/18
+    ep 23  live 16/18
+    ep 24  live 16/18
+    ep 25  live 16/18
+    ep 26  live 16/18
+    ep 27  live 16/18
+    ep 28  live 13/18
+    ep 29  live 13/18
+    ep 30  live 13/18
+    ep 31  live 13/18
+    ep 32  live 13/18
+    ep 33  live 13/18
+    ep 34  live 13/18
+    ep 35  live 13/18
+    ep 36  live 13/18
+    ep 37  live 13/18
+    ep 38  live 13/18
+    ep 39  live 13/18
+    ep 40  live 13/18
+    ep 41  live 13/18
+    ep 42  live 12/18
+    ep 43  live 7/18
+    ep 44  live 7/18
+    ep 45  live 6/18
+    ep 46  live 5/18
+    ep 47  live 5/18
+    ep 48  live 4/18
+    ep 49  live 4/18
+    ep 50  live 4/18
+    ep 51  live 4/18
+    ep 52  live 4/18
+    ep 53  live 4/18
+    ep 54  live 4/18
+    ep 55  live 4/18
+    ep 56  live 4/18
+    ep 57  live 3/18
+    ep 58  live 3/18
+    ep 59  live 3/18
+ground/linear s0 macroF1 0.738  macroAP 0.799  perfold 0.724+/-0.047
+ground/linear s1 macroF1 0.718  macroAP 0.787  perfold 0.703+/-0.045
+ground/linear s2 macroF1 0.746  macroAP 0.804  perfold 0.734+/-0.031
+ground/linear ENS macroF1 0.756  macroAP 0.811  perfold 0.739+/-0.026
+ground/mlp s0    macroF1 0.736  macroAP 0.779  perfold 0.718+/-0.029
+ground/mlp s1    macroF1 0.692  macroAP 0.743  perfold 0.685+/-0.052
+ground/mlp s2    macroF1 0.701  macroAP 0.738  perfold 0.688+/-0.019
+ground/mlp ENS   macroF1 0.726  macroAP 0.799  perfold 0.714+/-0.036
+drone/linear s0  macroF1 0.471  macroAP 0.474  perfold 0.457+/-0.033
+drone/linear s1  macroF1 0.481  macroAP 0.495  perfold 0.457+/-0.033
+drone/linear s2  macroF1 0.472  macroAP 0.474  perfold 0.457+/-0.033
+drone/linear ENS macroF1 0.476  macroAP 0.485  perfold 0.459+/-0.031
+drone/mlp s0     macroF1 0.493  macroAP 0.475  perfold 0.482+/-0.027
+drone/mlp s1     macroF1 0.507  macroAP 0.483  perfold 0.488+/-0.035
+drone/mlp s2     macroF1 0.496  macroAP 0.467  perfold 0.481+/-0.028
+drone/mlp ENS    macroF1 0.528  macroAP 0.512  perfold 0.509+/-0.022
+fused/linear s0  macroF1 0.720  macroAP 0.765  perfold 0.702+/-0.029
+fused/linear s1  macroF1 0.719  macroAP 0.762  perfold 0.701+/-0.034
+fused/linear s2  macroF1 0.716  macroAP 0.760  perfold 0.699+/-0.030
+fused/linear ENS macroF1 0.720  macroAP 0.767  perfold 0.701+/-0.030
+fused/mlp s0     macroF1 0.645  macroAP 0.686  perfold 0.615+/-0.046
+fused/mlp s1     macroF1 0.625  macroAP 0.674  perfold 0.601+/-0.070
+fused/mlp s2     macroF1 0.478  macroAP 0.529  perfold 0.433+/-0.151
+fused/mlp ENS    macroF1 0.627  macroAP 0.713  perfold 0.603+/-0.056
+
+=== summary ===
+           config  macro_F1  macro_AP  perfold_F1  perfold_sd
+ ground/linear s0     0.738     0.799       0.724       0.047
+ ground/linear s1     0.718     0.787       0.703       0.045
+ ground/linear s2     0.746     0.804       0.734       0.031
+ground/linear ENS     0.756     0.811       0.739       0.026
+    ground/mlp s0     0.736     0.779       0.718       0.029
+    ground/mlp s1     0.692     0.743       0.685       0.052
+    ground/mlp s2     0.701     0.738       0.688       0.019
+   ground/mlp ENS     0.726     0.799       0.714       0.036
+  drone/linear s0     0.471     0.474       0.457       0.033
+  drone/linear s1     0.481     0.495       0.457       0.033
+  drone/linear s2     0.472     0.474       0.457       0.033
+ drone/linear ENS     0.476     0.485       0.459       0.031
+     drone/mlp s0     0.493     0.475       0.482       0.027
+     drone/mlp s1     0.507     0.483       0.488       0.035
+     drone/mlp s2     0.496     0.467       0.481       0.028
+    drone/mlp ENS     0.528     0.512       0.509       0.022
+  fused/linear s0     0.720     0.765       0.702       0.029
+  fused/linear s1     0.719     0.762       0.701       0.034
+  fused/linear s2     0.716     0.760       0.699       0.030
+ fused/linear ENS     0.720     0.767       0.701       0.030
+     fused/mlp s0     0.645     0.686       0.615       0.046
+     fused/mlp s1     0.625     0.674       0.601       0.070
+     fused/mlp s2     0.478     0.529       0.433       0.151
+    fused/mlp ENS     0.627     0.713       0.603       0.056
+
+=== per-class AP (seed ensemble) ===
+           config  serice  sagitt  arista  millef  virgat  altiss  tector  bulbos
+ground/linear ENS   0.936   0.898   0.873   0.741   0.426   0.860   0.821   0.932
+   ground/mlp ENS   0.941   0.902   0.872   0.725   0.367   0.858   0.808   0.920
+ drone/linear ENS   0.707   0.783   0.414   0.218   0.208   0.440   0.388   0.722
+    drone/mlp ENS   0.751   0.782   0.441   0.331   0.203   0.483   0.387   0.717
+ fused/linear ENS   0.924   0.907   0.830   0.645   0.380   0.773   0.769   0.905
+    fused/mlp ENS   0.931   0.881   0.699   0.551   0.351   0.775   0.640   0.877
+
+wrote results/armhead_ablation.csv

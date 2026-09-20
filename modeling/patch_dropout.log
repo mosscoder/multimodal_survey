@@ -1,0 +1,365 @@
+pool 6089  per fold [1111, 1241, 1454, 1067, 1216]
+per-frame patch means (one memmap pass) ...
+
+== fold 0  tr 4978  va 1111 ==
+    ep  0  live 15/15
+    ep  1  live 15/15
+    ep  2  live 15/15
+    ep  3  live 15/15
+    ep  4  live 15/15
+    ep  5  live 15/15
+    ep  6  live 15/15
+    ep  7  live 15/15
+    ep  8  live 15/15
+    ep  9  live 15/15
+    ep 10  live 15/15
+    ep 11  live 15/15
+    ep 12  live 15/15
+    ep 13  live 15/15
+    ep 14  live 15/15
+    ep 15  live 15/15
+    ep 16  live 15/15
+    ep 17  live 15/15
+    ep 18  live 15/15
+    ep 19  live 15/15
+    ep 20  live 15/15
+    ep 21  live 15/15
+    ep 22  live 15/15
+    ep 23  live 15/15
+    ep 24  live 15/15
+    ep 25  live 15/15
+    ep 26  live 15/15
+    ep 27  live 15/15
+    ep 28  live 15/15
+    ep 29  live 15/15
+    ep 30  live 15/15
+    ep 31  live 15/15
+    ep 32  live 15/15
+    ep 33  live 15/15
+    ep 34  live 15/15
+    ep 35  live 15/15
+    ep 36  live 15/15
+    ep 37  live 15/15
+    ep 38  live 15/15
+    ep 39  live 15/15
+    ep 40  live 15/15
+    ep 41  live 15/15
+    ep 42  live 15/15
+    ep 43  live 15/15
+    ep 44  live 15/15
+    ep 45  live 15/15
+    ep 46  live 15/15
+    ep 47  live 15/15
+    ep 48  live 15/15
+    ep 49  live 12/15
+    ep 50  live 12/15
+    ep 51  live 11/15
+    ep 52  live 11/15
+    ep 53  live 11/15
+    ep 54  live 10/15
+    ep 55  live 10/15
+    ep 56  live 9/15
+    ep 57  live 9/15
+    ep 58  live 9/15
+    ep 59  live 9/15
+
+== fold 1  tr 4848  va 1241 ==
+    ep  0  live 15/15
+    ep  1  live 15/15
+    ep  2  live 15/15
+    ep  3  live 15/15
+    ep  4  live 15/15
+    ep  5  live 15/15
+    ep  6  live 15/15
+    ep  7  live 15/15
+    ep  8  live 15/15
+    ep  9  live 15/15
+    ep 10  live 15/15
+    ep 11  live 15/15
+    ep 12  live 15/15
+    ep 13  live 15/15
+    ep 14  live 15/15
+    ep 15  live 15/15
+    ep 16  live 15/15
+    ep 17  live 15/15
+    ep 18  live 15/15
+    ep 19  live 15/15
+    ep 20  live 15/15
+    ep 21  live 15/15
+    ep 22  live 15/15
+    ep 23  live 15/15
+    ep 24  live 15/15
+    ep 25  live 15/15
+    ep 26  live 15/15
+    ep 27  live 15/15
+    ep 28  live 15/15
+    ep 29  live 15/15
+    ep 30  live 15/15
+    ep 31  live 15/15
+    ep 32  live 15/15
+    ep 33  live 15/15
+    ep 34  live 15/15
+    ep 35  live 15/15
+    ep 36  live 15/15
+    ep 37  live 15/15
+    ep 38  live 15/15
+    ep 39  live 15/15
+    ep 40  live 15/15
+    ep 41  live 15/15
+    ep 42  live 15/15
+    ep 43  live 15/15
+    ep 44  live 15/15
+    ep 45  live 15/15
+    ep 46  live 15/15
+    ep 47  live 14/15
+    ep 48  live 14/15
+    ep 49  live 14/15
+    ep 50  live 14/15
+    ep 51  live 14/15
+    ep 52  live 14/15
+    ep 53  live 14/15
+    ep 54  live 9/15
+    ep 55  live 9/15
+    ep 56  live 9/15
+    ep 57  live 9/15
+    ep 58  live 9/15
+    ep 59  live 3/15
+
+== fold 2  tr 4635  va 1454 ==
+    ep  0  live 15/15
+    ep  1  live 15/15
+    ep  2  live 15/15
+    ep  3  live 15/15
+    ep  4  live 15/15
+    ep  5  live 15/15
+    ep  6  live 15/15
+    ep  7  live 15/15
+    ep  8  live 15/15
+    ep  9  live 15/15
+    ep 10  live 15/15
+    ep 11  live 15/15
+    ep 12  live 15/15
+    ep 13  live 15/15
+    ep 14  live 15/15
+    ep 15  live 15/15
+    ep 16  live 15/15
+    ep 17  live 15/15
+    ep 18  live 15/15
+    ep 19  live 15/15
+    ep 20  live 15/15
+    ep 21  live 15/15
+    ep 22  live 15/15
+    ep 23  live 15/15
+    ep 24  live 15/15
+    ep 25  live 15/15
+    ep 26  live 15/15
+    ep 27  live 15/15
+    ep 28  live 15/15
+    ep 29  live 15/15
+    ep 30  live 15/15
+    ep 31  live 15/15
+    ep 32  live 15/15
+    ep 33  live 15/15
+    ep 34  live 15/15
+    ep 35  live 15/15
+    ep 36  live 15/15
+    ep 37  live 15/15
+    ep 38  live 15/15
+    ep 39  live 15/15
+    ep 40  live 15/15
+    ep 41  live 15/15
+    ep 42  live 15/15
+    ep 43  live 15/15
+    ep 44  live 15/15
+    ep 45  live 15/15
+    ep 46  live 15/15
+    ep 47  live 15/15
+    ep 48  live 15/15
+    ep 49  live 15/15
+    ep 50  live 15/15
+    ep 51  live 15/15
+    ep 52  live 15/15
+    ep 53  live 15/15
+    ep 54  live 13/15
+    ep 55  live 13/15
+    ep 56  live 12/15
+    ep 57  live 12/15
+    ep 58  live 12/15
+    ep 59  live 12/15
+
+== fold 3  tr 5022  va 1067 ==
+    ep  0  live 15/15
+    ep  1  live 15/15
+    ep  2  live 15/15
+    ep  3  live 15/15
+    ep  4  live 15/15
+    ep  5  live 15/15
+    ep  6  live 15/15
+    ep  7  live 15/15
+    ep  8  live 15/15
+    ep  9  live 15/15
+    ep 10  live 15/15
+    ep 11  live 15/15
+    ep 12  live 15/15
+    ep 13  live 15/15
+    ep 14  live 15/15
+    ep 15  live 15/15
+    ep 16  live 15/15
+    ep 17  live 15/15
+    ep 18  live 15/15
+    ep 19  live 15/15
+    ep 20  live 15/15
+    ep 21  live 15/15
+    ep 22  live 15/15
+    ep 23  live 15/15
+    ep 24  live 15/15
+    ep 25  live 15/15
+    ep 26  live 15/15
+    ep 27  live 15/15
+    ep 28  live 15/15
+    ep 29  live 15/15
+    ep 30  live 15/15
+    ep 31  live 15/15
+    ep 32  live 15/15
+    ep 33  live 15/15
+    ep 34  live 14/15
+    ep 35  live 14/15
+    ep 36  live 14/15
+    ep 37  live 14/15
+    ep 38  live 14/15
+    ep 39  live 14/15
+    ep 40  live 14/15
+    ep 41  live 14/15
+    ep 42  live 14/15
+    ep 43  live 14/15
+    ep 44  live 14/15
+    ep 45  live 14/15
+    ep 46  live 14/15
+    ep 47  live 14/15
+    ep 48  live 14/15
+    ep 49  live 14/15
+    ep 50  live 13/15
+    ep 51  live 11/15
+    ep 52  live 11/15
+    ep 53  live 11/15
+    ep 54  live 10/15
+    ep 55  live 9/15
+    ep 56  live 9/15
+    ep 57  live 9/15
+    ep 58  live 8/15
+    ep 59  live 7/15
+
+== fold 4  tr 4873  va 1216 ==
+    ep  0  live 15/15
+    ep  1  live 15/15
+    ep  2  live 15/15
+    ep  3  live 15/15
+    ep  4  live 15/15
+    ep  5  live 15/15
+    ep  6  live 15/15
+    ep  7  live 15/15
+    ep  8  live 15/15
+    ep  9  live 15/15
+    ep 10  live 15/15
+    ep 11  live 15/15
+    ep 12  live 15/15
+    ep 13  live 15/15
+    ep 14  live 15/15
+    ep 15  live 15/15
+    ep 16  live 15/15
+    ep 17  live 15/15
+    ep 18  live 15/15
+    ep 19  live 15/15
+    ep 20  live 15/15
+    ep 21  live 15/15
+    ep 22  live 15/15
+    ep 23  live 15/15
+    ep 24  live 15/15
+    ep 25  live 15/15
+    ep 26  live 15/15
+    ep 27  live 15/15
+    ep 28  live 15/15
+    ep 29  live 15/15
+    ep 30  live 15/15
+    ep 31  live 15/15
+    ep 32  live 15/15
+    ep 33  live 15/15
+    ep 34  live 15/15
+    ep 35  live 15/15
+    ep 36  live 15/15
+    ep 37  live 15/15
+    ep 38  live 15/15
+    ep 39  live 15/15
+    ep 40  live 15/15
+    ep 41  live 15/15
+    ep 42  live 15/15
+    ep 43  live 15/15
+    ep 44  live 15/15
+    ep 45  live 15/15
+    ep 46  live 15/15
+    ep 47  live 15/15
+    ep 48  live 14/15
+    ep 49  live 13/15
+    ep 50  live 12/15
+    ep 51  live 11/15
+    ep 52  live 11/15
+    ep 53  live 11/15
+    ep 54  live 11/15
+    ep 55  live 10/15
+    ep 56  live 10/15
+    ep 57  live 7/15
+    ep 58  live 6/15
+    ep 59  live 6/15
+dp=0.0 s0      macroF1 0.707  macroAP 0.755  perfold 0.691+/-0.022
+dp=0.0 s1      macroF1 0.705  macroAP 0.756  perfold 0.688+/-0.020
+dp=0.0 s2      macroF1 0.705  macroAP 0.755  perfold 0.688+/-0.022
+dp=0.0 ENS     macroF1 0.704  macroAP 0.758  perfold 0.688+/-0.021
+dp=0.1 s0      macroF1 0.704  macroAP 0.753  perfold 0.689+/-0.025
+dp=0.1 s1      macroF1 0.701  macroAP 0.756  perfold 0.685+/-0.028
+dp=0.1 s2      macroF1 0.702  macroAP 0.756  perfold 0.689+/-0.024
+dp=0.1 ENS     macroF1 0.704  macroAP 0.758  perfold 0.689+/-0.024
+dp=0.2 s0      macroF1 0.697  macroAP 0.753  perfold 0.682+/-0.022
+dp=0.2 s1      macroF1 0.703  macroAP 0.757  perfold 0.687+/-0.023
+dp=0.2 s2      macroF1 0.703  macroAP 0.753  perfold 0.686+/-0.022
+dp=0.2 ENS     macroF1 0.697  macroAP 0.756  perfold 0.681+/-0.020
+dp=0.3 s0      macroF1 0.684  macroAP 0.738  perfold 0.675+/-0.035
+dp=0.3 s1      macroF1 0.698  macroAP 0.751  perfold 0.684+/-0.025
+dp=0.3 s2      macroF1 0.698  macroAP 0.754  perfold 0.682+/-0.022
+dp=0.3 ENS     macroF1 0.699  macroAP 0.753  perfold 0.683+/-0.021
+dp=0.4 s0      macroF1 0.695  macroAP 0.750  perfold 0.681+/-0.027
+dp=0.4 s1      macroF1 0.698  macroAP 0.751  perfold 0.681+/-0.024
+dp=0.4 s2      macroF1 0.688  macroAP 0.749  perfold 0.677+/-0.022
+dp=0.4 ENS     macroF1 0.691  macroAP 0.752  perfold 0.676+/-0.025
+
+=== summary ===
+    config  macro_F1  macro_AP  perfold_F1  perfold_sd
+ dp=0.0 s0     0.707     0.755       0.691       0.022
+ dp=0.0 s1     0.705     0.756       0.688       0.020
+ dp=0.0 s2     0.705     0.755       0.688       0.022
+dp=0.0 ENS     0.704     0.758       0.688       0.021
+ dp=0.1 s0     0.704     0.753       0.689       0.025
+ dp=0.1 s1     0.701     0.756       0.685       0.028
+ dp=0.1 s2     0.702     0.756       0.689       0.024
+dp=0.1 ENS     0.704     0.758       0.689       0.024
+ dp=0.2 s0     0.697     0.753       0.682       0.022
+ dp=0.2 s1     0.703     0.757       0.687       0.023
+ dp=0.2 s2     0.703     0.753       0.686       0.022
+dp=0.2 ENS     0.697     0.756       0.681       0.020
+ dp=0.3 s0     0.684     0.738       0.675       0.035
+ dp=0.3 s1     0.698     0.751       0.684       0.025
+ dp=0.3 s2     0.698     0.754       0.682       0.022
+dp=0.3 ENS     0.699     0.753       0.683       0.021
+ dp=0.4 s0     0.695     0.750       0.681       0.027
+ dp=0.4 s1     0.698     0.751       0.681       0.024
+ dp=0.4 s2     0.688     0.749       0.677       0.022
+dp=0.4 ENS     0.691     0.752       0.676       0.025
+
+=== per-class AP (seed ensemble) ===
+    config  serice  sagitt  arista  millef  virgat  altiss  tector  bulbos
+dp=0.0 ENS   0.917   0.905   0.829   0.661   0.327   0.759   0.759   0.904
+dp=0.1 ENS   0.918   0.904   0.833   0.665   0.316   0.761   0.758   0.905
+dp=0.2 ENS   0.919   0.905   0.826   0.660   0.322   0.760   0.756   0.904
+dp=0.3 ENS   0.920   0.901   0.814   0.656   0.327   0.755   0.746   0.905
+dp=0.4 ENS   0.920   0.903   0.819   0.649   0.301   0.760   0.759   0.905
+
+wrote results/patch_dropout.csv
