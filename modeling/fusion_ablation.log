@@ -1,0 +1,398 @@
+pool 6089  per fold [1111, 1241, 1454, 1067, 1216]
+per-frame patch means (one memmap pass) ...
+
+== fold 0  tr 4978  va 1111 ==
+    ep  0  live 15/15
+    ep  1  live 15/15
+    ep  2  live 15/15
+    ep  3  live 15/15
+    ep  4  live 15/15
+    ep  5  live 15/15
+    ep  6  live 15/15
+    ep  7  live 15/15
+    ep  8  live 15/15
+    ep  9  live 15/15
+    ep 10  live 15/15
+    ep 11  live 15/15
+    ep 12  live 15/15
+    ep 13  live 15/15
+    ep 14  live 15/15
+    ep 15  live 15/15
+    ep 16  live 15/15
+    ep 17  live 15/15
+    ep 18  live 15/15
+    ep 19  live 15/15
+    ep 20  live 15/15
+    ep 21  live 14/15
+    ep 22  live 14/15
+    ep 23  live 14/15
+    ep 24  live 14/15
+    ep 25  live 14/15
+    ep 26  live 14/15
+    ep 27  live 14/15
+    ep 28  live 14/15
+    ep 29  live 14/15
+    ep 30  live 14/15
+    ep 31  live 14/15
+    ep 32  live 13/15
+    ep 33  live 12/15
+    ep 34  live 12/15
+    ep 35  live 12/15
+    ep 36  live 12/15
+    ep 37  live 12/15
+    ep 38  live 12/15
+    ep 39  live 12/15
+    ep 40  live 11/15
+    ep 41  live 8/15
+    ep 42  live 6/15
+    ep 43  live 6/15
+    ep 44  live 5/15
+    ep 45  live 5/15
+    ep 46  live 4/15
+    ep 47  live 4/15
+    ep 48  live 4/15
+    ep 49  live 4/15
+    ep 50  live 4/15
+    ep 51  live 4/15
+    ep 52  live 4/15
+    ep 53  live 4/15
+    ep 54  live 4/15
+    ep 55  live 4/15
+    ep 56  live 3/15
+    ep 57  live 2/15
+    ep 58  live 2/15
+    ep 59  live 2/15
+
+== fold 1  tr 4848  va 1241 ==
+    ep  0  live 15/15
+    ep  1  live 15/15
+    ep  2  live 15/15
+    ep  3  live 15/15
+    ep  4  live 15/15
+    ep  5  live 15/15
+    ep  6  live 15/15
+    ep  7  live 15/15
+    ep  8  live 15/15
+    ep  9  live 15/15
+    ep 10  live 15/15
+    ep 11  live 15/15
+    ep 12  live 15/15
+    ep 13  live 15/15
+    ep 14  live 15/15
+    ep 15  live 15/15
+    ep 16  live 15/15
+    ep 17  live 15/15
+    ep 18  live 15/15
+    ep 19  live 15/15
+    ep 20  live 15/15
+    ep 21  live 15/15
+    ep 22  live 13/15
+    ep 23  live 13/15
+    ep 24  live 13/15
+    ep 25  live 13/15
+    ep 26  live 13/15
+    ep 27  live 13/15
+    ep 28  live 13/15
+    ep 29  live 13/15
+    ep 30  live 13/15
+    ep 31  live 13/15
+    ep 32  live 13/15
+    ep 33  live 13/15
+    ep 34  live 13/15
+    ep 35  live 13/15
+    ep 36  live 13/15
+    ep 37  live 13/15
+    ep 38  live 13/15
+    ep 39  live 13/15
+    ep 40  live 13/15
+    ep 41  live 13/15
+    ep 42  live 13/15
+    ep 43  live 11/15
+    ep 44  live 9/15
+    ep 45  live 8/15
+    ep 46  live 8/15
+    ep 47  live 8/15
+    ep 48  live 8/15
+    ep 49  live 7/15
+    ep 50  live 7/15
+    ep 51  live 6/15
+    ep 52  live 3/15
+    ep 53  live 2/15
+    ep 54  live 2/15
+    ep 55  live 2/15
+    ep 56  live 2/15
+    ep 57  live 1/15
+    ep 58  live 1/15
+    ep 59  live 1/15
+
+== fold 2  tr 4635  va 1454 ==
+    ep  0  live 15/15
+    ep  1  live 15/15
+    ep  2  live 15/15
+    ep  3  live 15/15
+    ep  4  live 15/15
+    ep  5  live 15/15
+    ep  6  live 15/15
+    ep  7  live 15/15
+    ep  8  live 15/15
+    ep  9  live 15/15
+    ep 10  live 15/15
+    ep 11  live 15/15
+    ep 12  live 15/15
+    ep 13  live 15/15
+    ep 14  live 15/15
+    ep 15  live 15/15
+    ep 16  live 15/15
+    ep 17  live 15/15
+    ep 18  live 15/15
+    ep 19  live 15/15
+    ep 20  live 15/15
+    ep 21  live 15/15
+    ep 22  live 15/15
+    ep 23  live 15/15
+    ep 24  live 15/15
+    ep 25  live 15/15
+    ep 26  live 15/15
+    ep 27  live 15/15
+    ep 28  live 15/15
+    ep 29  live 15/15
+    ep 30  live 15/15
+    ep 31  live 15/15
+    ep 32  live 15/15
+    ep 33  live 15/15
+    ep 34  live 15/15
+    ep 35  live 15/15
+    ep 36  live 15/15
+    ep 37  live 15/15
+    ep 38  live 15/15
+    ep 39  live 15/15
+    ep 40  live 15/15
+    ep 41  live 15/15
+    ep 42  live 13/15
+    ep 43  live 13/15
+    ep 44  live 13/15
+    ep 45  live 12/15
+    ep 46  live 9/15
+    ep 47  live 8/15
+    ep 48  live 8/15
+    ep 49  live 8/15
+    ep 50  live 7/15
+    ep 51  live 7/15
+    ep 52  live 7/15
+    ep 53  live 7/15
+    ep 54  live 7/15
+    ep 55  live 7/15
+    ep 56  live 4/15
+    ep 57  live 4/15
+    ep 58  live 3/15
+    ep 59  live 3/15
+
+== fold 3  tr 5022  va 1067 ==
+    ep  0  live 15/15
+    ep  1  live 15/15
+    ep  2  live 15/15
+    ep  3  live 15/15
+    ep  4  live 15/15
+    ep  5  live 15/15
+    ep  6  live 15/15
+    ep  7  live 15/15
+    ep  8  live 15/15
+    ep  9  live 15/15
+    ep 10  live 15/15
+    ep 11  live 15/15
+    ep 12  live 15/15
+    ep 13  live 15/15
+    ep 14  live 15/15
+    ep 15  live 15/15
+    ep 16  live 15/15
+    ep 17  live 15/15
+    ep 18  live 15/15
+    ep 19  live 15/15
+    ep 20  live 15/15
+    ep 21  live 14/15
+    ep 22  live 14/15
+    ep 23  live 13/15
+    ep 24  live 13/15
+    ep 25  live 13/15
+    ep 26  live 12/15
+    ep 27  live 12/15
+    ep 28  live 12/15
+    ep 29  live 11/15
+    ep 30  live 11/15
+    ep 31  live 11/15
+    ep 32  live 11/15
+    ep 33  live 11/15
+    ep 34  live 11/15
+    ep 35  live 11/15
+    ep 36  live 11/15
+    ep 37  live 11/15
+    ep 38  live 11/15
+    ep 39  live 11/15
+    ep 40  live 11/15
+    ep 41  live 11/15
+    ep 42  live 11/15
+    ep 43  live 11/15
+    ep 44  live 10/15
+    ep 45  live 10/15
+    ep 46  live 9/15
+    ep 47  live 9/15
+    ep 48  live 8/15
+    ep 49  live 7/15
+    ep 50  live 6/15
+    ep 51  live 6/15
+    ep 52  live 6/15
+    ep 53  live 5/15
+    ep 54  live 5/15
+    ep 55  live 5/15
+    ep 56  live 5/15
+    ep 57  live 4/15
+    ep 58  live 4/15
+    ep 59  live 4/15
+
+== fold 4  tr 4873  va 1216 ==
+    ep  0  live 15/15
+    ep  1  live 15/15
+    ep  2  live 15/15
+    ep  3  live 15/15
+    ep  4  live 15/15
+    ep  5  live 15/15
+    ep  6  live 15/15
+    ep  7  live 15/15
+    ep  8  live 15/15
+    ep  9  live 15/15
+    ep 10  live 15/15
+    ep 11  live 15/15
+    ep 12  live 14/15
+    ep 13  live 14/15
+    ep 14  live 14/15
+    ep 15  live 14/15
+    ep 16  live 14/15
+    ep 17  live 14/15
+    ep 18  live 12/15
+    ep 19  live 12/15
+    ep 20  live 12/15
+    ep 21  live 12/15
+    ep 22  live 12/15
+    ep 23  live 12/15
+    ep 24  live 12/15
+    ep 25  live 12/15
+    ep 26  live 12/15
+    ep 27  live 12/15
+    ep 28  live 12/15
+    ep 29  live 12/15
+    ep 30  live 12/15
+    ep 31  live 12/15
+    ep 32  live 12/15
+    ep 33  live 12/15
+    ep 34  live 12/15
+    ep 35  live 12/15
+    ep 36  live 12/15
+    ep 37  live 12/15
+    ep 38  live 12/15
+    ep 39  live 12/15
+    ep 40  live 10/15
+    ep 41  live 10/15
+    ep 42  live 10/15
+    ep 43  live 10/15
+    ep 44  live 10/15
+    ep 45  live 10/15
+    ep 46  live 8/15
+    ep 47  live 7/15
+    ep 48  live 7/15
+    ep 49  live 7/15
+    ep 50  live 7/15
+    ep 51  live 7/15
+    ep 52  live 6/15
+    ep 53  live 4/15
+    ep 54  live 4/15
+    ep 55  live 4/15
+    ep 56  live 4/15
+    ep 57  live 4/15
+    ep 58  live 4/15
+    ep 59  live 4/15
+ground_only s0     macroF1 0.703  macroAP 0.781  perfold 0.706+/-0.061
+ground_only s1     macroF1 0.748  macroAP 0.803  perfold 0.735+/-0.032
+ground_only s2     macroF1 0.705  macroAP 0.768  perfold 0.707+/-0.060
+ground_only ENS    macroF1 0.748  macroAP 0.802  perfold 0.735+/-0.032
+sum_fixed s0       macroF1 0.704  macroAP 0.752  perfold 0.691+/-0.023
+sum_fixed s1       macroF1 0.703  macroAP 0.755  perfold 0.691+/-0.023
+sum_fixed s2       macroF1 0.704  macroAP 0.751  perfold 0.689+/-0.024
+sum_fixed ENS      macroF1 0.702  macroAP 0.756  perfold 0.689+/-0.022
+gate_scalar s0     macroF1 0.671  macroAP 0.707  perfold 0.661+/-0.029
+gate_scalar s1     macroF1 0.671  macroAP 0.707  perfold 0.659+/-0.025
+gate_scalar s2     macroF1 0.641  macroAP 0.694  perfold 0.637+/-0.035
+gate_scalar ENS    macroF1 0.677  macroAP 0.715  perfold 0.665+/-0.024
+gate_perclass s0   macroF1 0.672  macroAP 0.709  perfold 0.663+/-0.023
+gate_perclass s1   macroF1 0.640  macroAP 0.696  perfold 0.638+/-0.036
+gate_perclass s2   macroF1 0.668  macroAP 0.704  perfold 0.655+/-0.023
+gate_perclass ENS  macroF1 0.674  macroAP 0.718  perfold 0.664+/-0.023
+fusion_mlp s0      macroF1 0.676  macroAP 0.706  perfold 0.656+/-0.029
+fusion_mlp s1      macroF1 0.646  macroAP 0.688  perfold 0.630+/-0.039
+fusion_mlp s2      macroF1 0.643  macroAP 0.672  perfold 0.623+/-0.027
+fusion_mlp ENS     macroF1 0.708  macroAP 0.750  perfold 0.687+/-0.026
+
+=== summary ===
+           config  macro_F1  macro_AP  perfold_F1  perfold_sd
+   ground_only s0     0.703     0.781       0.706       0.061
+   ground_only s1     0.748     0.803       0.735       0.032
+   ground_only s2     0.705     0.768       0.707       0.060
+  ground_only ENS     0.748     0.802       0.735       0.032
+     sum_fixed s0     0.704     0.752       0.691       0.023
+     sum_fixed s1     0.703     0.755       0.691       0.023
+     sum_fixed s2     0.704     0.751       0.689       0.024
+    sum_fixed ENS     0.702     0.756       0.689       0.022
+   gate_scalar s0     0.671     0.707       0.661       0.029
+   gate_scalar s1     0.671     0.707       0.659       0.025
+   gate_scalar s2     0.641     0.694       0.637       0.035
+  gate_scalar ENS     0.677     0.715       0.665       0.024
+ gate_perclass s0     0.672     0.709       0.663       0.023
+ gate_perclass s1     0.640     0.696       0.638       0.036
+ gate_perclass s2     0.668     0.704       0.655       0.023
+gate_perclass ENS     0.674     0.718       0.664       0.023
+    fusion_mlp s0     0.676     0.706       0.656       0.029
+    fusion_mlp s1     0.646     0.688       0.630       0.039
+    fusion_mlp s2     0.643     0.672       0.623       0.027
+   fusion_mlp ENS     0.708     0.750       0.687       0.026
+
+=== per-class AP (seed ensemble) ===
+           config  serice  sagitt  arista  millef  virgat  altiss  tector  bulbos
+  ground_only ENS   0.939   0.898   0.868   0.740   0.363   0.857   0.817   0.930
+    sum_fixed ENS   0.920   0.904   0.831   0.663   0.309   0.761   0.755   0.904
+  gate_scalar ENS   0.912   0.888   0.767   0.585   0.198   0.742   0.726   0.898
+gate_perclass ENS   0.914   0.894   0.792   0.582   0.214   0.731   0.714   0.907
+   fusion_mlp ENS   0.932   0.888   0.818   0.593   0.390   0.766   0.724   0.890
+
+=== learned gate values (gate_scalar / gate_perclass) ===
+ fold          mode  seed                                                                                            gate
+    0   gate_scalar     0                                                                                     [-1.679596]
+    0   gate_scalar     1                                                                                    [-1.7223408]
+    0   gate_scalar     2                                                                                    [-1.6426519]
+    0 gate_perclass     0   [-1.391467, -1.6426818, -1.5883338, 1.7697172, -1.6057893, -1.4548999, 1.6577966, -0.6520759]
+    0 gate_perclass     1   [1.4260201, -1.740699, -1.557174, 1.7685082, 0.99774784, -1.5188594, -1.6727421, -0.69264376]
+    0 gate_perclass     2    [1.3256106, 1.6009637, 1.538224, -1.8731287, -1.8098738, -1.5058287, -1.6695868, 0.67827904]
+    1   gate_scalar     0                                                                                     [1.7012422]
+    1   gate_scalar     1                                                                                     [1.6625081]
+    1   gate_scalar     2                                                                                    [-1.7062472]
+    1 gate_perclass     0       [1.40899, -1.6839277, 1.6774644, -1.8418758, 1.9073623, 1.6850284, 1.6160767, -0.6811941]
+    1 gate_perclass     1     [-1.4068394, -1.6852591, 1.7698696, 1.7792344, 1.7011135, -1.622486, -1.5810353, 0.8125837]
+    1 gate_perclass     2      [1.4594481, 1.659384, 1.3972259, -1.822695, -1.6800154, 1.5609081, 1.5577483, -0.74093735]
+    2   gate_scalar     0                                                                                    [-1.5836713]
+    2   gate_scalar     1                                                                                     [1.6939477]
+    2   gate_scalar     2                                                                                    [-1.6904111]
+    2 gate_perclass     0      [1.3841157, -1.6246525, 1.447033, 1.546225, -1.2749205, 1.4323936, -1.5962974, -0.7208492]
+    2 gate_perclass     1      [1.3945513, -1.7304536, -1.6307055, 1.8172841, -1.5432947, 1.4904019, -1.5785751, 0.77803]
+    2 gate_perclass     2   [-1.4069502, -1.510723, 1.5152528, 1.5389925, -1.3858302, -1.5102682, 1.5898194, -0.74988323]
+    3   gate_scalar     0                                                                                     [1.6813412]
+    3   gate_scalar     1                                                                                     [1.7143701]
+    3   gate_scalar     2                                                                                     [1.6371758]
+    3 gate_perclass     0     [1.4961718, 1.5913336, -1.5676817, 1.9138432, 1.9895511, 1.5523155, -1.5003089, 0.67810047]
+    3 gate_perclass     1 [0.89430267, -1.1557013, -1.1792198, -1.1634464, -1.1679481, 0.9884715, -1.0542858, 0.53865993]
+    3 gate_perclass     2       [-1.5344388, -1.6251035, 1.6069785, 1.842864, 1.8384595, 1.5762366, 1.6244022, -0.751494]
+    4   gate_scalar     0                                                                                    [-1.6314697]
+    4   gate_scalar     1                                                                                    [-1.6051975]
+    4   gate_scalar     2                                                                                    [-0.9317659]
+    4 gate_perclass     0    [-1.494319, 1.624859, -1.5208768, -1.5313207, -2.0131698, -1.5001336, 1.6491715, -0.6531663]
+    4 gate_perclass     1   [1.370919, -1.7200017, -1.6130055, -1.6256135, 2.0908227, -1.4698128, -1.5843191, -0.6203197]
+    4 gate_perclass     2    [-1.5082976, -1.6058925, 1.3160396, -1.6064931, 1.2709495, 1.4933925, -1.5885606, 0.6342769]
+
+wrote results/fusion_ablation.csv

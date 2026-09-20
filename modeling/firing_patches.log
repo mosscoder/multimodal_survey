@@ -1,0 +1,83 @@
+fold 0: train 4978  val 1111
+  ep  0  f1 0.313  best 0.313  bad 0
+  ep  1  f1 0.354  best 0.354  bad 0
+  ep  2  f1 0.372  best 0.372  bad 0
+  ep  3  f1 0.371  best 0.372  bad 1
+  ep  4  f1 0.434  best 0.434  bad 0
+  ep  5  f1 0.413  best 0.434  bad 1
+  ep  6  f1 0.438  best 0.438  bad 0
+  ep  7  f1 0.448  best 0.448  bad 0
+  ep  8  f1 0.441  best 0.448  bad 1
+  ep  9  f1 0.440  best 0.448  bad 2
+  ep 10  f1 0.473  best 0.473  bad 0
+  ep 11  f1 0.459  best 0.473  bad 1
+  ep 12  f1 0.474  best 0.474  bad 0
+  ep 13  f1 0.463  best 0.474  bad 1
+  ep 14  f1 0.492  best 0.492  bad 0
+  ep 15  f1 0.506  best 0.506  bad 0
+  ep 16  f1 0.548  best 0.548  bad 0
+  ep 17  f1 0.537  best 0.548  bad 1
+  ep 18  f1 0.585  best 0.585  bad 0
+  ep 19  f1 0.494  best 0.585  bad 1
+  ep 20  f1 0.557  best 0.585  bad 2
+  ep 21  f1 0.550  best 0.585  bad 3
+  ep 22  f1 0.578  best 0.585  bad 4
+  ep 23  f1 0.590  best 0.590  bad 0
+  ep 24  f1 0.610  best 0.610  bad 0
+  ep 25  f1 0.635  best 0.635  bad 0
+  ep 26  f1 0.594  best 0.635  bad 1
+  ep 27  f1 0.611  best 0.635  bad 2
+  ep 28  f1 0.639  best 0.639  bad 0
+  ep 29  f1 0.578  best 0.639  bad 1
+  ep 30  f1 0.646  best 0.646  bad 0
+  ep 31  f1 0.650  best 0.650  bad 0
+  ep 32  f1 0.673  best 0.673  bad 0
+  ep 33  f1 0.623  best 0.673  bad 1
+  ep 34  f1 0.623  best 0.673  bad 2
+  ep 35  f1 0.638  best 0.673  bad 3
+  ep 36  f1 0.648  best 0.673  bad 4
+  ep 37  f1 0.666  best 0.673  bad 5
+  ep 38  f1 0.631  best 0.673  bad 6
+  ep 39  f1 0.661  best 0.673  bad 7
+  ep 40  f1 0.649  best 0.673  bad 8
+  ep 41  f1 0.641  best 0.673  bad 9
+  ep 42  f1 0.659  best 0.673  bad 10
+
+fold 0 k=8 seed=0 macro F1 0.673
+
+=== QA list (fold 0, k=8, seed=0) ===
+               species                  bucket                            frame_id    p_hat        patch_logits                top3_boxes_yx_px
+      Lupinus sericeus                 present leg05_m055_b023_2026-06-18T16-16-21 1.000000 24.17, 23.90, 23.85 (416,704); (432,704); (352,768)
+      Lupinus sericeus                 present leg05_m056_b023_2026-06-18T16-16-22 1.000000 23.15, 22.73, 22.62 (384,928); (480,928); (416,928)
+      Lupinus sericeus absent (check for slip) leg03_m048_b166_2026-06-17T14-46-01 0.999992 16.76, 16.64, 16.63    (384,80); (384,64); (320,64)
+      Lupinus sericeus absent (check for slip) leg03_m048_b166_2026-06-17T11-40-58 0.999980 20.06, 19.56, 19.13    (336,80); (352,48); (368,80)
+Balsamorhiza sagittata                 present leg07_m029_b256_2026-06-17T14-16-10 1.000000 15.88, 15.88, 15.51 (656,496); (544,336); (448,464)
+Balsamorhiza sagittata                 present leg07_m030_b256_2026-06-17T14-16-11 0.999999 14.51, 14.23, 14.22 (672,208); (720,176); (688,176)
+Balsamorhiza sagittata absent (check for slip) leg09_m025_b329_2026-06-17T14-08-18 0.998759    7.79, 7.74, 7.64       (672,0); (640,0); (560,0)
+Balsamorhiza sagittata absent (check for slip) leg05_m084_b023_2026-06-18T16-16-51 0.691337    7.33, 6.48, 6.46 (656,720); (496,560); (656,576)
+   Gaillardia aristata                 present leg07_m079_b182_2026-06-18T13-52-03 0.999999 14.18, 14.14, 14.02 (416,752); (320,128); (368,736)
+   Gaillardia aristata                 present leg07_m077_b182_2026-06-18T13-52-01 0.999985 14.64, 14.63, 13.61 (384,208); (368,240); (336,432)
+   Gaillardia aristata absent (check for slip) leg07_m078_b182_2026-06-16T10-39-24 0.999561 15.62, 11.46, 10.85   (400,32); (432,16); (352,672)
+   Gaillardia aristata absent (check for slip) leg07_m076_b182_2026-06-18T13-52-00 0.943644   14.17, 9.82, 5.27 (352,336); (352,352); (336,480)
+  Achillea millefolium                 present leg05_m071_b023_2026-06-16T16-19-47 1.000000 15.33, 15.32, 14.85 (368,640); (368,624); (384,640)
+  Achillea millefolium                 present leg05_m072_b023_2026-06-16T16-19-48 0.999999 14.99, 14.67, 14.62 (336,704); (384,592); (352,752)
+  Achillea millefolium absent (check for slip) leg09_m033_b329_2026-06-17T10-42-37 0.995923    6.11, 5.98, 5.72     (448,48); (448,32); (448,0)
+  Achillea millefolium absent (check for slip) leg07_m057_b256_2026-06-17T14-16-38 0.986281    5.89, 5.83, 5.36    (336,96); (320,32); (320,96)
+     Euphorbia virgata                 present leg05_m042_b023_2026-06-18T16-16-08 0.991297    6.76, 6.52, 5.84 (608,896); (624,896); (624,912)
+     Euphorbia virgata                 present leg05_m011_b023_2026-06-18T16-15-35 0.982041    7.36, 6.31, 6.00 (496,256); (464,272); (544,640)
+     Euphorbia virgata absent (check for slip) leg03_m045_b166_2026-06-17T11-40-55 0.984165    4.14, 4.06, 3.87 (288,112); (704,192); (704,112)
+     Euphorbia virgata absent (check for slip) leg03_m047_b166_2026-06-17T11-40-57 0.978259    3.78, 3.55, 3.50 (336,176); (320,160); (352,144)
+ Sisymbrium altissimum                 present leg05_m118_b023_2026-06-16T16-20-36 1.000000 15.44, 15.30, 15.00 (384,704); (384,560); (448,528)
+ Sisymbrium altissimum                 present leg05_m108_b023_2026-06-18T16-17-16 1.000000 15.99, 15.92, 15.77 (320,752); (336,704); (304,752)
+ Sisymbrium altissimum absent (check for slip) leg05_m075_b023_2026-06-16T16-19-52 0.999892 12.18, 11.87, 11.78 (272,960); (272,944); (272,928)
+ Sisymbrium altissimum absent (check for slip) leg05_m110_b023_2026-06-16T16-20-28 0.999235    4.09, 3.74, 3.71 (336,592); (336,608); (336,624)
+       Bromus tectorum                 present leg05_m037_b023_2026-06-18T16-16-03 0.999998 13.43, 12.83, 12.74 (400,208); (432,176); (400,176)
+       Bromus tectorum                 present leg07_m072_b200_2026-06-16T11-45-17 0.999997 15.22, 14.52, 14.50 (528,448); (160,304); (576,384)
+       Bromus tectorum absent (check for slip) leg03_m018_b166_2026-06-17T11-40-25 0.999211    6.35, 6.31, 6.31 (496,464); (672,624); (640,624)
+       Bromus tectorum absent (check for slip) leg05_m124_b023_2026-06-16T16-20-43 0.982739    3.97, 3.85, 3.78 (688,160); (656,720); (352,672)
+           Poa bulbosa                 present leg03_m028_b166_2026-06-17T11-40-37 1.000000 20.29, 20.05, 20.04 (288,400); (368,688); (384,384)
+           Poa bulbosa                 present leg07_m074_b182_2026-06-18T13-51-58 1.000000 21.85, 21.70, 20.80 (448,544); (464,608); (512,608)
+           Poa bulbosa absent (check for slip) leg07_m004_b200_2026-06-19T10-44-57 0.999980    8.63, 8.63, 8.40 (384,464); (384,496); (384,512)
+           Poa bulbosa absent (check for slip) leg07_m006_b200_2026-06-19T10-45-00 0.999956 13.47, 11.89, 11.86 (336,432); (352,432); (336,448)
+
+wrote results/firing_patches_qa.csv

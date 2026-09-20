@@ -1,0 +1,347 @@
+pool 6089  per fold [1111, 1241, 1454, 1067, 1216]
+per-frame patch means (one memmap pass) ...
+
+== fold 0  tr 4978  va 1111 ==
+    ep  0  live 9/9
+    ep  1  live 9/9
+    ep  2  live 9/9
+    ep  3  live 9/9
+    ep  4  live 9/9
+    ep  5  live 9/9
+    ep  6  live 9/9
+    ep  7  live 9/9
+    ep  8  live 9/9
+    ep  9  live 9/9
+    ep 10  live 9/9
+    ep 11  live 9/9
+    ep 12  live 9/9
+    ep 13  live 9/9
+    ep 14  live 9/9
+    ep 15  live 9/9
+    ep 16  live 9/9
+    ep 17  live 9/9
+    ep 18  live 9/9
+    ep 19  live 9/9
+    ep 20  live 9/9
+    ep 21  live 9/9
+    ep 22  live 9/9
+    ep 23  live 6/9
+    ep 24  live 6/9
+    ep 25  live 6/9
+    ep 26  live 6/9
+    ep 27  live 6/9
+    ep 28  live 6/9
+    ep 29  live 6/9
+    ep 30  live 6/9
+    ep 31  live 6/9
+    ep 32  live 6/9
+    ep 33  live 6/9
+    ep 34  live 6/9
+    ep 35  live 6/9
+    ep 36  live 6/9
+    ep 37  live 6/9
+    ep 38  live 6/9
+    ep 39  live 6/9
+    ep 40  live 6/9
+    ep 41  live 4/9
+    ep 42  live 4/9
+    ep 43  live 4/9
+    ep 44  live 4/9
+    ep 45  live 4/9
+    ep 46  live 3/9
+    ep 47  live 3/9
+    ep 48  live 3/9
+    ep 49  live 3/9
+    ep 50  live 3/9
+    ep 51  live 3/9
+    ep 52  live 3/9
+    ep 53  live 3/9
+    ep 54  live 3/9
+    ep 55  live 3/9
+    ep 56  live 3/9
+    ep 57  live 3/9
+    ep 58  live 3/9
+    ep 59  live 3/9
+
+== fold 1  tr 4848  va 1241 ==
+    ep  0  live 9/9
+    ep  1  live 9/9
+    ep  2  live 9/9
+    ep  3  live 9/9
+    ep  4  live 9/9
+    ep  5  live 9/9
+    ep  6  live 9/9
+    ep  7  live 9/9
+    ep  8  live 9/9
+    ep  9  live 9/9
+    ep 10  live 9/9
+    ep 11  live 9/9
+    ep 12  live 9/9
+    ep 13  live 9/9
+    ep 14  live 9/9
+    ep 15  live 9/9
+    ep 16  live 9/9
+    ep 17  live 9/9
+    ep 18  live 9/9
+    ep 19  live 9/9
+    ep 20  live 9/9
+    ep 21  live 9/9
+    ep 22  live 9/9
+    ep 23  live 6/9
+    ep 24  live 6/9
+    ep 25  live 6/9
+    ep 26  live 6/9
+    ep 27  live 6/9
+    ep 28  live 6/9
+    ep 29  live 6/9
+    ep 30  live 6/9
+    ep 31  live 6/9
+    ep 32  live 6/9
+    ep 33  live 6/9
+    ep 34  live 6/9
+    ep 35  live 6/9
+    ep 36  live 6/9
+    ep 37  live 6/9
+    ep 38  live 6/9
+    ep 39  live 6/9
+    ep 40  live 6/9
+    ep 41  live 6/9
+    ep 42  live 6/9
+    ep 43  live 6/9
+    ep 44  live 6/9
+    ep 45  live 6/9
+    ep 46  live 6/9
+    ep 47  live 6/9
+    ep 48  live 4/9
+    ep 49  live 3/9
+    ep 50  live 3/9
+    ep 51  live 3/9
+    ep 52  live 2/9
+    ep 53  live 2/9
+    ep 54  live 1/9
+    ep 55  live 1/9
+    ep 56  live 1/9
+    ep 57  live 1/9
+    ep 58  live 1/9
+    ep 59  live 1/9
+
+== fold 2  tr 4635  va 1454 ==
+    ep  0  live 9/9
+    ep  1  live 9/9
+    ep  2  live 9/9
+    ep  3  live 9/9
+    ep  4  live 9/9
+    ep  5  live 9/9
+    ep  6  live 9/9
+    ep  7  live 9/9
+    ep  8  live 9/9
+    ep  9  live 9/9
+    ep 10  live 9/9
+    ep 11  live 9/9
+    ep 12  live 9/9
+    ep 13  live 9/9
+    ep 14  live 9/9
+    ep 15  live 9/9
+    ep 16  live 9/9
+    ep 17  live 9/9
+    ep 18  live 9/9
+    ep 19  live 9/9
+    ep 20  live 9/9
+    ep 21  live 9/9
+    ep 22  live 9/9
+    ep 23  live 9/9
+    ep 24  live 9/9
+    ep 25  live 9/9
+    ep 26  live 9/9
+    ep 27  live 9/9
+    ep 28  live 9/9
+    ep 29  live 9/9
+    ep 30  live 9/9
+    ep 31  live 9/9
+    ep 32  live 7/9
+    ep 33  live 7/9
+    ep 34  live 7/9
+    ep 35  live 7/9
+    ep 36  live 7/9
+    ep 37  live 7/9
+    ep 38  live 7/9
+    ep 39  live 7/9
+    ep 40  live 7/9
+    ep 41  live 7/9
+    ep 42  live 7/9
+    ep 43  live 7/9
+    ep 44  live 7/9
+    ep 45  live 7/9
+    ep 46  live 7/9
+    ep 47  live 7/9
+    ep 48  live 7/9
+    ep 49  live 7/9
+    ep 50  live 7/9
+    ep 51  live 7/9
+    ep 52  live 6/9
+    ep 53  live 6/9
+    ep 54  live 6/9
+    ep 55  live 5/9
+    ep 56  live 5/9
+    ep 57  live 5/9
+    ep 58  live 5/9
+    ep 59  live 3/9
+
+== fold 3  tr 5022  va 1067 ==
+    ep  0  live 9/9
+    ep  1  live 9/9
+    ep  2  live 9/9
+    ep  3  live 9/9
+    ep  4  live 9/9
+    ep  5  live 9/9
+    ep  6  live 9/9
+    ep  7  live 9/9
+    ep  8  live 9/9
+    ep  9  live 9/9
+    ep 10  live 9/9
+    ep 11  live 9/9
+    ep 12  live 9/9
+    ep 13  live 9/9
+    ep 14  live 9/9
+    ep 15  live 9/9
+    ep 16  live 9/9
+    ep 17  live 9/9
+    ep 18  live 9/9
+    ep 19  live 9/9
+    ep 20  live 8/9
+    ep 21  live 8/9
+    ep 22  live 8/9
+    ep 23  live 8/9
+    ep 24  live 8/9
+    ep 25  live 8/9
+    ep 26  live 8/9
+    ep 27  live 8/9
+    ep 28  live 8/9
+    ep 29  live 8/9
+    ep 30  live 8/9
+    ep 31  live 8/9
+    ep 32  live 8/9
+    ep 33  live 8/9
+    ep 34  live 8/9
+    ep 35  live 8/9
+    ep 36  live 8/9
+    ep 37  live 8/9
+    ep 38  live 8/9
+    ep 39  live 8/9
+    ep 40  live 8/9
+    ep 41  live 8/9
+    ep 42  live 8/9
+    ep 43  live 8/9
+    ep 44  live 5/9
+    ep 45  live 5/9
+    ep 46  live 5/9
+    ep 47  live 5/9
+    ep 48  live 5/9
+    ep 49  live 5/9
+    ep 50  live 4/9
+    ep 51  live 4/9
+    ep 52  live 4/9
+    ep 53  live 4/9
+    ep 54  live 4/9
+    ep 55  live 4/9
+    ep 56  live 4/9
+    ep 57  live 3/9
+    ep 58  live 3/9
+    ep 59  live 3/9
+
+== fold 4  tr 4873  va 1216 ==
+    ep  0  live 9/9
+    ep  1  live 9/9
+    ep  2  live 9/9
+    ep  3  live 9/9
+    ep  4  live 9/9
+    ep  5  live 9/9
+    ep  6  live 9/9
+    ep  7  live 9/9
+    ep  8  live 9/9
+    ep  9  live 9/9
+    ep 10  live 9/9
+    ep 11  live 9/9
+    ep 12  live 9/9
+    ep 13  live 9/9
+    ep 14  live 9/9
+    ep 15  live 9/9
+    ep 16  live 9/9
+    ep 17  live 9/9
+    ep 18  live 9/9
+    ep 19  live 9/9
+    ep 20  live 9/9
+    ep 21  live 9/9
+    ep 22  live 9/9
+    ep 23  live 9/9
+    ep 24  live 9/9
+    ep 25  live 9/9
+    ep 26  live 9/9
+    ep 27  live 9/9
+    ep 28  live 9/9
+    ep 29  live 9/9
+    ep 30  live 9/9
+    ep 31  live 9/9
+    ep 32  live 9/9
+    ep 33  live 9/9
+    ep 34  live 9/9
+    ep 35  live 6/9
+    ep 36  live 6/9
+    ep 37  live 6/9
+    ep 38  live 6/9
+    ep 39  live 6/9
+    ep 40  live 6/9
+    ep 41  live 6/9
+    ep 42  live 6/9
+    ep 43  live 6/9
+    ep 44  live 6/9
+    ep 45  live 6/9
+    ep 46  live 6/9
+    ep 47  live 6/9
+    ep 48  live 6/9
+    ep 49  live 6/9
+    ep 50  live 6/9
+    ep 51  live 6/9
+    ep 52  live 6/9
+    ep 53  live 6/9
+    ep 54  live 6/9
+    ep 55  live 6/9
+    ep 56  live 6/9
+    ep 57  live 6/9
+    ep 58  live 4/9
+    ep 59  live 4/9
+ground s0    macroF1 0.738  macroAP 0.797  perfold 0.730+/-0.034
+ground s1    macroF1 0.740  macroAP 0.801  perfold 0.727+/-0.030
+ground s2    macroF1 0.743  macroAP 0.805  perfold 0.729+/-0.033
+ground ENS   macroF1 0.745  macroAP 0.808  perfold 0.732+/-0.033
+drone s0     macroF1 0.470  macroAP 0.480  perfold 0.457+/-0.030
+drone s1     macroF1 0.469  macroAP 0.475  perfold 0.456+/-0.030
+drone s2     macroF1 0.466  macroAP 0.478  perfold 0.454+/-0.030
+drone ENS    macroF1 0.469  macroAP 0.480  perfold 0.456+/-0.030
+concat s0    macroF1 0.710  macroAP 0.765  perfold 0.693+/-0.023
+concat s1    macroF1 0.672  macroAP 0.741  perfold 0.667+/-0.061
+concat s2    macroF1 0.704  macroAP 0.755  perfold 0.688+/-0.023
+concat ENS   macroF1 0.704  macroAP 0.761  perfold 0.687+/-0.023
+
+=== summary ===
+    config  macro_F1  macro_AP  perfold_F1  perfold_sd
+ ground s0     0.738     0.797       0.730       0.034
+ ground s1     0.740     0.801       0.727       0.030
+ ground s2     0.743     0.805       0.729       0.033
+ground ENS     0.745     0.808       0.732       0.033
+  drone s0     0.470     0.480       0.457       0.030
+  drone s1     0.469     0.475       0.456       0.030
+  drone s2     0.466     0.478       0.454       0.030
+ drone ENS     0.469     0.480       0.456       0.030
+ concat s0     0.710     0.765       0.693       0.023
+ concat s1     0.672     0.741       0.667       0.061
+ concat s2     0.704     0.755       0.688       0.023
+concat ENS     0.704     0.761       0.687       0.023
+
+=== per-class AP (seed ensemble) ===
+    config  serice  sagitt  arista  millef  virgat  altiss  tector  bulbos
+ground ENS   0.941   0.901   0.882   0.747   0.379   0.857   0.827   0.932
+ drone ENS   0.698   0.769   0.415   0.249   0.188   0.507   0.285   0.726
+concat ENS   0.919   0.900   0.831   0.661   0.367   0.756   0.752   0.904
+
+wrote results/modality_ablation.csv
