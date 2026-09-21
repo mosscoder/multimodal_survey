@@ -1,0 +1,21 @@
+test split: 1613 frames
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|##########| 415/415 [00:00<00:00, 6644.08it/s]
+    satellite drone_image @224: 96/1613  62 img/s
+    satellite drone_image @224: 1056/1613  84 img/s
+wrote feats/test.drone_image.satellite.npy  (1613, 2048)
+Loading weights:   0%|          | 0/211 [00:00<?, ?it/s]Loading weights: 100%|##########| 211/211 [00:00<00:00, 6547.39it/s]
+    general ground_image @768: 48/1613  25 img/s
+    general ground_image @768: 528/1613  24 img/s
+    general ground_image @768: 1008/1613  23 img/s
+    general ground_image @768: 1488/1613  23 img/s
+wrote feats/test.ground_image.general.r768.npy  (1613, 1536)
+Loading weights:   0%|          | 0/211 [00:00<?, ?it/s]Loading weights: 100%|##########| 211/211 [00:00<00:00, 6044.99it/s]
+C:\Users\psala\multimodal_survey\modeling\extract_test_features.py:48: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  x = torch.stack([torch.from_numpy(np.asarray(im)) for im in imgs]).permute(0, 3, 1, 2).cuda().float() / 255
+    grid ground_image: 48/1613  15 img/s
+    grid ground_image: 528/1613  14 img/s
+    grid ground_image: 1008/1613  14 img/s
+    grid ground_image: 1488/1613  14 img/s
+wrote feats/test.ground_image.general.grid1024x768.npy  shape (1613, 3072, 768)
+
+done.
