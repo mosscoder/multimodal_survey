@@ -1,0 +1,208 @@
+per-frame patch means (train pool, for standardization) ...
+
+training final ground_grid (dense-grid top-1 MIL) ...
+    ground_grid seed0 ep 0 valF1 0.253 best 0.253 bad 0
+    ground_grid seed0 ep 1 valF1 0.273 best 0.273 bad 0
+    ground_grid seed0 ep 2 valF1 0.343 best 0.343 bad 0
+    ground_grid seed0 ep 3 valF1 0.396 best 0.396 bad 0
+    ground_grid seed0 ep 4 valF1 0.414 best 0.414 bad 0
+    ground_grid seed0 ep 5 valF1 0.483 best 0.483 bad 0
+    ground_grid seed0 ep 6 valF1 0.508 best 0.508 bad 0
+    ground_grid seed0 ep 7 valF1 0.485 best 0.508 bad 1
+    ground_grid seed0 ep 8 valF1 0.518 best 0.518 bad 0
+    ground_grid seed0 ep 9 valF1 0.530 best 0.530 bad 0
+    ground_grid seed0 ep10 valF1 0.506 best 0.530 bad 1
+    ground_grid seed0 ep11 valF1 0.491 best 0.530 bad 2
+    ground_grid seed0 ep12 valF1 0.479 best 0.530 bad 3
+    ground_grid seed0 ep13 valF1 0.572 best 0.572 bad 0
+    ground_grid seed0 ep14 valF1 0.548 best 0.572 bad 1
+    ground_grid seed0 ep15 valF1 0.545 best 0.572 bad 2
+    ground_grid seed0 ep16 valF1 0.545 best 0.572 bad 3
+    ground_grid seed0 ep17 valF1 0.550 best 0.572 bad 4
+    ground_grid seed0 ep18 valF1 0.567 best 0.572 bad 5
+    ground_grid seed0 ep19 valF1 0.536 best 0.572 bad 6
+    ground_grid seed0 ep20 valF1 0.550 best 0.572 bad 7
+    ground_grid seed0 ep21 valF1 0.542 best 0.572 bad 8
+    ground_grid seed0 ep22 valF1 0.563 best 0.572 bad 9
+    ground_grid seed0 ep23 valF1 0.596 best 0.596 bad 0
+    ground_grid seed0 ep24 valF1 0.555 best 0.596 bad 1
+    ground_grid seed0 ep25 valF1 0.618 best 0.618 bad 0
+    ground_grid seed0 ep26 valF1 0.634 best 0.634 bad 0
+    ground_grid seed0 ep27 valF1 0.644 best 0.644 bad 0
+    ground_grid seed0 ep28 valF1 0.670 best 0.670 bad 0
+    ground_grid seed0 ep29 valF1 0.648 best 0.670 bad 1
+    ground_grid seed0 ep30 valF1 0.650 best 0.670 bad 2
+    ground_grid seed0 ep31 valF1 0.698 best 0.698 bad 0
+    ground_grid seed0 ep32 valF1 0.735 best 0.735 bad 0
+    ground_grid seed0 ep33 valF1 0.698 best 0.735 bad 1
+    ground_grid seed0 ep34 valF1 0.722 best 0.735 bad 2
+    ground_grid seed0 ep35 valF1 0.697 best 0.735 bad 3
+    ground_grid seed0 ep36 valF1 0.727 best 0.735 bad 4
+    ground_grid seed0 ep37 valF1 0.720 best 0.735 bad 5
+    ground_grid seed0 ep38 valF1 0.730 best 0.735 bad 6
+    ground_grid seed0 ep39 valF1 0.715 best 0.735 bad 7
+    ground_grid seed0 ep40 valF1 0.740 best 0.740 bad 0
+    ground_grid seed0 ep41 valF1 0.736 best 0.740 bad 1
+    ground_grid seed0 ep42 valF1 0.738 best 0.740 bad 2
+    ground_grid seed0 ep43 valF1 0.729 best 0.740 bad 3
+    ground_grid seed0 ep44 valF1 0.735 best 0.740 bad 4
+    ground_grid seed0 ep45 valF1 0.742 best 0.742 bad 0
+    ground_grid seed0 ep46 valF1 0.745 best 0.745 bad 0
+    ground_grid seed0 ep47 valF1 0.740 best 0.745 bad 1
+    ground_grid seed0 ep48 valF1 0.740 best 0.745 bad 2
+    ground_grid seed0 ep49 valF1 0.745 best 0.745 bad 0
+    ground_grid seed0 ep50 valF1 0.756 best 0.756 bad 0
+    ground_grid seed0 ep51 valF1 0.750 best 0.756 bad 1
+    ground_grid seed0 ep52 valF1 0.750 best 0.756 bad 2
+    ground_grid seed0 ep53 valF1 0.750 best 0.756 bad 3
+    ground_grid seed0 ep54 valF1 0.754 best 0.756 bad 4
+    ground_grid seed0 ep55 valF1 0.752 best 0.756 bad 5
+    ground_grid seed0 ep56 valF1 0.751 best 0.756 bad 6
+    ground_grid seed0 ep57 valF1 0.753 best 0.756 bad 7
+    ground_grid seed0 ep58 valF1 0.754 best 0.756 bad 8
+    ground_grid seed0 ep59 valF1 0.754 best 0.756 bad 9
+    ground_grid seed1 ep 0 valF1 0.237 best 0.237 bad 0
+    ground_grid seed1 ep 1 valF1 0.277 best 0.277 bad 0
+    ground_grid seed1 ep 2 valF1 0.370 best 0.370 bad 0
+    ground_grid seed1 ep 3 valF1 0.383 best 0.383 bad 0
+    ground_grid seed1 ep 4 valF1 0.471 best 0.471 bad 0
+    ground_grid seed1 ep 5 valF1 0.436 best 0.471 bad 1
+    ground_grid seed1 ep 6 valF1 0.489 best 0.489 bad 0
+    ground_grid seed1 ep 7 valF1 0.522 best 0.522 bad 0
+    ground_grid seed1 ep 8 valF1 0.544 best 0.544 bad 0
+    ground_grid seed1 ep 9 valF1 0.557 best 0.557 bad 0
+    ground_grid seed1 ep10 valF1 0.460 best 0.557 bad 1
+    ground_grid seed1 ep11 valF1 0.526 best 0.557 bad 2
+    ground_grid seed1 ep12 valF1 0.564 best 0.564 bad 0
+    ground_grid seed1 ep13 valF1 0.600 best 0.600 bad 0
+    ground_grid seed1 ep14 valF1 0.596 best 0.600 bad 1
+    ground_grid seed1 ep15 valF1 0.521 best 0.600 bad 2
+    ground_grid seed1 ep16 valF1 0.518 best 0.600 bad 3
+    ground_grid seed1 ep17 valF1 0.599 best 0.600 bad 4
+    ground_grid seed1 ep18 valF1 0.513 best 0.600 bad 5
+    ground_grid seed1 ep19 valF1 0.601 best 0.601 bad 0
+    ground_grid seed1 ep20 valF1 0.614 best 0.614 bad 0
+    ground_grid seed1 ep21 valF1 0.592 best 0.614 bad 1
+    ground_grid seed1 ep22 valF1 0.603 best 0.614 bad 2
+    ground_grid seed1 ep23 valF1 0.597 best 0.614 bad 3
+    ground_grid seed1 ep24 valF1 0.562 best 0.614 bad 4
+    ground_grid seed1 ep25 valF1 0.692 best 0.692 bad 0
+    ground_grid seed1 ep26 valF1 0.665 best 0.692 bad 1
+    ground_grid seed1 ep27 valF1 0.608 best 0.692 bad 2
+    ground_grid seed1 ep28 valF1 0.658 best 0.692 bad 3
+    ground_grid seed1 ep29 valF1 0.661 best 0.692 bad 4
+    ground_grid seed1 ep30 valF1 0.661 best 0.692 bad 5
+    ground_grid seed1 ep31 valF1 0.670 best 0.692 bad 6
+    ground_grid seed1 ep32 valF1 0.683 best 0.692 bad 7
+    ground_grid seed1 ep33 valF1 0.712 best 0.712 bad 0
+    ground_grid seed1 ep34 valF1 0.701 best 0.712 bad 1
+    ground_grid seed1 ep35 valF1 0.702 best 0.712 bad 2
+    ground_grid seed1 ep36 valF1 0.691 best 0.712 bad 3
+    ground_grid seed1 ep37 valF1 0.727 best 0.727 bad 0
+    ground_grid seed1 ep38 valF1 0.711 best 0.727 bad 1
+    ground_grid seed1 ep39 valF1 0.737 best 0.737 bad 0
+    ground_grid seed1 ep40 valF1 0.745 best 0.745 bad 0
+    ground_grid seed1 ep41 valF1 0.735 best 0.745 bad 1
+    ground_grid seed1 ep42 valF1 0.731 best 0.745 bad 2
+    ground_grid seed1 ep43 valF1 0.742 best 0.745 bad 3
+    ground_grid seed1 ep44 valF1 0.742 best 0.745 bad 4
+    ground_grid seed1 ep45 valF1 0.733 best 0.745 bad 5
+    ground_grid seed1 ep46 valF1 0.734 best 0.745 bad 6
+    ground_grid seed1 ep47 valF1 0.737 best 0.745 bad 7
+    ground_grid seed1 ep48 valF1 0.740 best 0.745 bad 8
+    ground_grid seed1 ep49 valF1 0.747 best 0.747 bad 0
+    ground_grid seed1 ep50 valF1 0.745 best 0.747 bad 1
+    ground_grid seed1 ep51 valF1 0.740 best 0.747 bad 2
+    ground_grid seed1 ep52 valF1 0.743 best 0.747 bad 3
+    ground_grid seed1 ep53 valF1 0.742 best 0.747 bad 4
+    ground_grid seed1 ep54 valF1 0.743 best 0.747 bad 5
+    ground_grid seed1 ep55 valF1 0.735 best 0.747 bad 6
+    ground_grid seed1 ep56 valF1 0.739 best 0.747 bad 7
+    ground_grid seed1 ep57 valF1 0.743 best 0.747 bad 8
+    ground_grid seed1 ep58 valF1 0.743 best 0.747 bad 9
+    ground_grid seed1 ep59 valF1 0.742 best 0.747 bad 10
+    ground_grid seed2 ep 0 valF1 0.241 best 0.241 bad 0
+    ground_grid seed2 ep 1 valF1 0.302 best 0.302 bad 0
+    ground_grid seed2 ep 2 valF1 0.319 best 0.319 bad 0
+    ground_grid seed2 ep 3 valF1 0.377 best 0.377 bad 0
+    ground_grid seed2 ep 4 valF1 0.323 best 0.377 bad 1
+    ground_grid seed2 ep 5 valF1 0.459 best 0.459 bad 0
+    ground_grid seed2 ep 6 valF1 0.447 best 0.459 bad 1
+    ground_grid seed2 ep 7 valF1 0.481 best 0.481 bad 0
+    ground_grid seed2 ep 8 valF1 0.498 best 0.498 bad 0
+    ground_grid seed2 ep 9 valF1 0.561 best 0.561 bad 0
+    ground_grid seed2 ep10 valF1 0.543 best 0.561 bad 1
+    ground_grid seed2 ep11 valF1 0.566 best 0.566 bad 0
+    ground_grid seed2 ep12 valF1 0.498 best 0.566 bad 1
+    ground_grid seed2 ep13 valF1 0.555 best 0.566 bad 2
+    ground_grid seed2 ep14 valF1 0.518 best 0.566 bad 3
+    ground_grid seed2 ep15 valF1 0.606 best 0.606 bad 0
+    ground_grid seed2 ep16 valF1 0.600 best 0.606 bad 1
+    ground_grid seed2 ep17 valF1 0.571 best 0.606 bad 2
+    ground_grid seed2 ep18 valF1 0.521 best 0.606 bad 3
+    ground_grid seed2 ep19 valF1 0.610 best 0.610 bad 0
+    ground_grid seed2 ep20 valF1 0.585 best 0.610 bad 1
+    ground_grid seed2 ep21 valF1 0.604 best 0.610 bad 2
+    ground_grid seed2 ep22 valF1 0.543 best 0.610 bad 3
+    ground_grid seed2 ep23 valF1 0.573 best 0.610 bad 4
+    ground_grid seed2 ep24 valF1 0.545 best 0.610 bad 5
+    ground_grid seed2 ep25 valF1 0.674 best 0.674 bad 0
+    ground_grid seed2 ep26 valF1 0.681 best 0.681 bad 0
+    ground_grid seed2 ep27 valF1 0.626 best 0.681 bad 1
+    ground_grid seed2 ep28 valF1 0.663 best 0.681 bad 2
+    ground_grid seed2 ep29 valF1 0.648 best 0.681 bad 3
+    ground_grid seed2 ep30 valF1 0.685 best 0.685 bad 0
+    ground_grid seed2 ep31 valF1 0.643 best 0.685 bad 1
+    ground_grid seed2 ep32 valF1 0.684 best 0.685 bad 2
+    ground_grid seed2 ep33 valF1 0.681 best 0.685 bad 3
+    ground_grid seed2 ep34 valF1 0.700 best 0.700 bad 0
+    ground_grid seed2 ep35 valF1 0.725 best 0.725 bad 0
+    ground_grid seed2 ep36 valF1 0.704 best 0.725 bad 1
+    ground_grid seed2 ep37 valF1 0.702 best 0.725 bad 2
+    ground_grid seed2 ep38 valF1 0.721 best 0.725 bad 3
+    ground_grid seed2 ep39 valF1 0.717 best 0.725 bad 4
+    ground_grid seed2 ep40 valF1 0.727 best 0.727 bad 0
+    ground_grid seed2 ep41 valF1 0.719 best 0.727 bad 1
+    ground_grid seed2 ep42 valF1 0.721 best 0.727 bad 2
+    ground_grid seed2 ep43 valF1 0.741 best 0.741 bad 0
+    ground_grid seed2 ep44 valF1 0.727 best 0.741 bad 1
+    ground_grid seed2 ep45 valF1 0.725 best 0.741 bad 2
+    ground_grid seed2 ep46 valF1 0.731 best 0.741 bad 3
+    ground_grid seed2 ep47 valF1 0.733 best 0.741 bad 4
+    ground_grid seed2 ep48 valF1 0.731 best 0.741 bad 5
+    ground_grid seed2 ep49 valF1 0.735 best 0.741 bad 6
+    ground_grid seed2 ep50 valF1 0.731 best 0.741 bad 7
+    ground_grid seed2 ep51 valF1 0.741 best 0.741 bad 8
+    ground_grid seed2 ep52 valF1 0.734 best 0.741 bad 9
+    ground_grid seed2 ep53 valF1 0.739 best 0.741 bad 10
+training final ground_global (768px CLS+patch-mean) ...
+training final drone (224px CLS) ...
+
+final per-class fusion weights (w_grid, w_global, w_drone) and thresholds:
+              w_grid  w_global  w_drone  threshold
+Lupinus         0.80      0.10     0.10       0.62
+Balsamorhiza    0.50      0.10     0.40       0.53
+Gaillardia      0.80      0.10     0.10       0.60
+Achillea        1.00      0.00     0.00       0.62
+Euphorbia       0.50      0.20     0.30       0.42
+Sisymbrium      0.80      0.10     0.10       0.72
+Bromus          0.80      0.10     0.10       0.65
+Poa             0.90      0.10    -0.00       0.45
+
+=== HELD-OUT TEST RESULTS (n=1613) ===
+species                       AP   F1@0.5  F1@tuned
+Lupinus sericeus           0.880    0.821     0.843
+Balsamorhiza sagittata     0.943    0.878     0.877
+Gaillardia aristata        0.926    0.899     0.905
+Achillea millefolium       0.553    0.541     0.545
+Euphorbia virgata          0.745    0.611     0.707
+Sisymbrium altissimum      0.578    0.570     0.592
+Bromus tectorum            0.769    0.714     0.673
+Poa bulbosa                0.938    0.827     0.839
+MACRO                      0.791    0.733     0.748
+
+=== reference: CV results ===
+CV macro AP (3-way + tuned threshold): 0.824
+CV macro F1 @0.5: 0.767   @tuned: 0.771
+
+wrote results/test_eval.csv

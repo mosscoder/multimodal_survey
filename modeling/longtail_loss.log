@@ -1,0 +1,347 @@
+pool 6089  per fold [1111, 1241, 1454, 1067, 1216]
+per-frame patch means (one memmap pass) ...
+
+== fold 0  tr 4978  va 1111 ==
+    ep  0  live 9/9
+    ep  1  live 9/9
+    ep  2  live 9/9
+    ep  3  live 9/9
+    ep  4  live 9/9
+    ep  5  live 9/9
+    ep  6  live 9/9
+    ep  7  live 9/9
+    ep  8  live 9/9
+    ep  9  live 9/9
+    ep 10  live 9/9
+    ep 11  live 9/9
+    ep 12  live 9/9
+    ep 13  live 9/9
+    ep 14  live 9/9
+    ep 15  live 9/9
+    ep 16  live 9/9
+    ep 17  live 8/9
+    ep 18  live 8/9
+    ep 19  live 8/9
+    ep 20  live 8/9
+    ep 21  live 8/9
+    ep 22  live 8/9
+    ep 23  live 8/9
+    ep 24  live 8/9
+    ep 25  live 7/9
+    ep 26  live 7/9
+    ep 27  live 7/9
+    ep 28  live 7/9
+    ep 29  live 6/9
+    ep 30  live 6/9
+    ep 31  live 6/9
+    ep 32  live 6/9
+    ep 33  live 6/9
+    ep 34  live 6/9
+    ep 35  live 6/9
+    ep 36  live 6/9
+    ep 37  live 6/9
+    ep 38  live 6/9
+    ep 39  live 6/9
+    ep 40  live 6/9
+    ep 41  live 6/9
+    ep 42  live 6/9
+    ep 43  live 6/9
+    ep 44  live 6/9
+    ep 45  live 5/9
+    ep 46  live 5/9
+    ep 47  live 5/9
+    ep 48  live 5/9
+    ep 49  live 4/9
+    ep 50  live 4/9
+    ep 51  live 4/9
+    ep 52  live 4/9
+    ep 53  live 4/9
+    ep 54  live 4/9
+    ep 55  live 4/9
+    ep 56  live 4/9
+    ep 57  live 2/9
+    ep 58  live 2/9
+    ep 59  live 1/9
+
+== fold 1  tr 4848  va 1241 ==
+    ep  0  live 9/9
+    ep  1  live 9/9
+    ep  2  live 9/9
+    ep  3  live 9/9
+    ep  4  live 9/9
+    ep  5  live 9/9
+    ep  6  live 9/9
+    ep  7  live 9/9
+    ep  8  live 9/9
+    ep  9  live 9/9
+    ep 10  live 9/9
+    ep 11  live 9/9
+    ep 12  live 9/9
+    ep 13  live 9/9
+    ep 14  live 9/9
+    ep 15  live 9/9
+    ep 16  live 9/9
+    ep 17  live 9/9
+    ep 18  live 9/9
+    ep 19  live 9/9
+    ep 20  live 8/9
+    ep 21  live 8/9
+    ep 22  live 8/9
+    ep 23  live 8/9
+    ep 24  live 8/9
+    ep 25  live 8/9
+    ep 26  live 7/9
+    ep 27  live 7/9
+    ep 28  live 7/9
+    ep 29  live 7/9
+    ep 30  live 7/9
+    ep 31  live 7/9
+    ep 32  live 7/9
+    ep 33  live 7/9
+    ep 34  live 7/9
+    ep 35  live 7/9
+    ep 36  live 7/9
+    ep 37  live 7/9
+    ep 38  live 7/9
+    ep 39  live 7/9
+    ep 40  live 7/9
+    ep 41  live 7/9
+    ep 42  live 7/9
+    ep 43  live 7/9
+    ep 44  live 7/9
+    ep 45  live 7/9
+    ep 46  live 7/9
+    ep 47  live 7/9
+    ep 48  live 7/9
+    ep 49  live 7/9
+    ep 50  live 7/9
+    ep 51  live 6/9
+    ep 52  live 6/9
+    ep 53  live 6/9
+    ep 54  live 6/9
+    ep 55  live 6/9
+    ep 56  live 5/9
+    ep 57  live 5/9
+    ep 58  live 5/9
+    ep 59  live 5/9
+
+== fold 2  tr 4635  va 1454 ==
+    ep  0  live 9/9
+    ep  1  live 9/9
+    ep  2  live 9/9
+    ep  3  live 9/9
+    ep  4  live 9/9
+    ep  5  live 9/9
+    ep  6  live 9/9
+    ep  7  live 9/9
+    ep  8  live 9/9
+    ep  9  live 9/9
+    ep 10  live 9/9
+    ep 11  live 9/9
+    ep 12  live 9/9
+    ep 13  live 9/9
+    ep 14  live 8/9
+    ep 15  live 8/9
+    ep 16  live 8/9
+    ep 17  live 8/9
+    ep 18  live 8/9
+    ep 19  live 8/9
+    ep 20  live 8/9
+    ep 21  live 8/9
+    ep 22  live 8/9
+    ep 23  live 8/9
+    ep 24  live 8/9
+    ep 25  live 7/9
+    ep 26  live 7/9
+    ep 27  live 6/9
+    ep 28  live 6/9
+    ep 29  live 6/9
+    ep 30  live 6/9
+    ep 31  live 6/9
+    ep 32  live 6/9
+    ep 33  live 6/9
+    ep 34  live 6/9
+    ep 35  live 6/9
+    ep 36  live 6/9
+    ep 37  live 6/9
+    ep 38  live 6/9
+    ep 39  live 6/9
+    ep 40  live 6/9
+    ep 41  live 6/9
+    ep 42  live 6/9
+    ep 43  live 6/9
+    ep 44  live 6/9
+    ep 45  live 6/9
+    ep 46  live 5/9
+    ep 47  live 5/9
+    ep 48  live 5/9
+    ep 49  live 5/9
+    ep 50  live 5/9
+    ep 51  live 5/9
+    ep 52  live 5/9
+    ep 53  live 5/9
+    ep 54  live 5/9
+    ep 55  live 4/9
+    ep 56  live 4/9
+    ep 57  live 3/9
+    ep 58  live 3/9
+    ep 59  live 3/9
+
+== fold 3  tr 5022  va 1067 ==
+    ep  0  live 9/9
+    ep  1  live 9/9
+    ep  2  live 9/9
+    ep  3  live 9/9
+    ep  4  live 9/9
+    ep  5  live 9/9
+    ep  6  live 9/9
+    ep  7  live 9/9
+    ep  8  live 9/9
+    ep  9  live 9/9
+    ep 10  live 9/9
+    ep 11  live 9/9
+    ep 12  live 9/9
+    ep 13  live 9/9
+    ep 14  live 9/9
+    ep 15  live 9/9
+    ep 16  live 8/9
+    ep 17  live 8/9
+    ep 18  live 7/9
+    ep 19  live 7/9
+    ep 20  live 7/9
+    ep 21  live 6/9
+    ep 22  live 6/9
+    ep 23  live 6/9
+    ep 24  live 6/9
+    ep 25  live 6/9
+    ep 26  live 6/9
+    ep 27  live 5/9
+    ep 28  live 5/9
+    ep 29  live 4/9
+    ep 30  live 4/9
+    ep 31  live 4/9
+    ep 32  live 4/9
+    ep 33  live 4/9
+    ep 34  live 4/9
+    ep 35  live 4/9
+    ep 36  live 4/9
+    ep 37  live 4/9
+    ep 38  live 4/9
+    ep 39  live 4/9
+    ep 40  live 4/9
+    ep 41  live 4/9
+    ep 42  live 4/9
+    ep 43  live 4/9
+    ep 44  live 4/9
+    ep 45  live 4/9
+    ep 46  live 4/9
+    ep 47  live 4/9
+    ep 48  live 4/9
+    ep 49  live 4/9
+    ep 50  live 4/9
+    ep 51  live 4/9
+    ep 52  live 4/9
+    ep 53  live 4/9
+    ep 54  live 4/9
+    ep 55  live 4/9
+    ep 56  live 4/9
+    ep 57  live 4/9
+    ep 58  live 3/9
+    ep 59  live 3/9
+
+== fold 4  tr 4873  va 1216 ==
+    ep  0  live 9/9
+    ep  1  live 9/9
+    ep  2  live 9/9
+    ep  3  live 9/9
+    ep  4  live 9/9
+    ep  5  live 9/9
+    ep  6  live 9/9
+    ep  7  live 9/9
+    ep  8  live 9/9
+    ep  9  live 9/9
+    ep 10  live 9/9
+    ep 11  live 9/9
+    ep 12  live 9/9
+    ep 13  live 9/9
+    ep 14  live 9/9
+    ep 15  live 9/9
+    ep 16  live 9/9
+    ep 17  live 9/9
+    ep 18  live 9/9
+    ep 19  live 9/9
+    ep 20  live 9/9
+    ep 21  live 9/9
+    ep 22  live 9/9
+    ep 23  live 9/9
+    ep 24  live 9/9
+    ep 25  live 8/9
+    ep 26  live 8/9
+    ep 27  live 7/9
+    ep 28  live 7/9
+    ep 29  live 7/9
+    ep 30  live 6/9
+    ep 31  live 6/9
+    ep 32  live 6/9
+    ep 33  live 6/9
+    ep 34  live 5/9
+    ep 35  live 5/9
+    ep 36  live 5/9
+    ep 37  live 5/9
+    ep 38  live 5/9
+    ep 39  live 5/9
+    ep 40  live 5/9
+    ep 41  live 5/9
+    ep 42  live 5/9
+    ep 43  live 5/9
+    ep 44  live 5/9
+    ep 45  live 5/9
+    ep 46  live 5/9
+    ep 47  live 5/9
+    ep 48  live 5/9
+    ep 49  live 5/9
+    ep 50  live 5/9
+    ep 51  live 5/9
+    ep 52  live 5/9
+    ep 53  live 5/9
+    ep 54  live 5/9
+    ep 55  live 5/9
+    ep 56  live 5/9
+    ep 57  live 5/9
+    ep 58  live 5/9
+    ep 59  live 4/9
+bce_pos_weight s0    macroF1 0.722  macroAP 0.789  perfold 0.714+/-0.061
+bce_pos_weight s1    macroF1 0.728  macroAP 0.790  perfold 0.722+/-0.052
+bce_pos_weight s2    macroF1 0.684  macroAP 0.782  perfold 0.688+/-0.060
+bce_pos_weight ENS   macroF1 0.748  macroAP 0.807  perfold 0.736+/-0.036
+focal s0             macroF1 0.642  macroAP 0.737  perfold 0.667+/-0.114
+focal s1             macroF1 0.556  macroAP 0.698  perfold 0.622+/-0.095
+focal s2             macroF1 0.562  macroAP 0.713  perfold 0.641+/-0.116
+focal ENS            macroF1 0.732  macroAP 0.774  perfold 0.716+/-0.044
+asl s0               macroF1 0.513  macroAP 0.513  perfold 0.545+/-0.013
+asl s1               macroF1 0.524  macroAP 0.484  perfold 0.583+/-0.063
+asl s2               macroF1 0.476  macroAP 0.420  perfold 0.533+/-0.075
+asl ENS              macroF1 0.510  macroAP 0.627  perfold 0.558+/-0.056
+
+=== summary ===
+            config  macro_F1  macro_AP  perfold_F1  perfold_sd
+ bce_pos_weight s0     0.722     0.789       0.714       0.061
+ bce_pos_weight s1     0.728     0.790       0.722       0.052
+ bce_pos_weight s2     0.684     0.782       0.688       0.060
+bce_pos_weight ENS     0.748     0.807       0.736       0.036
+          focal s0     0.642     0.737       0.667       0.114
+          focal s1     0.556     0.698       0.622       0.095
+          focal s2     0.562     0.713       0.641       0.116
+         focal ENS     0.732     0.774       0.716       0.044
+            asl s0     0.513     0.513       0.545       0.013
+            asl s1     0.524     0.484       0.583       0.063
+            asl s2     0.476     0.420       0.533       0.075
+           asl ENS     0.510     0.627       0.558       0.056
+
+=== per-class AP (seed ensemble) ===
+            config  serice  sagitt  arista  millef  virgat  altiss  tector  bulbos
+bce_pos_weight ENS   0.936   0.898   0.880   0.756   0.386   0.846   0.821   0.932
+         focal ENS   0.924   0.876   0.862   0.717   0.250   0.833   0.801   0.929
+           asl ENS   0.909   0.863   0.860   0.660   0.069   0.260   0.621   0.776
+
+wrote results/longtail_loss.csv
