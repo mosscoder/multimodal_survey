@@ -7,11 +7,23 @@ authors:
   - family-names: Doherty
     given-names: Kyle
     affiliation: MPG Ranch
-  # TODO: add remaining contributors (field crew, drone pilot, engineering)
-  - name: "TODO: additional authors"
+  - family-names: Stam
+    given-names: Nicholas
+    affiliation: MPG Ranch
+  - family-names: Salakhutdinov
+    given-names: Paul
+  - family-names: Samsoe
+    given-names: Erik
+    affiliation: MPG Ranch
+  - family-names: Casper
+    given-names: Charles
+    affiliation: MPG Ranch
+  - family-names: Salakhutdinov
+    given-names: Ruslan
+    affiliation: Carnegie Mellon University
 repository: "https://github.com/mosscoder/multimodal_survey"
 url: "https://huggingface.co/datasets/mpg-ranch/multimodal-survey"
-date-released: 2026-08-11
+date-released: 2026-10-23
 keywords:
   - grassland
   - plant species classification

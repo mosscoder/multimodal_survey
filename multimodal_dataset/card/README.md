@@ -20,15 +20,15 @@ Can seeing a plant from the ground *and* from the air improve automated species
 identification? Paired ground-level and overhead imagery of Montana grassland,
 hand-labeled for 8 plant species, built to answer that question.
 
-**8,287** labeled frames · **8** target species · **2** sites, 9 strips ·
-**1.4 cm** RTK accuracy · **1.28 cm** drone GSD · **34** columns
+**8,287** labeled ground images · **8** target species · **2** sites, 9 strips ·
+**1.4 cm** RTK accuracy · **1.30 cm** drone GSD · **33** columns
 
-![Animated robot photographs beside their paired drone crops along one survey leg](images/sample_pairs_animation.gif)
+![Animated ground images beside their paired drone images along one leg](images/sample_pairs_animation.gif)
 
-Thirty five consecutive capture positions along one survey leg. The robot
-photograph is on the left. Its paired 4 m by 4 m drone crop is on the right,
-rotated so the robot's bearing points up, with the antenna position in yellow
-and a 1 m scale bar.
+Thirty five consecutive capture positions along one leg. The ground image is
+on the left. Its paired 4 m by 4 m drone image is on the right, rotated so the
+robot's bearing points up, with the antenna position in yellow and a 1 m scale
+bar.
 
 ## 1. Contents and motivation
 
@@ -39,30 +39,31 @@ looking straight down sees the spatial arrangement of vegetation clearly, but
 flattens the very structure that distinguishes one species from another. Each
 view holds information the other lacks. This dataset exists to test whether
 combining them improves species classification over either alone. A
-four-legged robot walked parallel transects across two grassland sites at MPG
-Ranch in western Montana, photographing the vegetation ahead of it every
-meter, with each camera position surveyed to centimeter accuracy. A drone
-photographed the same ground from above, usually within a few hours of the
-walk and always within a day, and its imagery was stitched into a seamless
-overhead map. Every row of the dataset pairs one ground-level photograph with
-the 4 × 4 m patch of overhead imagery directly in front of the robot at that
-moment. A botanist reviewed every one of the 8,287 frames for the presence of
-eight target species (four native wildflowers and four invasive weeds) and, in
-a separate pass, graded each image's quality. Each transect was covered twice,
-from the ground and the air alike, so the same vegetation appears under two
-different sets of field conditions.
+four-legged robot walked lawnmower patterns of parallel legs, nine strips in
+all, across two grassland sites at MPG Ranch in western Montana, photographing
+the vegetation ahead of it every meter, with each capture position surveyed to
+centimeter accuracy. A drone photographed the same ground from above, usually
+within a few hours of the capture event and always within a day, and its
+imagery was stitched into a seamless overhead map. Every row of the dataset
+pairs one ground image with the 4 × 4 m drone image of the ground directly in
+front of the robot at that moment. A botanist reviewed every one of the 8,287
+ground images for the presence of eight target species (four native
+wildflowers and four invasive weeds) and, in a separate pass, graded each
+image's quality. Each strip was covered twice, from the ground and the air
+alike, so the same vegetation appears under two different sets of field
+conditions.
 
 ### Features
 
 | Feature | Type | Notes |
 |---|---|---|
 | **Identity & imagery** | | |
-| `frame_id` | string | Capture stem: the join key and the source file name |
-| `ground_image` | Image | The robot photograph: 1280×720 JPEG, ground-level, near-horizontal, wide-angle |
-| `drone_image` | Image | Paired nadir orthomosaic crop, 4 × 4 m at 1.28 cm GSD → 312×312 px, cut at the frame's RTK antenna position. The orthomosaics were rectified against surveyed ground-control points at both sites, so crop placement and robot positions share a common geodetic frame |
+| `frame_id` | string | Capture stem, the join key and the source file name |
+| `ground_image` | Image | The robot's camera view as a 1280×720 JPEG, near-horizontal, wide-angle |
+| `drone_image` | Image | The paired nadir drone image, 308×308 px at exactly 1.30 cm per pixel, cropped from the flight's orthomosaic with the row's RTK antenna position at its bottom-edge midpoint and the bearing pointing up. Each pixel is interpolated once, bilinearly, from the orthomosaic at its native pixel size. The orthomosaics were rectified against surveyed ground-control points at both sites, so drone image placement and robot positions share a common geodetic frame |
 | **Labels** | | |
 | `species` | Sequence(ClassLabel) | Which of the 8 target species are present. Variable length 0 to 6. Empty means reviewed and none present |
-| `artifact_level` | ClassLabel(4) | Share of the frame degraded by video decoder artifacts, in quartile bands |
+| `artifact_level` | ClassLabel(4) | Share of the ground image degraded by video decoder artifacts, in four quartile levels numbered 0 to 3 (`0-25%`, `25-50%`, `50-75%`, `75-100%`) |
 | **Where** | | |
 | `site` | string | `site_1` or `site_2` |
 | `strip` | string | `strip_1` … `strip_5` within a site |
@@ -71,50 +72,49 @@ different sets of field conditions.
 | `altitude_ellipsoidal_m` | float64 | Ellipsoidal height of the **GNSS antenna**, 1178 to 1200 m. The antenna rides above the ground surface |
 | `accuracy_horizontal_m` | float64 | Receiver-reported, 1.4 to 1.7 cm. Trustworthy where `fix_type` is 6 |
 | `accuracy_vertical_m` | float64 | 1.0 to 1.7 cm, same caveat |
-| `fix_type` | int8 | GNSS solution state at the shutter: 6 (RTK fixed) on 8,285 frames, 5 (RTK float) on 2. The two float frames report the same centimeter accuracy, which is optimistic. This column is the honest flag |
+| `fix_type` | int8 | GNSS solution state at the shutter, 6 (RTK fixed) on 8,285 ground images and 5 (RTK float) on 2. The two float rows report the same centimeter accuracy, which is optimistic. This column is the honest flag |
 | `pdop` | float64 | Position dilution of precision, 0.88 to 1.25 across the release |
 | `satellites_used` | int8 | Satellites in the solution, 23 to 32 |
 | `bearing_deg` | float64 | Post-processed from the RTK track. Matches the image's EXIF `GPSImgDirection` |
-| `footprint_wkt` | string | The crop outline on the ground: a WKT polygon in WGS84 lon/lat, corners ordered antenna-left, antenna-right, front-right, front-left. For map overlay and spatial joins. Re-cropping the image itself needs no geometry (section 2) |
+| `footprint_wkt` | string | The 4 × 4 m footprint on the ground as a WKT polygon in WGS84 lon/lat, corners ordered antenna-left, antenna-right, front-right, front-left. This is the square the split rule and the overlap columns use. The drone image's 308 pixel grid at 1.30 cm spans 4.004 m, 4 mm past the footprint's far and side edges. For map overlay and spatial joins. Re-cropping the image itself needs no geometry (section 2) |
 | **When** | | |
-| `ground_captured_at` | string | Shutter instant of the robot frame, ISO 8601 with offset |
-| `drone_captured_at` | string | The median source-photo timestamp of the flight that produced this row's `drone_image`, from the PPK camera log. The mosaic is a composite, so its center-of-mass in time stands in for an instant. Flights ran 5.5 to 19.6 min |
-| `capture_offset_absolute` | float64 | Hours from `drone_captured_at` to `ground_captured_at`, signed. Positive means the ground frame came after the flight median. Median 1.16 h, max 20.29 h |
-| `capture_offset_time_of_day` | float64 | The same offset with the date discarded: clock-time difference only, wrapped to ±12 h. Median 1.16 h, max 4.35 h |
-| `capture_event` | int8 | Visit ordinal per (site, strip), 1 or 2. See the caveat below |
-| `mission_restart_utc` | string, nullable | Set only on the 31 frames captured after a 17.7 h mid-run resume, and null elsewhere |
+| `ground_captured_at` | string | Shutter instant of the ground image, ISO 8601 with offset |
+| `drone_captured_at` | string | The median source-photograph timestamp of the flight that produced this row's `drone_image`, from the PPK camera log. The mosaic is a composite, so its center-of-mass in time stands in for an instant. Flights ran 5.5 to 19.6 min |
+| `capture_offset_absolute` | float64 | Hours from `drone_captured_at` to `ground_captured_at`, signed. Positive means the ground image came after the flight median. Median 1.16 h, max 20.29 h |
+| `capture_offset_time_of_day` | float64 | The same offset with the date discarded, the clock-time difference only, wrapped to ±12 h. Median 1.16 h, max 4.35 h |
+| `capture_event` | int8 | Capture event ordinal per (site, strip), 1 or 2. See the caveat below |
+| `mission_restart_utc` | string, nullable | Set only on the 31 ground images captured after a 17.7 h mid-run resume, and null elsewhere |
 | **Cross-event pair** | | |
-| `pair_frame_id` | string, nullable | `frame_id` of the frame at the same (leg, mark) in the strip's other capture event, and null on the 153 frames whose mark was walked only once |
-| `pair_distance_m` | float64, nullable | Antenna separation between the paired captures: median 0.10 m, 95th percentile 0.33 m, max 2.12 m |
-| `pair_overlap_fraction` | float64, nullable | Share of this 4 m crop covered by the paired frame's crop |
-| `pair_offset_hours` | float64, nullable | Time between the paired captures: 3.0 to 3.4 h at `site_2`, 48 to 71 h at `site_1` |
-| **Along the transect** | | |
-| `leg` | string | `leg01` to `leg13`. Odd legs are survey lines, even legs the turns between them |
-| `along_leg_m` | float64 | **Nominal** grid position, 0 to 150 m. True position is ~3.5 cm off (median). Use lat/lon when precision matters |
-| `frame_offset_s` | float64 | Shutter offset from the intended 1 m mark, the only per-frame record of timing jitter |
+| `pair_frame_id` | string, nullable | `frame_id` of the ground image at the same (leg, mark) in the strip's other capture event, and null on the 153 rows whose mark was walked only once |
+| `pair_distance_m` | float64, nullable | Antenna separation between the paired capture positions, median 0.10 m, 95th percentile 0.33 m, max 2.12 m |
+| `pair_overlap_fraction` | float64, nullable | Share of this row's footprint covered by the paired row's footprint |
+| `pair_offset_hours` | float64, nullable | Time between the paired captures, 3.0 to 3.4 h at `site_2` and 48 to 71 h at `site_1` |
+| **Along the strip** | | |
+| `leg` | string | `leg01` to `leg13`. Odd legs are the straight lines of the strip, even legs the turns between them |
+| `along_leg_m` | float64 | Nominal position along the leg, 0 to 150 m, counted from the leg's start waypoint on every row (the 31 rows after the mid-run resume included). The capture position lies a median 19.4 cm from its planned mark (95th percentile 40.2 cm, maximum 2.45 m). Use lat/lon when precision matters |
+| `frame_offset_s` | float64 | Shutter offset from the intended 1 m mark, the only per-row record of timing jitter |
 | `speed_mps` | float64 | 0 to 1.46 m/s |
 | **Provenance & split** | | |
 | `run_id` | string | e.g. `strip_3_2026-06-16_11-29-48`. Links a row back to the source repository's `missions/` tree |
-| `tier2_overlap_fraction` | float64, nullable | Share of this crop shared with a test crop. Populated on `train_tier_2` rows only |
-| `drone_coverage` | float64 | Fraction of the 4 m crop that falls inside its flight's imagery footprint. 1.0 for all but 33 frames at `site_1/strip_5`'s western terminus (14 on event 1, 19 on event 2), where it drops as low as 0.08. All 33 are train or connector frames. The test leg is fully covered on both flights |
+| `tier2_overlap_fraction` | float64, nullable | Share of this row's footprint shared with test footprints. Populated on `train_tier_2` rows only |
 
 ### The two capture events
 
-Every strip was walked twice, and each walk is paired with its own drone
-flight. No two passes see the same conditions. Even at the same clock time,
-illumination, cloud, wind, and plant posture all differ. The two events are
-best read as **two independent condition samples** of the same ground rather
-than a controlled contrast. The interval between them differs by site, and the
-repeat is spatial rather than exact.
+Every strip was walked twice, and each capture event is paired with its own
+drone flight. No two capture events see the same conditions. Even at the same
+clock time, illumination, cloud, wind, and plant posture all differ. The two
+capture events are best read as **two independent condition samples** of the
+same ground rather than a controlled contrast. The interval between them
+differs by site, and the repeat is spatial rather than exact.
 
-| Site | Interval between the two events | Character |
+| Site | Interval between the two capture events | Character |
 |---|---|---|
-| `site_2` | 3.0 to 3.4 h, same day | Morning and afternoon walks of the same strip, a within-day contrast |
-| `site_1` | 48 to 71 h | A revisit two to three days later. Strips 1 and 5 were re-walked at nearly the same time of day |
+| `site_2` | 3.0 to 3.4 h, same day | Morning and afternoon capture events of the same strip, a within-day contrast |
+| `site_1` | 48 to 71 h | A second capture event two to three days later. Strips 1 and 5 were re-walked at nearly the same time of day |
 
-The robot follows the same nominal 1 m grid on both passes, but it does not
-land in the same place twice. Matching `leg` and mark across the two events,
-the antenna positions differ by:
+The robot follows the same nominal 1 m grid in both capture events, but it
+does not land in the same place twice. Matching `leg` and mark across the two
+capture events, the antenna positions differ by the amounts below.
 
 | Separation at the same (leg, mark) | Value |
 |---|---|
@@ -130,148 +130,125 @@ the antenna positions differ by:
 
 A (leg, mark) pair therefore marks the same neighborhood revisited rather than
 a fixed quadrat. 4,067 marks appear in both capture events. The remaining 153
-appear in only one, where a frame was skipped on one pass. Per strip the
-medians run 6.8 to 14.9 cm and the worst single case is 2.12 m on
+appear in only one, where a ground image was skipped in one capture event. Per
+strip the medians run 6.8 to 14.9 cm and the worst single case is 2.12 m on
 `site_2/strip_1`. That is close enough to treat the pair as the same patch of
 vegetation and too loose to treat it as a fixed plot. The pairing is recorded
-on every row. `pair_frame_id` identifies the counterpart frame, and
+on every row. `pair_frame_id` identifies the counterpart ground image, and
 `pair_distance_m`, `pair_overlap_fraction`, and `pair_offset_hours` quantify
 the separation.
 
 ### The flights
 
-| Flight | Paired with | Photos per sensor | Duration | Median capture (UTC) | GCP RMSE (horizontal) | RGB GSD |
+| Flight | Paired with | Source photographs per sensor | Duration | Median capture (UTC) | GCP RMSE (horizontal) | GSD |
 |---|---|---|---|---|---|---|
-| 260616-site-1-am | `site_1` event 1 | 295 | 19.6 min | 18:02:05 | 3.14 cm | 1.28 cm |
-| 260617-site-2-am | `site_2` event 1 | 154 | 5.5 min | 17:04:07 | 3.22 cm | 1.28 cm |
-| 260617-site-2-pm | `site_2` event 2 | 147 | 5.5 min | 20:23:59 | 1.94 cm | 1.28 cm |
-| 260618-site-1-pm | `site_1` event 2 | 265 | 9.9 min | 20:33:34 | 1.83 cm | 1.28 cm |
+| 260616-site-1-am | `site_1` event 1 | 295 | 19.6 min | 18:02:05 | 3.29 cm | 1.30 cm |
+| 260617-site-2-am | `site_2` event 1 | 154 | 5.5 min | 17:04:07 | 3.22 cm | 1.30 cm |
+| 260617-site-2-pm | `site_2` event 2 | 147 | 5.5 min | 20:23:59 | 1.94 cm | 1.30 cm |
+| 260618-site-1-pm | `site_1` event 2 | 265 | 9.9 min | 20:33:34 | 1.78 cm | 1.30 cm |
 
-All four flights flew the same plan: identical footprints per site, 9 m photo
-spacing, matching altitude. The first flight of the campaign ran at 2.2 m/s,
-half the 4.4 m/s of the other three, which is the whole story behind its
-longer duration; photo spacing and overlap are unaffected. Timestamps come
+All four flights flew the same plan, with identical extents per site, 9 m
+photo spacing, and matching altitude. The first flight of the campaign ran at
+2.2 m/s, half the 4.4 m/s of the other three, which is the whole story behind
+its longer duration. Photo spacing and overlap are unaffected. Timestamps come
 from the PPK camera logs (GPS time corrected for leap seconds). Five
 ground-control targets per site, at the four corners and the center, anchored
 the orthomosaic rectification. Each flight's DroneDeploy processing report
 located all five, and GCP RMSE is the horizontal RMS residual computed from
-the per-point X and Y errors in that report. The reports sit beside the
-orthomosaics on Google Cloud Storage.
+the per-point X and Y errors in that report. GSD is the sensor's ground sample
+distance at the flight altitude, and every drone image is gridded at exactly
+that pitch. The delivered site 1 orthomosaics are gridded at 1.30 cm per pixel
+and the site 2 orthomosaics at 1.28 cm, and the build interpolates each drone
+image pixel once, bilinearly, from the native raster.
 
 ## 2. Paired examples
 
-The left column shows the robot's ground-level photograph. The right column
-shows the orthomosaic crop for the same frame, rotated so the robot's bearing
-points up, with the antenna at the bottom-edge midpoint (yellow).
+The left column shows the ground image. The right column shows the drone
+image for the same row, rotated so the robot's bearing points up, with the
+antenna at the bottom-edge midpoint (yellow).
 
-![Robot frames beside their paired nadir drone crops](images/paired_examples.jpg)
+![Ground images beside their paired nadir drone images](images/paired_examples.jpg)
 
 The nadir view is mostly bare ground with discrete plants. The robot's oblique
 view foreshortens the same scene into apparently continuous cover. Both are
 accurate. A ground-level camera simply stacks many meters of vegetation into a
 few degrees of elevation.
 
-> **The drone crop is its own coordinate system.** Rows are meters ahead of
-> the antenna, columns are meters to the side, and one pixel is 4/312 m
-> (1.28 cm), so any smaller or repositioned crop is plain array slicing with
-> no projection or rotation math (code in section 5). The `footprint_wkt`
-> column places the same square on a map for GIS work. Image work never needs
-> it.
+> **The drone image is its own coordinate system.** Rows are meters ahead of
+> the antenna, columns are meters to the side, and one pixel is exactly
+> 1.30 cm (308 pixels span 4.004 m), so any smaller or repositioned window is
+> plain array slicing with no projection or rotation math (code in section 5).
+> The `footprint_wkt` column places the 4 m footprint on a map for GIS work.
+> Image work never needs it.
 
 ## 3. Splits
 
-The split follows a single rule. **The test set is an outermost leg of every
-strip**, `leg01` in eight of the nine and `leg13` in `site_1/strip_5` for the
-reason below. The assignment was made on geometry and imagery coverage, never
-on the labels. Every other frame is a training candidate. Because both capture
-events walk the same legs, the split groups them automatically, so the same
-ground never straddles the train/test boundary.
+The split follows a single rule. **The test split is an outermost leg of every
+strip**, `leg01` in eight of the nine strips and `leg13` in `site_1/strip_5`,
+a choice made before the strip's western terminus was recovered in the
+orthomosaics, and the published split is retained. The assignment was made on
+geometry, never on the labels. Every other row is a training candidate.
+Because both capture events walk the same legs, the split groups them
+automatically, so the same ground never straddles the train/test boundary.
 
-| Split | Frames | Share | Definition |
+| Split | Rows | Share | Definition |
 |---|---|---|---|
-| `train` | 6,480 | 78.2% | Zero crop overlap with any test frame |
+| `train` | 6,480 | 78.2% | Zero drone image overlap with any test row |
 | `test` | 1,613 | 19.5% | The outermost leg of all 9 strips, both capture events |
-| `train_tier_2` | 194 | 2.3% | Its 4 m crop intersects a test crop. Inclusion is optional |
+| `train_tier_2` | 194 | 2.3% | Its drone image intersects a test drone image. Inclusion is optional |
 
-![Site 1: every capture colored by split](images/site_1_splits.jpg)
-![Site 2: every capture colored by split](images/site_2_splits.jpg)
+![Site 1: every capture position colored by split](images/site_1_splits.jpg)
+![Site 2: every capture position colored by split](images/site_2_splits.jpg)
 
-Every capture, colored by split, over the site's own orthomosaic. The red test
-legs sit on the outside of each strip. The orange tier-2 frames hug them. At
-site 1, S5's test leg is on its eastern side rather than its western one. See
-below. At site 2, S3's test leg runs alongside S2. The strips abut, which is
+Every capture position, colored by split, over the site's own orthomosaic.
+The red test legs sit on the outside of each strip. The orange tier-2 rows hug
+them. At site 1, S5's test leg is on its eastern side rather than its western
+one. At site 2, S3's test leg runs alongside S2. The strips abut, which is
 where the cross-strip overlaps come from.
-
-### Why `site_1/strip_5` uses `leg13`
-
-That strip's `leg01` runs off the western edge of both flights' footprints.
-Fourteen frames are clipped against the 06-16 ortho and 19 against the 06-18
-ortho, some retaining as little as 8% of their 16 m². A test frame missing
-most of its aerial context is a degraded evaluation point, so the test leg
-moves to the strip's other outermost leg, `leg13`, which is fully covered on
-**both** flights.
-
-![site_1/strip_5 western terminus against the flight footprint](images/strip5_terminus.jpg)
-
-The clipping follows from **position** rather than heading. `leg01` heads east
-and is clipped at its *start*. `leg03` heads west and is clipped at its *end*.
-Both meet the same patch of ground at the strip's western terminus, where the
-footprint edge cuts diagonally. Only these two legs and the `leg04` turn are
-affected. Legs 05 through 13 are fully covered, and site 2 is clean
-throughout.
-
-> **The 33 clipped frames do not disappear.** They sit in train or on
-> connector turns, where a partial aerial crop is far less damaging than in an
-> evaluation set, and each carries its true footprint fraction in
-> `drone_coverage`. Coverage has been validated against **all four flights**
-> at native resolution. Clipping is confined to `site_1/strip_5`'s western
-> terminus on both of its flights (the 06-18 footprint cuts slightly deeper,
-> reaching legs 07 through 11). Site 2 is clean throughout, and the `leg13`
-> test leg is fully covered everywhere.
 
 ### Why `train_tier_2` exists
 
-Adjacent survey legs are 4.1 to 5.3 m apart, and a 4 m crop reaches 2.0 m
+Adjacent legs are 4.1 to 5.3 m apart, and a 4 m drone image reaches 2.0 m
 laterally, and further once the bearing wanders off the leg axis. So a small
-number of training crops cover ground that also appears in a test crop. Rather
-than delete them, they are labeled and set aside.
+number of training drone images cover ground that also appears in a test
+drone image. Rather than delete them, they are labeled and set aside.
 
-| Leg | Frames | Why it lands in tier 2 |
+| Leg | Rows | Why it lands in tier 2 |
 |---|---|---|
-| `leg03` | 126 | The survey leg adjacent to a `leg01` test leg |
-| `leg02` | 44 | The turn joining `leg01` to `leg03`, whose ground comes within 0.21 m of the test leg. Only 42% of the 106 turn frames qualify. The rest stay in clean train |
+| `leg03` | 126 | The leg adjacent to a `leg01` test leg |
+| `leg02` | 44 | The turn joining `leg01` to `leg03`, whose ground comes within 0.21 m of the test leg. Only 42% of the 106 turn rows qualify. The rest stay in clean train |
 | `leg12`, `leg10` | 16 | `site_1/strip_5`: the neighbors of its `leg13` test leg |
 | `leg05`, `leg09` | 8 | `site_2/strip_2`. Its legs run alongside `strip_3`'s test leg where the two strips abut |
 
-> **The zero-overlap guarantee applies to the drone crops only.** The ground
-> camera is oblique and wide-angle. A train frame on `leg03` photographs
-> test-leg terrain 5 m away in essentially every frame, at distance and
+> **The zero-overlap guarantee applies to the drone images only.** The ground
+> camera is oblique and wide-angle. A train ground image on `leg03` shows
+> test-leg terrain 5 m away in essentially every case, at distance and
 > foreshortened. That ground-modality leakage is inherent to the survey
 > geometry and is not quantified. The guarantee is limited to the aerial
-> modality. No **4 m drone crop** in `train` shares any ground with a test
-> crop.
+> modality. No drone image in `train` shares any ground with a test drone
+> image.
 
 > **Training on `train` alone is exactly clean in the aerial modality**,
-> verified by polygon intersection over every crop pair rather than a distance
-> heuristic. Adding `train_tier_2` puts 2.50% of the evaluated pixels on
-> ground the model has seen, touching 213 of the 1,613 test crops.
+> verified by polygon intersection over every pair of footprints rather than a
+> distance heuristic. Adding `train_tier_2` puts 2.50% of the evaluated pixels
+> on ground the model has seen, touching 213 of the 1,613 test drone images.
 > `tier2_overlap_fraction` supports partial inclusion. The median is 4.5% and
-> the maximum 62.6%, so a threshold recovers most of those frames while
-> leaving the worst behind. This matters most for *Euphorbia virgata*, the
-> rarest class, which has 11 of its 123 training positives in tier 2.
+> the maximum 62.6%, so a threshold recovers most of those rows while leaving
+> the worst behind. This matters most for *Euphorbia virgata*, the rarest
+> class, which has 11 of its 123 training positives in tier 2.
 
 ## 4. Labels
 
 Eight target species, four wildflowers and four weeds, labeled by presence in
-the frame. Labels were assigned from a blank slate, with nothing pre-checked
-and no model predictions shown, by a **single annotator per task** (one for
-species, one for `artifact_level`). No inter-annotator agreement data exists.
-A frame with an empty list was reviewed and had no target present (23% of
-frames).
+the ground image. Labels were assigned from a blank slate, with nothing
+pre-checked and no model predictions shown, by a **single annotator per task**
+(one for species, one for `artifact_level`). No inter-annotator agreement data
+exists. A ground image with an empty list was reviewed and had no target
+present (23% of ground images).
 
 ![Species positives per split](images/species_per_split.jpg)
 
-| Species | Common name | Group | train | test | tier 2 | total | of all frames |
+| Species | Common name | Group | train | test | tier 2 | total | of all ground images |
 |---|---|---|---|---|---|---|---|
 | *Lupinus sericeus* | silky lupine | wildflower | 1,331 | 209 | 39 | 1,579 | 19.1% |
 | *Balsamorhiza sagittata* | arrowleaf balsamroot | wildflower | 618 | 245 | 24 | 887 | 10.7% |
@@ -282,48 +259,53 @@ frames).
 | *Bromus tectorum* | cheatgrass | weed | 444 | 140 | 13 | 597 | 7.2% |
 | *Poa bulbosa* | bulbous bluegrass | weed | 3,664 | 1,090 | 105 | 4,859 | 58.6% |
 
-> **The class balance is steep.** *Poa bulbosa* appears in 58.6% of frames and
-> *Euphorbia virgata* in 2.1%, a 28× spread. Frames carry 0 to 6 species at
-> once (median 1), which is why `species` is a variable-length list rather
-> than a fixed multi-hot vector.
+> **The class balance is steep.** *Poa bulbosa* appears in 58.6% of ground
+> images and *Euphorbia virgata* in 2.1%, a 28× spread. Ground images carry 0
+> to 6 species at once (median 1), which is why `species` is a variable-length
+> list rather than a fixed multi-hot vector.
 
 A machine-readable species table ships beside the data as
 [`species.csv`](species.csv) (genus, species, common name).
 
 ### Image quality
 
-A second annotation pass graded every frame for the share degraded by video
-decoder artifacts. The robot delivers its camera feed as an H.264 stream over
-WebRTC, and packets lost on the wireless link leave the decoder to conceal the
-missing data with content from earlier frames, which produces blocky or
-smeared regions. The distribution is U-shaped rather than graded.
+A second annotation pass graded every ground image for the share degraded by
+video decoder artifacts, in four quartile levels numbered 0 to 3 (0-25%,
+25-50%, 50-75%, and 75-100% of the image). The robot delivers its camera feed
+as an H.264 stream over WebRTC, and packets lost on the wireless link leave the
+decoder to conceal the missing data with content from earlier video frames,
+which produces blocky or smeared regions. The distribution is U-shaped rather
+than graded.
 
 ![artifact_level distribution by split](images/artifact_levels.jpg)
 
-> **The robot's own corruption flag is uninformative here.** Every frame
-> reports `corrupt = false`, including all 1,304 frames a human graded as
-> band 4. To select clean imagery, filter on `artifact_level`.
+> **The robot's own corruption flag is uninformative here.** Every ground
+> image reports `corrupt = false`, including all 1,304 a human graded at
+> level 3 (75-100% degraded). To select clean imagery, filter on
+> `artifact_level`.
 
 ### Suggested metric
 
-Report a one-vs-all F1 per species plus their macro average. With the class
-balance above, a single pooled number hides exactly the classes this dataset
-is hardest on.
+Report the average precision per species, the area under its one-against-all
+precision-recall curve, plus the macro average over the eight species. With
+the class balance above, a single pooled number hides exactly the classes
+this dataset is hardest on, and average precision needs no decision
+threshold.
 
 ```python
 import numpy as np
-from sklearn.metrics import f1_score
+from sklearn.metrics import average_precision_score
 
-# y_true, y_pred: (n_frames, 8) binary arrays in the canonical class order
-per_species = f1_score(y_true, y_pred, average=None)
-macro = f1_score(y_true, y_pred, average="macro")
-for name, f1 in zip(CLASSES, per_species):
-    print(f"{name:24s} {f1:.3f}")
+# y_true: (n_rows, 8) binary array in the canonical class order
+# y_score: (n_rows, 8) predicted scores or probabilities, same order
+per_species = average_precision_score(y_true, y_score, average=None)
+macro = average_precision_score(y_true, y_score, average="macro")
+for name, ap in zip(CLASSES, per_species):
+    print(f"{name:24s} {ap:.3f}")
 print(f"{'macro average':24s} {macro:.3f}")
 ```
 
-Choosing a decision threshold per species is part of the task. Use the
-provided splits as-is so results stay comparable.
+Use the provided splits as-is so results stay comparable.
 
 ## 5. Loading the dataset
 
@@ -333,15 +315,15 @@ provided splits as-is so results stay comparable.
 # pip install datasets
 from datasets import load_dataset
 
-# the clean training split: 6,480 frames, zero test-crop overlap
+# the clean training split: 6,480 ground images, zero test overlap in the drone images
 train = load_dataset("mpg-ranch/multimodal-survey", split="train")
 test  = load_dataset("mpg-ranch/multimodal-survey", split="test")
 
 row = train[0]
-row["ground_image"]  # PIL.Image, 1280x720: the robot photograph
-row["drone_image"]   # PIL.Image, 312x312: 4x4 m nadir crop, bearing up
-row["species"]       # ['Lupinus sericeus', 'Poa bulbosa']
-row["artifact_level"]# 0  (band 1: 0-25% of the frame degraded)
+row["ground_image"]  # PIL.Image, 1280x720: the ground image
+row["drone_image"]   # PIL.Image, 308x308: the 4 m nadir drone image, bearing up
+row["species"]       # [0, 7]  (class ids, see the multi-hot snippet below)
+row["artifact_level"]# 0  (level 0: 0-25% of the ground image degraded)
 ```
 
 ### Species labels to a multi-hot vector
@@ -363,17 +345,17 @@ train = train.map(multi_hot, batched=True)
 ### Filtering
 
 ```python
-# drop the heavily degraded frames (band 4)
-BANDS = train.features["artifact_level"].names
-clean = train.filter(lambda r: r["artifact_level"] != BANDS.index("75-100%"))
+# drop the heavily degraded ground images (level 3)
+LEVELS = train.features["artifact_level"].names
+clean = train.filter(lambda r: r["artifact_level"] != LEVELS.index("75-100%"))
 
-# ground frames captured close in time to their drone imagery
+# ground images captured close in time to their drone imagery
 tight = train.filter(lambda r: abs(r["capture_offset_time_of_day"]) < 1.0)
 
 # one site, one capture event
 morning = train.filter(lambda r: r["site"] == "site_2" and r["capture_event"] == 1)
 
-# frames where a particular species is present
+# rows where a particular species is present
 spurge = train.filter(lambda r: CLASSES.index("Euphorbia virgata") in r["species"])
 ```
 
@@ -383,7 +365,7 @@ spurge = train.filter(lambda r: CLASSES.index("Euphorbia virgata") in r["species
 # all 194 of them: accepts 2.50% evaluated-pixel contamination
 t2 = load_dataset("mpg-ranch/multimodal-survey", split="train_tier_2")
 
-# or only the mildly-overlapping ones, e.g. under 10% of the crop shared
+# or only the mildly-overlapping ones, e.g. under 10% of the drone image shared
 t2_mild = t2.filter(lambda r: r["tier2_overlap_fraction"] < 0.10)
 
 from datasets import concatenate_datasets
@@ -397,10 +379,10 @@ import torch
 from torchvision.transforms.functional import to_tensor
 
 def collate(batch):
-    # the robot frame is oblique and wide-angle. The crop is nadir and metric.
+    # the ground image is oblique and wide-angle. The drone image is nadir and metric.
     # They cover overlapping ground but are NOT pixel-registered to each other.
     robot = torch.stack([to_tensor(b["ground_image"].resize((640, 360))) for b in batch])
-    drone = torch.stack([to_tensor(b["drone_image"]) for b in batch])   # 3x312x312
+    drone = torch.stack([to_tensor(b["drone_image"]) for b in batch])   # 3x308x308
     y     = torch.tensor(np.stack([b["labels"] for b in batch]), dtype=torch.float32)
     return robot, drone, y
 
@@ -410,32 +392,32 @@ loader = torch.utils.data.DataLoader(train, batch_size=32, collate_fn=collate)
 ### Re-cropping the drone image
 
 ```python
-# the crop is a metric chart: rows are meters ahead of the antenna, columns meters left.
+# the drone image is a metric chart: rows are meters ahead of the antenna, columns meters left.
 # A smaller or shifted window is array slicing. No projection knowledge is needed.
-N, S = 312, 4.0
-PX = N / S                                      # 78 px per meter
+N, P = 308, 0.0130                              # pixels per side, meters per pixel
+PX = 1 / P                                      # 76.9 px per meter
 
 def sub_crop(drone_image, ahead, left, size):
     # (ahead, left): window center in meters from the antenna
     a = np.asarray(drone_image)
-    r = round(N - (ahead + size / 2) * PX)      # row 0 is 4 m ahead
-    c = round(N / 2 - (left + size / 2) * PX)   # column 0 is 2 m left
+    r = round(N - (ahead + size / 2) * PX)      # row 0 is 4.004 m ahead
+    c = round(N / 2 - (left + size / 2) * PX)   # column 0 is 2.002 m left
     return a[r : r + round(size * PX), c : c + round(size * PX)]
 
-patch = sub_crop(row["drone_image"], ahead=1.0, left=0.0, size=2.0)  # 2 x 2 m, 156 x 156 px
+patch = sub_crop(row["drone_image"], ahead=1.0, left=0.0, size=2.0)  # 2 x 2 m, 154 x 154 px
 ```
 
 ### Recovering the geometry
 
 ```python
-# each drone crop spans 0 to 4 m ahead of the antenna and +/-2 m across,
-# rotated so `bearing_deg` points up the image. To place a crop pixel on the ground:
+# each drone image spans 0 to 4.004 m ahead of the antenna and 2.002 m to either side,
+# rotated so `bearing_deg` points up the image. To place a drone image pixel on the ground:
 import math
 
-def pixel_to_ground(row, px, py, S=4.0, N=312):
+def pixel_to_ground(row, px, py, P=0.0130, N=308):
     th = math.radians(row["bearing_deg"])
-    fwd = S * (1 - (py + 0.5) / N)          # meters ahead of the antenna
-    lat = S * (0.5 - (px + 0.5) / N)        # meters to the left
+    fwd = (N - py - 0.5) * P                 # meters ahead of the antenna
+    lat = (N / 2 - px - 0.5) * P             # meters to the left
     dE  = fwd * math.sin(th) - lat * math.cos(th)
     dN  = fwd * math.cos(th) + lat * math.sin(th)
     return dE, dN                            # offset in meters, EPSG:6514
@@ -448,9 +430,9 @@ classification, but only the first below fuses the two as joint classifier
 input. The others use one view to supervise, label, or direct the other.
 Releases that combine aerial and ground platforms serve SLAM, registration,
 navigation, and crop phenotyping. To our knowledge none pairs ground-robot
-photographs with coincident centimeter-scale orthomosaic crops of the same
-footprints, labeled for plant species in natural vegetation. The closest
-neighbors:
+photographs with coincident centimeter-scale drone images cropped from
+orthomosaics over the same footprints, labeled for plant species in natural
+vegetation. The closest neighbors follow.
 
 ### The Auto Arborist Dataset (CVPR 2022)
 
@@ -532,5 +514,5 @@ in motion, labels are image-level, and no aerial imagery is paired.
 Data are released under CC BY 4.0. Code in the source repository
 ([mosscoder/multimodal_survey](https://github.com/mosscoder/multimodal_survey))
 is MIT. See [`CITATION.cff`](CITATION.cff) in this repository for the
-preferred citation. The build is reproducible from the source repository:
-`python -m multimodal_dataset build` at commit `SOURCE_COMMIT`.
+preferred citation. The build is reproducible from the source repository by
+running `python -m multimodal_dataset build` at commit `SOURCE_COMMIT`.

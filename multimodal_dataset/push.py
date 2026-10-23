@@ -7,7 +7,8 @@ the private repo if needed, uploads the three splits (image columns embedded
 into parquet by ``push_to_hub``), then uploads the card: ``card/README.md``
 with its YAML front matter merged over the hub-generated ``dataset_info``
 block and ``SOURCE_COMMIT`` replaced by the current git commit, plus the
-figures, ``species.csv``, and ``CITATION.cff``.
+figures (the hub's ``images/`` folder is made to mirror the local one),
+``species.csv``, and ``CITATION.cff``.
 """
 from __future__ import annotations
 
@@ -74,7 +75,7 @@ def push(out_dir: str | Path = OUT_DIR, repo_id: str = REPO_ID):
                                      force_download=True)
     readme = merged_readme(Path(hub_readme).read_text())
     api.upload_folder(folder_path=str(_CARD), repo_id=repo_id, repo_type="dataset",
-                      ignore_patterns=["README.md"],
+                      ignore_patterns=["README.md"], delete_patterns=["images/*"],
                       commit_message="card: figures, species.csv, CITATION.cff")
     api.upload_file(path_or_fileobj=io.BytesIO(readme.encode()),
                     path_in_repo="README.md", repo_id=repo_id, repo_type="dataset",

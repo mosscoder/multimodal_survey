@@ -1,8 +1,8 @@
-"""The 34 release features of the multimodal-survey Hugging Face dataset.
+"""The 33 release features of the multimodal-survey Hugging Face dataset.
 
-One row per labeled robot capture: the ground photograph, its 4 x 4 m nadir
-drone-orthomosaic crop, the species and quality labels, and the telemetry the
-release documents. Column names, order, and semantics follow
+One row per labeled robot capture: the ground image, its 4 x 4 m nadir drone
+image, the species and quality labels, and the telemetry the release
+documents. Column names, order, and semantics follow
 ``docs/dataset-overview.html`` exactly; that page is the spec, this file is its
 executable form. The join key is ``frame_id`` (the capture stem).
 """
@@ -50,7 +50,7 @@ def features() -> Features:
         "pair_distance_m": _F,
         "pair_overlap_fraction": _F,
         "pair_offset_hours": _F,
-        # along the transect
+        # along the strip
         "leg": _S,
         "along_leg_m": _F,
         "frame_offset_s": _F,
@@ -58,7 +58,6 @@ def features() -> Features:
         # provenance & split
         "run_id": _S,
         "tier2_overlap_fraction": _F,        # populated on train_tier_2 rows only
-        "drone_coverage": _F,
     })
 
 
