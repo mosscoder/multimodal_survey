@@ -39,10 +39,10 @@ DEFAULT_ON = None
 # Image-quality task                                                          #
 # --------------------------------------------------------------------------- #
 # A second, independent labelling task: instead of which species are present, a
-# single ordinal judgement per frame — how much of the image is degraded by
+# single ordinal judgement per ground image — how much of it is degraded by
 # video decoder artifacts. Four equal
-# quartile bands over the *share of the frame affected*; stored behind the scenes
-# as the integer 1..4 (0 = unset). Hot-keys 1–4 map to the four bands in order.
+# quartile levels over the *share of the image affected*; stored behind the scenes
+# as the integer 1..4 (0 = unset). Hot-keys 1–4 map to the four levels in order.
 QUALITY_LABEL = "Artifact prevalence"
 QUALITY_BINS = [
     ("0–25%",   "clean — few/no visual artifacts"),
@@ -51,6 +51,6 @@ QUALITY_BINS = [
     ("75–100%", "severe — frame dominated by artifacts"),
 ]
 
-# Release names for the quality bands (the dataset's `artifact_level` ClassLabel).
+# Release names for the quality levels (the dataset's `artifact_level` ClassLabel).
 # Plain hyphens, unlike the en-dashed UI strings above; index = stored bin - 1.
 ARTIFACT_LEVELS = ["0-25%", "25-50%", "50-75%", "75-100%"]

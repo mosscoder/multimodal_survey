@@ -1,9 +1,10 @@
 """Split assignment: the test-leg rule and the tier-2 overlap computation.
 
-The rule lives here and only here: the test set is an outermost leg of every
-strip — ``leg01`` everywhere except ``site_1/strip_5``, whose western terminus
-runs off both flight footprints, so its test leg is ``leg13``. Any non-test
-frame whose 4 m crop intersects a test crop becomes ``train_tier_2``, carrying
+The rule lives here and only here: the test split is an outermost leg of every
+strip — ``leg01`` everywhere except ``site_1/strip_5``, where it is ``leg13``,
+a choice made before the strip's western terminus was recovered in the
+re-exported orthomosaics and retained as published. Any non-test
+row whose 4 m footprint intersects a test footprint becomes ``train_tier_2``, carrying
 the intersected share of its area in ``tier2_overlap_fraction``; everything
 else is clean ``train``.
 """
@@ -23,7 +24,7 @@ def assign_splits(rows: list[dict]) -> None:
     """Set ``row['_split']`` and ``row['tier2_overlap_fraction']`` in place.
 
     Overlap is geometric and site-wide (strips can abut), computed on the
-    crop polygons rows carry in ``row['_poly']`` (EPSG:6514 meters).
+    footprint polygons rows carry in ``row['_poly']`` (EPSG:6514 meters).
     """
     from shapely import unary_union
     from shapely.prepared import prep
