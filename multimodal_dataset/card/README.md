@@ -143,8 +143,8 @@ the separation.
 | Flight | Paired with | Source photographs per sensor | Duration | Median capture (UTC) | GCP RMSE (horizontal) | GSD |
 |---|---|---|---|---|---|---|
 | 260616-site-1-am | `site_1` event 1 | 295 | 19.6 min | 18:02:05 | 3.29 cm | 1.30 cm |
-| 260617-site-2-am | `site_2` event 1 | 154 | 5.5 min | 17:04:07 | 3.22 cm | 1.30 cm |
-| 260617-site-2-pm | `site_2` event 2 | 147 | 5.5 min | 20:23:59 | 1.94 cm | 1.30 cm |
+| 260617-site-2-am | `site_2` event 1 | 154 | 5.5 min | 17:04:07 | 3.13 cm | 1.30 cm |
+| 260617-site-2-pm | `site_2` event 2 | 147 | 5.5 min | 20:23:59 | 1.82 cm | 1.30 cm |
 | 260618-site-1-pm | `site_1` event 2 | 265 | 9.9 min | 20:33:34 | 1.78 cm | 1.30 cm |
 
 All four flights flew the same plan, with identical extents per site, 9 m
@@ -157,9 +157,9 @@ the orthomosaic rectification. Each flight's DroneDeploy processing report
 located all five, and GCP RMSE is the horizontal RMS residual computed from
 the per-point X and Y errors in that report. GSD is the sensor's ground sample
 distance at the flight altitude, and every drone image is gridded at exactly
-that pitch. The delivered site 1 orthomosaics are gridded at 1.30 cm per pixel
-and the site 2 orthomosaics at 1.28 cm, and the build interpolates each drone
-image pixel once, bilinearly, from the native raster.
+that pitch. All four delivered orthomosaics are gridded at 1.30 cm per pixel,
+and the build interpolates each drone image pixel once, bilinearly, from the
+native raster.
 
 ## 2. Paired examples
 

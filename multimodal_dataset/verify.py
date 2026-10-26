@@ -43,7 +43,7 @@ PUBLISHED = {
     "drone_image_px": 308, "output_pitch_m": 0.0130, "ground_image_size": (1280, 720),
     "native_pixel_cm": {                 # the delivered orthomosaics' GeoTIFF transforms
         "260616-site-1-am": (1.30, 0.005), "260618-site-1-pm": (1.30, 0.005),
-        "260617-site-2-am": (1.28, 0.005), "260617-site-2-pm": (1.28, 0.005)},
+        "260617-site-2-am": (1.30, 0.005), "260617-site-2-pm": (1.30, 0.005)},
     "species_per_split": {          # train, test, tier 2
         "Lupinus sericeus": (1331, 209, 39),
         "Balsamorhiza sagittata": (618, 245, 24),

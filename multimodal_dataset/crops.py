@@ -11,7 +11,7 @@ flights. The drone image is the ``N`` x ``N`` grid of ``N = round(S / P)`` =
 4.004 m ahead of the antenna and 2.002 m to either side, 4 mm past the
 footprint's far and side edges (below the 1.4 cm RTK accuracy). Every grid
 point is interpolated once, bilinearly, from the orthomosaic at its native
-pixel size (1.28 to 1.30 cm across the four flights), with no warped VRT and
+pixel size (1.2996 to 1.3000 cm across the four flights), with no warped VRT and
 no intermediate resampled file. ``coverage`` is the fraction of the grid whose
 nearest native pixel lies inside the orthomosaic's alpha mask; the build
 requires 1.0 on every row.
