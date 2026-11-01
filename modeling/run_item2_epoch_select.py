@@ -10,6 +10,16 @@ For each branch (ground, drone):
     a checkpoint saved at every epoch (cheap -- a single linear layer) so the
     epoch-E* checkpoint can be selected after CV determines E*, with no need
     to retrain. That checkpoint predicts the test split.
+
+Item 3 (reproducibility): all 3 seed-heads in a fold still share one batch
+stream (one memmap read per batch, consumed by every head) -- option (b) from
+the spec, chosen to avoid tripling the ground branch's memmap streaming cost.
+The shared stream is now seeded per fold (np.random.default_rng(fold) for CV,
+a fixed constant for the full-pool final run), so a rerun reproduces the same
+batch order. Because the order is shared, the 3 "seeds" differ only in weight
+initialization (torch.manual_seed(seed), already set per head), not in data
+order -- the manuscript must describe them as initialization seeds, not fully
+independent resamples.
 """
 import json, time
 import numpy as np
@@ -19,6 +29,11 @@ from datasets import load_dataset
 from sklearn.metrics import f1_score, average_precision_score
 
 from assemble import pool, Y_pool
+
+torch.backends.cudnn.benchmark = False
+torch.backends.cudnn.deterministic = True
+torch.use_deterministic_algorithms(True, warn_only=True)   # warn (not crash) on any op lacking a deterministic kernel
+FINAL_RNG_SEED = 1000   # full-pool final run has no fold index; distinct from fold ids 0-4
 
 CLASSES = ["Lupinus sericeus", "Balsamorhiza sagittata", "Gaillardia aristata",
            "Achillea millefolium", "Euphorbia virgata", "Sisymbrium altissimum",
@@ -65,9 +80,10 @@ def pos_weight_for(y):
 
 
 # ---------------------------------------------------------------- GROUND ---
-def ground_fold_run(rows_tr, rows_va):
-    """3 seeds, shared batch stream, full EPOCHS, no early stop.
-    Returns: per-epoch val-prob array per seed (EPOCHS, n_va, 8)."""
+def ground_fold_run(rows_tr, rows_va, fold):
+    """3 seeds, shared batch stream (seeded per fold -- item 3), full EPOCHS,
+    no early stop. Returns: per-epoch val-prob array per seed (EPOCHS, n_va, 8)."""
+    rng = np.random.default_rng(fold)
     mu = torch.tensor(PMEAN[rows_tr].mean(0)).cuda()
     sd = torch.tensor(PMEAN[rows_tr].std(0) + 1e-6).cuda()
     Yt = torch.tensor(Y_pool[rows_tr], dtype=torch.float32).cuda()
@@ -97,7 +113,7 @@ def ground_fold_run(rows_tr, rows_va):
 
     epoch_preds = {s: np.empty((EPOCHS, n_va, 8), dtype=np.float32) for s in SEEDS}
     for ep in range(EPOCHS):
-        order = np.random.permutation(len(rows_tr))
+        order = rng.permutation(len(rows_tr))
         for j in range(0, len(order), BATCH):
             sel = abs_tr[order[j:j+BATCH]]
             g = torch.from_numpy(np.asarray(GRID[sel], dtype=np.float32)).cuda()
@@ -117,6 +133,7 @@ def ground_fold_run(rows_tr, rows_va):
 
 def ground_final_run():
     """Train on the FULL pool, 3 seeds, full EPOCHS, checkpoint every epoch."""
+    rng = np.random.default_rng(FINAL_RNG_SEED)
     mu = torch.tensor(PMEAN.mean(0)).cuda()
     sd = torch.tensor(PMEAN.std(0) + 1e-6).cuda()
     Yt = torch.tensor(Y_pool, dtype=torch.float32).cuda()
@@ -131,7 +148,7 @@ def ground_final_run():
 
     n = len(rows_pool)
     for ep in range(EPOCHS):
-        order = np.random.permutation(n)
+        order = rng.permutation(n)
         for j in range(0, n, BATCH):
             sel = rows_pool[order[j:j+BATCH]]
             g = torch.from_numpy(np.asarray(GRID[sel], dtype=np.float32)).cuda()
@@ -161,7 +178,8 @@ def ground_predict_test(state_dict, mu, sd):
 
 
 # ----------------------------------------------------------------- DRONE ---
-def drone_fold_run(rows_tr, rows_va):
+def drone_fold_run(rows_tr, rows_va, fold):
+    rng = np.random.default_rng(fold)
     X = A_drone
     mu, sd = X[rows_tr].mean(0), X[rows_tr].std(0) + 1e-6
     Xtr = torch.tensor((X[rows_tr] - mu) / sd, dtype=torch.float32)
@@ -179,7 +197,7 @@ def drone_fold_run(rows_tr, rows_va):
 
     epoch_preds = {s: np.empty((EPOCHS, n_va, 8), dtype=np.float32) for s in SEEDS}
     for ep in range(EPOCHS):
-        order = np.random.permutation(len(rows_tr))
+        order = rng.permutation(len(rows_tr))
         for j in range(0, len(order), BATCH):
             idx = order[j:j+BATCH]
             for s, m in heads.items():
@@ -194,6 +212,7 @@ def drone_fold_run(rows_tr, rows_va):
 
 
 def drone_final_run():
+    rng = np.random.default_rng(FINAL_RNG_SEED)
     X = A_drone
     mu, sd = X.mean(0), X.std(0) + 1e-6
     Xt = torch.tensor((X - mu) / sd, dtype=torch.float32)
@@ -209,7 +228,7 @@ def drone_final_run():
         scheds[s] = torch.optim.lr_scheduler.CosineAnnealingLR(opts[s], EPOCHS)
 
     for ep in range(EPOCHS):
-        order = np.random.permutation(n)
+        order = rng.permutation(n)
         for j in range(0, n, BATCH):
             idx = order[j:j+BATCH]
             for s, m in heads.items():
@@ -239,7 +258,7 @@ def run_branch(name, fold_run_fn, final_run_fn, predict_test_fn):
         va = np.where(folds == f)[0]
         tr = np.where(folds != f)[0]
         print(f"  fold {f}  tr {len(tr)}  va {len(va)}", flush=True)
-        per_fold_epoch_preds[f] = fold_run_fn(tr, va)
+        per_fold_epoch_preds[f] = fold_run_fn(tr, va, f)
         per_fold_va_idx[f] = va
 
     # 2) E* = argmax of mean-over-seeds-then-mean-over-folds val macro-AP curve

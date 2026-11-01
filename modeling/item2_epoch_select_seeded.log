@@ -1,0 +1,107 @@
+per-frame patch means (one memmap pass, pool rows only) ...
+  done in 31s
+
+===== branch: drone =====
+  fold 0  tr 4978  va 1111
+  fold 1  tr 4848  va 1241
+  fold 2  tr 4635  va 1454
+  fold 3  tr 5022  va 1067
+  fold 4  tr 4873  va 1216
+  drone: E* = 3  (mean macro-AP 0.4701)
+  drone pooled OOF @ E*=3: macroAP 0.457  macroF1 0.406
+  drone: training final model on full pool ...
+
+===== branch: ground =====
+  fold 0  tr 4978  va 1111
+    ground ep  0  (t=128s)
+    ground ep  5  (t=388s)
+    ground ep 10  (t=639s)
+    ground ep 15  (t=41710s)
+    ground ep 20  (t=41944s)
+    ground ep 25  (t=42174s)
+    ground ep 30  (t=42394s)
+    ground ep 35  (t=42606s)
+    ground ep 40  (t=42792s)
+    ground ep 45  (t=42955s)
+    ground ep 50  (t=43091s)
+    ground ep 55  (t=43225s)
+    ground ep 59  (t=43327s)
+  fold 1  tr 4848  va 1241
+    ground ep  0  (t=43359s)
+    ground ep  5  (t=43584s)
+    ground ep 10  (t=43815s)
+    ground ep 15  (t=44047s)
+    ground ep 20  (t=44262s)
+    ground ep 25  (t=44472s)
+    ground ep 30  (t=44685s)
+    ground ep 35  (t=44901s)
+    ground ep 40  (t=45143s)
+    ground ep 45  (t=45382s)
+    ground ep 50  (t=45743s)
+    ground ep 55  (t=45990s)
+    ground ep 59  (t=46203s)
+  fold 2  tr 4635  va 1454
+    ground ep  0  (t=48195s)
+    ground ep  5  (t=48437s)
+    ground ep 10  (t=48669s)
+    ground ep 15  (t=48897s)
+    ground ep 20  (t=49142s)
+    ground ep 25  (t=49372s)
+    ground ep 30  (t=49603s)
+    ground ep 35  (t=49836s)
+    ground ep 40  (t=50071s)
+    ground ep 45  (t=50303s)
+    ground ep 50  (t=50536s)
+    ground ep 55  (t=50768s)
+    ground ep 59  (t=50958s)
+  fold 3  tr 5022  va 1067
+    ground ep  0  (t=51018s)
+    ground ep  5  (t=51247s)
+    ground ep 10  (t=51477s)
+    ground ep 15  (t=51703s)
+    ground ep 20  (t=51933s)
+    ground ep 25  (t=52158s)
+    ground ep 30  (t=52387s)
+    ground ep 35  (t=52611s)
+    ground ep 40  (t=52838s)
+    ground ep 45  (t=53064s)
+    ground ep 50  (t=53291s)
+    ground ep 55  (t=53517s)
+    ground ep 59  (t=53698s)
+  fold 4  tr 4873  va 1216
+    ground ep  0  (t=53754s)
+    ground ep  5  (t=53973s)
+    ground ep 10  (t=54203s)
+    ground ep 15  (t=54428s)
+    ground ep 20  (t=54645s)
+    ground ep 25  (t=54862s)
+    ground ep 30  (t=55078s)
+    ground ep 35  (t=55300s)
+    ground ep 40  (t=55518s)
+    ground ep 45  (t=55739s)
+    ground ep 50  (t=55959s)
+    ground ep 55  (t=56180s)
+    ground ep 59  (t=56356s)
+  ground: E* = 54  (mean macro-AP 0.7993)
+  ground pooled OOF @ E*=54: macroAP 0.809  macroF1 0.753
+  ground: training final model on full pool ...
+    ground FINAL ep  0
+    ground FINAL ep  5
+    ground FINAL ep 10
+    ground FINAL ep 15
+    ground FINAL ep 20
+    ground FINAL ep 25
+    ground FINAL ep 30
+    ground FINAL ep 35
+    ground FINAL ep 40
+    ground FINAL ep 45
+    ground FINAL ep 50
+    ground FINAL ep 55
+    ground FINAL ep 59
+
+=== E* summary ===
+        E_star  cv_macro_AP  cv_macro_F1
+drone    3.000        0.457        0.406
+ground  54.000        0.809        0.753
+
+done.
