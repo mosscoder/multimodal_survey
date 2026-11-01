@@ -17,6 +17,10 @@ from sklearn.metrics import f1_score, average_precision_score
 
 from assemble import pool, Y_pool
 
+torch.backends.cudnn.benchmark = False
+torch.backends.cudnn.deterministic = True
+torch.use_deterministic_algorithms(True, warn_only=True)
+
 CLASSES = ["Lupinus sericeus", "Balsamorhiza sagittata", "Gaillardia aristata",
            "Achillea millefolium", "Euphorbia virgata", "Sisymbrium altissimum",
            "Bromus tectorum", "Poa bulbosa"]
@@ -50,6 +54,7 @@ class GroundOnlyHead(nn.Module):
 
 
 def train_ground_grid(seed):
+    rng = np.random.default_rng(seed)   # item 3: each seed already has its own independent run here
     va_abs = rows_pool[va_mask]
     Yt = torch.tensor(Y_pool[tr_mask], dtype=torch.float32).cuda()
     Yva = Y_pool[va_mask]
@@ -78,7 +83,7 @@ def train_ground_grid(seed):
     best, state, bad = -1.0, None, 0
     for ep in range(60):
         m.train()
-        order = np.random.permutation(len(tr_abs))
+        order = rng.permutation(len(tr_abs))
         for j in range(0, len(order), 64):
             sel = tr_abs[order[j:j+64]]
             g = torch.from_numpy(np.asarray(GRID[sel], dtype=np.float32)).cuda()
@@ -109,6 +114,7 @@ def train_ground_grid(seed):
 
 
 def fit_small(Xtr, Ytr, Xva, Yva, seed, lr=1e-2, wd=1e-2, epochs=60, patience=10, batch=64):
+    rng = np.random.default_rng(seed)   # item 3: each seed already has its own independent run here
     torch.manual_seed(seed)
     head = nn.Linear(Xtr.shape[1], 8)
     opt = torch.optim.AdamW(head.parameters(), lr=lr, weight_decay=wd)
@@ -121,7 +127,7 @@ def fit_small(Xtr, Ytr, Xva, Yva, seed, lr=1e-2, wd=1e-2, epochs=60, patience=10
     best, state, bad = -1.0, None, 0
     for ep in range(epochs):
         head.train()
-        order = np.random.permutation(len(Xt))
+        order = rng.permutation(len(Xt))
         for j in range(0, len(order), batch):
             idx = order[j:j+batch]
             opt.zero_grad(); loss_fn(head(Xt[idx]), Yt[idx]).backward(); opt.step()

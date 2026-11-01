@@ -9,6 +9,10 @@ import torch, torch.nn as nn
 from datasets import load_dataset
 from sklearn.metrics import f1_score, average_precision_score
 
+torch.backends.cudnn.benchmark = False
+torch.backends.cudnn.deterministic = True
+torch.use_deterministic_algorithms(True, warn_only=True)
+
 CLASSES = ["Lupinus sericeus", "Balsamorhiza sagittata", "Gaillardia aristata",
            "Achillea millefolium", "Euphorbia virgata", "Sisymbrium altissimum",
            "Bromus tectorum", "Poa bulbosa"]
@@ -58,7 +62,8 @@ class TopKHead(nn.Module):
         return s.topk(k, dim=1).values.mean(1) + self.aerial(a)
 
 
-def fit_predict_mil(rows_tr, rows_va, lr=1e-2, wd=1e-2, epochs=60, patience=10, batch=64):
+def fit_predict_mil(rows_tr, rows_va, fold, lr=1e-2, wd=1e-2, epochs=60, patience=10, batch=64):
+    rng = np.random.default_rng(fold)   # item 3: shared stream across heads, seeded per fold
     mu_g, sd_g = grid_stats(rows_tr)
     mu_gt = torch.tensor(mu_g).cuda(); sd_gt = torch.tensor(sd_g).cuda()
     mu_a, sd_a = A[rows_tr].mean(0), A[rows_tr].std(0) + 1e-6
@@ -94,7 +99,7 @@ def fit_predict_mil(rows_tr, rows_va, lr=1e-2, wd=1e-2, epochs=60, patience=10, 
         best[h] = dict(f1=-1.0, state=None, bad=0)
 
     for ep in range(epochs):
-        order = np.random.permutation(len(rows_tr))
+        order = rng.permutation(len(rows_tr))
         for j in range(0, len(order), batch):
             sel = order[j:j+batch]
             Gb, ab, yb = grid_batch(rows_tr[sel]), a_tr[sel], Yt[sel]
@@ -130,7 +135,7 @@ for fk in range(K):
     va = np.where(fold_abs == fk)[0]
     tr = np.where((fold_abs >= 0) & (fold_abs != fk))[0]
     print(f"\n== fold {fk}  tr {len(tr)}  va {len(va)} ==", flush=True)
-    res = fit_predict_mil(tr, va)
+    res = fit_predict_mil(tr, va, fk)
     for h, P in res.items():
         oof[h][va] = P
 
