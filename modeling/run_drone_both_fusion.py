@@ -95,7 +95,7 @@ drone_cls = cv_oof(A_cls, "drone/cls")
 print("training drone-alone, CLS+patch-mean (2048-d, 'both') ...")
 drone_both = cv_oof(A_both, "drone/both")
 
-d = np.load("results/armhead_ablation_oof.npz")
+d = np.load("results/preds/armhead_ablation_oof.npz")
 ground = np.mean([d[f"ground_linear_s{s}"] for s in SEEDS], axis=0)
 
 report("ground alone (ref)", ground, rows, apr)

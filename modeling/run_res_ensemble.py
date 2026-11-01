@@ -86,7 +86,7 @@ def report(tag, P):
     apr.append(dict(config=tag, **{c.split()[1][:6]: v for c, v in zip(CLASSES, ap)}))
 
 
-d = np.load("results/armhead_ablation_oof.npz")
+d = np.load("results/preds/armhead_ablation_oof.npz")
 ground_grid = np.mean([d[f"ground_linear_s{s}"] for s in SEEDS], axis=0)   # dense-grid top-1 MIL, 1024x768
 report("dense-grid top-1 MIL (ref)", ground_grid)
 

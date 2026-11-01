@@ -25,7 +25,7 @@ K = 5
 folds = pool["fold"].values
 rows_pool = pool.index.to_numpy()
 
-d = np.load("results/armhead_ablation_oof.npz")
+d = np.load("results/preds/armhead_ablation_oof.npz")
 ground_p = np.mean([d[f"ground_linear_s{s}"] for s in SEEDS], axis=0)
 eps = 1e-6
 pc = np.clip(ground_p, eps, 1 - eps)

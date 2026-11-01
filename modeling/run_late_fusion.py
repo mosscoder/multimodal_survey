@@ -1,5 +1,5 @@
 """Late fusion of independently-trained ground-alone and drone-alone models.
-Uses already-saved OOF probabilities (results/armhead_ablation_oof.npz) --
+Uses already-saved OOF probabilities (results/preds/armhead_ablation_oof.npz) --
 no retraining. Both methods use nested 5-fold validation: tune/fit on the
 other 4 folds, apply to the held-out fold, rotate -- honest, full-pool OOF.
 
@@ -9,7 +9,7 @@ other 4 folds, apply to the held-out fold, rotate -- honest, full-pool OOF.
 """
 import numpy as np
 import pandas as pd
-from sklearn.metrics import f1_score, average_precision_score
+from sklearn.metrics import f1_score, average_precision_score, precision_score, recall_score
 from sklearn.linear_model import LogisticRegression
 
 from assemble import pool, Y_pool
@@ -20,7 +20,7 @@ CLASSES = ["Lupinus sericeus", "Balsamorhiza sagittata", "Gaillardia aristata",
 folds = pool["fold"].values
 K = 5
 
-d = np.load("results/armhead_ablation_oof.npz")
+d = np.load("results/preds/armhead_ablation_oof.npz")
 ground = np.mean([d[f"ground_linear_s{s}"] for s in (0, 1, 2)], axis=0)   # (N,8) ENS probs
 drone = np.mean([d[f"drone_linear_s{s}"] for s in (0, 1, 2)], axis=0)
 
@@ -28,17 +28,19 @@ drone = np.mean([d[f"drone_linear_s{s}"] for s in (0, 1, 2)], axis=0)
 def score(P):
     per_f1 = f1_score(Y_pool, P > 0.5, average=None, zero_division=0)
     per_ap = average_precision_score(Y_pool, P, average=None)
+    per_p = precision_score(Y_pool, P > 0.5, average=None, zero_division=0)
+    per_r = recall_score(Y_pool, P > 0.5, average=None, zero_division=0)
     ff = [f1_score(Y_pool[folds == k], P[folds == k] > 0.5, average="macro", zero_division=0)
           for k in range(K)]
-    return per_f1, per_ap, np.mean(ff), np.std(ff)
+    return per_f1, per_ap, per_p, per_r, np.mean(ff), np.std(ff)
 
 
 def report(tag, P):
-    f1, ap, fm, fsd = score(P)
+    f1, ap, prec, rec, fm, fsd = score(P)
     print(f"{tag:28s} macroF1 {f1.mean():.3f}  macroAP {ap.mean():.3f}  "
-          f"perfold {fm:.3f}+/-{fsd:.3f}")
-    return dict(config=tag, macro_F1=f1.mean(), macro_AP=ap.mean(),
-                perfold_F1=fm, perfold_sd=fsd), ap
+          f"macroP {prec.mean():.3f}  macroR {rec.mean():.3f}  perfold {fm:.3f}+/-{fsd:.3f}")
+    return dict(config=tag, macro_F1=f1.mean(), macro_AP=ap.mean(), macro_P=prec.mean(),
+                macro_R=rec.mean(), perfold_F1=fm, perfold_sd=fsd), ap
 
 
 rows, apr = [], []
@@ -94,8 +96,10 @@ print(df.to_string(index=False, float_format=lambda x: f"{x:.3f}"))
 print("\n=== per-class AP ===")
 print(pd.DataFrame(apr).to_string(index=False, float_format=lambda x: f"{x:.3f}"))
 
-df.to_csv("results/late_fusion.csv", index=False)
+# item 5: macro_P/macro_R are new columns -- write to a new file, leave the
+# original results/late_fusion.csv (AP/F1 only) untouched per the no-overwrite rule.
+df.to_csv("results/late_fusion_with_PR.csv", index=False)
 pd.DataFrame(apr).to_csv("results/late_fusion_perclass_ap.csv", index=False)
 pd.DataFrame(w_chosen, columns=[c.split()[0] for c in CLASSES]).to_csv("results/late_fusion_weights.csv", index=False)
 pd.DataFrame(coefs).to_csv("results/late_fusion_stacking_coefs.csv", index=False)
-print("\nwrote results/late_fusion.csv (+ perclass_ap, weights, stacking_coefs)")
+print("\nwrote results/late_fusion_with_PR.csv (new; results/late_fusion.csv left untouched)")

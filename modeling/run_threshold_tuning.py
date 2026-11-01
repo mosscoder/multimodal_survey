@@ -17,7 +17,7 @@ K = 5
 SEEDS = [0, 1, 2]
 
 # rebuild the current-best fused OOF (ground+drone weighted avg), same recipe as run_late_fusion.py
-d = np.load("results/armhead_ablation_oof.npz")
+d = np.load("results/preds/armhead_ablation_oof.npz")
 ground = np.mean([d[f"ground_linear_s{s}"] for s in SEEDS], axis=0)
 drone = np.mean([d[f"drone_linear_s{s}"] for s in SEEDS], axis=0)
 
