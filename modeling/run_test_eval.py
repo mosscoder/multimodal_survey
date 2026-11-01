@@ -170,11 +170,11 @@ Adrone_train = np.load("feats/train.drone_image.satellite.npy").astype(np.float3
 Adrone_test = np.load("feats/test.drone_image.satellite.npy").astype(np.float32)[:, :1024]
 drone_test = np.mean([train_small(Adrone_train, s, Adrone_test) for s in SEEDS], axis=0)
 
-np.savez("results/test_component_preds.npz", ground_grid=ground_grid_test,
+np.savez("results/preds/test_component_preds.npz", ground_grid=ground_grid_test,
         ground_global=ground_global_test, drone=drone_test)
 
 # ---- fusion weights + thresholds refit on the FULL train pool's existing OOF (no test leakage) ----
-d = np.load("results/armhead_ablation_oof.npz")
+d = np.load("results/preds/armhead_ablation_oof.npz")
 ground_grid_oof = np.mean([d[f"ground_linear_s{s}"] for s in SEEDS], axis=0)
 drone_oof = np.mean([d[f"drone_linear_s{s}"] for s in SEEDS], axis=0)
 ground_global_oof = np.load("results/res_ensemble_oof.npz")["ground_global"]

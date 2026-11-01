@@ -1,6 +1,6 @@
 """2-way late fusion (ground-alone + drone-alone): per-class CV results, then
 applied to the held-out test set using already-trained final models (no
-retraining -- reuses results/test_component_preds.npz from the 3-way test run).
+retraining -- reuses results/preds/test_component_preds.npz from the 3-way test run).
 """
 import numpy as np
 import pandas as pd
@@ -17,7 +17,7 @@ K = 5
 SEEDS = [0, 1, 2]
 
 # ---- CV: nested 5-fold weighted average, ground + drone only ----
-d = np.load("results/armhead_ablation_oof.npz")
+d = np.load("results/preds/armhead_ablation_oof.npz")
 ground_oof = np.mean([d[f"ground_linear_s{s}"] for s in SEEDS], axis=0)
 drone_oof = np.mean([d[f"drone_linear_s{s}"] for s in SEEDS], axis=0)
 
@@ -56,7 +56,7 @@ for j in range(8):
     w_final[j] = best_w
 
 # ---- apply to TEST using the already-trained final models ----
-t = np.load("results/test_component_preds.npz")
+t = np.load("results/preds/test_component_preds.npz")
 ground_test, drone_test = t["ground_grid"], t["drone"]
 P_test = w_final[None, :] * ground_test + (1 - w_final[None, :]) * drone_test
 

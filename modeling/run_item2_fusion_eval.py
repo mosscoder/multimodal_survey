@@ -19,16 +19,19 @@ folds = pool["fold"].values
 K = 5
 
 # ---- load item2 E*-selected OOF / test predictions (3-seed ensemble) ----
-g_oof = np.load("results/item2_ground_oof.npz", allow_pickle=True)
-d_oof = np.load("results/item2_drone_oof.npz", allow_pickle=True)
+g_oof = np.load("results/preds/item2_ground_oof.npz", allow_pickle=True)
+d_oof = np.load("results/preds/item2_drone_oof.npz", allow_pickle=True)
 assert (g_oof["frame_id"] == pool["frame_id"].to_numpy()).all()
 assert (d_oof["frame_id"] == pool["frame_id"].to_numpy()).all()
 ground_oof, drone_oof = g_oof["ens"], d_oof["ens"]
 
-g_test = np.load("results/item2_ground_test.npz", allow_pickle=True)["ens"]
-d_test = np.load("results/item2_drone_test.npz", allow_pickle=True)["ens"]
+g_test_npz = np.load("results/preds/item2_ground_test.npz", allow_pickle=True)
+d_test_npz = np.load("results/preds/item2_drone_test.npz", allow_pickle=True)
+assert (g_test_npz["frame_id"] == d_test_npz["frame_id"]).all()
+g_test, d_test = g_test_npz["ens"], d_test_npz["ens"]
 
 test_ds = load_dataset("mpg-ranch/multimodal-survey", split="test")
+assert (g_test_npz["frame_id"] == np.array(test_ds["frame_id"])).all()
 Y_test = np.zeros((len(test_ds), 8), dtype=np.int8)
 for i, ids in enumerate(test_ds["species"]):
     Y_test[i, list(ids)] = 1
@@ -89,6 +92,15 @@ for name in ["ground", "drone", "fused"]:
 df = pd.DataFrame(rows)
 df.to_csv("results/item2_ground_drone_fused_cv_vs_test.csv", index=False)
 
+# ---- item 4: save fused OOF/test prediction arrays + fusion weights ----
+np.savez("results/preds/item2_fused_oof.npz", ens=P_cv, frame_id=pool["frame_id"].to_numpy())
+np.savez("results/preds/item2_fused_test.npz", ens=P_test, frame_id=g_test_npz["frame_id"])
+
+pd.DataFrame(w_per_fold, columns=[c.split()[0] for c in CLASSES]).assign(fold=range(K)) \
+    .to_csv("results/item2_fusion_weights_perfold.csv", index=False)
+pd.DataFrame({"species": CLASSES, "ground_weight": w_final}) \
+    .to_csv("results/item2_fusion_weights_final.csv", index=False)
+
 print(f"final fusion weights (full pool, ground share): " +
       ", ".join(f"{c.split()[0]}={w:.2f}" for c, w in zip(CLASSES, w_final)))
 
@@ -103,3 +115,5 @@ for name in ["ground", "drone", "fused"]:
               f"{r.cv_precision:8.3f} {r.test_precision:9.3f}   {r.cv_recall:7.3f} {r.test_recall:9.3f}")
 
 print("\nwrote results/item2_ground_drone_fused_cv_vs_test.csv")
+print("wrote results/preds/item2_fused_oof.npz, results/preds/item2_fused_test.npz")
+print("wrote results/item2_fusion_weights_perfold.csv, results/item2_fusion_weights_final.csv")

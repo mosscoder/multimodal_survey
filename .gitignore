@@ -26,6 +26,10 @@ CLAUDE.md
 *.npy
 *.tif
 
+# Baseline-rerun item 4: committed CV/test prediction arrays (tiny -- ~0.2MB
+# per array), so metrics besides AP/F1@0.5 can be recomputed without retraining.
+!modeling/results/preds/*.npz
+
 # Built HF dataset artifacts and the ortho download cache (large, rebuildable
 # from missions/ + GCS via `python -m multimodal_dataset build`).
 multimodal_dataset/out/

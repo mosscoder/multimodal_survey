@@ -44,6 +44,7 @@ EPOCHS = 60
 LR, WD, BATCH = 1e-2, 1e-2, 64
 folds = pool["fold"].values
 rows_pool = pool.index.to_numpy()
+test_ds_frame_id = np.array(load_dataset("mpg-ranch/multimodal-survey", split="test")["frame_id"])
 
 GRID = np.load("feats/train.ground_image.general.grid1280x720.npy", mmap_mode="r")
 P_PATCHES = GRID.shape[1]
@@ -303,10 +304,10 @@ def run_branch(name, fold_run_fn, final_run_fn, predict_test_fn):
     test_preds = [predict_test_fn(ckpts[s][E_star], mu, sd) for s in SEEDS]
     test_pred_ens = np.mean(test_preds, axis=0)
 
-    np.savez(f"results/item2_{name}_oof.npz", **{f"s{s}": oof[s] for s in SEEDS}, ens=oof_ens,
+    np.savez(f"results/preds/item2_{name}_oof.npz", **{f"s{s}": oof[s] for s in SEEDS}, ens=oof_ens,
             frame_id=pool["frame_id"].to_numpy())
-    np.savez(f"results/item2_{name}_test.npz", **{f"s{s}": test_preds[i] for i, s in enumerate(SEEDS)},
-            ens=test_pred_ens)
+    np.savez(f"results/preds/item2_{name}_test.npz", **{f"s{s}": test_preds[i] for i, s in enumerate(SEEDS)},
+            ens=test_pred_ens, frame_id=test_ds_frame_id)
     return dict(E_star=E_star, cv_macro_AP=ap_pooled.mean(), cv_macro_F1=f1_pooled.mean())
 
 
