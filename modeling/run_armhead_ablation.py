@@ -25,9 +25,9 @@ CONFIGS = [("ground", "linear"), ("ground", "mlp"),
            ("drone", "linear"), ("drone", "mlp"),
            ("fused", "linear"), ("fused", "mlp")]
 SEEDS = [0, 1, 2]
-P_PATCHES = 3072
+P_PATCHES = 3600   # native 1280x720 grid (item 1), was 3072 @ 1024x768
 
-GRID = np.load("feats/train.ground_image.general.grid1024x768.npy", mmap_mode="r")   # (6480,3072,768) f16
+GRID = np.load("feats/train.ground_image.general.grid1280x720.npy", mmap_mode="r")   # (6480,3600,768) f16, native res
 A = np.load("feats/train.drone_image.satellite.npy")[:, :1024].astype(np.float32)     # aerial CLS, 224px
 
 ds = load_dataset("mpg-ranch/multimodal-survey", split="train")

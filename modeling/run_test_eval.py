@@ -22,7 +22,7 @@ CLASSES = ["Lupinus sericeus", "Balsamorhiza sagittata", "Gaillardia aristata",
            "Bromus tectorum", "Poa bulbosa"]
 SEEDS = [0, 1, 2]
 K = 5
-P_PATCHES = 3072
+P_PATCHES = 3600   # native 1280x720 grid (item 1), was 3072 @ 1024x768
 VAL_FOLD = 4                                # held out purely for early-stopping the final model
 
 folds = pool["fold"].values
@@ -30,8 +30,8 @@ rows_pool = pool.index.to_numpy()
 tr_mask = folds != VAL_FOLD
 va_mask = folds == VAL_FOLD
 
-GRID = np.load("feats/train.ground_image.general.grid1024x768.npy", mmap_mode="r")
-GRID_TEST = np.load("feats/test.ground_image.general.grid1024x768.npy", mmap_mode="r")
+GRID = np.load("feats/train.ground_image.general.grid1280x720.npy", mmap_mode="r")        # native res
+GRID_TEST = np.load("feats/test.ground_image.general.grid1280x720.npy", mmap_mode="r")    # native res
 
 print("per-frame patch means (train pool, for standardization) ...", flush=True)
 tr_abs = rows_pool[tr_mask]

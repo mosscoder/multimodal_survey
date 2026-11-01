@@ -1,4 +1,8 @@
-"""Dense per-patch feature extraction for spatial maps. 1024x768 -> 64x48 = 3072 patches."""
+"""Dense per-patch feature extraction for spatial maps. Native resolution:
+1280x720 (the ground_image's released size, no resize/stretch) -> 80x45 = 3600
+patches. Was 1024x768 -> 64x48 = 3072 (stretched the aspect ratio); superseded
+by this native-res version per the rerun spec, item 1. Old file kept on disk
+(grid1024x768.npy) for comparison, this writes to a new grid1280x720.npy path."""
 import numpy as np, torch
 from datasets import load_dataset
 from transformers import AutoImageProcessor, AutoModel
@@ -7,9 +11,9 @@ MODELS = {"general": "facebook/dinov3-vitb16-pretrain-lvd1689m",
           "satellite": "facebook/dinov3-vitl16-pretrain-sat493m"}
 splits = {"train": load_dataset("mpg-ranch/multimodal-survey", split="train")}
 
-RES_W, RES_H = 1024, 768                      # was 1024x576; user asked for 1024x768
-GRID_W, GRID_H = RES_W // 16, RES_H // 16     # 64 x 48 patch grid
-P = GRID_W * GRID_H                           # 3,072 patches per frame
+RES_W, RES_H = 1280, 720                      # native ground_image size, no resize
+GRID_W, GRID_H = RES_W // 16, RES_H // 16     # 80 x 45 patch grid
+P = GRID_W * GRID_H                           # 3,600 patches per frame
 
 proc  = AutoImageProcessor.from_pretrained(MODELS["general"])   # normalization stats only
 model = AutoModel.from_pretrained(MODELS["general"]).cuda().eval()
@@ -25,8 +29,12 @@ def extract_grid(split, out_path, batch_size=48):
     import time; t0 = time.time()
     for i in range(0, len(split), batch_size):
         imgs = split[i:i + batch_size]["ground_image"]
-        x = torch.stack([torch.from_numpy(np.asarray(im.convert("RGB").resize((RES_W, RES_H))))
-                         for im in imgs]).permute(0, 3, 1, 2).cuda().float() / 255
+        # native resolution: skip resize entirely when the image already matches (true
+        # no-op, avoids any resampling-filter artifact from resizing to an identical size)
+        prepped = [im.convert("RGB") for im in imgs]
+        prepped = [im if im.size == (RES_W, RES_H) else im.resize((RES_W, RES_H)) for im in prepped]
+        x = torch.stack([torch.from_numpy(np.asarray(im)) for im in prepped]
+                        ).permute(0, 3, 1, 2).cuda().float() / 255
         with torch.autocast("cuda", dtype=torch.bfloat16):
             h = model(pixel_values=(x - mu_px) / sd_px)
         G[i:i + batch_size] = h.last_hidden_state[:, skip:, :].float().cpu().numpy()

@@ -44,7 +44,8 @@ def extract_grid(column, key, res_w, res_h, batch_size=48):
     G = np.lib.format.open_memmap(out_path, mode="w+", dtype=np.float16, shape=(len(split), P, 768))
     t0 = time.time()
     for i in range(0, len(split), batch_size):
-        imgs = [im.convert("RGB").resize((res_w, res_h)) for im in split[i:i+batch_size][column]]
+        imgs = [im.convert("RGB") for im in split[i:i+batch_size][column]]
+        imgs = [im if im.size == (res_w, res_h) else im.resize((res_w, res_h)) for im in imgs]
         x = torch.stack([torch.from_numpy(np.asarray(im)) for im in imgs]).permute(0, 3, 1, 2).cuda().float() / 255
         mu = torch.tensor(proc.image_mean).view(1, 3, 1, 1).cuda()
         sd = torch.tensor(proc.image_std).view(1, 3, 1, 1).cuda()
@@ -75,10 +76,10 @@ if not os.path.exists(p):
 else:
     print(f"skip {p} (exists)")
 
-# 3. ground dense grid, 1024x768 -- the expensive one
-p = "feats/test.ground_image.general.grid1024x768.npy"
+# 3. ground dense grid, NATIVE resolution 1280x720 (no resize/stretch) -- the expensive one
+p = "feats/test.ground_image.general.grid1280x720.npy"
 if not os.path.exists(p):
-    extract_grid("ground_image", "general", 1024, 768)
+    extract_grid("ground_image", "general", 1280, 720, batch_size=48)
 else:
     print(f"skip {p} (exists)")
 
