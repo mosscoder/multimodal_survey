@@ -176,7 +176,8 @@ for f in range(K):
         oof[h][va] = Pv
 
 np.savez("results/preds/armhead_ablation_oof.npz",
-        **{f"{m}_{sc}_s{s}": oof[(m, sc, s)] for m, sc in CONFIGS for s in SEEDS})
+        **{f"{m}_{sc}_s{s}": oof[(m, sc, s)] for m, sc in CONFIGS for s in SEEDS},
+        frame_id=meta.loc[pool_mask, "frame_id"].to_numpy())
 
 rows, apr = [], []
 for mode, sc in CONFIGS:
