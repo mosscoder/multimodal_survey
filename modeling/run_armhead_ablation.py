@@ -12,6 +12,7 @@ value the flat post-pooling fusions (sum_fixed, gates, fusion_mlp) couldn't?
                       THEN drone also adds a flat offset after pooling
 """
 import json
+import time
 import numpy as np
 import pandas as pd
 import torch, torch.nn as nn, torch.nn.functional as F
@@ -21,6 +22,8 @@ from sklearn.metrics import f1_score, average_precision_score
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 torch.use_deterministic_algorithms(True, warn_only=True)
+
+from timing_utils import log_stage, reset_vram
 
 CLASSES = ["Lupinus sericeus", "Balsamorhiza sagittata", "Gaillardia aristata",
            "Achillea millefolium", "Euphorbia virgata", "Sisymbrium altissimum",
@@ -165,6 +168,7 @@ def fit_predict_mil(rows_tr, rows_va, fold, lr=1e-2, wd=1e-2, epochs=60, patienc
 
 
 # ---- CV ----------------------------------------------------------------
+reset_vram(); t_cv = time.time()
 oof = {(mode, sc, s): np.zeros(Y_pool.shape, np.float32) for mode, sc in CONFIGS for s in SEEDS}
 abs_idx = np.where(pool_mask)[0]
 for f in range(K):
@@ -174,6 +178,8 @@ for f in range(K):
     preds = fit_predict_mil(abs_idx[tr], abs_idx[va], f)
     for h, Pv in preds.items():
         oof[h][va] = Pv
+log_stage("train_cv_armhead_ablation", time.time() - t_cv,
+          note=f"{len(CONFIGS)} configs x {len(SEEDS)} seeds x {K} folds")
 
 np.savez("results/preds/armhead_ablation_oof.npz",
         **{f"{m}_{sc}_s{s}": oof[(m, sc, s)] for m, sc in CONFIGS for s in SEEDS},

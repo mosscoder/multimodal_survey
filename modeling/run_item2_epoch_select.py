@@ -21,7 +21,7 @@ initialization (torch.manual_seed(seed), already set per head), not in data
 order -- the manuscript must describe them as initialization seeds, not fully
 independent resamples.
 """
-import json, time
+import json, os, time
 import numpy as np
 import pandas as pd
 import torch, torch.nn as nn
@@ -29,6 +29,12 @@ from datasets import load_dataset
 from sklearn.metrics import f1_score, average_precision_score
 
 from assemble import pool, Y_pool
+from timing_utils import log_stage, reset_vram
+
+# item 7: set to skip the (hours-long) 5-fold CV loop and go straight to final-model
+# training + test prediction, reusing the already-committed E* -- for getting a clean,
+# isolated wall-time measurement of just those two stages without redoing the CV.
+TIMING_ONLY = os.environ.get("ITEM7_TIMING_FINAL_ONLY") == "1"
 
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
@@ -52,9 +58,11 @@ assert P_PATCHES == 3600, P_PATCHES
 A_drone = np.load("feats/train.drone_image.satellite.npy").astype(np.float32)[:, :1024][rows_pool]
 
 print("per-frame patch means (one memmap pass, pool rows only) ...", flush=True)
+reset_vram()
 t0 = time.time()
 PMEAN = np.stack([np.asarray(GRID[r], np.float32).mean(0) for r in rows_pool])
 print(f"  done in {time.time()-t0:.0f}s", flush=True)
+log_stage("ground_patch_mean_precompute", time.time() - t0)
 
 
 class GroundHead(nn.Module):
@@ -252,57 +260,72 @@ def drone_predict_test(state_dict, mu, sd):
 # ---------------------------------------------------------------- DRIVER ---
 def run_branch(name, fold_run_fn, final_run_fn, predict_test_fn):
     print(f"\n===== branch: {name} =====", flush=True)
-    # 1) CV: collect per-epoch val predictions for every fold/seed
-    per_fold_epoch_preds = {}   # fold -> {seed: (EPOCHS, n_va, 8)}
-    per_fold_va_idx = {}
-    for f in range(K):
-        va = np.where(folds == f)[0]
-        tr = np.where(folds != f)[0]
-        print(f"  fold {f}  tr {len(tr)}  va {len(va)}", flush=True)
-        per_fold_epoch_preds[f] = fold_run_fn(tr, va, f)
-        per_fold_va_idx[f] = va
+    if not TIMING_ONLY:
+        # 1) CV: collect per-epoch val predictions for every fold/seed
+        reset_vram(); t_cv = time.time()
+        per_fold_epoch_preds = {}   # fold -> {seed: (EPOCHS, n_va, 8)}
+        per_fold_va_idx = {}
+        for f in range(K):
+            va = np.where(folds == f)[0]
+            tr = np.where(folds != f)[0]
+            print(f"  fold {f}  tr {len(tr)}  va {len(va)}", flush=True)
+            per_fold_epoch_preds[f] = fold_run_fn(tr, va, f)
+            per_fold_va_idx[f] = va
+        log_stage(f"train_cv_{name}", time.time() - t_cv, note=f"{K} folds x {len(SEEDS)} seeds x {EPOCHS} epochs")
 
-    # 2) E* = argmax of mean-over-seeds-then-mean-over-folds val macro-AP curve
-    curve = np.zeros(EPOCHS)
-    for f in range(K):
-        va = per_fold_va_idx[f]
-        fold_curve = np.zeros(EPOCHS)
-        for ep in range(EPOCHS):
-            seed_ap = []
+        # 2) E* = argmax of mean-over-seeds-then-mean-over-folds val macro-AP curve
+        curve = np.zeros(EPOCHS)
+        for f in range(K):
+            va = per_fold_va_idx[f]
+            fold_curve = np.zeros(EPOCHS)
+            for ep in range(EPOCHS):
+                seed_ap = []
+                for s in SEEDS:
+                    p = per_fold_epoch_preds[f][s][ep]
+                    ap = average_precision_score(Y_pool[va], p, average="macro")
+                    seed_ap.append(ap)
+                fold_curve[ep] = np.mean(seed_ap)
+            curve += fold_curve / K
+        E_star = int(np.argmax(curve))
+        print(f"  {name}: E* = {E_star}  (mean macro-AP {curve[E_star]:.4f})", flush=True)
+        pd.DataFrame({"epoch": np.arange(EPOCHS), "mean_macro_AP": curve}).to_csv(
+            f"results/item2_{name}_epoch_curve.csv", index=False)
+
+        # 3) pooled OOF at E*, per-fold metrics at E*
+        oof = {s: np.zeros(Y_pool.shape, dtype=np.float32) for s in SEEDS}
+        per_fold_rows = []
+        for f in range(K):
+            va = per_fold_va_idx[f]
             for s in SEEDS:
-                p = per_fold_epoch_preds[f][s][ep]
-                ap = average_precision_score(Y_pool[va], p, average="macro")
-                seed_ap.append(ap)
-            fold_curve[ep] = np.mean(seed_ap)
-        curve += fold_curve / K
-    E_star = int(np.argmax(curve))
-    print(f"  {name}: E* = {E_star}  (mean macro-AP {curve[E_star]:.4f})", flush=True)
-    pd.DataFrame({"epoch": np.arange(EPOCHS), "mean_macro_AP": curve}).to_csv(
-        f"results/item2_{name}_epoch_curve.csv", index=False)
-
-    # 3) pooled OOF at E*, per-fold metrics at E*
-    oof = {s: np.zeros(Y_pool.shape, dtype=np.float32) for s in SEEDS}
-    per_fold_rows = []
-    for f in range(K):
-        va = per_fold_va_idx[f]
-        for s in SEEDS:
-            oof[s][va] = per_fold_epoch_preds[f][s][E_star]
-        fold_P = np.mean([per_fold_epoch_preds[f][s][E_star] for s in SEEDS], axis=0)
-        ap = average_precision_score(Y_pool[va], fold_P, average=None)
-        f1 = f1_score(Y_pool[va], fold_P > 0.5, average=None, zero_division=0)
-        per_fold_rows.append(dict(fold=f, macro_AP=ap.mean(), macro_F1=f1.mean(),
-                                  **{f"AP_{c.split()[0]}": v for c, v in zip(CLASSES, ap)}))
-    pd.DataFrame(per_fold_rows).to_csv(f"results/item2_{name}_perfold_at_Estar.csv", index=False)
-    oof_ens = np.mean([oof[s] for s in SEEDS], axis=0)
-    ap_pooled = average_precision_score(Y_pool, oof_ens, average=None)
-    f1_pooled = f1_score(Y_pool, oof_ens > 0.5, average=None, zero_division=0)
-    print(f"  {name} pooled OOF @ E*={E_star}: macroAP {ap_pooled.mean():.3f}  macroF1 {f1_pooled.mean():.3f}", flush=True)
+                oof[s][va] = per_fold_epoch_preds[f][s][E_star]
+            fold_P = np.mean([per_fold_epoch_preds[f][s][E_star] for s in SEEDS], axis=0)
+            ap = average_precision_score(Y_pool[va], fold_P, average=None)
+            f1 = f1_score(Y_pool[va], fold_P > 0.5, average=None, zero_division=0)
+            per_fold_rows.append(dict(fold=f, macro_AP=ap.mean(), macro_F1=f1.mean(),
+                                      **{f"AP_{c.split()[0]}": v for c, v in zip(CLASSES, ap)}))
+        pd.DataFrame(per_fold_rows).to_csv(f"results/item2_{name}_perfold_at_Estar.csv", index=False)
+        oof_ens = np.mean([oof[s] for s in SEEDS], axis=0)
+        ap_pooled = average_precision_score(Y_pool, oof_ens, average=None)
+        f1_pooled = f1_score(Y_pool, oof_ens > 0.5, average=None, zero_division=0)
+        print(f"  {name} pooled OOF @ E*={E_star}: macroAP {ap_pooled.mean():.3f}  macroF1 {f1_pooled.mean():.3f}", flush=True)
+    else:
+        est_summary = pd.read_csv("results/item2_Estar_summary.csv", index_col=0)
+        E_star = int(est_summary.loc[name, "E_star"])
+        print(f"  {name}: [ITEM7_TIMING_FINAL_ONLY] using committed E* = {E_star}, skipping CV", flush=True)
 
     # 4) final model: full pool, checkpoint every epoch, select E*, predict test
     print(f"  {name}: training final model on full pool ...", flush=True)
+    reset_vram(); t_final = time.time()
     ckpts, (mu, sd) = final_run_fn()
+    log_stage(f"train_final_{name}", time.time() - t_final, note=f"full pool, {EPOCHS} epochs")
+
+    reset_vram(); t_pred = time.time()
     test_preds = [predict_test_fn(ckpts[s][E_star], mu, sd) for s in SEEDS]
     test_pred_ens = np.mean(test_preds, axis=0)
+    log_stage(f"test_predict_{name}", time.time() - t_pred, note=f"{len(test_pred_ens)} frames")
+
+    if TIMING_ONLY:
+        return None   # measurement-only pass: don't touch the already-committed result files
 
     np.savez(f"results/preds/item2_{name}_oof.npz", **{f"s{s}": oof[s] for s in SEEDS}, ens=oof_ens,
             frame_id=pool["frame_id"].to_numpy())
@@ -315,7 +338,8 @@ results = {}
 results["drone"] = run_branch("drone", drone_fold_run, drone_final_run, drone_predict_test)
 results["ground"] = run_branch("ground", ground_fold_run, ground_final_run, ground_predict_test)
 
-pd.DataFrame(results).T.to_csv("results/item2_Estar_summary.csv")
-print("\n=== E* summary ===")
-print(pd.DataFrame(results).T.to_string(float_format=lambda x: f"{x:.3f}"))
+if not TIMING_ONLY:
+    pd.DataFrame(results).T.to_csv("results/item2_Estar_summary.csv")
+    print("\n=== E* summary ===")
+    print(pd.DataFrame(results).T.to_string(float_format=lambda x: f"{x:.3f}"))
 print("\ndone.")

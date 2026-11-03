@@ -1,0 +1,8 @@
+stage,path,size_gb
+grid_extract_train,feats/train.ground_image.general.grid1280x720.npy,35.8318
+grid_extract_test,feats/test.ground_image.general.grid1280x720.npy,8.9192
+cls_extract_train_drone_satellite,feats/train.drone_image.satellite.npy,0.0531
+cls_extract_test_drone_satellite,feats/test.drone_image.satellite.npy,0.0132
+cls_extract_train_ground_general,feats/train.ground_image.general.npy,0.0398
+cls_extract_train_ground_r768,feats/train.ground_image.general.r768.npy,0.0398
+cls_extract_test_ground_r768,feats/test.ground_image.general.r768.npy,0.0099

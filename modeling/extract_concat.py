@@ -1,6 +1,9 @@
+import time
 import numpy as np, torch
 from datasets import load_dataset
 from transformers import AutoImageProcessor, AutoModel
+
+from timing_utils import log_stage, reset_vram
 
 MODELS = {"general":   "facebook/dinov3-vitb16-pretrain-lvd1689m",   # 768-d,  ground photographs
           "satellite": "facebook/dinov3-vitl16-pretrain-sat493m"}    # 1024-d, nadir drone crops
@@ -32,7 +35,9 @@ os.makedirs("feats", exist_ok=True)
 for name, split in splits.items():
     for column, key in PLAN:
         p = f"feats/{name}.{column}.{key}.npy"
+        reset_vram(); t_stage = time.time()
         a = extract(split, column, key)
+        log_stage(f"cls_extract_{name}_{column}_{key}", time.time() - t_stage, note=f"{len(split)} frames")
         np.save(p, a)
         print(f"wrote {p}  {a.shape}", flush=True)
     split.remove_columns(["ground_image", "drone_image"]).to_pandas().to_parquet(f"feats/{name}.meta.parquet")

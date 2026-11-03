@@ -9,6 +9,7 @@ early stopping (same method as every CV run, just not scored on that fold).
 already-computed OOF predictions (no test leakage) and applied as-is to test.
 """
 import json
+import time
 import numpy as np
 import pandas as pd
 import torch, torch.nn as nn
@@ -20,6 +21,8 @@ from assemble import pool, Y_pool
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 torch.use_deterministic_algorithms(True, warn_only=True)
+
+from timing_utils import log_stage, reset_vram
 
 CLASSES = ["Lupinus sericeus", "Balsamorhiza sagittata", "Gaillardia aristata",
            "Achillea millefolium", "Euphorbia virgata", "Sisymbrium altissimum",
@@ -158,17 +161,23 @@ def train_small(Xtr_full, seed, X_test):
 
 # ---- train final models, 3 seeds each ----
 print("\ntraining final ground_grid (dense-grid top-1 MIL) ...")
+reset_vram(); t_stage = time.time()
 ground_grid_test = np.mean([train_ground_grid(s) for s in SEEDS], axis=0)
+log_stage("train_final_test_eval_ground_grid", time.time() - t_stage, note=f"{len(SEEDS)} seeds")
 
 print("training final ground_global (768px CLS+patch-mean) ...")
 X768_train = np.load("feats/train.ground_image.general.r768.npy").astype(np.float32)
 X768_test = np.load("feats/test.ground_image.general.r768.npy").astype(np.float32)
+reset_vram(); t_stage = time.time()
 ground_global_test = np.mean([train_small(X768_train, s, X768_test) for s in SEEDS], axis=0)
+log_stage("train_final_test_eval_ground_global", time.time() - t_stage, note=f"{len(SEEDS)} seeds")
 
 print("training final drone (224px CLS) ...")
 Adrone_train = np.load("feats/train.drone_image.satellite.npy").astype(np.float32)[:, :1024]
 Adrone_test = np.load("feats/test.drone_image.satellite.npy").astype(np.float32)[:, :1024]
+reset_vram(); t_stage = time.time()
 drone_test = np.mean([train_small(Adrone_train, s, Adrone_test) for s in SEEDS], axis=0)
+log_stage("train_final_test_eval_drone", time.time() - t_stage, note=f"{len(SEEDS)} seeds")
 
 test_frame_id = np.array(load_dataset("mpg-ranch/multimodal-survey", split="test")["frame_id"])
 np.savez("results/preds/test_component_preds.npz", ground_grid=ground_grid_test,

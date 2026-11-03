@@ -1,0 +1,15 @@
+stage,wall_s,gpu,peak_vram_gb,note
+cls_extract_train_ground_image_general,351.4,NVIDIA GeForce RTX 4070,1.183,6480 frames
+cls_extract_train_drone_image_satellite,712.2,NVIDIA GeForce RTX 4070,2.299,6480 frames
+cls_extract_train_drone_image_general,322.9,NVIDIA GeForce RTX 4070,1.183,6480 frames
+grid_extract_train,720.0,NVIDIA GeForce RTX 4070,0.0,"derived from extract_grid_native.log rate telemetry, 6480 frames; no rerun (avoids overwriting 35.8GB cache)"
+grid_extract_test,202.0,NVIDIA GeForce RTX 4070,0.0,"derived from extract_test_native.log rate telemetry, 1613 frames; no rerun (avoids overwriting 8.9GB cache)"
+cls_extract_test_drone,19.2,NVIDIA GeForce RTX 4070,0.0,"derived from extract_test.log rate telemetry, 1613 frames; no rerun"
+cls_extract_test_ground_r768,70.1,NVIDIA GeForce RTX 4070,0.0,"derived from extract_test.log rate telemetry, 1613 frames; no rerun"
+train_cv_ground,15157.0,NVIDIA GeForce RTX 4070,0.0,"5 folds x 3 seeds x 60 epochs; derived from item2_epoch_select_seeded.log, excluding an ~11.4h diagnosed machine-sleep gap"
+train_cv_and_final_drone,97.0,NVIDIA GeForce RTX 4070,0.0,"5-fold CV + full-pool final model, combined (not separable in this log); drone head trains on CPU"
+ground_patch_mean_precompute,102.5,NVIDIA GeForce RTX 4070,0.0,
+train_final_drone,27.5,NVIDIA GeForce RTX 4070,0.0,"full pool, 60 epochs"
+test_predict_drone,0.1,NVIDIA GeForce RTX 4070,0.0,1613 frames
+train_final_ground,7190.6,NVIDIA GeForce RTX 4070,2.854,"full pool, 60 epochs"
+test_predict_ground,73.9,NVIDIA GeForce RTX 4070,2.853,1613 frames

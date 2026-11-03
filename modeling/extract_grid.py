@@ -3,9 +3,12 @@
 patches. Was 1024x768 -> 64x48 = 3072 (stretched the aspect ratio); superseded
 by this native-res version per the rerun spec, item 1. Old file kept on disk
 (grid1024x768.npy) for comparison, this writes to a new grid1280x720.npy path."""
+import time
 import numpy as np, torch
 from datasets import load_dataset
 from transformers import AutoImageProcessor, AutoModel
+
+from timing_utils import log_stage, reset_vram
 
 MODELS = {"general": "facebook/dinov3-vitb16-pretrain-lvd1689m",
           "satellite": "facebook/dinov3-vitl16-pretrain-sat493m"}
@@ -45,7 +48,9 @@ def extract_grid(split, out_path, batch_size=48):
 
 
 out = f"feats/train.ground_image.general.grid{RES_W}x{RES_H}.npy"
+reset_vram(); t_stage = time.time()
 G = extract_grid(splits["train"], out)
+log_stage("grid_extract_train", time.time() - t_stage, note=f"{len(splits['train'])} frames")
 print(f"wrote {out}  shape {G.shape}  {G.nbytes/1e9:.1f} GB")
 
 # informational: pooled grid vs the 768x768 resolution-study patch features (NOT expected to

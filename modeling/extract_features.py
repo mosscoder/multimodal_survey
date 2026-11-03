@@ -27,6 +27,8 @@ import torch
 from datasets import load_dataset
 from transformers import AutoImageProcessor, AutoModel
 
+from timing_utils import log_stage, reset_vram
+
 DATASET = "mpg-ranch/multimodal-survey"
 MODELS = {
     "vitb_general": "facebook/dinov3-vitb16-pretrain-lvd1689m",
@@ -81,6 +83,7 @@ def extract(ds, model_key: str, col: str, batch_size: int, bf16: bool) -> None:
         d = ds[split]
         n = len(d)
         feats = np.empty((n, dim), dtype=np.float32)
+        reset_vram()
         t0 = time.time()
         for i0 in range(0, n, batch_size):
             i1 = min(i0 + batch_size, n)
@@ -98,6 +101,7 @@ def extract(ds, model_key: str, col: str, batch_size: int, bf16: bool) -> None:
         np.save(out_path, feats)
         dt = time.time() - t0
         print(f"  wrote {out_path.name}  [{n}, {dim}]  {n / dt:.0f} img/s  {dt:.0f}s")
+        log_stage(f"cls_extract_{split}_{model_key}_{col}", dt, note=f"{n} frames")
 
     del model
     torch.cuda.empty_cache()
