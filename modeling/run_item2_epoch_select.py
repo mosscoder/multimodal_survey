@@ -35,6 +35,9 @@ from timing_utils import log_stage, reset_vram
 # training + test prediction, reusing the already-committed E* -- for getting a clean,
 # isolated wall-time measurement of just those two stages without redoing the CV.
 TIMING_ONLY = os.environ.get("ITEM7_TIMING_FINAL_ONLY") == "1"
+# dataset-fix rerun: restrict to a subset of branches (e.g. "drone") so the other
+# branch's already-correct, already-committed results aren't touched or re-cost.
+BRANCHES_TO_RUN = os.environ.get("ITEM_BRANCHES", "drone,ground").split(",")
 
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
@@ -334,12 +337,22 @@ def run_branch(name, fold_run_fn, final_run_fn, predict_test_fn):
     return dict(E_star=E_star, cv_macro_AP=ap_pooled.mean(), cv_macro_F1=f1_pooled.mean())
 
 
+BRANCH_FNS = {
+    "drone": (drone_fold_run, drone_final_run, drone_predict_test),
+    "ground": (ground_fold_run, ground_final_run, ground_predict_test),
+}
 results = {}
-results["drone"] = run_branch("drone", drone_fold_run, drone_final_run, drone_predict_test)
-results["ground"] = run_branch("ground", ground_fold_run, ground_final_run, ground_predict_test)
+for name in BRANCHES_TO_RUN:
+    results[name] = run_branch(name, *BRANCH_FNS[name])
 
 if not TIMING_ONLY:
-    pd.DataFrame(results).T.to_csv("results/item2_Estar_summary.csv")
+    # merge into the existing summary so branches NOT in BRANCHES_TO_RUN keep their row
+    try:
+        prior = pd.read_csv("results/item2_Estar_summary.csv", index_col=0).T.to_dict()
+    except FileNotFoundError:
+        prior = {}
+    prior.update(results)
+    pd.DataFrame(prior).T.to_csv("results/item2_Estar_summary.csv")
     print("\n=== E* summary ===")
-    print(pd.DataFrame(results).T.to_string(float_format=lambda x: f"{x:.3f}"))
+    print(pd.DataFrame(prior).T.to_string(float_format=lambda x: f"{x:.3f}"))
 print("\ndone.")

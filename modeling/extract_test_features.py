@@ -12,6 +12,9 @@ MODELS = {"general": "facebook/dinov3-vitb16-pretrain-lvd1689m",
 # already exists (the cache is overwritten with an equivalent, deterministic
 # re-run -- used once to get a real measured number where none existed before).
 FORCE = os.environ.get("ITEM7_FORCE_RETIME") == "1"
+# dataset-fix rerun: force ONLY the small drone-CLS block (step 1), never the
+# 8.9GB grid block (step 3) -- that one stays gated behind the broader FORCE.
+FORCE_DRONE = os.environ.get("ITEM7_FORCE_RETIME_DRONE") == "1" or FORCE
 
 split = load_dataset("mpg-ranch/multimodal-survey", split="test")
 print(f"test split: {len(split)} frames", flush=True)
@@ -68,7 +71,7 @@ def extract_grid(column, key, res_w, res_h, batch_size=48):
 
 # 1. drone alone (224px CLS + patch-mean) -- fast
 p = "feats/test.drone_image.satellite.npy"
-if not os.path.exists(p) or FORCE:
+if not os.path.exists(p) or FORCE_DRONE:
     reset_vram(); t_stage = time.time()
     a = extract_pooled("drone_image", "satellite", 224, 96)
     log_stage("cls_extract_test_drone", time.time() - t_stage, note=f"{len(split)} frames")
