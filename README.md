@@ -23,7 +23,7 @@ multimodal_survey/
 │   └── planning/          QGIS project + basemap for laying out strips
 ├── multimodal_dataset/    builds the Hugging Face dataset, plus the (historical) labeling app
 ├── dev/                   the pre-reorg field shakedown (site_1_strip_3_test_run/)
-└── docs/                  the dataset overview, field walkthrough, and figures
+└── docs/                  the field walkthrough, getting-started guide, and figures
 ```
 
 ### `missions/` — what the robot did
@@ -66,7 +66,7 @@ pixels at 1.30 cm per pixel), plus location, time, bearing, species labels,
 and the artifact level. The release is the Hugging Face dataset
 [`mpg-ranch/multimodal-survey`](https://huggingface.co/datasets/mpg-ranch/multimodal-survey),
 8,287 rows in 33 columns. The release-facing description of every column lives
-in [`docs/dataset-overview.html`](docs/dataset-overview.html).
+in the dataset card, [`multimodal_dataset/card/README.md`](multimodal_dataset/card/README.md).
 
 ```bash
 python -m multimodal_dataset build     # missions/ + orthomosaics -> multimodal_dataset/out/

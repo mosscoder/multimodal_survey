@@ -22,9 +22,8 @@ from .crops import FLIGHTS, N, P, antenna_en, footprint_corners_en
 from .extract import planned_mark_en
 from .schema import COLUMNS
 
-# The published numbers (docs/dataset-overview.html, the card and the
-# manuscript). Exact where exact, (value, tolerance) where the page states a
-# rounded figure.
+# The published numbers (the dataset card and the manuscript). Exact where
+# exact, (value, tolerance) where the card states a rounded figure.
 PUBLISHED = {
     "columns": 33,
     "counts": {"train": 6480, "test": 1613, "train_tier_2": 194},

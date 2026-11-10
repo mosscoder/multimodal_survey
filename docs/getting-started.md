@@ -34,7 +34,7 @@ previous, `u` jump to next unreviewed. Task and mission are chosen in-app.
 The `multimodal_dataset/` package assembles the release from `missions/` and the
 four drone orthomosaics, which the build downloads once into
 `multimodal_dataset/cache/`. The release-facing description of every column is
-[`dataset-overview.html`](dataset-overview.html).
+the dataset card, [`multimodal_dataset/card/README.md`](../multimodal_dataset/card/README.md).
 
 ```bash
 python -m multimodal_dataset build     # assemble to multimodal_dataset/out/

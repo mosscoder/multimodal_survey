@@ -2,9 +2,9 @@
 
 One row per labeled robot capture: the ground image, its 4 x 4 m nadir drone
 image, the species and quality labels, and the telemetry the release
-documents. Column names, order, and semantics follow
-``docs/dataset-overview.html`` exactly; that page is the spec, this file is its
-executable form. The join key is ``frame_id`` (the capture stem).
+documents. Column names, order, and semantics follow the dataset card
+(``multimodal_dataset/card/README.md``) exactly; the card is the spec, this
+file is its executable form. The join key is ``frame_id`` (the capture stem).
 """
 from __future__ import annotations
 
