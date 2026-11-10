@@ -211,7 +211,7 @@ where the cross-strip overlaps come from.
 
 ### Why `train_tier_2` exists
 
-Adjacent legs are 4.1 to 5.3 m apart, and a 4 m drone image reaches 2.0 m
+Adjacent legs were planned 5 m apart, and a 4 m drone image reaches 2.0 m
 laterally, and further once the bearing wanders off the leg axis. So a small
 number of training drone images cover ground that also appears in a test
 drone image. Rather than delete them, they are labeled and set aside.
