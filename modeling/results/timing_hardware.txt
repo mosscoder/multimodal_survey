@@ -1,0 +1,6 @@
+GPU: NVIDIA GeForce RTX 4070
+Total VRAM: 12.9 GB
+CPU: Intel64 Family 6 Model 183 Stepping 1, GenuineIntel  (24 physical / 32 logical cores)
+RAM: 68.4 GB
+OS: Windows-11-10.0.26200-SP0
+PyTorch: 2.11.0+cu128  CUDA: 12.8
