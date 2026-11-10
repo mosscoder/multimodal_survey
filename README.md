@@ -23,7 +23,7 @@ multimodal_survey/
 │   └── planning/          QGIS project + basemap for laying out strips
 ├── multimodal_dataset/    builds the Hugging Face dataset, plus the (historical) labeling app
 ├── dev/                   the pre-reorg field shakedown (site_1_strip_3_test_run/)
-└── docs/                  the field walkthrough, getting-started guide, and figures
+└── docs/                  the getting-started guide and figures
 ```
 
 ### `missions/` — what the robot did
@@ -53,8 +53,9 @@ partial / aborted) and basic quality checks. A run only counts as usable once it
 `seed_poly.geojson`.
 
 **Running a survey in the field** — the full procedure (clone onto the dog,
-pre-flight, run, push the results) lives in
-[`docs/field-walkthrough.md`](docs/field-walkthrough.md).
+pre-flight, run, push the results) lives with the survey software, in
+[`docs/field-walkthrough.md`](https://github.com/mosscoder/mpg-ai-edge/blob/refactor/docs/field-walkthrough.md)
+of the go2-survey repository.
 
 ### `multimodal_dataset/` — building the Hugging Face dataset
 
