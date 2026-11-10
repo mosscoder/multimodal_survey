@@ -1,5 +1,10 @@
-"""Extract the three feature sets needed for the best config, on the TEST split
-(never done before -- every prior extraction was train-only by design)."""
+"""Features of the test split: the whole-image drone features and the dense
+ground patch features at native resolution, extracted the same way as for the
+training split.
+
+Writes feats/test.drone_image.satellite.npy and
+feats/test.ground_image.general.grid1280x720.npy (8.9 GB). Requires a CUDA GPU.
+"""
 import numpy as np, torch, os, time
 from datasets import load_dataset
 from transformers import AutoImageProcessor, AutoModel
@@ -8,13 +13,11 @@ from timing_utils import log_stage, reset_vram
 
 MODELS = {"general": "facebook/dinov3-vitb16-pretrain-lvd1689m",
           "satellite": "facebook/dinov3-vitl16-pretrain-sat493m"}
-# item 7: set to force a fresh, timed re-extraction even when the cached .npy
-# already exists (the cache is overwritten with an equivalent, deterministic
-# re-run -- used once to get a real measured number where none existed before).
-FORCE = os.environ.get("ITEM7_FORCE_RETIME") == "1"
-# dataset-fix rerun: force ONLY the small drone-CLS block (step 1), never the
-# 8.9GB grid block (step 3) -- that one stays gated behind the broader FORCE.
-FORCE_DRONE = os.environ.get("ITEM7_FORCE_RETIME_DRONE") == "1" or FORCE
+# Existing feature files are kept. FORCE_REEXTRACT=1 overwrites both, and
+# FORCE_REEXTRACT_DRONE=1 overwrites only the small drone file, never the
+# 8.9 GB ground file.
+FORCE = os.environ.get("FORCE_REEXTRACT") == "1"
+FORCE_DRONE = os.environ.get("FORCE_REEXTRACT_DRONE") == "1" or FORCE
 
 split = load_dataset("mpg-ranch/multimodal-survey", split="test")
 print(f"test split: {len(split)} frames", flush=True)
@@ -79,17 +82,7 @@ if not os.path.exists(p) or FORCE_DRONE:
 else:
     print(f"skip {p} (exists)")
 
-# 2. ground global-pool, 768px CLS + patch-mean -- fast
-p = "feats/test.ground_image.general.r768.npy"
-if not os.path.exists(p) or FORCE:
-    reset_vram(); t_stage = time.time()
-    a = extract_pooled("ground_image", "general", 768, 48)
-    log_stage("cls_extract_test_ground_r768", time.time() - t_stage, note=f"{len(split)} frames")
-    np.save(p, a); print(f"wrote {p}  {a.shape}", flush=True)
-else:
-    print(f"skip {p} (exists)")
-
-# 3. ground dense grid, NATIVE resolution 1280x720 (no resize/stretch) -- the expensive one
+# 2. ground dense grid, NATIVE resolution 1280x720 (no resize/stretch) -- the expensive one
 p = "feats/test.ground_image.general.grid1280x720.npy"
 if not os.path.exists(p) or FORCE:
     reset_vram(); t_stage = time.time()

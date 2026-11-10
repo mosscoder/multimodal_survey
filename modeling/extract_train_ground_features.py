@@ -1,9 +1,11 @@
-"""Dense per-patch feature extraction for spatial maps. Native resolution:
-1280x720 (the ground_image's released size, no resize/stretch) -> 80x45 = 3600
-patches. Was 1024x768 -> 64x48 = 3072 (stretched the aspect ratio); superseded
-by this native-res version per the rerun spec, item 1. Old file kept on disk
-(grid1024x768.npy) for comparison, this writes to a new grid1280x720.npy path."""
-import time
+"""Dense per-patch features of the training-split ground images at native resolution.
+
+Each 1280 by 720 ground image goes through the frozen DINOv3 ViT-B/16 without
+resizing, which gives an 80 by 45 grid of 3,600 patch tokens of 768 values.
+Writes feats/train.ground_image.general.grid1280x720.npy, a float16 array of
+6,480 by 3,600 by 768 (35.8 GB). Requires a CUDA GPU.
+"""
+import os, time
 import numpy as np, torch
 from datasets import load_dataset
 from transformers import AutoImageProcessor, AutoModel
@@ -47,16 +49,9 @@ def extract_grid(split, out_path, batch_size=48):
     return G
 
 
+os.makedirs("feats", exist_ok=True)
 out = f"feats/train.ground_image.general.grid{RES_W}x{RES_H}.npy"
 reset_vram(); t_stage = time.time()
 G = extract_grid(splits["train"], out)
 log_stage("grid_extract_train", time.time() - t_stage, note=f"{len(splits['train'])} frames")
 print(f"wrote {out}  shape {G.shape}  {G.nbytes/1e9:.1f} GB")
-
-# informational: pooled grid vs the 768x768 resolution-study patch features (NOT expected to
-# match -- different resolution + preprocessing -- just a magnitude/sanity readout)
-gmean = np.asarray(G.mean(1), dtype=np.float32)
-ref = np.load("feats/train.ground_image.general.r768.npy")[:, 768:]   # patch-mean half
-d = np.linalg.norm(gmean - ref, axis=1) / np.linalg.norm(ref, axis=1)
-print(f"G.mean(1) vs r768 patch-mean: relL2 {d.mean():.3f} (mean) {d.max():.3f} (max)  "
-      f"-- large is expected, resolutions differ")

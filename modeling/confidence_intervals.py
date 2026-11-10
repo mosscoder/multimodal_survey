@@ -1,8 +1,13 @@
-"""Item 6: leg-level 95% bootstrap CI (macro + per-species AP) and per-fold
-scores for the pooled OOF predictions at E*, for ground, drone and fused.
-Rides on item 4's saved OOF arrays (frame_id-aligned to `pool`), so it can be
-rerun without retraining. Writes NEW files only -- results/topk_k8_leg_bootstrap_ci.csv
-(an earlier configuration) is left untouched.
+"""Leg-level 95% bootstrap confidence intervals and per-fold scores.
+
+For the pooled out-of-fold predictions of ground, drone and fused, computes the
+95% interval of each species' AP and of the macro AP by resampling the 38 legs
+of the cross-validation pool (2,000 resamples, seed 0), and the per-fold macro
+AP, macro F1 at 0.5 and per-species AP.
+
+Reads results/preds/{ground,drone,fused}_cv.npz. Writes
+results/ap_confidence_intervals.csv and results/ap_per_fold.csv. Runs on a CPU
+in about a minute.
 """
 import numpy as np
 import pandas as pd
@@ -41,10 +46,10 @@ def leg_bootstrap_ap(Yv, Pv, groups, n_boot=N_BOOT, seed=0):
     return per_species_ci, macro_ci
 
 
-# ---- load pooled OOF predictions (frame_id-aligned to `pool`), item 4's arrays ----
+# ---- load the pooled out-of-fold predictions (frame_id-aligned to `pool`) ----
 configs = {}
 for name in ["ground", "drone", "fused"]:
-    d = np.load(f"results/preds/item2_{name}_oof.npz", allow_pickle=True)
+    d = np.load(f"results/preds/{name}_cv.npz", allow_pickle=True)
     assert (d["frame_id"] == pool["frame_id"].to_numpy()).all()
     configs[name] = d["ens"]
 
@@ -60,7 +65,7 @@ for name, P in configs.items():
                          ci_lo=macro_ci[0], ci_hi=macro_ci[1]))
 
 ci_df = pd.DataFrame(ci_rows)
-ci_df.to_csv("results/item6_leg_bootstrap_ci.csv", index=False)
+ci_df.to_csv("results/ap_confidence_intervals.csv", index=False)
 
 print("=== leg-level 95% bootstrap CI (2000 resamples of 38 legs) ===")
 for name in configs:
@@ -83,7 +88,7 @@ for name, P in configs.items():
         fold_rows.append(row)
 
 fold_df = pd.DataFrame(fold_rows)
-fold_df.to_csv("results/item6_perfold.csv", index=False)
+fold_df.to_csv("results/ap_per_fold.csv", index=False)
 
 print("\n=== per-fold macro AP / macro F1@0.5, per config ===")
 for name in configs:
@@ -91,4 +96,4 @@ for name in configs:
     print(f"\n-- {name} --  mean(fold F1) {sub.macro_F1.mean():.3f} +/- {sub.macro_F1.std():.3f}")
     print(sub[["fold", "macro_AP", "macro_F1"]].to_string(index=False, float_format=lambda x: f"{x:.3f}"))
 
-print("\nwrote results/item6_leg_bootstrap_ci.csv, results/item6_perfold.csv")
+print("\nwrote results/ap_confidence_intervals.csv, results/ap_per_fold.csv")

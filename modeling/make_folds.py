@@ -1,3 +1,12 @@
+"""Assign the 38 legs of the cross-validation pool to five folds.
+
+The pool is the training-split ground images on the legs (odd leg numbers, the
+even ones are the turns). Both capture events of a leg share one fold. Legs are
+placed greedily, those with the rarest species first, to balance the positives
+of every species and the number of ground images per fold.
+
+Writes folds_leg5.json.
+"""
 import json, numpy as np
 from datasets import load_dataset
 

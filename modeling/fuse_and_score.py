@@ -1,9 +1,17 @@
-"""Item 2 follow-up: ground-only / drone-only / 2-way fused numbers (CV + test)
-using the epoch-selected (E*) predictions from run_item2_epoch_select.py.
-Late fusion = per-class weighted average, nested 5-fold CV grid search (21-pt
-weight grid), matching run_2way_test_eval.py's established recipe -- but run
-on the item2 (native-res ground, E*-selected, freshly recomputed drone) preds
-instead of the old armhead_ablation_oof.npz ones. Writes NEW files only.
+"""Fuse the two modalities and score the ground, drone and fused predictions.
+
+Late fusion is a per-species weighted average of the probabilities the two
+modalities predict. The ground weight is chosen from 21 values (0 to 1 in steps
+of 0.05) to maximize average precision, by nested five-fold cross-validation:
+the weight applied to a fold is chosen on the other four folds. For the test
+split the weights are refit on the whole pool.
+
+Reads results/preds/{ground,drone}_{cv,test}.npz written by
+train_classifiers.py. Writes results/ap_cv_and_test.csv (AP, F1, precision and
+recall per species and as the macro average, in cross-validation and on the
+test split, for ground, drone and fused), results/fusion_weights.csv,
+results/fusion_weights_per_fold.csv and results/preds/fused_{cv,test}.npz.
+Runs on a CPU in seconds.
 """
 import numpy as np
 import pandas as pd
@@ -18,15 +26,15 @@ CLASSES = ["Lupinus sericeus", "Balsamorhiza sagittata", "Gaillardia aristata",
 folds = pool["fold"].values
 K = 5
 
-# ---- load item2 E*-selected OOF / test predictions (3-seed ensemble) ----
-g_oof = np.load("results/preds/item2_ground_oof.npz", allow_pickle=True)
-d_oof = np.load("results/preds/item2_drone_oof.npz", allow_pickle=True)
+# ---- load the out-of-fold and test predictions at E* (three-seed ensemble) ----
+g_oof = np.load("results/preds/ground_cv.npz", allow_pickle=True)
+d_oof = np.load("results/preds/drone_cv.npz", allow_pickle=True)
 assert (g_oof["frame_id"] == pool["frame_id"].to_numpy()).all()
 assert (d_oof["frame_id"] == pool["frame_id"].to_numpy()).all()
 ground_oof, drone_oof = g_oof["ens"], d_oof["ens"]
 
-g_test_npz = np.load("results/preds/item2_ground_test.npz", allow_pickle=True)
-d_test_npz = np.load("results/preds/item2_drone_test.npz", allow_pickle=True)
+g_test_npz = np.load("results/preds/ground_test.npz", allow_pickle=True)
+d_test_npz = np.load("results/preds/drone_test.npz", allow_pickle=True)
 assert (g_test_npz["frame_id"] == d_test_npz["frame_id"]).all()
 g_test, d_test = g_test_npz["ens"], d_test_npz["ens"]
 
@@ -90,16 +98,16 @@ for name in ["ground", "drone", "fused"]:
                       test_AP=ap_te.mean(), test_F1=f1_te.mean(), test_precision=prec_te.mean(), test_recall=rec_te.mean()))
 
 df = pd.DataFrame(rows)
-df.to_csv("results/item2_ground_drone_fused_cv_vs_test.csv", index=False)
+df.to_csv("results/ap_cv_and_test.csv", index=False)
 
-# ---- item 4: save fused OOF/test prediction arrays + fusion weights ----
-np.savez("results/preds/item2_fused_oof.npz", ens=P_cv, frame_id=pool["frame_id"].to_numpy())
-np.savez("results/preds/item2_fused_test.npz", ens=P_test, frame_id=g_test_npz["frame_id"])
+# ---- save the fused out-of-fold and test predictions and the fusion weights ----
+np.savez("results/preds/fused_cv.npz", ens=P_cv, frame_id=pool["frame_id"].to_numpy())
+np.savez("results/preds/fused_test.npz", ens=P_test, frame_id=g_test_npz["frame_id"])
 
 pd.DataFrame(w_per_fold, columns=[c.split()[0] for c in CLASSES]).assign(fold=range(K)) \
-    .to_csv("results/item2_fusion_weights_perfold.csv", index=False)
+    .to_csv("results/fusion_weights_per_fold.csv", index=False)
 pd.DataFrame({"species": CLASSES, "ground_weight": w_final}) \
-    .to_csv("results/item2_fusion_weights_final.csv", index=False)
+    .to_csv("results/fusion_weights.csv", index=False)
 
 print(f"final fusion weights (full pool, ground share): " +
       ", ".join(f"{c.split()[0]}={w:.2f}" for c, w in zip(CLASSES, w_final)))
@@ -114,6 +122,6 @@ for name in ["ground", "drone", "fused"]:
         print(f"{r.species:24s} {r.cv_AP:7.3f} {r.test_AP:8.3f}   {r.cv_F1:7.3f} {r.test_F1:8.3f}   "
               f"{r.cv_precision:8.3f} {r.test_precision:9.3f}   {r.cv_recall:7.3f} {r.test_recall:9.3f}")
 
-print("\nwrote results/item2_ground_drone_fused_cv_vs_test.csv")
-print("wrote results/preds/item2_fused_oof.npz, results/preds/item2_fused_test.npz")
-print("wrote results/item2_fusion_weights_perfold.csv, results/item2_fusion_weights_final.csv")
+print("\nwrote results/ap_cv_and_test.csv")
+print("wrote results/preds/fused_cv.npz, results/preds/fused_test.npz")
+print("wrote results/fusion_weights_per_fold.csv, results/fusion_weights.csv")

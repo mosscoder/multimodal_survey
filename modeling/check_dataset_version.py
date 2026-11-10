@@ -1,3 +1,7 @@
+"""Check that the cached copy of the dataset is the current release, 33 columns
+with no drone_coverage column and 308 by 308 drone images. Forces one fresh
+download for the comparison.
+"""
 import sys
 from datasets import load_dataset
 

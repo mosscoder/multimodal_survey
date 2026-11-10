@@ -1,7 +1,7 @@
-"""Item 7: shared helper so every extraction/training script logs wall time and
-peak VRAM for its stage(s) the same way. Appends to results/timing.csv (so
-multiple scripts' runs accumulate into one file) -- callers should run each
-stage once per fresh-measurement pass to avoid duplicate rows.
+"""Shared helper so every extraction and training script logs wall time and peak
+GPU memory for its stages the same way. Appends to results/timing.csv, so the
+rows of several scripts accumulate in one file. Delete that file before a fresh
+measurement pass to avoid duplicate rows.
 """
 import csv
 import os

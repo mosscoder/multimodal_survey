@@ -1,3 +1,11 @@
+"""Whole-image features of the training-split drone images.
+
+Each 308 by 308 drone image is resized to 224 by 224 by the model's image
+processor and goes through the frozen satellite DINOv3 ViT-L/16. Writes
+feats/train.drone_image.satellite.npy, which stores per image the CLS token and
+the mean patch token side by side (2,048 values). The drone classifier uses
+the first 1,024, the CLS token. Requires a CUDA GPU.
+"""
 import time
 import numpy as np, torch
 from datasets import load_dataset
@@ -5,14 +13,11 @@ from transformers import AutoImageProcessor, AutoModel
 
 from timing_utils import log_stage, reset_vram
 
-MODELS = {"general":   "facebook/dinov3-vitb16-pretrain-lvd1689m",   # 768-d,  ground photographs
-          "satellite": "facebook/dinov3-vitl16-pretrain-sat493m"}    # 1024-d, nadir drone crops
-PLAN = [("ground_image", "general"),
-        ("drone_image",  "satellite"),
-        ("drone_image",  "general")]      # general backbone on crops, for the backbone comparison
+MODELS = {"satellite": "facebook/dinov3-vitl16-pretrain-sat493m"}    # 1024-d, nadir drone images
+PLAN = [("drone_image", "satellite")]
 
 splits = {"train": load_dataset("mpg-ranch/multimodal-survey", split="train")}
-# The test split is not extracted here. It is opened once, in section 6, after tuning is complete.
+# The test split is not extracted here (see extract_test_features.py).
 
 @torch.inference_mode()
 def extract(split, column, key, batch_size=128):
@@ -40,5 +45,3 @@ for name, split in splits.items():
         log_stage(f"cls_extract_{name}_{column}_{key}", time.time() - t_stage, note=f"{len(split)} frames")
         np.save(p, a)
         print(f"wrote {p}  {a.shape}", flush=True)
-    split.remove_columns(["ground_image", "drone_image"]).to_pandas().to_parquet(f"feats/{name}.meta.parquet")
-    print(f"wrote feats/{name}.meta.parquet", flush=True)

@@ -1,25 +1,30 @@
-"""Item 2: epoch selection by best MEAN macro-AP across folds (no per-fold
-early stopping). Full fixed 60-epoch cosine schedule, every fold, every seed.
-Native-resolution ground grid (item 1) + freshly recomputed drone CLS.
+"""Train the ground and drone classifiers and select one epoch per modality.
 
-For each branch (ground, drone):
-  - 5-fold CV, 3 seeds, full 60 epochs, per-epoch val predictions recorded.
-  - E* = argmax of the mean-over-seeds-then-mean-over-folds val macro-AP curve.
-  - Per-fold metrics reported AT E*; pooled OOF at E* feeds fusion.
-  - Final model: trained on the FULL 6089-pool, 3 seeds, full 60 epochs, with
-    a checkpoint saved at every epoch (cheap -- a single linear layer) so the
-    epoch-E* checkpoint can be selected after CV determines E*, with no need
-    to retrain. That checkpoint predicts the test split.
+For each modality (ground, drone):
+  - Five-fold cross-validation grouped by leg, three seeds, the full 60-epoch
+    cosine schedule with no early stopping, validation predictions recorded at
+    every epoch.
+  - The selected epoch E* is the argmax of the validation macro AP curve,
+    averaged over the three seeds and then over the five folds. E* counts
+    from zero, so E* = 54 is the 55th epoch.
+  - Per-fold metrics are reported at E*, and the pooled out-of-fold predictions
+    at E* feed the fusion (fuse_and_score.py).
+  - The final model trains on the whole 6,089-image pool, three seeds, with a
+    checkpoint at every epoch (cheap for a single linear layer), so the
+    checkpoint at E* predicts the test split without retraining.
 
-Item 3 (reproducibility): all 3 seed-heads in a fold still share one batch
-stream (one memmap read per batch, consumed by every head) -- option (b) from
-the spec, chosen to avoid tripling the ground branch's memmap streaming cost.
-The shared stream is now seeded per fold (np.random.default_rng(fold) for CV,
-a fixed constant for the full-pool final run), so a rerun reproduces the same
-batch order. Because the order is shared, the 3 "seeds" differ only in weight
-initialization (torch.manual_seed(seed), already set per head), not in data
-order -- the manuscript must describe them as initialization seeds, not fully
-independent resamples.
+Reproducibility: the three seeds of a fold share one batch stream (one memmap
+read per batch, consumed by every head), which avoids tripling the cost of
+streaming the ground features. The stream is seeded per fold
+(np.random.default_rng(fold) in cross-validation, a fixed constant for the
+final run), so a rerun reproduces the batch order. The three seeds therefore
+differ in their initial weights (torch.manual_seed(seed) per head) and not in
+data order.
+
+Reads the feature files in feats/ written by the three extract_*.py scripts and
+the fold assignment folds_leg5.json. Writes results/selected_epochs.csv,
+results/{ground,drone}_epoch_curve.csv, results/{ground,drone}_per_fold.csv and
+results/preds/{ground,drone}_{cv,test}.npz. Requires a CUDA GPU.
 """
 import json, os, time
 import numpy as np
@@ -31,13 +36,13 @@ from sklearn.metrics import f1_score, average_precision_score
 from assemble import pool, Y_pool
 from timing_utils import log_stage, reset_vram
 
-# item 7: set to skip the (hours-long) 5-fold CV loop and go straight to final-model
-# training + test prediction, reusing the already-committed E* -- for getting a clean,
-# isolated wall-time measurement of just those two stages without redoing the CV.
-TIMING_ONLY = os.environ.get("ITEM7_TIMING_FINAL_ONLY") == "1"
-# dataset-fix rerun: restrict to a subset of branches (e.g. "drone") so the other
-# branch's already-correct, already-committed results aren't touched or re-cost.
-BRANCHES_TO_RUN = os.environ.get("ITEM_BRANCHES", "drone,ground").split(",")
+# TIMING_FINAL_ONLY=1 skips the hours-long cross-validation loop, reads E* from
+# results/selected_epochs.csv, and only trains the final model and predicts the
+# test split, to time those two stages. It writes no result file.
+TIMING_ONLY = os.environ.get("TIMING_FINAL_ONLY") == "1"
+# MODALITIES restricts the run to a subset (for example "drone") and leaves the
+# other modality's result files untouched.
+BRANCHES_TO_RUN = os.environ.get("MODALITIES", "drone,ground").split(",")
 
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
@@ -93,7 +98,7 @@ def pos_weight_for(y):
 
 # ---------------------------------------------------------------- GROUND ---
 def ground_fold_run(rows_tr, rows_va, fold):
-    """3 seeds, shared batch stream (seeded per fold -- item 3), full EPOCHS,
+    """3 seeds, shared batch stream (seeded per fold), full EPOCHS,
     no early stop. Returns: per-epoch val-prob array per seed (EPOCHS, n_va, 8)."""
     rng = np.random.default_rng(fold)
     mu = torch.tensor(PMEAN[rows_tr].mean(0)).cuda()
@@ -292,7 +297,7 @@ def run_branch(name, fold_run_fn, final_run_fn, predict_test_fn):
         E_star = int(np.argmax(curve))
         print(f"  {name}: E* = {E_star}  (mean macro-AP {curve[E_star]:.4f})", flush=True)
         pd.DataFrame({"epoch": np.arange(EPOCHS), "mean_macro_AP": curve}).to_csv(
-            f"results/item2_{name}_epoch_curve.csv", index=False)
+            f"results/{name}_epoch_curve.csv", index=False)
 
         # 3) pooled OOF at E*, per-fold metrics at E*
         oof = {s: np.zeros(Y_pool.shape, dtype=np.float32) for s in SEEDS}
@@ -306,15 +311,15 @@ def run_branch(name, fold_run_fn, final_run_fn, predict_test_fn):
             f1 = f1_score(Y_pool[va], fold_P > 0.5, average=None, zero_division=0)
             per_fold_rows.append(dict(fold=f, macro_AP=ap.mean(), macro_F1=f1.mean(),
                                       **{f"AP_{c.split()[0]}": v for c, v in zip(CLASSES, ap)}))
-        pd.DataFrame(per_fold_rows).to_csv(f"results/item2_{name}_perfold_at_Estar.csv", index=False)
+        pd.DataFrame(per_fold_rows).to_csv(f"results/{name}_per_fold.csv", index=False)
         oof_ens = np.mean([oof[s] for s in SEEDS], axis=0)
         ap_pooled = average_precision_score(Y_pool, oof_ens, average=None)
         f1_pooled = f1_score(Y_pool, oof_ens > 0.5, average=None, zero_division=0)
         print(f"  {name} pooled OOF @ E*={E_star}: macroAP {ap_pooled.mean():.3f}  macroF1 {f1_pooled.mean():.3f}", flush=True)
     else:
-        est_summary = pd.read_csv("results/item2_Estar_summary.csv", index_col=0)
+        est_summary = pd.read_csv("results/selected_epochs.csv", index_col=0)
         E_star = int(est_summary.loc[name, "E_star"])
-        print(f"  {name}: [ITEM7_TIMING_FINAL_ONLY] using committed E* = {E_star}, skipping CV", flush=True)
+        print(f"  {name}: [TIMING_FINAL_ONLY] using committed E* = {E_star}, skipping CV", flush=True)
 
     # 4) final model: full pool, checkpoint every epoch, select E*, predict test
     print(f"  {name}: training final model on full pool ...", flush=True)
@@ -330,9 +335,9 @@ def run_branch(name, fold_run_fn, final_run_fn, predict_test_fn):
     if TIMING_ONLY:
         return None   # measurement-only pass: don't touch the already-committed result files
 
-    np.savez(f"results/preds/item2_{name}_oof.npz", **{f"s{s}": oof[s] for s in SEEDS}, ens=oof_ens,
+    np.savez(f"results/preds/{name}_cv.npz", **{f"s{s}": oof[s] for s in SEEDS}, ens=oof_ens,
             frame_id=pool["frame_id"].to_numpy())
-    np.savez(f"results/preds/item2_{name}_test.npz", **{f"s{s}": test_preds[i] for i, s in enumerate(SEEDS)},
+    np.savez(f"results/preds/{name}_test.npz", **{f"s{s}": test_preds[i] for i, s in enumerate(SEEDS)},
             ens=test_pred_ens, frame_id=test_ds_frame_id)
     return dict(E_star=E_star, cv_macro_AP=ap_pooled.mean(), cv_macro_F1=f1_pooled.mean())
 
@@ -348,11 +353,11 @@ for name in BRANCHES_TO_RUN:
 if not TIMING_ONLY:
     # merge into the existing summary so branches NOT in BRANCHES_TO_RUN keep their row
     try:
-        prior = pd.read_csv("results/item2_Estar_summary.csv", index_col=0).T.to_dict()
+        prior = pd.read_csv("results/selected_epochs.csv", index_col=0).T.to_dict()
     except FileNotFoundError:
         prior = {}
     prior.update(results)
-    pd.DataFrame(prior).T.to_csv("results/item2_Estar_summary.csv")
+    pd.DataFrame(prior).T.to_csv("results/selected_epochs.csv")
     print("\n=== E* summary ===")
     print(pd.DataFrame(prior).T.to_string(float_format=lambda x: f"{x:.3f}"))
 print("\ndone.")

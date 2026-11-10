@@ -1,6 +1,8 @@
-"""Item 7: one-time hardware readout (GPU, total VRAM, CPU, RAM) and feature
-cache sizes on disk -- the parts of the timing/compute deliverable that don't
-need a training or extraction run to measure."""
+"""Record the hardware (GPU, GPU memory, CPU, RAM, software versions) and the
+size on disk of the feature files.
+
+Writes results/hardware.txt and results/feature_cache_sizes.csv.
+"""
 import os
 import platform
 import psutil
@@ -24,19 +26,16 @@ lines.append(f"PyTorch: {torch.__version__}  CUDA: {torch.version.cuda}")
 text = "\n".join(lines)
 print(text)
 os.makedirs("results", exist_ok=True)
-with open("results/timing_hardware.txt", "w") as f:
+with open("results/hardware.txt", "w") as f:
     f.write(text + "\n")
-print("\nwrote results/timing_hardware.txt")
+print("\nwrote results/hardware.txt")
 
-# ---- feature cache sizes on disk (the files the active CV/test pipeline reads) ----
+# ---- size on disk of the feature files the three extract_*.py scripts write ----
 CACHE_FILES = {
     "grid_extract_train": "feats/train.ground_image.general.grid1280x720.npy",
     "grid_extract_test": "feats/test.ground_image.general.grid1280x720.npy",
     "cls_extract_train_drone_satellite": "feats/train.drone_image.satellite.npy",
     "cls_extract_test_drone_satellite": "feats/test.drone_image.satellite.npy",
-    "cls_extract_train_ground_general": "feats/train.ground_image.general.npy",
-    "cls_extract_train_ground_r768": "feats/train.ground_image.general.r768.npy",
-    "cls_extract_test_ground_r768": "feats/test.ground_image.general.r768.npy",
 }
 rows = []
 for stage, path in CACHE_FILES.items():
