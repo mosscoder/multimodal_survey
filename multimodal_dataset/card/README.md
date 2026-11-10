@@ -200,7 +200,9 @@ automatically, so the same ground never straddles the train/test boundary.
 ![Site 1: every capture position colored by split](images/site_1_splits.jpg)
 ![Site 2: every capture position colored by split](images/site_2_splits.jpg)
 
-Every capture position, colored by split, over the site's own orthomosaic.
+The capture positions of the second capture event, colored by split, over the
+orthomosaic of the matching flight. The first capture event followed the same
+legs.
 The red test legs sit on the outside of each strip. The orange tier-2 rows hug
 them. At site 1, S5's test leg is on its eastern side rather than its western
 one. At site 2, S3's test leg runs alongside S2. The strips abut, which is
