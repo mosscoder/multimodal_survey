@@ -78,26 +78,6 @@ Load it from Hugging Face as shown above. The
 [dataset card](multimodal_dataset/card/README.md) explains the columns, the
 splits, filtering by image quality, and how to re-crop the drone image.
 
-### Rebuild the dataset
-
-`multimodal_dataset/` reads every completed run in `missions/`, crops each
-drone image from its flight's orthomosaic, assigns the splits, and checks every
-published number before an upload.
-
-```bash
-pip install -r multimodal_dataset/requirements.txt
-python -m multimodal_dataset build     # missions/ and the orthomosaics to multimodal_dataset/out/
-python -m multimodal_dataset verify    # every release check must pass before an upload
-python -m multimodal_dataset push      # upload to Hugging Face with the card
-```
-
-Pushing needs a Hugging Face write token in `.env` (`HF_TOKEN=...`). Build and
-verify need no credentials. The same folder contains the app that produced the
-species and quality labels, described in
-[`multimodal_dataset/labeling/README.md`](multimodal_dataset/labeling/README.md).
-Labeling is complete, and the app remains as a record of how the labels were
-made.
-
 ### Reproduce the baselines
 
 `modeling/` contains the code and the results of the baseline classifiers
@@ -133,6 +113,11 @@ which lives in its own repository. Each strip has a folder
 operator procedure for a survey is the
 [field walkthrough](https://github.com/mosscoder/mpg-ai-edge/blob/refactor/docs/field-walkthrough.md)
 in the go2-survey repository.
+
+The species and quality labels were made with the app in
+[`multimodal_dataset/labeling/`](multimodal_dataset/labeling/README.md). The
+code in `multimodal_dataset/` turns these records and the drone orthomosaics
+into the dataset.
 
 ## Status
 
