@@ -110,7 +110,7 @@ differs by site, and the repeat is spatial rather than exact.
 | Site | Interval between the two capture events | Character |
 |---|---|---|
 | `site_2` | 3.0 to 3.4 h, same day | Morning and afternoon capture events of the same strip, a within-day contrast |
-| `site_1` | 48 to 71 h | A second capture event two to three days later. Strips 1 and 5 were re-walked at nearly the same time of day |
+| `site_1` | 48 to 71 h | A second capture event two to three days later |
 
 The robot follows the same nominal 1 m grid in both capture events, but it
 does not land in the same place twice. Matching `leg` and mark across the two
