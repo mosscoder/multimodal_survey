@@ -196,7 +196,7 @@ class Store(BaseStore):
         super().__init__(captures, out_path)
 
         # Self-contained label set — the target species in display order. No model
-        # predictions are loaded; labels are pure human ground truth (CLAUDE.md).
+        # predictions are loaded; labels are pure human ground truth.
         self.classes: list[str] = list(CLASS_ORDER)
         # Fresh frames start blank unless a canonical default species is set.
         self.default_vec = [1 if c == DEFAULT_ON else 0 for c in self.classes]
