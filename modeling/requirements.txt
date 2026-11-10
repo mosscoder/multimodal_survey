@@ -1,0 +1,11 @@
+# Packages used by the baseline scripts in this folder. The committed results
+# were produced with PyTorch 2.11.0 and CUDA 12.8 (results/hardware.txt).
+torch
+transformers>=4.56   # DINOv3 support
+datasets
+numpy
+pandas
+pyarrow
+scikit-learn
+psutil
+pillow
