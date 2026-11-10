@@ -322,7 +322,7 @@ from datasets import load_dataset
 train = load_dataset("mpg-ranch/multimodal-survey", split="train")
 test  = load_dataset("mpg-ranch/multimodal-survey", split="test")
 
-row = train[0]
+row = train[69]
 row["ground_image"]  # PIL.Image, 1280x720: the ground image
 row["drone_image"]   # PIL.Image, 308x308: the 4 m nadir drone image, bearing up
 row["species"]       # [0, 7]  (class ids, see the multi-hot snippet below)
