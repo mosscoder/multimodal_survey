@@ -29,8 +29,8 @@ from pathlib import Path
 from .crops import FLIGHTS, S, antenna_en, footprint_corners_en, footprint_wkt
 from .discover import RunInfo
 
-_REPO = Path(__file__).resolve().parent.parent
-MEDIAN_TIMES = _REPO / "docs" / "figures" / "drone_flight_median_times.json"
+# Median source-photograph time of each flight (UTC), from the PPK camera logs.
+MEDIAN_TIMES = Path(__file__).resolve().parent / "drone_flight_median_times.json"
 
 RESTART_GAP_S = 3600.0
 
