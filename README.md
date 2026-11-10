@@ -2,127 +2,146 @@
   <img src="assets/multmodal_survey_logo.png" alt="multimodal_survey" width="400">
 </p>
 
-# Multimodal Survey
+# MPG Ranch Multimodal Survey
 
-This project explores the Unitree Go2 robot as a platform for botanical surveys in a wildlands setting. Our Go2 traversed several kilometers of transects across the grasslands at MPG Ranch and photographed the vegetation at regular intervals. Aerial drone imagery of the same ground was gathered within hours of each walk. The repo holds exactly two things: the field data the robot recorded (`missions/`) and the pipeline that turns it into the paired ground-and-aerial Hugging Face dataset (`multimodal_dataset/`). Modeling work built on this data lives elsewhere and will surface in applied papers.
+[![Dataset on Hugging Face](https://img.shields.io/badge/dataset-Hugging%20Face-yellow.svg)](https://huggingface.co/datasets/mpg-ranch/multimodal-survey)
+[![Data license CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Code license MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
+
+A quadruped robot walked fixed routes through a grassland under restoration at
+MPG Ranch, Montana, and photographed the vegetation every meter. A drone mapped
+the same ground within a day of each walk. This repository contains the field records of
+those surveys, the pipeline that turns them into a dataset of paired ground and
+drone images, and the baseline experiments reported with the dataset.
 
 <p align="center">
-  <img src="assets/sample_pairs_animation.gif" alt="Animated robot photographs beside their paired drone images along one survey leg" width="900">
+  <img src="assets/sample_pairs_animation.gif" alt="Animated ground images beside their paired drone images along one leg" width="900">
 </p>
 <p align="center">
-  <sub>Thirty five consecutive capture positions along one survey leg. The robot photograph is on the left. Its paired 4 m by 4 m drone image is on the right, rotated so the robot's bearing points up, with the antenna position in yellow and a 1 m scale bar.</sub>
+  <sub>Thirty five consecutive capture positions along one leg. The ground image is on the left. Its paired 4 by 4 m drone image is on the right, rotated so the robot's bearing points up, with the antenna position in yellow and a 1 m scale bar.</sub>
 </p>
 
-## Repo layout
+## The dataset
+
+The dataset is
+[`mpg-ranch/multimodal-survey`](https://huggingface.co/datasets/mpg-ranch/multimodal-survey)
+on Hugging Face, under CC BY 4.0. Each row pairs one ground image with the
+drone image of the 4 by 4 m of ground ahead of the robot, and records which of
+eight plant species are present in the ground image.
+
+```python
+from datasets import load_dataset
+
+ds = load_dataset("mpg-ranch/multimodal-survey")
+```
+
+| | |
+|---|---|
+| Ground images | 8,287, each 1280 by 720 pixels |
+| Drone images | One per ground image, 4 by 4 m at 1.30 cm per pixel, 308 by 308 pixels |
+| Labels | Presence of eight species, four seeded natives and four invasive weeds, and an image quality level |
+| Extent | Two sites and nine strips, each surveyed in two capture events, over four days in June 2026 |
+| Splits | 6,480 training, 1,613 test, 194 tier 2 |
+| Columns | 33 |
+
+The dataset card describes every column, the splits, and recipes for loading
+and filtering. Its source is
+[`multimodal_dataset/card/README.md`](multimodal_dataset/card/README.md).
+
+## How to cite
+
+A data descriptor is in preparation. Until it is published, please cite the
+dataset.
+
+> Doherty, K. et al. MPG Ranch Multimodal Survey: paired ground-robot and drone imagery of Montana grassland. Hugging Face (2026). https://huggingface.co/datasets/mpg-ranch/multimodal-survey
+
+The "Cite this repository" button in the sidebar gives the same reference in
+BibTeX and APA form, from [`CITATION.cff`](CITATION.cff). A DOI will be added
+when the dataset is released.
+
+## What is in this repository
 
 ```
 multimodal_survey/
-├── missions/              survey definitions + everything the robot recorded
-│   ├── <site>/<strip>/    one folder per strip surveyed (config, runs, labels)
-│   ├── inventory.csv      per-run status + quality tracker
-│   └── planning/          QGIS project + basemap for laying out strips
-├── multimodal_dataset/    builds the Hugging Face dataset, plus the (historical) labeling app
-└── dev/                   the pre-reorg field shakedown (site_1_strip_3_test_run/)
+├── missions/              survey definitions and everything the robot recorded
+│   ├── <site>/<strip>/    one folder per strip (configuration, runs, labels)
+│   ├── inventory.csv      status of the runs
+│   └── planning/          QGIS project and basemap used to lay out the strips
+├── multimodal_dataset/    the pipeline that builds, verifies and uploads the dataset
+├── modeling/              the baseline experiments
+└── dev/                   three early test runs of one strip
 ```
 
-### `missions/` — what the robot did
+### Use the dataset
 
-One folder per strip surveyed, named `<site>/<strip>/` (e.g. `site_1/strip_3`).
-Each holds:
+Load it from Hugging Face as shown above. The
+[dataset card](multimodal_dataset/card/README.md) explains the columns, the
+splits, filtering by image quality, and how to re-crop the drone image.
 
-* `mission.toml` — the run configuration (leg geometry, capture interval, steering).
-* `seed_poly.geojson` — the strip's boundary, drawn by hand in QGIS.
-* `waypoints.geojson` — the leg corners, generated from the seed polygon by
-  `go2-survey make-waypoints` (regenerating this is a desk task, not a field
-  task — don't hand-edit it).
-* `mission_layout.png` — a preview image of the route.
-* `runs/<run_id>/` — one folder per time the robot actually walked the strip (a
-  strip is often walked more than once, on different days). Each run holds the
-  photos (`captures/*.jpg`, geotagged and bearing-tagged, with a JSON sidecar per
-  photo and a `captures.geojson` manifest), the field logs (`main.log`, `gps.log`,
-  `imu.log`, `battery.log`), and, once a person has labeled it,
-  `labels/species.json`.
+### Rebuild the dataset
 
-`inventory.csv`, at the top of `missions/`, tracks every run's status (complete /
-partial / aborted) and basic quality checks. A run only counts as usable once its
-`main.log` reaches `MISSION COMPLETE`.
-
-`missions/planning/` holds the QGIS project (`ranch_map.qgz`) and basemap
-(`ranch_map.gpkg`) used to lay out strips before they become each mission's
-`seed_poly.geojson`.
-
-**Running a survey in the field** — the full procedure (clone onto the dog,
-pre-flight, run, push the results) lives with the survey software, in
-[`docs/field-walkthrough.md`](https://github.com/mosscoder/mpg-ai-edge/blob/refactor/docs/field-walkthrough.md)
-of the go2-survey repository.
-
-### `multimodal_dataset/` — building the Hugging Face dataset
-
-A small, self-contained package that reads every completed mission out of
-`missions/` and assembles the release. Each row pairs one ground image (the
-robot's 1280 by 720 photograph) with the nadir drone image cropped from the
-flight's orthomosaic over the 4 m by 4 m footprint ahead of it (308 by 308
-pixels at 1.30 cm per pixel), plus location, time, bearing, species labels,
-and the artifact level. The release is the Hugging Face dataset
-[`mpg-ranch/multimodal-survey`](https://huggingface.co/datasets/mpg-ranch/multimodal-survey),
-8,287 rows in 33 columns. The release-facing description of every column lives
-in the dataset card, [`multimodal_dataset/card/README.md`](multimodal_dataset/card/README.md).
+`multimodal_dataset/` reads every completed run in `missions/`, crops each
+drone image from its flight's orthomosaic, assigns the splits, and checks every
+published number before an upload.
 
 ```bash
-python -m multimodal_dataset build     # missions/ + orthomosaics -> multimodal_dataset/out/
-python -m multimodal_dataset verify    # every release gate must pass before a push
-python -m multimodal_dataset push      # upload to the Hugging Face repo with the card
+pip install -r multimodal_dataset/requirements.txt
+python -m multimodal_dataset build     # missions/ and the orthomosaics to multimodal_dataset/out/
+python -m multimodal_dataset verify    # every release check must pass before an upload
+python -m multimodal_dataset push      # upload to Hugging Face with the card
 ```
 
 Pushing needs a Hugging Face write token in `.env` (`HF_TOKEN=...`). Build and
-verify need no credentials.
+verify need no credentials. The same folder contains the app that produced the
+species and quality labels, described in
+[`multimodal_dataset/labeling/README.md`](multimodal_dataset/labeling/README.md).
+Labeling is complete, and the app remains as a record of how the labels were
+made.
 
-It also holds the **labeling app**, the local web tool that produced the
-shipped labels (labeling is complete; the app stays as provenance). It carries two switchable tasks over the same ground images — pick either from
-the header dropdowns, alongside the mission switcher, with no relaunch:
+### Reproduce the baselines
 
-* **Species** (multilabel) — for each ground image, which of the 8 target species are
-  present. The checkboxes are grouped Wildflowers / Weeds and nothing is checked
-  by default, so the labels are unbiased human ground truth (the model's own
-  predictions are never shown). Hot-keys: `1`–`4` wildflowers, `A`/`S`/`D`/`F`
-  weeds. Saved to `labels/species.json`.
-* **Image quality** (single-select) — one ordinal judgement per ground image: how
-  much of it is degraded by video decoder artifacts, in quartile levels `0–25` / `25–50` / `50–75` / `75–100`% of the
-  image affected, stored behind the scenes as `1`–`4` (the released
-  `artifact_level` is that integer minus 1, levels 0 to 3). Hot-keys `1`–`4` pick the
-  level. Saved to `labels/quality.json`.
+`modeling/` contains the code and the results of the baseline classifiers
+reported with the dataset. One classifier reads the ground image and one reads
+the drone image, each a linear layer on a frozen DINOv3 model, and a late
+fusion combines the two. The [README of that folder](modeling/README.md) lists
+the steps. Feature extraction and training need a CUDA GPU, and the scores can
+be recomputed from the tracked predictions without one.
 
-Each task keeps its own labels file, cursor, and progress; both autosave and are
-resumable. Navigation is shared: `→`/`Space`/`Enter` confirm + next, `←` prev,
-`c` copy the previous ground image's labels, `u` jump to the next unreviewed ground image. The task and
-the mission are both chosen from the header dropdowns in-app — never on the CLI;
-`--mission`/`--run` only pick which mission to land on first.
+| Modality | Macro AP, cross-validation [95% CI] | Macro AP, test split |
+|---|---|---|
+| Drone image | 0.457 [0.407, 0.497] | 0.373 |
+| Ground image | 0.809 [0.775, 0.834] | 0.809 |
+| Fused | 0.812 [0.776, 0.841] | 0.815 |
 
-```bash
-python -m multimodal_dataset.labeling label    # opens on the Species task; switch task + mission from the header
-```
+### How the data were collected
 
-## Roadmap
+A Unitree Go2 robot walked each strip under
+[go2-survey](https://github.com/mosscoder/mpg-ai-edge), the mission software,
+which lives in its own repository. Each strip has a folder
+`missions/<site>/<strip>/` with the following contents.
 
-- [x] **Review the robot mission data for completeness.** Every run reached
-  `MISSION COMPLETE` with its captures, sidecars, and logs intact (status
-  tracked in `missions/inventory.csv`).
-- [x] **Label the imagery.** All 8,287 ground images hand-labeled for the 8 target
-  species (`labels/species.json`) and image quality (`labels/quality.json`).
-- [x] **Build and push the paired dataset.** One row per ground image with its
-  4 m nadir drone image, 33 columns, 8,287 rows split 6,480 train / 1,613 test /
-  194 train_tier_2. Live as a private Hugging Face dataset at
-  `mpg-ranch/multimodal-survey`, with every release invariant verified by
-  `python -m multimodal_dataset verify`.
-- [ ] **Finish the release metadata.** Fill the remaining `CITATION.cff`
-  author names and backfill the 5 missing `missions/inventory.csv` rows.
-- [ ] **Take the dataset public.** Gated on a coordinate-precision review and
-  a dataset-viewer check (the viewer activates once the repo is public).
-- [ ] **Add the multispectral drone image** (`drone_image_ms`) from the Mavic 3M
-  orthomosaics as a follow-up column: bands Red, Green, NIR, RedEdge at
-  2.24 cm GSD, values as scaled digital numbers rather than reflectance.
+- `mission.toml`, the run configuration (leg geometry, capture interval, steering)
+- `seed_poly.geojson`, the boundary of the strip, drawn in QGIS
+- `waypoints.geojson`, the leg corners generated from that boundary
+- `mission_layout.png`, a preview of the route
+- `runs/<run_id>/`, one folder per walk of the strip, with the ground images and
+  a JSON sidecar for each in `captures/`, the field logs, and the labels in
+  `labels/species.json` and `labels/quality.json`
+
+`missions/inventory.csv` tracks the status of the runs, and
+`missions/planning/` contains the QGIS project used to lay out the strips. The
+operator procedure for a survey is the
+[field walkthrough](https://github.com/mosscoder/mpg-ai-edge/blob/refactor/docs/field-walkthrough.md)
+in the go2-survey repository.
+
+## Status
+
+The field campaign, the labeling and the dataset build are complete. The
+dataset is private while the data descriptor is in preparation. It will become
+public, with a DOI, when the descriptor is submitted. A multispectral drone image is planned as a
+follow-up column.
 
 ## License
 
-Code in this repository is MIT licensed (see [`LICENSE`](LICENSE)). The
-dataset on Hugging Face is released under CC BY 4.0.
+Code in this repository is MIT licensed (see [`LICENSE`](LICENSE)). The dataset
+is released under CC BY 4.0.
