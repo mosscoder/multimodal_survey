@@ -163,9 +163,10 @@ native raster.
 
 ## 2. Paired examples
 
-The left column shows the ground image. The right column shows the drone
-image for the same row, rotated so the robot's bearing points up, with the
-antenna at the bottom-edge midpoint (yellow).
+The left column shows the ground image, with the species present listed
+beneath it. The right column shows the drone image for the same row, rotated
+so the robot's bearing points up, with the antenna at the bottom-edge midpoint
+(yellow) and a white bar spanning 1 m.
 
 ![Ground images beside their paired nadir drone images](images/paired_examples.jpg)
 
