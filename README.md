@@ -48,17 +48,6 @@ The dataset card describes every column, the splits, and recipes for loading
 and filtering. Its source is
 [`multimodal_dataset/card/README.md`](multimodal_dataset/card/README.md).
 
-## How to cite
-
-A data descriptor is in preparation. Until it is published, please cite the
-dataset.
-
-> Doherty, K. et al. MPG Ranch Multimodal Survey: paired ground-robot and drone imagery of Montana grassland. Hugging Face (2026). https://huggingface.co/datasets/mpg-ranch/multimodal-survey
-
-The "Cite this repository" button in the sidebar gives the same reference in
-BibTeX and APA form, from [`CITATION.cff`](CITATION.cff). A DOI will be added
-when the dataset is released.
-
 ## What is in this repository
 
 ```
@@ -129,3 +118,14 @@ public, with a DOI, when the descriptor is submitted.
 
 Code in this repository is MIT licensed (see [`LICENSE`](LICENSE)). The dataset
 is released under CC BY 4.0.
+
+## How to cite
+
+A data descriptor is in preparation. Until it is published, please cite the
+dataset.
+
+> Doherty, K. et al. MPG Ranch Multimodal Survey: paired ground-robot and drone imagery of Montana grassland. Hugging Face (2026). https://huggingface.co/datasets/mpg-ranch/multimodal-survey
+
+The "Cite this repository" button in the sidebar gives the same reference in
+BibTeX and APA form, from [`CITATION.cff`](CITATION.cff). A DOI will be added
+when the dataset is released.
