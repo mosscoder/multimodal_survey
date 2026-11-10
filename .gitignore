@@ -1,7 +1,7 @@
 # Secrets — API tokens such as HF_TOKEN. Never commit.
 .env
 
-# Local-only Claude session guidance.
+# Local-only working notes.
 CLAUDE.md
 
 # macOS / editor cruft. Previously only caught by a personal global gitignore;
@@ -22,6 +22,10 @@ CLAUDE.md
 *.npz
 *.npy
 *.tif
+
+# Exception: the baseline predictions are tracked (under 1 MB per array), so
+# the baseline table can be recomputed without retraining.
+!modeling/results/preds/*.npz
 
 # Built HF dataset artifacts and the ortho download cache (large, rebuildable
 # from missions/ + GCS via `python -m multimodal_dataset build`).
