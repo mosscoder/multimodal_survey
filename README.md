@@ -22,8 +22,7 @@ multimodal_survey/
 │   ├── inventory.csv      per-run status + quality tracker
 │   └── planning/          QGIS project + basemap for laying out strips
 ├── multimodal_dataset/    builds the Hugging Face dataset, plus the (historical) labeling app
-├── dev/                   the pre-reorg field shakedown (site_1_strip_3_test_run/)
-└── docs/                  the getting-started guide and figures
+└── dev/                   the pre-reorg field shakedown (site_1_strip_3_test_run/)
 ```
 
 ### `missions/` — what the robot did
@@ -74,6 +73,9 @@ python -m multimodal_dataset build     # missions/ + orthomosaics -> multimodal_
 python -m multimodal_dataset verify    # every release gate must pass before a push
 python -m multimodal_dataset push      # upload to the Hugging Face repo with the card
 ```
+
+Pushing needs a Hugging Face write token in `.env` (`HF_TOKEN=...`). Build and
+verify need no credentials.
 
 It also holds the **labeling app**, the local web tool that produced the
 shipped labels (labeling is complete; the app stays as provenance). It carries two switchable tasks over the same ground images — pick either from
