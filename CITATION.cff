@@ -18,9 +18,6 @@ authors:
   - family-names: Casper
     given-names: Charles
     affiliation: MPG Ranch
-  - family-names: Salakhutdinov
-    given-names: Ruslan
-    affiliation: Carnegie Mellon University
 repository: "https://github.com/mosscoder/multimodal_survey"
 url: "https://huggingface.co/datasets/mpg-ranch/multimodal-survey"
 date-released: 2026-10-23
