@@ -14,7 +14,7 @@ size_categories:
 - 1K<n<10K
 ---
 
-# MPG Ranch multimodal survey: robot config
+# MPG Ranch Multimodal Survey
 
 Can seeing a plant from the ground *and* from the air improve automated species
 identification? Paired ground-level and overhead imagery of Montana grassland,
