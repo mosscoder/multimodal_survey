@@ -123,8 +123,7 @@ into the dataset.
 
 The field campaign, the labeling and the dataset build are complete. The
 dataset is private while the data descriptor is in preparation. It will become
-public, with a DOI, when the descriptor is submitted. A multispectral drone image is planned as a
-follow-up column.
+public, with a DOI, when the descriptor is submitted.
 
 ## License
 
