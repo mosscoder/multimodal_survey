@@ -44,11 +44,7 @@ ds = load_dataset("mpg-ranch/multimodal-survey")
 | Splits | 6,480 training, 1,613 test, 194 tier 2 |
 | Columns | 33 |
 
-The dataset card describes every column, the splits, and recipes for loading
-and filtering. Its source is
-[`multimodal_dataset/card/README.md`](multimodal_dataset/card/README.md).
-
-## What is in this repository
+## Repository layout
 
 ```
 multimodal_survey/
@@ -61,13 +57,7 @@ multimodal_survey/
 └── dev/                   three early test runs of one strip
 ```
 
-### Use the dataset
-
-Load it from Hugging Face as shown above. The
-[dataset card](multimodal_dataset/card/README.md) explains the columns, the
-splits, filtering by image quality, and how to re-crop the drone image.
-
-### Reproduce the baselines
+### Modeling baselines
 
 `modeling/` contains the code and the results of the baseline classifiers
 reported with the dataset. One classifier reads the ground image and one reads
@@ -85,31 +75,17 @@ be recomputed from the tracked predictions without one.
 Scores by species and the cross-validated scores with their confidence
 intervals are in [`modeling/results/`](modeling/results).
 
-### How the data were collected
+### Data collection
 
-A Unitree Go2 robot walked each strip under
-[go2-survey](https://github.com/mosscoder/mpg-ai-edge), the mission software,
-which lives in its own repository. Each strip has a folder
-`missions/<site>/<strip>/` with the following contents.
-
-- `mission.toml`, the run configuration (leg geometry, capture interval, steering)
-- `seed_poly.geojson`, the boundary of the strip, drawn in QGIS
-- `waypoints.geojson`, the leg corners generated from that boundary
-- `mission_layout.png`, a preview of the route
-- `runs/<run_id>/`, one folder per walk of the strip, with the ground images and
-  a JSON sidecar for each in `captures/`, the field logs, and the labels in
-  `labels/species.json` and `labels/quality.json`
-
-`missions/inventory.csv` tracks the status of the runs, and
-`missions/planning/` contains the QGIS project used to lay out the strips. The
-operator procedure for a survey is the
-[field walkthrough](https://github.com/mosscoder/mpg-ai-edge/blob/refactor/docs/field-walkthrough.md)
-in the go2-survey repository.
+A Unitree Go2 robot walked each strip under go2-survey, the mission software.
+Each strip has a folder, `missions/<site>/<strip>/`. Its `mission.toml`
+specifies the robot survey details, and its `runs/` folder contains the ground
+images, logs and labels of each walk. See
+[go2-survey](https://github.com/mosscoder/mpg-ai-edge/tree/refactor) for
+details.
 
 The species and quality labels were made with the app in
-[`multimodal_dataset/labeling/`](multimodal_dataset/labeling/README.md). The
-code in `multimodal_dataset/` turns these records and the drone orthomosaics
-into the dataset.
+[`multimodal_dataset/labeling/`](multimodal_dataset/labeling/README.md).
 
 ## Status
 
@@ -127,7 +103,7 @@ is released under CC BY 4.0.
 A data descriptor is in preparation. Until it is published, please cite the
 dataset.
 
-> Doherty, K. et al. MPG Ranch Multimodal Survey: paired ground-robot and drone imagery of Montana grassland. Hugging Face (2026). https://huggingface.co/datasets/mpg-ranch/multimodal-survey
+> Doherty, K., Stam, N., Salakhutdinov, P., Samsoe, E. & Casper, C. MPG Ranch Multimodal Survey: paired ground-robot and drone imagery of Montana grassland. Hugging Face (2026). https://huggingface.co/datasets/mpg-ranch/multimodal-survey
 
 The "Cite this repository" button in the sidebar gives the same reference in
 BibTeX and APA form, from [`CITATION.cff`](CITATION.cff). A DOI will be added
