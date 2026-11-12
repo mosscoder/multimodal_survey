@@ -60,10 +60,13 @@ from the ground and from the air.
 | How robust is a model to field conditions? | Two capture events per strip (`capture_event`) and a quality level for every ground image (`artifact_level`) |
 | Which part of the ground ahead matters? | The drone image can be re-cropped to a nearer or narrower window by array slicing (section 5) |
 
-In the baselines in the source repository
-([`modeling/`](https://github.com/mosscoder/multimodal_survey/tree/main/modeling)),
-the ground image scores higher than the drone image for every species, and the
-size of the gap differs widely by species.
+The baselines in the source repository
+([`modeling/`](https://github.com/mosscoder/multimodal_survey/tree/main/modeling))
+are linear classifiers on frozen DINOv3 features. On the test split they reach
+a macro average precision of 0.815 with the two views fused, 0.809 from the
+ground image and 0.373 from the drone image. The ground image scores higher
+than the drone image for every species, and the size of the gap differs widely
+by species.
 
 ### Features
 

@@ -7,8 +7,10 @@ themselves, every number the release documentation states: the partition and
 schema, the zero train/test footprint overlap, the pair-join structure, the
 offset and separation statistics, the distance from every capture position to
 its planned mark, the per-split species table, the image sizes, the
-drone-image coverage and native pixel sizes the build recorded, and a random
-spot-check back against the source sidecars. Any mismatch fails the run.
+drone-image coverage and native pixel sizes the build recorded, the baseline
+scores on the test split (from the predictions tracked in ``modeling/``), and
+a random spot-check back against the source sidecars. Any mismatch fails the
+run.
 """
 from __future__ import annotations
 
@@ -39,6 +41,10 @@ PUBLISHED = {
     "tier2_touched_test_crops": 213,
     "tier2_overlap_median": (0.045, 0.002), "tier2_overlap_max": (0.626, 0.002),
     "artifact_level3": 1304,
+    # Macro average precision of the baselines on the test split, as quoted in
+    # the card. Recomputed here from modeling/results/preds/<modality>_test.npz.
+    "baseline_test_macro_ap": {"drone": (0.373, 0.0005), "ground": (0.809, 0.0005),
+                               "fused": (0.815, 0.0005)},
     "drone_image_px": 308, "output_pitch_m": 0.0130, "ground_image_size": (1280, 720),
     "native_pixel_cm": {                 # the delivered orthomosaics' GeoTIFF transforms
         "260616-site-1-am": (1.30, 0.005), "260618-site-1-pm": (1.30, 0.005),
@@ -67,6 +73,18 @@ def _check(name: str, ok: bool, detail: str = "") -> None:
 def _close(actual: float, spec: tuple[float, float]) -> bool:
     value, tol = spec
     return abs(actual - value) <= tol
+
+
+def _average_precision(y, score) -> float:
+    """Area under the precision-recall curve as a step function, tied scores
+    sharing one threshold (the definition scikit-learn uses)."""
+    import numpy as np
+    order = np.argsort(-score, kind="stable")
+    y, score = y[order], score[order]
+    last = np.r_[np.where(np.diff(score))[0], y.size - 1]   # last row of each threshold
+    tp = np.cumsum(y)[last]
+    precision, recall = tp / (last + 1), tp / tp[-1]
+    return float(np.sum(np.diff(np.r_[0.0, recall]) * precision))
 
 
 def _quantile(values: list[float], q: float) -> float:
@@ -193,6 +211,25 @@ def verify(out_dir: str | Path = OUT_DIR, spot_checks: int = 25) -> None:
         got = tuple(sum(1 for row in plain[s]["species"] if sid in row)
                     for s in ("train", "test", "train_tier_2"))
         _check(f"species counts: {sp}", got == expected, str(got))
+
+    print("[verify] baseline scores quoted in the card")
+    import numpy as np
+    preds_dir = Path(__file__).resolve().parent.parent / "modeling" / "results" / "preds"
+    test_ids = plain["test"]["frame_id"]
+    labels = np.zeros((len(test_ids), len(names)), dtype=int)
+    for i, present in enumerate(plain["test"]["species"]):
+        labels[i, present] = 1
+    per_species = {}
+    for modality, published in PUBLISHED["baseline_test_macro_ap"].items():
+        z = np.load(preds_dir / f"{modality}_test.npz", allow_pickle=False)
+        aligned = z["frame_id"].tolist() == list(test_ids)
+        per_species[modality] = [_average_precision(labels[:, j], z["ens"][:, j])
+                                 for j in range(len(names))]
+        macro = sum(per_species[modality]) / len(names)
+        _check(f"{modality} macro AP on the test split", aligned and _close(macro, published),
+               f"{macro:.4f}, rows aligned {aligned}")
+    _check("ground AP exceeds drone AP for every species on the test split",
+           all(g > d for g, d in zip(per_species["ground"], per_species["drone"])))
 
     print("[verify] images (full decode pass)")
     drone_size = (PUBLISHED["drone_image_px"], PUBLISHED["drone_image_px"])
