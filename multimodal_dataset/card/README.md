@@ -16,9 +16,10 @@ size_categories:
 
 # MPG Ranch Multimodal Survey
 
-Can seeing a plant from the ground *and* from the air improve automated species
-identification? Paired ground-level and overhead imagery of Montana grassland,
-hand-labeled for 8 plant species, built to answer that question.
+Which plant species can be identified from the ground, which from the air, and
+what does having both add? This dataset pairs ground-level and overhead images
+of the same Montana grassland, hand-labeled for 8 plant species, so the two
+views can be compared alone and combined.
 
 **8,287** labeled ground images · **8** target species · **2** sites, 9 strips ·
 **1.4 cm** RTK accuracy · **1.30 cm** drone GSD · **33** columns
@@ -32,13 +33,15 @@ bar.
 
 ## 1. Contents and motivation
 
-Identifying plant species from photographs is hard from any single vantage
-point. A camera at ground level sees leaf shape, flower color, and growth
-habit, but stems overlap and distant plants shrink to a few pixels. A camera
-looking straight down sees the spatial arrangement of vegetation clearly, but
-flattens the very structure that distinguishes one species from another. Each
-view captures information the other lacks. This dataset exists to test whether
-combining them improves species classification over either alone. A
+A plant looks different from the ground and from the air. A camera at ground
+level sees leaf shape, flower color, and growth habit, but stems overlap and
+distant plants shrink to a few pixels. A camera looking straight down sees the
+spatial arrangement of vegetation clearly, but flattens the very structure
+that distinguishes one species from another. The two views also differ in
+scale, since a drone maps a whole site in one flight and a ground survey
+advances a meter at a time. This dataset pairs both views of the same ground
+under one set of species labels, so that each can be evaluated on its own,
+against the other, and in combination. A
 four-legged robot walked lawnmower patterns of parallel legs, nine strips in
 all, across two grassland sites at MPG Ranch in western Montana, photographing
 the vegetation ahead of it every meter, with each capture position surveyed to
@@ -52,6 +55,22 @@ wildflowers and four invasive weeds), and a second annotator graded each
 image's quality. Each strip was covered twice, from the ground and the air
 alike, so the same vegetation appears under two different sets of field
 conditions.
+
+### What the dataset supports
+
+| Question | What makes it possible |
+|---|---|
+| Which species can each view identify? | One set of labels and splits for both views, so a classifier per view can be compared species by species |
+| Can labels made on the ground train a model that reads the air? | Every label was assigned on the ground image, so a drone-only model tests how far a robot's ground truth extends over a drone map |
+| What does combining the views add? | Every row is a matched pair, so any fusion method can be scored against either view alone |
+| Can the two views share one representation? | 8,287 pairs for cross-view matching or retrieval |
+| How robust is a model to field conditions? | Two capture events per strip (`capture_event`) and a quality level for every ground image (`artifact_level`) |
+| Which part of the ground ahead matters? | The drone image can be re-cropped to a nearer or narrower window by array slicing (section 5) |
+
+In the baselines in the source repository
+([`modeling/`](https://github.com/mosscoder/multimodal_survey/tree/main/modeling)),
+the ground image scores higher than the drone image for every species, and the
+size of the gap differs widely by species.
 
 ### Features
 
