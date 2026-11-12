@@ -81,8 +81,7 @@ A Unitree Go2 robot walked each strip under go2-survey, the mission software.
 Each strip has a folder, `missions/<site>/<strip>/`. Its `mission.toml`
 specifies the robot survey details, and its `runs/` folder contains the ground
 images, logs and labels of each walk. See
-[go2-survey](https://github.com/mosscoder/mpg-ai-edge/tree/refactor) for
-details.
+[go2-survey](https://github.com/mosscoder/go2-survey) for details.
 
 The species and quality labels were made with the app in
 [`multimodal_dataset/labeling/`](multimodal_dataset/labeling/README.md).
