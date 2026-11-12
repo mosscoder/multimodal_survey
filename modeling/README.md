@@ -7,7 +7,7 @@ image, and a late fusion combines the two. Each classifier is a linear layer on
 a frozen DINOv3 model. Paul Salakhutdinov wrote the code and produced the
 results.
 
-## Files
+## Scripts
 
 | Script | Purpose | Writes |
 |---|---|---|
@@ -28,7 +28,7 @@ above, except `timing.csv` and `feature_cache_sizes.csv`, which a rerun writes
 afresh. Every tracked result is the output of one of these scripts. The feature
 files in `feats/` are too large to track.
 
-## Where the numbers in the paper come from
+## Results files
 
 | Entry of the baseline table | File | Columns |
 |---|---|---|
@@ -63,19 +63,3 @@ The durations were measured on the machine described in `results/hardware.txt`.
 The scoring does not need a GPU. With only the tracked predictions,
 `fuse_and_score.py` and `confidence_intervals.py` recompute every value of the
 baseline table.
-
-## Notes
-
-- The cross-validation pool is the 6,089 training ground images on the legs.
-  The turns are left out. Folds are grouped by leg, so both capture events of a
-  leg fall in one fold.
-- Each reported prediction is the average of three runs with different random
-  seeds. The three runs of a fold share one seeded batch order and differ in
-  their initial weights.
-- One epoch is selected per modality, the one with the highest mean validation
-  macro AP across the five folds. The final model trains on the whole pool to
-  that epoch and predicts the test split.
-- The drone image enters its model resized from 308 by 308 to 224 by 224
-  pixels. The ground image enters at its full 1280 by 720 pixels.
-- Feature extraction runs in reduced precision on the GPU, so a rerun on
-  different hardware can differ from the tracked results in the last digits.
