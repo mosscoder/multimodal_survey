@@ -76,11 +76,14 @@ fusion combines the two. The [README of that folder](modeling/README.md) lists
 the steps. Feature extraction and training need a CUDA GPU, and the scores can
 be recomputed from the tracked predictions without one.
 
-| Modality | Macro AP, cross-validation [95% CI] | Macro AP, test split |
-|---|---|---|
-| Drone image | 0.457 [0.407, 0.497] | 0.373 |
-| Ground image | 0.809 [0.775, 0.834] | 0.809 |
-| Fused | 0.812 [0.776, 0.841] | 0.815 |
+| Modality | Macro AP, test split |
+|---|---|
+| Drone image | 0.373 |
+| Ground image | 0.809 |
+| Fused | 0.815 |
+
+Scores by species and the cross-validated scores with their confidence
+intervals are in [`modeling/results/`](modeling/results).
 
 ### How the data were collected
 
