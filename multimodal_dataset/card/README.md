@@ -37,7 +37,7 @@ point. A camera at ground level sees leaf shape, flower color, and growth
 habit, but stems overlap and distant plants shrink to a few pixels. A camera
 looking straight down sees the spatial arrangement of vegetation clearly, but
 flattens the very structure that distinguishes one species from another. Each
-view holds information the other lacks. This dataset exists to test whether
+view captures information the other lacks. This dataset exists to test whether
 combining them improves species classification over either alone. A
 four-legged robot walked lawnmower patterns of parallel legs, nine strips in
 all, across two grassland sites at MPG Ranch in western Montana, photographing
@@ -63,7 +63,7 @@ conditions.
 | `drone_image` | Image | The paired nadir drone image, 308×308 px at exactly 1.30 cm per pixel, cropped from the flight's orthomosaic with the row's RTK antenna position at its bottom-edge midpoint and the bearing pointing up. Each pixel is interpolated once, bilinearly, from the orthomosaic at its native pixel size. The orthomosaics were rectified against surveyed ground-control points at both sites, so drone image placement and robot positions share a common geodetic frame |
 | **Labels** | | |
 | `species` | Sequence(ClassLabel) | Which of the 8 target species are present. Variable length 0 to 6. Empty means reviewed and none present |
-| `artifact_level` | ClassLabel(4) | Share of the ground image degraded by video decoder artifacts, in four quartile levels numbered 0 to 3 (`0-25%`, `25-50%`, `50-75%`, `75-100%`) |
+| `artifact_level` | ClassLabel(4) | Fraction of the ground image degraded by video decoder artifacts, in four quartile levels numbered 0 to 3 (`0-25%`, `25-50%`, `50-75%`, `75-100%`) |
 | **Where** | | |
 | `site` | string | `site_1` or `site_2` |
 | `strip` | string | `strip_1` … `strip_5` within a site |
@@ -87,7 +87,7 @@ conditions.
 | **Cross-event pair** | | |
 | `pair_frame_id` | string, nullable | `frame_id` of the ground image at the same (leg, mark) in the strip's other capture event, and null on the 153 rows whose mark was walked only once |
 | `pair_distance_m` | float64, nullable | Antenna separation between the paired capture positions, median 0.10 m, 95th percentile 0.33 m, max 2.12 m |
-| `pair_overlap_fraction` | float64, nullable | Share of this row's footprint covered by the paired row's footprint |
+| `pair_overlap_fraction` | float64, nullable | Fraction of this row's footprint covered by the paired row's footprint |
 | `pair_offset_hours` | float64, nullable | Time between the paired captures, 3.0 to 3.4 h at `site_2` and 48 to 71 h at `site_1` |
 | **Along the strip** | | |
 | `leg` | string | `leg01` to `leg13`. Odd legs are the straight lines of the strip, even legs the turns between them |
@@ -96,7 +96,7 @@ conditions.
 | `speed_mps` | float64 | 0 to 1.46 m/s |
 | **Provenance & split** | | |
 | `run_id` | string | e.g. `strip_3_2026-06-16_11-29-48`. Links a row back to the source repository's `missions/` tree |
-| `tier2_overlap_fraction` | float64, nullable | Share of this row's footprint shared with test footprints. Populated on `train_tier_2` rows only |
+| `tier2_overlap_fraction` | float64, nullable | Fraction of this row's footprint covered by test footprints. Populated on `train_tier_2` rows only |
 
 ### The two capture events
 
@@ -192,7 +192,7 @@ geometry, never on the labels. Every other row is a training candidate.
 Because both capture events walk the same legs, the split groups them
 automatically, so the same ground never straddles the train/test boundary.
 
-| Split | Rows | Share | Definition |
+| Split | Rows | Fraction | Definition |
 |---|---|---|---|
 | `train` | 6,480 | 78.2% | Zero drone image overlap with any test row |
 | `test` | 1,613 | 19.5% | The outermost leg of all 9 strips, both capture events |
@@ -263,16 +263,16 @@ present (23% of ground images).
 | *Poa bulbosa* | bulbous bluegrass | weed | 3,664 | 1,090 | 105 | 4,859 | 58.6% |
 
 > **The class balance is steep.** *Poa bulbosa* appears in 58.6% of ground
-> images and *Euphorbia virgata* in 2.1%, a 28× spread. Ground images carry 0
+> images and *Euphorbia virgata* in 2.1%, a 28× spread. Ground images contain 0
 > to 6 species at once (median 1), which is why `species` is a variable-length
 > list rather than a fixed multi-hot vector.
 
-A machine-readable species table ships beside the data as
+The release includes a machine-readable species table,
 [`species.csv`](species.csv) (genus, species, common name).
 
 ### Image quality
 
-A second annotation pass graded every ground image for the share degraded by
+A second annotation pass graded every ground image for the fraction degraded by
 video decoder artifacts, in four quartile levels numbered 0 to 3 (0-25%,
 25-50%, 50-75%, and 75-100% of the image). The robot delivers its camera feed
 as an H.264 stream over WebRTC, and packets lost on the wireless link leave the
@@ -460,7 +460,7 @@ trained on 2.7 million satellite-to-species-photo pairs.
 Daroya et al. ([paper](https://arxiv.org/abs/2412.14428)). Trains satellite-image encoders by contrasting them against millions of
 geotagged citizen-science wildlife observations and habitat descriptions,
 transferring ground-level signal into the overhead view. Its contribution is
-the training signal itself: a contrastive objective linking a satellite patch
+the training signal itself, a contrastive objective linking a satellite patch
 to the species recorded there and to Wikipedia habitat text, which beats both
 ImageNet and satellite-specific pretraining on downstream recognition tasks.
 
@@ -498,7 +498,7 @@ A ground-robot lineage releases outdoor imagery for semantic segmentation.
 RUGD ([Wigness et al.](https://doi.org/10.1109/IROS40897.2019.8968283)) and
 RELLIS-3D ([Jiang et al.](https://github.com/unmannedlab/RELLIS-3D))
 established the off-road benchmark line, GOOSE
-([Mortimer et al.](https://goose-dataset.de/)) carries the finest current
+([Mortimer et al.](https://goose-dataset.de/)) has the finest current
 ontology at 64 classes, and its GOOSE-Ex extension adds the only annotated
 quadruped-mounted imagery to date, with vegetation appearing throughout as
 coarse structural classes such as grass, bush, and tree, never as botanical
