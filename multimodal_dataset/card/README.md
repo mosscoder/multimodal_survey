@@ -34,27 +34,20 @@ bar.
 ## 1. Contents and motivation
 
 A plant looks different from the ground and from the air. A camera at ground
-level sees leaf shape, flower color, and growth habit, but stems overlap and
-distant plants shrink to a few pixels. A camera looking straight down sees the
-spatial arrangement of vegetation clearly, but flattens the very structure
-that distinguishes one species from another. The two views also differ in
-scale, since a drone maps a whole site in one flight and a ground survey
+level sees leaf shape, flower color, and growth habit, and a camera looking
+straight down sees how the vegetation is arranged. The two views also differ
+in scale, since a drone maps a whole site in one flight and a ground survey
 advances a meter at a time. This dataset pairs both views of the same ground
-under one set of species labels, so that each can be evaluated on its own,
-against the other, and in combination. A
-four-legged robot walked lawnmower patterns of parallel legs, nine strips in
-all, across two grassland sites at MPG Ranch in western Montana, photographing
-the vegetation ahead of it every meter, with each capture position surveyed to
-centimeter accuracy. A drone photographed the same ground from above, usually
-within a few hours of the capture event and always within a day, and its
-imagery was stitched into a seamless overhead map. Every row of the dataset
-pairs one ground image with the 4 × 4 m drone image of the ground directly in
-front of the robot at that moment. A botanist reviewed every one of the 8,287
-ground images for the presence of eight target species (four native
-wildflowers and four invasive weeds), and a second annotator graded each
-image's quality. Each strip was covered twice, from the ground and the air
-alike, so the same vegetation appears under two different sets of field
-conditions.
+under one set of species labels, so each can be evaluated alone, against the
+other, and combined.
+
+A four-legged robot walked nine strips across two grassland sites at MPG Ranch
+in western Montana, photographing the vegetation ahead of it every meter. A
+drone mapped the same ground within a day. Each row pairs one ground image
+with the 4 × 4 m drone image of the ground directly ahead of the robot. A
+botanist labeled all 8,287 ground images for eight target species, and a
+second annotator graded each image's quality. Every strip was surveyed twice,
+from the ground and from the air.
 
 ### What the dataset supports
 
