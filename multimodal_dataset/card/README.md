@@ -41,6 +41,15 @@ macro average precision on the test split of 0.815 with the two views fused,
 results are in the
 [source repository](https://github.com/mosscoder/multimodal_survey/tree/main/modeling).
 
+## Paired examples
+
+The left column shows the ground image, with the species present listed
+beneath it. The right column shows the drone image for the same row, rotated
+so the robot's bearing points up, with the antenna at the bottom-edge midpoint
+(yellow) and a white bar spanning 1 m.
+
+![Ground images beside their paired nadir drone images](images/paired_examples.jpg)
+
 ## Columns
 
 Each of the 8,287 rows is one ground image and its paired drone image, described by 33 columns.
@@ -83,20 +92,21 @@ Each of the 8,287 rows is one ground image and its paired drone image, described
 
 ## How to load
 
+### Basic
+
 ```python
 # pip install datasets
 from datasets import load_dataset
 
-ds = load_dataset("mpg-ranch/multimodal-survey")
-train, test = ds["train"], ds["test"]
+# the clean training split: 6,480 ground images, zero test overlap in the drone images
+train = load_dataset("mpg-ranch/multimodal-survey", split="train")
+test  = load_dataset("mpg-ranch/multimodal-survey", split="test")
 
 row = train[69]
-row["ground_image"]   # PIL.Image, 1280x720
-row["drone_image"]    # PIL.Image, 308x308, bearing up
-row["species"]        # [0, 7], class indices
-
-names = train.features["species"].feature.names
-[names[i] for i in row["species"]]   # ['Lupinus sericeus', 'Poa bulbosa']
+row["ground_image"]  # PIL.Image, 1280x720: the ground image
+row["drone_image"]   # PIL.Image, 308x308: the 4 m nadir drone image, bearing up
+row["species"]       # [0, 7]  (class ids, see the multi-hot snippet below)
+row["artifact_level"]# 0  (level 0: 0-25% of the ground image degraded)
 ```
 
 The dataset has three splits. `test` (1,613 rows) is the outermost leg of
@@ -104,6 +114,103 @@ every strip. `train` (6,480 rows) is the rest, apart from the 194 rows of
 `train_tier_2`, whose drone image overlaps a test drone image. Leave tier 2
 out for a training split that has no ground in common with the test split in
 the drone images, or add it for more training data.
+
+### Species labels to a multi-hot vector
+
+```python
+import numpy as np
+
+CLASSES = train.features["species"].feature.names   # canonical order, 8 classes
+
+def multi_hot(batch):
+    v = np.zeros((len(batch["species"]), len(CLASSES)), dtype=np.int8)
+    for i, ids in enumerate(batch["species"]):
+        v[i, ids] = 1                               # species are stored as class ids
+    return {"labels": v}
+
+train = train.map(multi_hot, batched=True)
+```
+
+### Filtering
+
+```python
+# drop the heavily degraded ground images (level 3)
+LEVELS = train.features["artifact_level"].names
+clean = train.filter(lambda r: r["artifact_level"] != LEVELS.index("75-100%"))
+
+# ground images captured close in time to their drone imagery
+tight = train.filter(lambda r: abs(r["capture_offset_time_of_day"]) < 1.0)
+
+# one site, one capture event
+morning = train.filter(lambda r: r["site"] == "site_2" and r["capture_event"] == 1)
+
+# rows where a particular species is present
+spurge = train.filter(lambda r: CLASSES.index("Euphorbia virgata") in r["species"])
+```
+
+### Including tier 2
+
+```python
+# all 194 of them: accepts 2.50% evaluated-pixel contamination
+t2 = load_dataset("mpg-ranch/multimodal-survey", split="train_tier_2")
+
+# or only the mildly-overlapping ones, e.g. under 10% of the drone image shared
+t2_mild = t2.filter(lambda r: r["tier2_overlap_fraction"] < 0.10)
+
+from datasets import concatenate_datasets
+train_plus = concatenate_datasets([train, t2_mild])
+```
+
+### Using the pair
+
+```python
+import torch
+from torchvision.transforms.functional import to_tensor
+
+def collate(batch):
+    # the ground image is oblique and wide-angle. The drone image is nadir and metric.
+    # They cover overlapping ground but are NOT pixel-registered to each other.
+    robot = torch.stack([to_tensor(b["ground_image"].resize((640, 360))) for b in batch])
+    drone = torch.stack([to_tensor(b["drone_image"]) for b in batch])   # 3x308x308
+    y     = torch.tensor(np.stack([b["labels"] for b in batch]), dtype=torch.float32)
+    return robot, drone, y
+
+loader = torch.utils.data.DataLoader(train, batch_size=32, collate_fn=collate)
+```
+
+### Re-cropping the drone image
+
+```python
+# the drone image is a metric chart: rows are meters ahead of the antenna, columns meters left.
+# A smaller or shifted window is array slicing. No projection knowledge is needed.
+N, P = 308, 0.0130                              # pixels per side, meters per pixel
+PX = 1 / P                                      # 76.9 px per meter
+
+def sub_crop(drone_image, ahead, left, size):
+    # (ahead, left): window center in meters from the antenna
+    a = np.asarray(drone_image)
+    r = round(N - (ahead + size / 2) * PX)      # row 0 is 4.004 m ahead
+    c = round(N / 2 - (left + size / 2) * PX)   # column 0 is 2.002 m left
+    return a[r : r + round(size * PX), c : c + round(size * PX)]
+
+patch = sub_crop(row["drone_image"], ahead=1.0, left=0.0, size=2.0)  # 2 x 2 m, 154 x 154 px
+```
+
+### Recovering the geometry
+
+```python
+# each drone image spans 0 to 4.004 m ahead of the antenna and 2.002 m to either side,
+# rotated so `bearing_deg` points up the image. To place a drone image pixel on the ground:
+import math
+
+def pixel_to_ground(row, px, py, P=0.0130, N=308):
+    th = math.radians(row["bearing_deg"])
+    fwd = (N - py - 0.5) * P                 # meters ahead of the antenna
+    lat = (N / 2 - px - 0.5) * P             # meters to the left
+    dE  = fwd * math.sin(th) - lat * math.cos(th)
+    dN  = fwd * math.cos(th) + lat * math.sin(th)
+    return dE, dN                            # offset in meters, EPSG:6514
+```
 
 ## How to cite
 
