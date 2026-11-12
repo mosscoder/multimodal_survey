@@ -16,10 +16,12 @@ size_categories:
 
 # MPG Ranch Multimodal Survey
 
-Which plant species can be identified from the ground, which from the air, and
-what does having both add? This dataset pairs ground-level and overhead images
-of the same Montana grassland, hand-labeled for 8 plant species, so the two
-views can be compared alone and combined.
+A quadruped robot walked fixed routes through a grassland under restoration at
+MPG Ranch, Montana, and photographed the vegetation every meter. A drone mapped
+the same ground within a day of each walk. Each row of this dataset pairs one
+ground image with the drone image of the 4 by 4 m of ground ahead of the
+robot, and records which of eight plant species are present in the ground
+image.
 
 ![Animated ground images beside their paired drone images along one leg](images/sample_pairs_animation.gif)
 
@@ -28,16 +30,12 @@ on the left. Its paired 4 m by 4 m drone image is on the right, rotated so the
 robot's bearing points up, with the antenna position in yellow and a 1 m scale
 bar.
 
-A four-legged robot walked nine strips across two grassland sites at MPG Ranch
-in western Montana in June 2026, photographing the vegetation ahead of it
-every meter. A drone mapped the same ground within a day. Each row pairs one
-ground image with the 4 × 4 m drone image of the ground directly ahead of the
-robot. A botanist labeled all 8,287 ground images for eight target species,
-four seeded natives (silky lupine, arrowleaf balsamroot, blanketflower, common
+A botanist labeled all 8,287 ground images for eight target species, four
+seeded natives (silky lupine, arrowleaf balsamroot, blanketflower, common
 yarrow) and four invasive weeds (leafy spurge, tall tumblemustard, cheatgrass,
-bulbous bluegrass), and a second annotator graded each image's quality. Every
-strip was surveyed twice, from the ground and from the air, in two capture
-events.
+bulbous bluegrass), and a second annotator graded each image's quality. The
+surveys covered nine strips at two sites in June 2026, and every strip was
+surveyed twice, from the ground and from the air, in two capture events.
 
 A plant looks different from the ground and from the air, and the two views
 differ in scale, since a drone maps a whole site in one flight and a ground
