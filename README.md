@@ -44,8 +44,7 @@ ds = load_dataset("mpg-ranch/multimodal-survey")
 | Splits | 6,480 training, 1,613 test, 194 tier 2 |
 | Columns | 33 |
 
-The dataset card describes every column, the splits, and recipes for loading
-and filtering. Its source is
+The dataset card describes every column and the splits. Its source is
 [`multimodal_dataset/card/README.md`](multimodal_dataset/card/README.md).
 
 ## What is in this repository
@@ -64,8 +63,8 @@ multimodal_survey/
 ### Use the dataset
 
 Load it from Hugging Face as shown above. The
-[dataset card](multimodal_dataset/card/README.md) explains the columns, the
-splits, filtering by image quality, and how to re-crop the drone image.
+[dataset card](multimodal_dataset/card/README.md) describes the columns and the
+splits.
 
 ### Reproduce the baselines
 
