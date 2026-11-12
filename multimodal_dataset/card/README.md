@@ -217,7 +217,7 @@ def pixel_to_ground(row, px, py, P=0.0130, N=308):
 A data descriptor is in preparation. Until it is published, please cite the
 dataset.
 
-> Doherty, K. et al. MPG Ranch Multimodal Survey: paired ground-robot and drone imagery of Montana grassland. Hugging Face (2026). https://huggingface.co/datasets/mpg-ranch/multimodal-survey
+> Doherty, K., Stam, N., Salakhutdinov, P., Samsoe, E. & Casper, C. MPG Ranch Multimodal Survey: paired ground-robot and drone imagery of Montana grassland. Hugging Face (2026). https://huggingface.co/datasets/mpg-ranch/multimodal-survey
 
 [`CITATION.cff`](CITATION.cff) gives the same reference in machine-readable
 form. The data are released under CC BY 4.0. The
