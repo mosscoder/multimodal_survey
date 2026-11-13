@@ -88,7 +88,7 @@ Each of the 8,287 rows is one ground image and its paired drone image, described
 
 ## How to load
 
-### Basic
+### Basics
 
 ```python
 # pip install datasets
@@ -147,7 +147,7 @@ spurge = train.filter(lambda r: CLASSES.index("Euphorbia virgata") in r["species
 ### Including tier 2
 
 ```python
-# all 194 of them: accepts 2.50% evaluated-pixel contamination
+# drone images that overlap the test split
 t2 = load_dataset("mpg-ranch/multimodal-survey", split="train_tier_2")
 
 # or only the mildly-overlapping ones, e.g. under 10% of the drone image shared
@@ -157,7 +157,7 @@ from datasets import concatenate_datasets
 train_plus = concatenate_datasets([train, t2_mild])
 ```
 
-### Using the pair
+### Building a paired dataloader
 
 ```python
 import torch
@@ -192,7 +192,7 @@ def sub_crop(drone_image, ahead, left, size):
 patch = sub_crop(row["drone_image"], ahead=1.0, left=0.0, size=2.0)  # 2 x 2 m, 154 x 154 px
 ```
 
-### Recovering the geometry
+### Recovering the drone image geometry
 
 ```python
 # each drone image spans 0 to 4.004 m ahead of the antenna and 2.002 m to either side,
