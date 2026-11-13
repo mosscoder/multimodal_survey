@@ -35,13 +35,7 @@ our dataset to advance methods for automating vegetation surveys.
 
 ![Animated ground images beside their paired drone images along one leg](images/sample_pairs_animation.gif)
 
-Thirty five consecutive capture positions along one leg. The ground image is
-on the left. Its paired 4 m by 4 m drone image is on the right, rotated so the
-robot's bearing points up, with the antenna position in yellow and a 1 m scale
-bar.
-
-The baseline code and results are in the
-[source repository](https://github.com/mosscoder/multimodal_survey/tree/main/modeling).
+A sequence of capture positions along one leg of the Go2 survey. The ground image is on the left. Its paired 4 by 4 m drone image is on the right, rotated so the robot's bearing points up.
 
 ## Paired examples
 
@@ -214,6 +208,17 @@ def pixel_to_ground(row, px, py, P=0.0130, N=308):
     return dE, dN                            # offset in meters, EPSG:6514
 ```
 
+## GitHub project
+
+The [multimodal_survey](https://github.com/mosscoder/multimodal_survey)
+repository on GitHub contains the records of the field surveys, the pipeline
+that built this dataset, and the baseline experiments, with their code and
+results in
+[`modeling/`](https://github.com/mosscoder/multimodal_survey/tree/main/modeling).
+The robot ran [go2-survey](https://github.com/mosscoder/go2-survey), the
+mission software, which has its own repository. The code in both is under the
+MIT license.
+
 ## How to cite
 
 A data descriptor is in preparation. Until it is published, please cite the
@@ -222,7 +227,5 @@ dataset.
 > Doherty, K., Stam, N., Salakhutdinov, P., Samsoe, E. & Casper, C. MPG Ranch Multimodal Survey: paired ground-robot and drone imagery of Montana grassland. Hugging Face (2026). https://huggingface.co/datasets/mpg-ranch/multimodal-survey
 
 [`CITATION.cff`](CITATION.cff) gives the same reference in machine-readable
-form. The data are released under CC BY 4.0. The
-[source repository](https://github.com/mosscoder/multimodal_survey) describes
-how the data were collected and contains the code, under the MIT license, that
-built this release from commit `SOURCE_COMMIT`.
+form. The data are released under CC BY 4.0, and this release was built from
+commit `SOURCE_COMMIT` of the GitHub project.
