@@ -16,12 +16,22 @@ size_categories:
 
 # MPG Ranch Multimodal Survey
 
-A quadruped robot walked fixed routes through a grassland under restoration at
-MPG Ranch, Montana, and photographed the vegetation every meter. A drone mapped
-the same ground within a day of each walk. Each row of this dataset pairs one
-ground image with the drone image of the 4 by 4 m of ground ahead of the
-robot, and records which of eight plant species are present in the ground
-image.
+Monitoring vegetation change at the landscape scale is costly in wildland
+settings due to factors such as rugged terrain and rarity of botanical
+expertise. We release a dataset of paired ground robot and aerial drone imagery
+to enable the study of the relative benefit of each platform for automated
+vegetation monitoring at fine spatial scales. A Unitree Go2 quadruped robot
+walked fixed routes through a grassland in Montana, USA, photographing the
+ground ahead every meter, and a DJI Mavic 3M drone photographed the same ground
+from above. Both platforms were RTK-enabled and covered every route twice,
+capturing the same scenes under different lighting. Each of the 8,287 ground
+images is paired with a 4 by 4 m drone image cropped from a 1.30 cm per pixel
+orthomosaic at the robot's position. A botanist labeled every ground image for
+eight target species, four natives and four invasive weeds. We established
+baseline classifier performance with DINOv3 vision encoders, achieving a macro
+average precision on the test split of 0.809 (ground), 0.373 (drone), and 0.815
+(fusion, a weighted average of both predictions). We hope that others may use
+our dataset to advance methods for automating vegetation surveys.
 
 ![Animated ground images beside their paired drone images along one leg](images/sample_pairs_animation.gif)
 
@@ -30,15 +40,7 @@ on the left. Its paired 4 m by 4 m drone image is on the right, rotated so the
 robot's bearing points up, with the antenna position in yellow and a 1 m scale
 bar.
 
-A plant looks different from the ground and from the air, and the two views
-differ in scale, since a drone maps a whole site in one flight and a ground
-survey advances a meter at a time. The dataset supports comparing what each
-view can identify species by species, training a model on drone images from
-labels made on the ground, fusing the two views, and learning a representation
-they share. Baseline linear classifiers on frozen DINOv3 features reach a
-macro average precision on the test split of 0.815 with the two views fused,
-0.809 from the ground image and 0.373 from the drone image. The code and
-results are in the
+The baseline code and results are in the
 [source repository](https://github.com/mosscoder/multimodal_survey/tree/main/modeling).
 
 ## Paired examples
