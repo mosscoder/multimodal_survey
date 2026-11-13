@@ -8,17 +8,28 @@
 [![Data license CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Code license MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 
-A quadruped robot walked fixed routes through a grassland under restoration at
-MPG Ranch, Montana, and photographed the vegetation every meter. A drone mapped
-the same ground within a day of each walk. This repository contains the field records of
-those surveys, the pipeline that turns them into a dataset of paired ground and
-drone images, and the baseline experiments reported with the dataset.
+Monitoring vegetation change at the landscape scale is costly in wildland
+settings due to factors such as rugged terrain and rarity of botanical
+expertise. We release a dataset of paired ground robot and aerial drone imagery
+to enable the study of the relative benefit of each platform for automated
+vegetation monitoring at fine spatial scales. A Unitree Go2 quadruped robot
+walked fixed routes through a grassland in Montana, USA, photographing the
+ground ahead every meter, and a DJI Mavic 3M drone photographed the same ground
+from above. Both platforms were RTK-enabled and covered every route twice,
+capturing the same scenes under different lighting. Each of the 8,287 ground
+images is paired with a 4 by 4 m drone image cropped from a 1.30 cm per pixel
+orthomosaic at the robot's position. A botanist labeled every ground image for
+eight target species, four natives and four invasive weeds. We established
+baseline classifier performance with DINOv3 vision encoders, achieving a macro
+average precision on the test split of 0.809 (ground), 0.373 (drone), and 0.815
+(fusion, a weighted average of both predictions). We hope that others may use
+our dataset to advance methods for automating vegetation surveys.
 
 <p align="center">
   <img src="assets/sample_pairs_animation.gif" alt="Animated ground images beside their paired drone images along one leg" width="900">
 </p>
 <p align="center">
-  <sub>Thirty five consecutive capture positions along one leg. The ground image is on the left. Its paired 4 by 4 m drone image is on the right, rotated so the robot's bearing points up, with the antenna position in yellow and a 1 m scale bar.</sub>
+  <sub>A sequence of capture positions along one leg of the Go2 survey. The ground image is on the left. Its paired 4 by 4 m drone image is on the right, rotated so the robot's bearing points up.</sub>
 </p>
 
 ## The dataset
@@ -63,8 +74,7 @@ multimodal_survey/
 reported with the dataset. One classifier reads the ground image and one reads
 the drone image, each a linear layer on a frozen DINOv3 model, and a late
 fusion combines the two. The [README of that folder](modeling/README.md) lists
-the steps. Feature extraction and training need a CUDA GPU, and the scores can
-be recomputed from the tracked predictions without one.
+the steps.
 
 | Modality | Macro AP, test split |
 |---|---|
@@ -92,11 +102,6 @@ The field campaign, the labeling and the dataset build are complete. The
 dataset is private while the data descriptor is in preparation. It will become
 public, with a DOI, when the descriptor is submitted.
 
-## License
-
-Code in this repository is MIT licensed (see [`LICENSE`](LICENSE)). The dataset
-is released under CC BY 4.0.
-
 ## How to cite
 
 A data descriptor is in preparation. Until it is published, please cite the
@@ -104,6 +109,7 @@ dataset.
 
 > Doherty, K., Stam, N., Salakhutdinov, P., Samsoe, E. & Casper, C. MPG Ranch Multimodal Survey: paired ground-robot and drone imagery of Montana grassland. Hugging Face (2026). https://huggingface.co/datasets/mpg-ranch/multimodal-survey
 
-The "Cite this repository" button in the sidebar gives the same reference in
-BibTeX and APA form, from [`CITATION.cff`](CITATION.cff). A DOI will be added
-when the dataset is released.
+## License
+
+Code in this repository is MIT licensed (see [`LICENSE`](LICENSE)). The dataset
+is released under CC BY 4.0.
